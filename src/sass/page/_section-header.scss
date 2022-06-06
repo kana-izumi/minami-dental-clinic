@@ -1,0 +1,31 @@
+@use "global" as *;
+
+.section-header {
+    position: relative;
+}
+.section-header__title {
+    font-size: 20px;
+    font-weight: $bold;
+    margin-left: rem(64);
+    margin-right: rem(64);
+}
+
+.section-header__icon-lefts {
+    width: rem(67);
+    height: rem(17);
+    position: relative;
+}
+
+.section-header__icon-left1,
+.section-header__icon-left2,
+.section-header__icon-left3,
+.section-header__icon-left4,
+.section-header__icon-left5 {
+    position: absolute;
+    width: rem(3);
+    height: rem(12);
+    background-color: $main-color;
+    top: 0;
+    left: 0;
+    transform: rotate(45deg);
+}

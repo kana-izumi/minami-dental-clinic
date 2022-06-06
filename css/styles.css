@@ -1,6 +1,6 @@
 @charset "UTF-8";
 body {
-  font-family: "";
+  font-family: "M PLUS Rounded 1c", sans-serif;
 }
 
 .u-desktop {
@@ -29,10 +29,10 @@ html {
 }
 @media screen and (min-width: 768px) {
   html {
-    font-size: 1.4545454545vw;
+    font-size: 1.6vw;
   }
 }
-@media (min-width: 1100px) {
+@media (min-width: 1000px) {
   html {
     font-size: 16px;
   }
@@ -182,7 +182,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .inner {
-    max-width: 1150px;
+    max-width: 1050px;
     padding-right: 25px;
     padding-left: 25px;
   }
@@ -191,7 +191,46 @@ select::-ms-expand {
 .test {
   font-size: 20px;
   font-size: 1.25rem;
-  background-color: #111;
+  background-color: #393939;
   color: #fff;
+  font-weight: 700;
+}
+
+.section-header {
+  position: relative;
+}
+
+.section-header__title {
+  font-size: 20px;
+  font-weight: 700;
+  margin-left: 64px;
+  margin-left: 4rem;
+  margin-right: 64px;
+  margin-right: 4rem;
+}
+
+.section-header__icon-lefts {
+  width: 67px;
+  width: 4.1875rem;
+  height: 17px;
+  height: 1.0625rem;
+  position: relative;
+}
+
+.section-header__icon-left1,
+.section-header__icon-left2,
+.section-header__icon-left3,
+.section-header__icon-left4,
+.section-header__icon-left5 {
+  position: absolute;
+  width: 3px;
+  width: 0.1875rem;
+  height: 12px;
+  height: 0.75rem;
+  background-color: #1391E6;
+  top: 0;
+  left: 0;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 /*# sourceMappingURL=styles.css.map */
