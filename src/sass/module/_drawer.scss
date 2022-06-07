@@ -1,0 +1,139 @@
+@use "global" as *;
+
+.drawer {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 300;
+    height: rem(60);
+
+    &.is-active {
+        display: block;
+    }
+}
+
+.drawer__inner {
+    display: flex;
+    align-items: center;
+    height: inherit;
+}
+
+.drawer__header-logo {
+    margin-right: rem(40);
+    width: rem(270);
+    display: none;
+
+    &.is-active {
+        display: block;
+    }
+}
+
+.drawer__icon {
+    position: fixed;
+    top: rem(20);
+    right: rem(16);
+    z-index: 300;
+
+    &.is-active {
+        .drawer__icon-bar1 {
+            transform: rotate(-45deg);
+            top: rem(8);
+			background: $white;
+        }
+
+        .drawer__icon-bar2 {
+            display: none;
+        }
+
+        .drawer__icon-bar3 {
+            transform: rotate(45deg);
+            top: rem(8);
+			background: $white;
+        }
+    }
+}
+
+.drawer__icon-bars {
+    width: rem(32);
+    height: rem(32);
+    position: relative;
+}
+
+.drawer__icon-bar1,
+.drawer__icon-bar2,
+.drawer__icon-bar3 {
+    position: absolute;
+    width: rem(27);
+    height: rem(3);
+    background: $main-color;
+    border-radius: 2px;
+    top: 0;
+    left: 0;
+}
+
+.drawer__icon-bar1 {
+    top: 0;
+}
+
+.drawer__icon-bar2 {
+    top: rem(8);
+}
+
+.drawer__icon-bar3 {
+    top: rem(16);
+}
+
+
+.drawer__content {
+    background: $sub-color1;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    z-index: 299;
+    transform: translateX(105%);
+
+    &.is-active {
+        transform: translateX(0);
+    }
+}
+
+.drawer__content-items {
+    padding: rem(160) rem(60) rem(170) rem(60);
+    color: $white;
+    font-size: rem(14);
+}
+
+.drawer__content-item {
+    display: flex;
+    position: relative;
+    padding-top: rem(19);
+    padding-bottom: rem(19);
+    border-top: 1px dotted #fff;
+
+    &:nth-child(n+5) {
+        border-bottom: 1px dotted #fff;
+    }
+
+    img {
+        width: rem(24);
+        height: rem(24);
+    }
+
+    a {
+        margin-left: rem(14);
+    }
+    &::after {
+        content: "";
+        display: inline-block;
+        width: rem(14);
+        height: rem(14);
+        position: absolute;
+        background-image: url(/src/images/common/icon-right.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        vertical-align: middle;
+        right: 0;
+    }
+}

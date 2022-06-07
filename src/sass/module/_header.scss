@@ -1,0 +1,19 @@
+@use "global" as *;
+
+.header {
+  height: rem(60);
+  box-shadow: 0 3px 6px #00000029;
+}
+
+.header__inner {
+  height: inherit;
+}
+
+.header__logo {
+  width: rem(270);
+  padding-top: rem(15);
+
+  &.is-active {
+    display: none;
+  }
+}
