@@ -1,0 +1,13 @@
+@use "global" as *;
+
+.footer__copyright {
+    background: $main-color;
+    height: rem(115);
+    text-align: center;
+    padding-top: rem(17);
+
+    small {
+        color: $white;
+        font-size: rem(14);
+    }
+}

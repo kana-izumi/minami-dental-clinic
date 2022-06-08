@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.footer-nav {
+    padding: rem(60) 0 rem(60);
+
+}
+
+.footer-nav__item {
+    &:not(:first-child) {
+        margin-top: rem(40);
+    }
+
+    dd {
+        margin-top: 20px;
+    }
+}
+
+.footer-nav__item-medical {
+    display: flex;
+    flex-direction: column;
+
+    &:nth-child(n+5) {
+        flex-wrap: wrap;
+    }
+
+}
