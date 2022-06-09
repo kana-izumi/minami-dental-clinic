@@ -400,6 +400,11 @@ select::-ms-expand {
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
           box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
 }
+@media screen and (min-width: 768px) {
+  .header {
+    height: 5rem;
+  }
+}
 
 .header__inner {
   height: inherit;
@@ -526,5 +531,18 @@ select::-ms-expand {
 .section-header__icon-right5 {
   right: 55px;
   right: 3.4375rem;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 /*# sourceMappingURL=styles.css.map */
