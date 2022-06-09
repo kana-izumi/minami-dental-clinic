@@ -392,6 +392,8 @@ select::-ms-expand {
 
 .footer {
   background: #DFF1FD;
+  margin-top: 120px;
+  margin-top: 7.5rem;
 }
 
 .header {
@@ -533,6 +535,28 @@ select::-ms-expand {
   right: 3.4375rem;
 }
 
+.main-visual__inner {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.main-visual__items {
+  position: relative;
+}
+
+.main-visual__catch {
+  position: absolute;
+  bottom: 16px;
+  bottom: 1rem;
+  left: 20px;
+  left: 1.25rem;
+  z-index: 100;
+}
+.main-visual__catch img {
+  width: 265px;
+  width: 16.5625rem;
+}
+
 .swiper {
   width: 100%;
   height: 100%;
@@ -544,5 +568,39 @@ select::-ms-expand {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 50px;
+  width: 50px;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 50px;
+  margin: auto;
+  width: 50px;
+}
+
+/* 前への矢印カスタマイズ */
+.swiper-button-prev:after {
+  background-image: url(/src/images/top/arrow-left.svg);
+}
+
+/* 次への矢印カスタマイズ */
+.swiper-button-next:after {
+  background-image: url(/src/images/top/arrow-right.svg);
+}
+
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
 }
 /*# sourceMappingURL=styles.css.map */
