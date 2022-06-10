@@ -1,6 +1,7 @@
 @use "global" as *;
 
 .main-visual {
+
 }
 
 .main-visual__inner {
@@ -29,6 +30,14 @@
   height: 50px;
   width: 50px;
 }
+
+.swiper-button-next {
+  right: rem(-22);
+}
+
+.swiper-button-prev {
+  left: rem(-22);
+}
 /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev:after,
 .swiper-button-next:after {
@@ -51,6 +60,14 @@
 .swiper-slide img {
   height: auto;
   width: 100%;
+}
+
+.swiper-pagination ,
+.swiper-pagination-bullets ,
+.swiper-pagination-horizontal {
+  display: flex;
+  flex-direction: column;
+  left: -21px;
 }
 
 .main-visual__catch {

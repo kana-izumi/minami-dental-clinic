@@ -1,0 +1,62 @@
+@use "global" as *;
+
+.news {
+    margin-top: rem(156);
+}
+
+.news__heading {
+    display: flex;
+    margin-left: rem(16);
+    align-items: center;
+
+}
+
+.news__heading-lead {
+    font-size: rem(11);
+    color: $main-color;
+    margin-left: rem(16);
+    text-transform: uppercase;
+}
+
+.news__heading-link {
+    a {
+        font-size: rem(11);
+        color: #888888;
+        text-decoration: underline;
+        text-decoration-color: #888888;
+        margin-left: rem(64);
+    }
+}
+
+.news__info {
+    margin-top: rem(7);
+    border-top: rem(1) solid $black;
+    border-bottom: rem(1) solid $black;
+    padding-top: rem(14);
+    padding-bottom: rem(13);
+    position: relative;
+}
+
+.news__info-date {
+    width: rem(96);
+    font-size: rem(12);
+}
+
+.news__info-text {
+    margin-left: rem(24);
+    font-size: rem(14);
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        width: rem(14);
+        height: rem(14);
+        background: url(/src/images/top/icon-arrow-black.svg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}
