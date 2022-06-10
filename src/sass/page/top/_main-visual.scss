@@ -70,5 +70,8 @@
   width: rem(335);
   border-radius: rem(12);
   overflow: hidden;
-  margin: 0 auto;
+  margin: -10px auto 0;
+  position: absolute;
+  left: rem(20);
+  z-index: 200;
 }
