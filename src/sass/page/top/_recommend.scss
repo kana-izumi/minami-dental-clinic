@@ -1,0 +1,26 @@
+@use "global" as *;
+
+.recommend {
+
+}
+
+.recommend__items {
+
+}
+
+.recommend__item-img {
+    width: rem(220);
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: rem(177);
+        background: url(/src/images/top/recommend-1.svg);
+        background-size: cover;
+    }
+}
+
+.recommend__item-text {
+
+}

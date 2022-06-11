@@ -721,4 +721,18 @@ select::-ms-expand {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+.recommend__item-img {
+  width: 220px;
+  width: 13.75rem;
+  position: relative;
+}
+.recommend__item-img::before {
+  content: "";
+  position: absolute;
+  width: 177px;
+  width: 11.0625rem;
+  background: url(/src/images/top/recommend-1.svg);
+  background-size: cover;
+}
 /*# sourceMappingURL=styles.css.map */
