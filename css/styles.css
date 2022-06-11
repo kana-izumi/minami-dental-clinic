@@ -722,17 +722,40 @@ select::-ms-expand {
   background-size: cover;
 }
 
+.recommend__items {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+
+.recommend__item + .recommend__item {
+  margin-top: 60px;
+  margin-top: 3.75rem;
+}
+
+.recommend__item-title {
+  width: 177px;
+  width: 11.0625rem;
+  margin: 12px auto 0;
+  margin: 0.75rem auto 0;
+}
+
 .recommend__item-img {
   width: 220px;
   width: 13.75rem;
-  position: relative;
+  margin: 12px auto 0;
+  margin: 0.75rem auto 0;
+  text-align: center;
 }
-.recommend__item-img::before {
-  content: "";
-  position: absolute;
-  width: 177px;
-  width: 11.0625rem;
-  background: url(/src/images/top/recommend-1.svg);
-  background-size: cover;
+
+.recommend__item-text {
+  line-height: 1.714;
+  margin-top: 14px;
+  margin-top: 0.875rem;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.recommend__item-text--red {
+  color: #EE5A6D;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -5,22 +5,29 @@
 }
 
 .recommend__items {
-
+    margin-top: rem(40);
 }
 
+.recommend__item + .recommend__item {
+    margin-top: rem(60);
+}
+
+.recommend__item-title {
+    width: rem(177);
+    margin: rem(12) auto 0;
+}
 .recommend__item-img {
     width: rem(220);
-    position: relative;
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: rem(177);
-        background: url(/src/images/top/recommend-1.svg);
-        background-size: cover;
-    }
+    margin: rem(12) auto 0;
+    text-align: center;
 }
 
 .recommend__item-text {
+    line-height: 1.714;
+    margin-top: rem(14);
+    font-size: rem(14);
+}
 
+.recommend__item-text--red {
+    color: #EE5A6D;
 }
