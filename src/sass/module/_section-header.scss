@@ -1,14 +1,12 @@
 @use "global" as *;
 
 .section-header {
-    display: inline-block;
     position: relative;
 }
 .section-header__title {
-    font-size: 20px;
+    font-size: rem(20);
     font-weight: $bold;
-    margin-left: rem(95);
-    margin-right: rem(95);
+    text-align: center;
 
     &::before {
         position: absolute;

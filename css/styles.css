@@ -438,17 +438,14 @@ select::-ms-expand {
 }
 
 .section-header {
-  display: inline-block;
   position: relative;
 }
 
 .section-header__title {
   font-size: 20px;
+  font-size: 1.25rem;
   font-weight: 700;
-  margin-left: 95px;
-  margin-left: 5.9375rem;
-  margin-right: 95px;
-  margin-right: 5.9375rem;
+  text-align: center;
 }
 .section-header__title::before {
   position: absolute;
@@ -478,8 +475,13 @@ select::-ms-expand {
 }
 
 .concept {
-  margin-top: 170px;
-  margin-top: 10.625rem;
+  margin-top: 60px;
+  margin-top: 3.75rem;
+  padding-top: 110px;
+  padding-top: 6.875rem;
+  background-image: url(/src/images/top/concept-bg.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .concept__heading-lead {
@@ -506,6 +508,7 @@ select::-ms-expand {
 .concept__link {
   margin-top: 40px;
   margin-top: 2.5rem;
+  text-align: center;
 }
 
 .concept__link-btn {
@@ -727,6 +730,11 @@ select::-ms-expand {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.recommend {
+  margin-top: 100px;
+  margin-top: 6.25rem;
 }
 
 .recommend__items {

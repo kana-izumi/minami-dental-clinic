@@ -1,7 +1,11 @@
 @use "global" as *;
 
 .concept {
-    margin-top: rem(170);
+    margin-top: rem(60);
+    padding-top: rem(110);
+    background-image: url(/src/images/top/concept-bg.svg);
+    background-repeat: no-repeat;
+    background-size: cover;
 }
 
 .concept__heading-lead {
@@ -22,6 +26,7 @@
 
 .concept__link {
     margin-top: rem(40);
+    text-align: center;
 }
 
 .concept__link-btn {
