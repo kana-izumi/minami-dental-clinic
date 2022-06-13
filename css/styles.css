@@ -481,7 +481,8 @@ select::-ms-expand {
   padding-top: 6.875rem;
   background-image: url(/src/images/top/concept-bg.svg);
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 80%;
+  background-position: left center;
 }
 
 .concept__heading-lead {
