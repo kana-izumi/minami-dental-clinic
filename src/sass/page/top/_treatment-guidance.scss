@@ -1,0 +1,88 @@
+@use "global" as *;
+
+.treatment-guidance {
+    margin-top: rem(185);
+    padding-top: rem(30);
+    padding-bottom: rem(98);
+    background-color: $sub-color2;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: rem(-58);
+        left: 0;
+        width: 100%;
+        height: rem(85);
+        background: url(/src/images/top/bg-top.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 100;
+    }
+    &::after {
+        content: "";
+        position: absolute;
+        bottom: rem(-28);
+        left: 0;
+        width: 100%;
+        height: rem(30);
+        background: url(/src/images/top/bg-bottom.svg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        z-index: 100;
+    }
+}
+
+.treatment-guidance__items {
+    margin-top: rem(40);
+}
+
+.treatment-guidance__item {
+    position: relative;
+}
+
+.treatment-guidance__item +
+    .treatment-guidance__item  {
+        margin-top: rem(20);
+    }
+
+
+.treatment-guidance__content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    color: $white;
+}
+
+.treatment-guidance__content-title {
+    font-size: rem(20);
+}
+
+.treatment-guidance__content-border {
+    display: inline-block;
+    width: rem(30);
+    height: rem(2);
+    background-color: $white;
+    margin-top: rem(15);
+    text-align: center;
+}
+
+.treatment-guidance__content-lead {
+    font-size: rem(11);
+    margin-top: rem(15);
+}
+
+.treatment-guidance__text {
+    margin-top: rem(20);
+    margin-bottom: rem(98);
+    padding: rem(20);
+    background-color: $white;
+    line-height: 1.714;
+    font-size: rem(14);
+}
+
+.treatment-guidance__text--red {
+    color: red;
+}

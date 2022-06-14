@@ -38,7 +38,5 @@
 }
 
 .footer-nav__sub {
-    &:not(:first-child) {
-        margin-left: rem(20);
-    }
+    margin-left: rem(20);
 }
