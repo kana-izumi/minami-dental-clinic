@@ -780,8 +780,6 @@ select::-ms-expand {
   margin-top: 11.5625rem;
   padding-top: 30px;
   padding-top: 1.875rem;
-  padding-bottom: 98px;
-  padding-bottom: 6.125rem;
   background-color: #DFF1FD;
   position: relative;
 }
@@ -817,6 +815,8 @@ select::-ms-expand {
 .treatment-guidance__items {
   margin-top: 40px;
   margin-top: 2.5rem;
+  margin-bottom: 39px;
+  margin-bottom: 2.4375rem;
 }
 
 .treatment-guidance__item {
@@ -865,8 +865,6 @@ select::-ms-expand {
 .treatment-guidance__text {
   margin-top: 20px;
   margin-top: 1.25rem;
-  margin-bottom: 98px;
-  margin-bottom: 6.125rem;
   padding: 20px;
   padding: 1.25rem;
   background-color: #fff;
@@ -877,5 +875,40 @@ select::-ms-expand {
 
 .treatment-guidance__text--red {
   color: red;
+}
+
+.treatment-guidance__bg {
+  height: 58px;
+  height: 3.625rem;
+  background-color: #DFF1FD;
+  position: relative;
+}
+.treatment-guidance__bg::before {
+  position: absolute;
+  content: url(/src/images/top/bottom-deco-1.svg);
+  top: 50%;
+  left: 12px;
+  left: 0.75rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 25px;
+  width: 1.5625rem;
+  height: 25px;
+  height: 1.5625rem;
+  z-index: 101;
+}
+.treatment-guidance__bg::after {
+  position: absolute;
+  content: url(/src/images/top/bottom-deco-2.svg);
+  top: 50%;
+  right: 8px;
+  right: 0.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 53px;
+  width: 3.3125rem;
+  height: 58px;
+  height: 3.625rem;
+  z-index: 101;
 }
 /*# sourceMappingURL=styles.css.map */

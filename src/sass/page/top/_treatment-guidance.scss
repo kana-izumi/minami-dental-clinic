@@ -3,7 +3,7 @@
 .treatment-guidance {
     margin-top: rem(185);
     padding-top: rem(30);
-    padding-bottom: rem(98);
+    // padding-bottom: rem(39);
     background-color: $sub-color2;
     position: relative;
 
@@ -35,6 +35,7 @@
 
 .treatment-guidance__items {
     margin-top: rem(40);
+    margin-bottom: rem(39);
 }
 
 .treatment-guidance__item {
@@ -76,7 +77,6 @@
 
 .treatment-guidance__text {
     margin-top: rem(20);
-    margin-bottom: rem(98);
     padding: rem(20);
     background-color: $white;
     line-height: 1.714;
@@ -85,4 +85,31 @@
 
 .treatment-guidance__text--red {
     color: red;
+}
+
+.treatment-guidance__bg {
+    height: rem(58);
+    background-color: $sub-color2;
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: url(/src/images/top/bottom-deco-1.svg);
+        top: 50%;
+        left: rem(12);
+        transform: translateY(-50%);
+        width: rem(25);
+        height: rem(25);
+        z-index: 101;
+    }
+    &::after{
+        position: absolute;
+        content: url(/src/images/top/bottom-deco-2.svg);
+        top: 50%;
+        right: rem(8);
+        transform: translateY(-50%);
+        width: rem(53);
+        height: rem(58);
+        z-index: 101;
+    }
 }
