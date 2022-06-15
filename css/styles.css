@@ -345,6 +345,37 @@ select::-ms-expand {
   font-size: 0.875rem;
 }
 
+.footer-info {
+  text-align: center;
+}
+
+.footer-info__body {
+  padding: 32px 10px 20px 10px;
+  padding: 2rem 0.625rem 1.25rem 0.625rem;
+}
+
+.footer-info__logo {
+  width: 311px;
+  width: 19.4375rem;
+  text-align: center;
+}
+
+.footer-info__medical-time {
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
+  width: 335px;
+  width: 20.9375rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin: 20px auto 0;
+  margin: 1.25rem auto 0;
+  position: absolute;
+  left: 20px;
+  left: 1.25rem;
+  z-index: 200;
+}
+
 .footer-nav {
   padding: 60px 0 60px;
   padding: 3.75rem 0 3.75rem;
@@ -472,6 +503,89 @@ select::-ms-expand {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(/src/images/top/title-deco.svg);
+}
+
+.staff-blog {
+  margin-top: 100px;
+  margin-top: 6.25rem;
+}
+
+.staff-blog__items {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+
+.staff-blog__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.staff-blog__item + .staff-blog__item {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.staff-blog__img {
+  width: 75.9398496%;
+}
+
+.staff-blog__body {
+  margin-left: 10px;
+  margin-left: 0.625rem;
+}
+
+.staff-blog__category {
+  display: inline-block;
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #fff;
+  padding: 3px 8px;
+  padding: 0.1875rem 0.5rem;
+  line-height: 1;
+  background-color: #1391E6;
+  border-radius: 3.125rem;
+}
+
+.staff-blog__title {
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.staff-blog__date {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  color: #888888;
+}
+
+.staff-blog__link {
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  text-align: center;
+}
+
+.staff-blog__link-btn {
+  border: 1px solid #1391E6;
+  border: 0.0625rem solid #1391E6;
+  padding: 10px 40px;
+  padding: 0.625rem 2.5rem;
+  border-radius: 1.5rem;
+  color: #1391E6;
+  position: relative;
+}
+.staff-blog__link-btn::after {
+  position: absolute;
+  content: "";
+  top: 50%;
+  right: 5px;
+  right: 0.3125rem;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 13px;
+  width: 0.8125rem;
+  height: 13px;
+  height: 0.8125rem;
+  background-image: url(/src/images/top/icon-arrow-blue-btn.svg);
 }
 
 .concept {

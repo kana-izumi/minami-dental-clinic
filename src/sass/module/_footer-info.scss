@@ -1,0 +1,30 @@
+@use "global" as *;
+
+.footer-info {
+    text-align: center;
+}
+
+.footer-info__inner {
+
+}
+
+.footer-info__body {
+    padding: rem(32) rem(10) rem(20) rem(10);
+}
+
+.footer-info__logo {
+    width: rem(311);
+    text-align: center;
+}
+
+.footer-info__medical-time {
+    background-color: #fff;
+    box-shadow: 0 3px 6px #00000029;
+    width: rem(335);
+    border-radius: rem(12);
+    overflow: hidden;
+    margin: rem(20) auto 0;
+    position: absolute;
+    left: rem(20);
+    z-index: 200;
+}
