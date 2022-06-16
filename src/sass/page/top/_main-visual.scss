@@ -70,6 +70,12 @@
   left: -21px;
 }
 
+.swiper-pagination-horizontal,
+.swiper-pagination-bullets,
+.swiper-pagination-bullet {
+  margin: 4px;
+}
+
 .main-visual__catch {
   position: absolute;
   bottom: rem(16);
