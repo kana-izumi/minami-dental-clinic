@@ -2,15 +2,37 @@
 
 .recommend {
     margin-top: rem(100);
+
+    @include mq(sm) {
+        margin-top: rem(227);
+    }
 }
 
 .recommend__items {
     margin-top: rem(40);
+
+    @include mq(md) {
+        display: flex;
+        align-self: stretch;
+    }
+}
+
+.recommend__item {
+
+    @include mq(md) {
+        width: calc(33% - rem(66) * 2 / 3);
+    }
 }
 
 .recommend__item + .recommend__item {
     margin-top: rem(60);
+
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(66);
+    }
 }
+
 
 .recommend__item-title {
     width: rem(177);

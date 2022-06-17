@@ -6,6 +6,7 @@
     position: relative;
 
     @include mq(md) {
+        padding-top: rem(180);
         display: flex;
         flex-direction: row-reverse;
         align-items: center;
@@ -20,7 +21,14 @@
         height: rem(307);
         background: url(/src/images/top/concept-bg.svg);
         background-size: contain;
-        z-index: 100;
+        background-repeat: no-repeat;
+        z-index: 90;
+
+        @include mq(md) {
+            width: rem(1311);
+            height: rem(725);
+            left: rem(416);
+        }
     }
 }
 
@@ -54,7 +62,6 @@
 
 .concept__link {
     margin-top: rem(40);
-    text-align: center;
 }
 
 .concept__link-btn {
@@ -63,7 +70,13 @@
     padding: rem(10) rem(40);
     border: 1px solid $main-color;
     border-radius: rem(24);
+    background-color: $white;
+    text-align: center;
     position: relative;
+
+@include mq(md) {
+    text-align: left;
+}
 
     &::after {
         content: "";
@@ -80,12 +93,15 @@
 }
 
 .concept__img {
-    @include mq(sm) {
-        margin-top: rem(40);
-        margin-right: rem(40);
-    }
+    margin-top: rem(40);
+    margin-right: rem(40);
 
-    @include mq(md) {
+    @include mq(sm) {
+        margin: 0;
         flex: 0 1 50%;
+        position: relative;
+        z-index: 101;
+        overflow: hidden;
+        border-radius: rem(0) rem(20) rem(20) rem(0);
     }
 }
