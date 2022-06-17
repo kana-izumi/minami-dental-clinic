@@ -1,12 +1,7 @@
 @use "global" as *;
 
 .footer-info {
-    margin-top: rem(132);
-    padding-top: rem(13);
     text-align: center;
-}
-
-.footer-info__inner {
 }
 
 .footer-info__body {
@@ -113,5 +108,18 @@
     border-radius: rem(12);
     overflow: hidden;
     margin: rem(20) auto 0;
+}
 
+.footer-info-map {
+    margin-top: rem(20);
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* = height ÷ width × 100 */
+}
+.footer-info-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
 }

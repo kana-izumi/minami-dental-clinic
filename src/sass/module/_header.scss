@@ -11,13 +11,24 @@
 
 .header__inner {
   height: inherit;
+  max-width: rem(1200);
+  margin: 0 auto;
 }
 
 .header__logo {
   width: rem(270);
-  padding-top: rem(15);
+  // padding-top: rem(15);
 
   &.is-active {
     display: none;
+  }
+}
+
+.header__block {
+  @include mq(md) {
+    display: flex;
+    justify-content: space-between;
+    height: inherit;
+    align-items: center;
   }
 }

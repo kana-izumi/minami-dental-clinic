@@ -3,7 +3,6 @@
 .treatment-guidance {
     margin-top: rem(185);
     padding-top: rem(30);
-    // padding-bottom: rem(39);
     background-color: $sub-color2;
     position: relative;
 
@@ -47,6 +46,10 @@
         margin-top: rem(20);
     }
 
+.treatment-guidance-img {
+    overflow: hidden;
+    border-radius: rem(20);
+}
 
 .treatment-guidance__content {
     position: absolute;

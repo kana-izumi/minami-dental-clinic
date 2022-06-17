@@ -3,10 +3,37 @@
 .concept {
     margin-top: rem(60);
     padding-top: rem(110);
-    background-image: url(/src/images/top/concept-bg.svg);
-    background-repeat: no-repeat;
-    background-size: 80%;
-    background-position: left center;
+    position: relative;
+
+    @include mq(md) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 0;
+        width: rem(556);
+        height: rem(307);
+        background: url(/src/images/top/concept-bg.svg);
+        background-size: contain;
+        z-index: 100;
+    }
+}
+
+.concept__inner {
+    position: relative;
+    z-index: 101;
+
+    @include mq(sm) {
+        flex: 0 1 31.7%;
+    }
+}
+
+.concept__body {
 }
 
 .concept__heading-lead {
@@ -53,6 +80,12 @@
 }
 
 .concept__img {
-    margin-top: rem(40);
-    margin-right: rem(40);
+    @include mq(sm) {
+        margin-top: rem(40);
+        margin-right: rem(40);
+    }
+
+    @include mq(md) {
+        flex: 0 1 50%;
+    }
 }
