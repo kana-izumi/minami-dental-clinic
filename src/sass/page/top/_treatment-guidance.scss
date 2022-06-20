@@ -49,8 +49,6 @@
 .treatment-guidance__flex {
     @include mq(md) {
         display: flex;
-        border: rem(1) solid #44C0D4;
-        box-shadow: 0 3px 6px #00000029;
     }
 }
 

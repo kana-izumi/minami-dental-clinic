@@ -672,10 +672,20 @@ select::-ms-expand {
   width: 270px;
   width: 16.875rem;
 }
+@media screen and (min-width: 600px) {
+  .header__logo {
+    padding-top: 0.9375rem;
+  }
+}
 .header__logo.is-active {
   display: none;
 }
 
+@media screen and (min-width: 600px) {
+  .header__block {
+    height: inherit;
+  }
+}
 @media screen and (min-width: 768px) {
   .header__block {
     display: -webkit-box;
@@ -757,8 +767,6 @@ select::-ms-expand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
   }
 }
 
@@ -771,11 +779,11 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .staff-blog__item {
-    display: block;
-    width: calc(33.3% - 1.04167rem);
-  }
-  .staff-blog__item:not(:nth-child(3n+1)) {
-    margin-left: 3.125rem;
+    display: inline-block;
+    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
+    border-radius: 1.25rem;
+    width: 33.3%;
   }
 }
 
@@ -788,6 +796,11 @@ select::-ms-expand {
 @media screen and (min-width: 600px) {
   .staff-blog__img {
     width: 75.9398496%;
+  }
+}
+@media screen and (min-width: 768px) {
+  .staff-blog__img {
+    width: 100%;
   }
 }
 
@@ -847,6 +860,36 @@ select::-ms-expand {
   height: 13px;
   height: 0.8125rem;
   background-image: url(/src/images/top/icon-arrow-blue-btn.svg);
+}
+
+.mv-sub {
+  position: relative;
+}
+
+.mv-sub__inner {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.mv-sub__heading {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mv-sub__title {
+  letter-spacing: em;
+}
+
+.mv-sub__lead {
+  display: inline-block;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  letter-spacing: 0.12em;
 }
 
 .concept {
@@ -1305,9 +1348,6 @@ select::-ms-expand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    border: 0.0625rem solid #44C0D4;
-    -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
-            box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
   }
 }
 

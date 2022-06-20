@@ -17,7 +17,10 @@
 
 .header__logo {
   width: rem(270);
-  // padding-top: rem(15);
+
+  @include mq(sm) {
+    padding-top: rem(15);
+  }
 
   &.is-active {
     display: none;
@@ -25,6 +28,10 @@
 }
 
 .header__block {
+  @include mq(sm) {
+    height: inherit;
+  }
+
   @include mq(md) {
     display: flex;
     justify-content: space-between;

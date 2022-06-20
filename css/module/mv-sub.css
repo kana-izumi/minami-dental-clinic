@@ -1,0 +1,49 @@
+body {
+  font-family: "M PLUS Rounded 1c", sans-serif;
+}
+
+.u-desktop {
+  display: none;
+}
+@media screen and (min-width: 768px) {
+  .u-desktop {
+    display: block;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .u-mobile {
+    display: none;
+  }
+}
+
+.mv-sub {
+  position: relative;
+}
+
+.mv-sub__inner {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.mv-sub__heading {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.mv-sub__title {
+  letter-spacing: em;
+}
+
+.mv-sub__lead {
+  display: inline-block;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+  letter-spacing: 0.12em;
+}
+/*# sourceMappingURL=mv-sub.css.map */

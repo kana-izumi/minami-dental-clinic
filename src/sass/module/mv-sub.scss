@@ -1,0 +1,32 @@
+@use "global" as *;
+
+.mv-sub {
+    position: relative;
+
+}
+
+.mv-sub__inner {
+    margin-top: rem(20);
+}
+
+.mv-sub__img {
+}
+
+.mv-sub__heading {
+    color: $white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+
+.mv-sub__title {
+    letter-spacing: em;
+}
+
+.mv-sub__lead {
+    display: inline-block;
+    margin-top: rem(10);
+    letter-spacing: 0.12em;
+}

@@ -45,12 +45,29 @@
   </div> -->
 
   <div class="header">
-    <div class="header__inner inner">
-      <div class="header__logo">
-        <img src="./images/common/logo.svg" alt="ロゴ画像">
+    <div class="header__inner">
+      <div class="header__block">
+        <div class="header__logo">
+          <img src="./images/common/logo.svg" alt="ロゴ画像">
+        </div>
+          <nav class="header-nav u-desktop">
+            <ul class="header-nav__list">
+              <li><img src="/src/images/common/icon-nav01.svg" alt=""><a href="">ホーム</li></a>
+              <li><img src="/src/images/common/icon-nav02.svg" alt=""><a href="">当院について</li></a>
+              <li><img src="/src/images/common/icon-nav03.svg" alt=""><a href="">診療案内</li></a>
+              <li><img src="/src/images/common/icon-nav04.svg" alt=""><a href="">スタッフ紹介</li></a>
+              <li><img src="/src/images/common/icon-nav05.svg" alt=""><a href="">スタッフブログ</li></a>
+              <li><img src="/src/images/common/icon-nav07.svg" alt=""><a href="">お問い合わせ</li></a>
+            </ul>
+            <div class="header__info">
+              <p class="header__info-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
+              <p class="header__info-tel">03-1234-5678</p>
+            </div>
+          </nav>
       </div>
+
       <!-- drawer -->
-      <div class="drawer">
+      <div class="drawer u-mobile">
         <div class="drawer__inner inner">
           <div class="drawer__header-logo">
             <img src="./images/common/logo-drawer.svg" alt="ロゴ画像">
@@ -97,114 +114,46 @@
   </div>
     <!-- /.header -->
 
-    <div class="main-visual">
-      <div class="main-visual__inner inner">
-    <div class="main-visual__items">
-      <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="main-visual__img1">
-              <img src="./src/images/top/top-01-sp.jpg" alt="メイン画像">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="main-visual__img2">
-              <img src="./src/images/top/top-02-sp.jpg" alt="メイン画像">
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="main-visual__img3">
-              <img src="./src/images/top/top-03-sp.jpg" alt="メイン画像">
-            </div>
-          </div>
-          <div class="main-visual__catch">
-            <img src="./src/images/top/top-text.svg" alt="">
-          </div>
+    <div class="mv-sub">
+      <div class="mv-sub__inner inner">
+        <div class="mv-sub__img u-mobile">
+          <img src="./src/images/about/page-about_top-sp.jpg" alt="">
+        </div>
+        <div class="mv-sub__img u-desktop">
+          <img src="./src/images/about/page-about_top.jpg" alt="">
+        </div>
+        <div class="mv-sub__heading">
+          <h2 class="mv-sub__title">当院について</h2>
+          <span class="mv-sub__lead">ABOUT OUR CLINIC</span>
         </div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-      </div>
-    </div>
-    <div class="main-visual__medical-time">
-      <img src="./src/images/top/medical-time-pc.jpg" alt="">
     </div>
     <!-- /.main-visual -->
 
-    <section class="news">
-      <div class="news__inner inner">
-        <div class="news__heading">
-          <h3 class="news__heading-title">お知らせ<span class="news__heading-lead">news</span></h3>
-          <p class="news__heading-link"><a href="">過去のお知らせはこちら</a></p>
-        </div>
-        <div class="news__info">
-          <time class="news__info-date">2021/01/01</time>
-          <a class="news__info-text" href="">年末年始の営業時間のお知らせ</a>
-        </div>
-      </div>
-    </section>
-    <!-- /.news -->
-
     <section class="concept">
       <div class="concept__inner inner">
-        <span class="concept__heading-lead">concept</span>
-        <h3 class="concept__heading-title">健康的で素敵な笑顔あふれる<br>街づくりを目指して</h3>
-        <p class="concept__message">私たちは最新の医療技術を追求すると共に、患者様とのコミュニケーションを大事することで、気軽に通いやすく些細なことでも相談できる「街の掛かり付け医」を目指しております。<br>
-          お子様からご高齢の方まで、快適な空間で治療が受けられる場を作り、地域医療に貢献しきたいと考えております。</p>
-          <div class="concept__link">
-            <a class="concept__link-btn" href="">当院について</a>
-          </div>
-      </div>
-      <div class="concept__img">
-        <img src="./src/images/top/concept-img1.jpg" alt="">
+        <div class="concept__body">
+          <span class="concept__heading-lead">POLICY</span>
+          <h3 class="concept__heading-title">コミュニケーションから始まる最適な医療提供</h3>
+          <p class="concept__message">当院ではまず患者様から詳しくお話を伺います。
+            難しい言葉は使わず、実際に感じている小さな違和感からあらゆる可能性を考え、最適な治療方法をご提案いたします。<br>
+            「どこよりも本音で話せる歯医者さん」を目指し、スタッフ一同、「人間力の向上」にも勤めております。</p>
+        </div>
+        <div class="concept__img concept__img--feature">
+          <img src="./src/images/about/feature_1.jpg" alt="当院のポリシー">
+        </div>
+        <div class="concept__body--">
+          <span class="concept__heading-lead">FEATURE</span>
+          <h3 class="concept__heading-title">「医療技術の追求」と<br>「通いやすさ」</h3>
+          <p class="concept__message">歯の治療において、小さな違和感は大きなストレスにつながります。私たちは常に快適な歯科医療技術の研究を行っております。
+            また、「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。<br>
+            朝から夜までお仕事をされている方のために診療時間を見直し、平日でもご利用いただけるようにいたしました。</p>
+        </div>
+        <div class="concept__img">
+          <img src="./src/images/about/feature_2.jpg" alt="当院の特徴">
+        </div>
       </div>
     </section>
-    <div class="recommend">
-      <div class="recommend__inner inner">
-        <div class="section-header">
-          <h2 class="section-header__title">当院の3つのおすすめ</h2>
-        </div>
-        <div class="recommend__items">
-          <div class="recommend__item">
-            <div class="recommend__item-title">
-              <img src="./src/images/top/recommend-1.svg" alt="">
-            </div>
-            <div class="recommend__item-img">
-              <img src="./src/images/top/recommend-img-01.svg" alt="">
-            </div>
-            <div class="recommend__item-text">
-              <p>歯の治療において、小さな違和感は大きなストレスにつながります。<br>
-                私たちは常に快適な歯科医療技術の研究を行っております。</p>
-            </div>
-          </div>
-          <div class="recommend__item">
-            <div class="recommend__item-title">
-              <img src="./src/images/top/recommend-2.svg" alt="">
-            </div>
-            <div class="recommend__item-img">
-              <img src="./src/images/top/recommend-img-02.svg" alt="">
-            </div>
-            <div class="recommend__item-text">
-              <p>「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。</p>
-            </div>
-          </div>
-          <div class="recommend__item">
-            <div class="recommend__item-title">
-              <img src="./src/images/top/recommend-3.svg" alt="">
-            </div>
-            <div class="recommend__item-img">
-              <img src="./src/images/top/recommend-img-03.svg" alt="">
-            </div>
-            <div class="recommend__item-text">
-              <p>朝から夜までお仕事をされている方のために、診療時間を見直しました。<br>
-                <span class="recommend__item-text--red">※駆け込みでも対応可能ですが、事前にご連絡いただけるとスムーズです。</span></p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
     <!-- /.concept -->
     <section class="treatment-guidance">
       <div class="treatment-guidance__inner inner">
@@ -212,24 +161,26 @@
           <h2 class="section-header__title">診療案内</h2>
         </div>
         <div class="treatment-guidance__items">
-          <div class="treatment-guidance__item">
-            <div class="treatment-guidance-img">
-              <img src="./src/images/top/medical_1.jpg" alt="一般治療">
+          <div class="treatment-guidance__flex">
+            <div class="treatment-guidance__item">
+              <div class="treatment-guidance-img">
+                <img src="./src/images/top/medical_1.jpg" alt="一般治療">
+              </div>
+              <div class="treatment-guidance__content">
+                <p class="treatment-guidance__content-title">一般診療</p>
+                <p class="treatment-guidance__content-border"></p>
+                <p class="treatment-guidance__content-lead">虫歯・入れ歯・小児歯科</p>
+              </div>
             </div>
-            <div class="treatment-guidance__content">
-              <p class="treatment-guidance__content-title">一般診療</p>
-              <p class="treatment-guidance__content-border"></p>
-              <p class="treatment-guidance__content-lead">虫歯・入れ歯・小児歯科</p>
-            </div>
-          </div>
-          <div class="treatment-guidance__item">
-            <div class="treatment-guidance-img">
-              <img src="./src/images/top/medical_2.jpg" alt="特殊治療">
-            </div>
-            <div class="treatment-guidance__content">
-              <p class="treatment-guidance__content-title">特殊診療</p>
-              <p class="treatment-guidance__content-border"></p>
-              <p class="treatment-guidance__content-lead">インプラント・ホワイトニング<br>予防歯科・口腔外科・審美歯科</p>
+            <div class="treatment-guidance__item">
+              <div class="treatment-guidance-img">
+                <img src="./src/images/top/medical_2.jpg" alt="特殊治療">
+              </div>
+              <div class="treatment-guidance__content">
+                <p class="treatment-guidance__content-title">特殊診療</p>
+                <p class="treatment-guidance__content-border"></p>
+                <p class="treatment-guidance__content-lead">インプラント・ホワイトニング<br>予防歯科・口腔外科・審美歯科</p>
+              </div>
             </div>
           </div>
             <div class="treatment-guidance__text">
