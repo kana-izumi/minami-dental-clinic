@@ -6,6 +6,11 @@
     background-color: $sub-color2;
     position: relative;
 
+    @include mq(md) {
+        margin-top: rem(140);
+        padding-top: 0;
+    }
+
     &::before {
         content: "";
         position: absolute;
@@ -44,6 +49,8 @@
 .treatment-guidance__flex {
     @include mq(md) {
         display: flex;
+        border: rem(1) solid #44C0D4;
+        box-shadow: 0 3px 6px #00000029;
     }
 }
 

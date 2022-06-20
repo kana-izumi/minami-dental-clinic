@@ -6,19 +6,41 @@
 
 .staff-blog__items {
     margin-top: rem(40);
+
+    @include mq(md) {
+        display: flex;
+        flex-wrap: wrap;
+    }
 }
 
 .staff-blog__item {
-    display: flex;
+    @include mq(sm) {
+        display: flex;
+    }
+
+    @include mq(md) {
+        display: block;
+        width: calc(33.3% - rem(50) / 3);
+
+        &:not(:nth-child(3n + 1)) {
+            margin-left: rem(50);
+        }
+    }
 }
 
+
 .staff-blog__item + .staff-blog__item {
-    margin-top: rem(20);
+    @include mq(sm) {
+        margin-top: rem(20);
+    }
 }
 
 .staff-blog__img {
-    width: 75.9398496%;
+    @include mq(sm) {
+        width: 75.9398496%;
+    }
 }
+
 
 .staff-blog__body {
     margin-left: rem(10);
