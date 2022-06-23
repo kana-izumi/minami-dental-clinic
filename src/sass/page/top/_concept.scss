@@ -13,22 +13,22 @@
     }
 
     &::before {
-        position: absolute;
-        content: "";
-        top: 0;
-        left: 0;
-        width: rem(556);
-        height: rem(307);
-        background: url(/src/images/top/concept-bg.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        z-index: 90;
+        // position: absolute;
+        // content: "";
+        // top: 0;
+        // left: 3%;
+        // width: 100%;
+        // height: rem(307);
+        // background-image: url(/src/images/top/concept-bg.svg);
+        // background-size: contain;
+        // background-repeat: no-repeat;
+        // z-index: 90;
 
-        @include mq(md) {
-            width: rem(1311);
-            height: rem(725);
-            left: rem(416);
-        }
+        // @include mq(md) {
+        //     width: 100%;
+        //     height: rem(725);
+        //     left: 32.5%;
+        // }
     }
 }
 

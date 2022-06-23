@@ -70,10 +70,15 @@
   left: -21px;
 }
 
-.swiper-pagination-horizontal,
+.swiper-pagination-bullets
+.swiper-pagination-horizontal {
+  left: rem(-21);
+}
+
+.swiper-pagination-horizontal
 .swiper-pagination-bullets,
 .swiper-pagination-bullet {
-  margin: 4px;
+  margin: 3px var(--swiper-pagination-bullet-horizontal-gap,4px);
 }
 
 .main-visual__catch {

@@ -13,9 +13,7 @@
 }
 
 .staff-blog__item {
-    @include mq(sm) {
         display: flex;
-    }
 
     @include mq(md) {
         display: inline-block;
@@ -30,9 +28,11 @@
 
 
 .staff-blog__item + .staff-blog__item {
-    @include mq(sm) {
         margin-top: rem(20);
-    }
+
+        @include mq(md) {
+            margin-top: rem(0);
+        }
 }
 
 .staff-blog__img {
