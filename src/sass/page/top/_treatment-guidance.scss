@@ -4,25 +4,30 @@
     margin-top: rem(185);
     padding-top: rem(30);
     background-color: $sub-color2;
-    position: relative;
 
     @include mq(md) {
         margin-top: rem(140);
         padding-top: 0;
     }
+}
+
+.treatment-guidance__deco-top{
+    height: rem(201);
+    width: 100%;
+    position: relative;
 
     &::before {
         content: "";
         position: absolute;
-        top: rem(-58);
+        top: 0;
         left: 0;
-        width: 100%;
         height: rem(85);
-        background: url(/src/images/top/bg-top.svg);
-        background-size: contain;
+        background-image: url(/src/images/top/bg-top.svg);
+        background-size: cover;
         background-repeat: no-repeat;
         z-index: 100;
     }
+}
     &::after {
         content: "";
         position: absolute;
@@ -35,7 +40,6 @@
         background-repeat: no-repeat;
         z-index: 100;
     }
-}
 
 .treatment-guidance__items {
     margin-top: rem(40);

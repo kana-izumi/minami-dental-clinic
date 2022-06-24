@@ -83,23 +83,15 @@
 
 .main-visual__catch {
   position: absolute;
-  bottom: rem(16);
+  bottom: rem(32);
   left: rem(20);
   z-index: 100;
+  max-width: rem(265);
+  width: 100%;
 
-  img {
-    width: rem(265);
+  @include mq(md) {
+    max-width: rem(415);
   }
 }
 
-.main-visual__medical-time {
-  background-color: #fff;
-  box-shadow: 0 3px 6px #00000029;
-  width: rem(335);
-  border-radius: rem(12);
-  overflow: hidden;
-  margin: -10px auto 0;
-  position: absolute;
-  left: rem(20);
-  z-index: 200;
-}
+

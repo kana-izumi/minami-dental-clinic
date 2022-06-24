@@ -1098,35 +1098,57 @@ select::-ms-expand {
 
 .main-visual__catch {
   position: absolute;
-  bottom: 16px;
-  bottom: 1rem;
+  bottom: 32px;
+  bottom: 2rem;
   left: 20px;
   left: 1.25rem;
   z-index: 100;
+  max-width: 265px;
+  max-width: 16.5625rem;
+  width: 100%;
 }
-.main-visual__catch img {
-  width: 265px;
-  width: 16.5625rem;
-}
-
-.main-visual__medical-time {
-  background-color: #fff;
-  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
-          box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
-  width: 335px;
-  width: 20.9375rem;
-  border-radius: 0.75rem;
-  overflow: hidden;
-  margin: -10px auto 0;
-  position: absolute;
-  left: 20px;
-  left: 1.25rem;
-  z-index: 200;
+@media screen and (min-width: 768px) {
+  .main-visual__catch {
+    max-width: 25.9375rem;
+  }
 }
 
-.news {
-  margin-top: 156px;
-  margin-top: 9.75rem;
+.news__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+}
+@media screen and (min-width: 768px) {
+  .news__inner {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.news__info {
+  position: relative;
+  max-width: 540px;
+  max-width: 33.75rem;
+  width: 100%;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .news__info {
+    margin-top: 1.3125rem;
+  }
 }
 
 .news__heading {
@@ -1160,7 +1182,7 @@ select::-ms-expand {
   margin-left: 4rem;
 }
 
-.news__info {
+.news__body {
   margin-top: 7px;
   margin-top: 0.4375rem;
   border-top: 1px solid #393939;
@@ -1202,6 +1224,29 @@ select::-ms-expand {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.news__medical-time {
+  background-color: #fff;
+  -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
+          box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
+  width: 100%;
+  max-width: 335px;
+  max-width: 20.9375rem;
+  border-radius: 0.75rem;
+  overflow: hidden;
+  margin-top: -20px;
+  margin-top: -1.25rem;
+  right: 20px;
+  right: 1.25rem;
+  z-index: 200;
+}
+@media screen and (min-width: 768px) {
+  .news__medical-time {
+    right: 6.25rem;
+    max-width: 29.8125rem;
+    margin-left: 3.9375rem;
+  }
 }
 
 .recommend {
@@ -1289,14 +1334,13 @@ select::-ms-expand {
 .treatment-guidance::before {
   content: "";
   position: absolute;
-  top: -58px;
-  top: -3.625rem;
+  top: 0;
   left: 0;
   width: 100%;
   height: 85px;
   height: 5.3125rem;
-  background: url(/src/images/top/bg-top.svg);
-  background-size: contain;
+  background-image: url(/src/images/top/bg-top.svg);
+  background-size: cover;
   background-repeat: no-repeat;
   z-index: 100;
 }
