@@ -1,15 +1,12 @@
 @use "global" as *;
 
-.concept {
+.about-sub {
     margin-top: rem(60);
     padding-top: rem(110);
     position: relative;
 
     @include mq(md) {
         padding-top: rem(180);
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
     }
 
     &::before {
@@ -32,57 +29,61 @@
     }
 }
 
+.about-sub__inner {
+    position: relative;
+    z-index: 101;
 
+    @include mq(sm) {
+        flex: 0 1 31.7%;
+    }
+}
 
-.concept__heading-lead {
+.about-sub__inner {
+    position: relative;
+    z-index: 101;
+
+    @include mq(sm) {
+        flex: 0 1 31.7%;
+    }
+}
+
+.about-sub__content1 {
+
+    @include mq(md) {
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+}
+
+.about-sub__content2{
+    margin-top: rem(40);
+
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+        margin-top: rem(160);
+    }
+}
+
+.about-sub__heading-lead {
     font-size: rem(11);
     color: $main-color;
 }
 
-.concept__heading-title {
+.about-sub__heading-title {
     font-size: rem(20);
     margin-top: rem(16);
     letter-spacing: 0.16em
 }
 
-.concept__message {
+.about-sub__message {
     margin-top: rem(32);
     font-size: rem(14);
 }
 
-.concept__link {
-    margin-top: rem(40);
-}
 
-.concept__link-btn {
-    display: inline-block;
-    font-size: rem(14);
-    padding: rem(10) rem(40);
-    border: 1px solid $main-color;
-    border-radius: rem(24);
-    background-color: $white;
-    text-align: center;
-    position: relative;
-
-@include mq(md) {
-    text-align: left;
-}
-
-    &::after {
-        content: "";
-        position: absolute;
-        width: rem(12);
-        height: rem(12);
-        top: 50%;
-        right: rem(12);
-        transform: translateY(-50%);
-        background: url(/src/images/top/icon-arrow-blue-btn.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-    }
-}
-
-.concept__img {
+.about-sub__img {
     margin-top: rem(40);
     margin-right: rem(40);
 
@@ -92,6 +93,18 @@
         position: relative;
         z-index: 101;
         overflow: hidden;
-        border-radius: rem(0) rem(20) rem(20) rem(0);
+    }
+}
+
+.about-sub__img--feature {
+    margin-top: rem(40);
+    margin-left: rem(40);
+
+    @include mq(sm) {
+        margin: 0;
+        flex: 0 1 50%;
+        position: relative;
+        z-index: 101;
+        overflow: hidden;
     }
 }

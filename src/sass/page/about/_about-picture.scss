@@ -1,0 +1,27 @@
+@use "global" as *;
+
+.about-picture {
+    margin-top: rem(100);
+
+    @include mq(md) {
+        margin-top: rem(160);
+    }
+}
+
+.about-picture__inner {
+    max-width: rem(1000);
+}
+.about-picture__items {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: rem(160) rem(160);
+    gap: rem(11);
+    margin-top: rem(40);
+
+    @include mq(md) {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: rem(317) rem(317);
+        gap: rem(24);
+        margin-top: rem(60);
+    }
+}
