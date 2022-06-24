@@ -3,7 +3,7 @@
 .treatment-guidance {
     margin-top: rem(185);
     padding-top: rem(30);
-    background-color: $sub-color2;
+
 
     @include mq(md) {
         margin-top: rem(140);
@@ -12,34 +12,46 @@
 }
 
 .treatment-guidance__deco-top{
-    height: rem(201);
+    height: rem(80);
     width: 100%;
     position: relative;
+
+    @include mq(md) {
+        height: rem(201);
+    }
 
     &::before {
         content: "";
         position: absolute;
-        top: 0;
-        left: 0;
-        height: rem(85);
-        background-image: url(/src/images/top/bg-top.svg);
-        background-size: cover;
-        background-repeat: no-repeat;
-        z-index: 100;
-    }
-}
-    &::after {
-        content: "";
-        position: absolute;
-        bottom: rem(-28);
+        bottom: 0;
         left: 0;
         width: 100%;
-        height: rem(30);
-        background: url(/src/images/top/bg-bottom.svg);
+        height: inherit;
+        background-image: url(/src/images/top/bg-top.svg);
         background-size: contain;
         background-repeat: no-repeat;
-        z-index: 100;
     }
+
+        @include mq(md) {
+            background-size: cover;
+        }
+}
+    // &::after {
+    //     content: "";
+    //     position: absolute;
+    //     bottom: rem(-28);
+    //     left: 0;
+    //     width: 100%;
+    //     height: rem(30);
+    //     background: url(/src/images/top/bg-bottom.svg);
+    //     background-size: contain;
+    //     background-repeat: no-repeat;
+    //     z-index: 100;
+    // }
+
+.treatment-guidance__inner {
+    background-color: $sub-color2;
+}
 
 .treatment-guidance__items {
     margin-top: rem(40);

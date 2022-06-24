@@ -1322,8 +1322,6 @@ select::-ms-expand {
   margin-top: 11.5625rem;
   padding-top: 30px;
   padding-top: 1.875rem;
-  background-color: #DFF1FD;
-  position: relative;
 }
 @media screen and (min-width: 768px) {
   .treatment-guidance {
@@ -1331,32 +1329,37 @@ select::-ms-expand {
     padding-top: 0;
   }
 }
-.treatment-guidance::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
+
+.treatment-guidance__deco-top {
+  height: 80px;
+  height: 5rem;
   width: 100%;
-  height: 85px;
-  height: 5.3125rem;
-  background-image: url(/src/images/top/bg-top.svg);
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 100;
+  position: relative;
 }
-.treatment-guidance::after {
+@media screen and (min-width: 768px) {
+  .treatment-guidance__deco-top {
+    height: 12.5625rem;
+  }
+}
+.treatment-guidance__deco-top::before {
   content: "";
   position: absolute;
-  bottom: -28px;
-  bottom: -1.75rem;
+  bottom: 0;
   left: 0;
   width: 100%;
-  height: 30px;
-  height: 1.875rem;
-  background: url(/src/images/top/bg-bottom.svg);
+  height: inherit;
+  background-image: url(/src/images/top/bg-top.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .treatment-guidance__deco-top {
+    background-size: cover;
+  }
+}
+
+.treatment-guidance__inner {
+  background-color: #DFF1FD;
 }
 
 .treatment-guidance__items {
