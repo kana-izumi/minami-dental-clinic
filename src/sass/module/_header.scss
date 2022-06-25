@@ -17,10 +17,8 @@
 
 .header__logo {
   width: rem(270);
-
-  @include mq(sm) {
-    padding-top: rem(15);
-  }
+  padding-top: rem(15);
+  padding-left: rem(15);
 
   &.is-active {
     display: none;

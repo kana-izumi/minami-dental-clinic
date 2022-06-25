@@ -173,6 +173,39 @@ select::-ms-expand {
   display: none;
 }
 
+.bread__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+@media screen and (min-width: 768px) {
+  .bread__list {
+    padding-left: 1.875rem;
+  }
+}
+
+.bread__item a {
+  font-size: 12px;
+  font-size: 0.75rem; /* リンクの文字サイズを調整 */
+}
+
+.bread__item::after {
+  content: ">";
+  margin-left: 5px;
+  margin-left: 0.3125rem;
+  margin-right: 5px;
+  margin-right: 0.3125rem;
+  color: #393939;
+}
+
+.bread__item:last-child::after {
+  content: ""; /* 最後のliの後ろには区切り文字を表示しない */
+}
+
+.bread__item-grey {
+  color: #C2C2C2;
+}
+
 .drawer {
   position: fixed;
   top: 0;
@@ -671,11 +704,10 @@ select::-ms-expand {
 .header__logo {
   width: 270px;
   width: 16.875rem;
-}
-@media screen and (min-width: 600px) {
-  .header__logo {
-    padding-top: 0.9375rem;
-  }
+  padding-top: 15px;
+  padding-top: 0.9375rem;
+  padding-left: 15px;
+  padding-left: 0.9375rem;
 }
 .header__logo.is-active {
   display: none;
@@ -873,6 +905,17 @@ select::-ms-expand {
   margin-top: 1.25rem;
 }
 
+.mv-sub__img {
+  max-width: 335px;
+  max-width: 20.9375rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .mv-sub__img {
+    max-width: 72.5rem;
+  }
+}
+
 .mv-sub__heading {
   color: #fff;
   position: absolute;
@@ -1048,6 +1091,158 @@ select::-ms-expand {
     position: relative;
     z-index: 101;
     overflow: hidden;
+  }
+}
+
+.medical-content__deco-top {
+  height: 85px;
+  height: 5.3125rem;
+  width: 100%;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__deco-top {
+    height: 12.5625rem;
+  }
+}
+.medical-content__deco-top::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: inherit;
+  background-image: url(/src/images/top/bg-top.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.medical-content__bg {
+  background-color: #DFF1FD;
+  padding-top: 30px;
+  padding-top: 1.875rem;
+}
+
+.medical-content__items {
+  padding: 24px 20px;
+  padding: 1.5rem 1.25rem;
+  background-color: #fff;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  border-radius: 1.25rem;
+}
+
+.medical-content__heading {
+  border-bottom: 1px solid #C2C2C2;
+  border-bottom: 0.0625rem solid #C2C2C2;
+  padding-bottom: 20px;
+  padding-bottom: 1.25rem;
+}
+
+.medical-content__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+
+.medical-content__lead {
+  font-size: 14px;
+  font-size: 0.875rem;
+  color: #1391E6;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.medical-content__body {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.714;
+  margin-top: 20px;
+  margin-top: 1.25rem;
+}
+
+.medical-content__img {
+  margin-top: 20px;
+  margin-top: 1.25rem;
+  width: 100%;
+  max-width: 295px;
+  max-width: 18.4375rem;
+}
+
+.medical-menu {
+  margin-top: 60px;
+  margin-top: 3.75rem;
+}
+
+.medical-menu__inner + .medical-menu__inner {
+  margin-top: 80px;
+  margin-top: 5rem;
+}
+
+.medical-menu__heading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.medical-menu__category {
+  padding: 8px 12px;
+  padding: 0.5rem 0.75rem;
+  background-color: #1391E6;
+  color: #fff;
+  margin-left: 24px;
+  margin-left: 1.5rem;
+  border-radius: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  font-size: 14px;
+  font-size: 0.875rem;
+}
+
+.medical-menu__category--red {
+  background-color: #EE5A6D;
+}
+
+.medical-menu__list {
+  margin-top: 32px;
+  margin-top: 2rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-menu__list {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 0;
+  }
+}
+
+.medical-menu_item {
+  border: 1px solid #1391E6;
+  border: 0.0625rem solid #1391E6;
+  padding: 17px 0;
+  padding: 1.0625rem 0;
+  color: #1391E6;
+  text-align: center;
+  background-color: #fff;
+  border-radius: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-menu_item {
+    padding: 1.1875rem 2rem;
+  }
+}
+
+.medical-menu_item + .medical-menu_item {
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-menu_item + .medical-menu_item {
+    margin-top: 0;
+    margin-left: 1rem;
   }
 }
 

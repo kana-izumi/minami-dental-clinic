@@ -10,6 +10,12 @@
 }
 
 .mv-sub__img {
+    max-width: rem(335);
+    width: 100%;
+
+    @include mq(md) {
+        max-width: rem(1160);
+    }
 }
 
 .mv-sub__heading {

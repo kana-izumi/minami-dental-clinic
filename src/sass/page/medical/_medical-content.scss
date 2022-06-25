@@ -1,0 +1,65 @@
+@use "global" as *;
+
+.medical-content {
+}
+
+.medical-content__deco-top {
+    height: rem(85);
+    width: 100%;
+    position: relative;
+
+    @include mq(md) {
+        height: rem(201);
+    }
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: inherit;
+        background-image: url(/src/images/top/bg-top.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
+
+.medical-content__bg {
+    background-color: $sub-color2;
+    padding-top: rem(30);
+}
+
+.medical-content__items {
+    padding: rem(24) rem(20);
+    background-color: $white;
+    margin-top: rem(40);
+    border-radius: rem(20);
+}
+
+.medical-content__heading {
+    border-bottom: rem(1) solid #C2C2C2;
+    padding-bottom: rem(20);
+}
+.medical-content__title {
+    font-size: rem(20);
+}
+
+.medical-content__lead {
+    font-size: rem(14);
+    color: $main-color;
+    margin-top: rem(20);
+}
+
+.medical-content__body {
+    font-size: rem(14);
+    line-height: 1.714;
+    margin-top: rem(20);
+}
+
+.medical-content__img {
+    margin-top: rem(20);
+    width: 100%;
+    max-width: rem(295);
+}

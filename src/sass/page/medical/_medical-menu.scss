@@ -1,0 +1,60 @@
+@use "global" as *;
+
+.medical-menu {
+    margin-top: rem(60);
+}
+
+.medical-menu__inner + .medical-menu__inner {
+    margin-top: rem(80);
+}
+
+.medical-menu__heading {
+    display: flex;
+    align-items: center;
+}
+
+.medical-menu__category {
+    padding: rem(8) rem(12);
+    background-color: $main-color;
+    color: $white;
+    margin-left: rem(24);
+    border-radius: rem(24);
+    font-weight: $bold;
+    letter-spacing: 0.12em;
+    font-size: rem(14);
+}
+
+.medical-menu__category--red {
+    background-color: #EE5A6D;
+}
+
+.medical-menu__list {
+        margin-top: rem(32);
+
+    @include mq(md) {
+        display: flex;
+        margin-top: 0;
+    }
+}
+
+.medical-menu_item {
+    border: rem(1) solid $main-color;
+    padding: rem(17) 0;
+    color: $main-color;
+    text-align: center;
+    background-color: $white;
+    border-radius: rem(12);
+
+    @include mq(md) {
+        padding: rem(19) rem(32 );
+    }
+}
+
+.medical-menu_item + .medical-menu_item {
+    margin-top: rem(16);
+
+    @include mq(md) {
+        margin-top: 0;
+        margin-left: rem(16);
+    }
+}
