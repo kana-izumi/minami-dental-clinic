@@ -4,7 +4,6 @@
     margin-top: rem(185);
     padding-top: rem(30);
 
-
     @include mq(md) {
         margin-top: rem(140);
         padding-top: 0;
@@ -49,7 +48,32 @@
     //     z-index: 100;
     // }
 
+.treatment-guidance-bg {
+    background-color: $sub-color2;
+    padding-bottom: rem(94);
+    position: relative;
 
+    &::before{
+        position: absolute;
+        content: url(/src/images/top/bottom-deco-1.svg);
+        bottom: 0;
+        left: rem(12);
+        transform: translateY(-50%);
+        width: rem(25);
+        height: rem(25);
+        z-index: 101;
+    }
+    &::after{
+        position: absolute;
+        content: url(/src/images/top/bottom-deco-2.svg);
+        bottom: 0;
+        right: rem(8);
+        transform: translateY(-50%);
+        width: rem(53);
+        height: rem(58);
+        z-index: 101;
+    }
+}
 
 .treatment-guidance__items {
     margin-top: rem(40);
@@ -137,29 +161,10 @@
     color: red;
 }
 
-.treatment-guidance__bg {
+.treatment-guidance__deco-bottom {
     height: rem(58);
     background-color: $sub-color2;
     position: relative;
 
-    &::before{
-        position: absolute;
-        content: url(/src/images/top/bottom-deco-1.svg);
-        top: 50%;
-        left: rem(12);
-        transform: translateY(-50%);
-        width: rem(25);
-        height: rem(25);
-        z-index: 101;
-    }
-    &::after{
-        position: absolute;
-        content: url(/src/images/top/bottom-deco-2.svg);
-        top: 50%;
-        right: rem(8);
-        transform: translateY(-50%);
-        width: rem(53);
-        height: rem(58);
-        z-index: 101;
-    }
+
 }

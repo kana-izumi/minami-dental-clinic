@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.concept {
+.about {
     margin-top: rem(60);
     padding-top: rem(110);
     position: relative;
@@ -32,29 +32,32 @@
     }
 }
 
+.about__inner {
+    flex: 0 1 35%;
+}
 
-
-.concept__heading-lead {
+.about__heading-lead {
     font-size: rem(11);
     color: $main-color;
 }
 
-.concept__heading-title {
+.about__heading-title {
     font-size: rem(20);
     margin-top: rem(16);
     letter-spacing: 0.16em
 }
 
-.concept__message {
+.about__message {
     margin-top: rem(32);
     font-size: rem(14);
+    line-height: 1.7;
 }
 
-.concept__link {
+.about__link {
     margin-top: rem(40);
 }
 
-.concept__link-btn {
+.about__link-btn {
     display: inline-block;
     font-size: rem(14);
     padding: rem(10) rem(40);
@@ -82,16 +85,20 @@
     }
 }
 
-.concept__img {
+.about__img {
     margin-top: rem(40);
     margin-right: rem(40);
 
     @include mq(sm) {
         margin: 0;
-        flex: 0 1 50%;
+        flex: 0 0 50%;
         position: relative;
         z-index: 101;
         overflow: hidden;
         border-radius: rem(0) rem(20) rem(20) rem(0);
+    }
+
+    @include mq(md) {
+
     }
 }
