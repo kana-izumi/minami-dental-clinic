@@ -379,14 +379,19 @@ select::-ms-expand {
 }
 
 .footer-info {
-  text-align: center;
-}
-
-.footer-info__body {
   padding: 32px 10px 20px 10px;
   padding: 2rem 0.625rem 1.25rem 0.625rem;
   background-color: #fff;
   border-radius: 0.5rem;
+  text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .footer-info {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding: 2.5rem 3.125rem;
+  }
 }
 
 .footer-info__logo {
@@ -523,7 +528,6 @@ select::-ms-expand {
   width: 100%;
   padding-top: 100%; /* = height ÷ width × 100 */
 }
-
 .footer-info-map iframe {
   position: absolute;
   top: 0;
@@ -1094,6 +1098,16 @@ select::-ms-expand {
   }
 }
 
+.medical-content {
+  margin-top: 100px;
+  margin-top: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-content {
+    margin-top: 10rem;
+  }
+}
+
 .medical-content__deco-top {
   height: 85px;
   height: 5.3125rem;
@@ -1148,13 +1162,76 @@ select::-ms-expand {
   z-index: 101;
 }
 
-.medical-content__items {
+.medical-content__items1 {
   padding: 24px 20px;
   padding: 1.5rem 1.25rem;
   background-color: #fff;
   margin-top: 40px;
   margin-top: 2.5rem;
   border-radius: 1.25rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__items1 {
+    padding: 3.75rem 3.75rem;
+  }
+}
+.medical-content__items1::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  right: 1.25rem;
+  width: 80px;
+  width: 5rem;
+  height: 60px;
+  height: 3.75rem;
+  background-image: url(/src/images/medical/tag-01.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__items1::after {
+    width: 6.25rem;
+    height: 5rem;
+  }
+}
+
+.medical-content__items2 {
+  padding: 24px 20px;
+  padding: 1.5rem 1.25rem;
+  background-color: #fff;
+  margin-top: 40px;
+  margin-top: 2.5rem;
+  border-radius: 1.25rem;
+  position: relative;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__items2 {
+    padding: 3.75rem 3.75rem;
+  }
+}
+.medical-content__items2::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 20px;
+  right: 1.25rem;
+  width: 80px;
+  width: 5rem;
+  height: 60px;
+  height: 3.75rem;
+  background-image: url(/src/images/medical/tag-02.svg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: contain;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__items2::after {
+    width: 6.25rem;
+    height: 5rem;
+  }
 }
 
 .medical-content__heading {
@@ -1163,6 +1240,16 @@ select::-ms-expand {
   padding-bottom: 20px;
   padding-bottom: 1.25rem;
 }
+@media screen and (min-width: 768px) {
+  .medical-content__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .medical-content__title {
   font-size: 20px;
@@ -1170,19 +1257,43 @@ select::-ms-expand {
 }
 
 .medical-content__lead {
+  display: inline-block;
   font-size: 14px;
   font-size: 0.875rem;
   color: #1391E6;
   margin-top: 20px;
   margin-top: 1.25rem;
 }
+@media screen and (min-width: 768px) {
+  .medical-content__lead {
+    margin-left: 1.25rem;
+    margin-top: 0;
+  }
+}
 
-.medical-content__body {
+@media screen and (min-width: 768px) {
+  .medical-content__body {
+    margin-top: 2.5rem;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+
+.medical-content__text {
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.714;
   margin-top: 20px;
   margin-top: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__text {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 1 50%;
+            flex: 0 1 50%;
+    margin-top: 0;
+  }
 }
 
 .medical-content__img {
@@ -1191,6 +1302,16 @@ select::-ms-expand {
   width: 100%;
   max-width: 295px;
   max-width: 18.4375rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__img {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 50%;
+            flex: 0 0 50%;
+    max-width: 100%;
+    margin-left: 2.5rem;
+    margin-top: 0;
+  }
 }
 
 .medical-content__deco-bottom {
@@ -1255,7 +1376,6 @@ select::-ms-expand {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin-top: 0;
   }
 }
 
