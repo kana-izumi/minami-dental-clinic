@@ -15,14 +15,18 @@
     &::before {
         content: "";
         position: absolute;
-        top: 0;
+        top: rem(13);
         left: 0;
         width: 100%;
-        height: inherit;
+        height: 100%;
         background-image: url(/src/images/top/bg-top.svg);
-        background-size: cover;
+        background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+
+        @include mq(md) {
+            background-size: cover;
+        }
     }
 }
 

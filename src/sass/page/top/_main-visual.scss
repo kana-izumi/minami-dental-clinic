@@ -70,14 +70,16 @@
   left: -21px;
 }
 
-.swiper-pagination-bullets
-.swiper-pagination-horizontal {
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
   left: rem(-21);
 }
 
-.swiper-pagination-horizontal
-.swiper-pagination-bullets,
-.swiper-pagination-bullet {
+
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 3px var(--swiper-pagination-bullet-horizontal-gap,4px);
 }
 

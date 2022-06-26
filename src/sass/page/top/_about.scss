@@ -13,27 +13,30 @@
     }
 
     &::before {
-        // position: absolute;
-        // content: "";
-        // top: 0;
-        // left: 3%;
-        // width: 100%;
-        // height: rem(307);
-        // background-image: url(/src/images/top/concept-bg.svg);
-        // background-size: contain;
-        // background-repeat: no-repeat;
-        // z-index: 90;
+        position: absolute;
+        content: "";
+        top: 0;
+        left: 3%;
+        width: 100%;
+        height:100vw;
+        background-image: url(/src/images/top/concept-bg.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 90;
 
         // @include mq(md) {
         //     width: 100%;
-        //     height: rem(725);
+        //     height: rem(705);
         //     left: 32.5%;
+        //     background-position: right;
         // }
     }
 }
 
 .about__inner {
     flex: 0 1 35%;
+    position: relative;
+    z-index: 100;
 }
 
 .about__heading-lead {

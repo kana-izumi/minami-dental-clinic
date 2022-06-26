@@ -1108,14 +1108,20 @@ select::-ms-expand {
 .medical-content__deco-top::before {
   content: "";
   position: absolute;
-  top: 0;
+  top: 13px;
+  top: 0.8125rem;
   left: 0;
   width: 100%;
-  height: inherit;
+  height: 100%;
   background-image: url(/src/images/top/bg-top.svg);
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__deco-top::before {
+    background-size: cover;
+  }
 }
 
 .medical-content__bg {
@@ -1268,10 +1274,25 @@ select::-ms-expand {
             align-items: center;
   }
 }
+.about::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 3%;
+  width: 100%;
+  height: 100vw;
+  background-image: url(/src/images/top/concept-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 90;
+}
+
 .about__inner {
   -webkit-box-flex: 0;
       -ms-flex: 0 1 35%;
           flex: 0 1 35%;
+  position: relative;
+  z-index: 100;
 }
 
 .about__heading-lead {
@@ -1432,13 +1453,15 @@ select::-ms-expand {
   left: -21px;
 }
 
-.swiper-pagination-bullets .swiper-pagination-horizontal {
+.swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
   left: -21px;
   left: -1.3125rem;
 }
 
-.swiper-pagination-horizontal .swiper-pagination-bullets,
-.swiper-pagination-bullet {
+.swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 3px 4px;
 }
 
