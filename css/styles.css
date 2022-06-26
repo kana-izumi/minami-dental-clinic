@@ -1098,28 +1098,14 @@ select::-ms-expand {
   height: 85px;
   height: 5.3125rem;
   width: 100%;
-  position: relative;
+  background-image: url(/src/images/top/bg-top.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 @media screen and (min-width: 768px) {
   .medical-content__deco-top {
     height: 12.5625rem;
-  }
-}
-.medical-content__deco-top::before {
-  content: "";
-  position: absolute;
-  top: 13px;
-  top: 0.8125rem;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-image: url(/src/images/top/bg-top.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
-}
-@media screen and (min-width: 768px) {
-  .medical-content__deco-top::before {
     background-size: cover;
   }
 }
@@ -1128,6 +1114,38 @@ select::-ms-expand {
   background-color: #DFF1FD;
   padding-top: 30px;
   padding-top: 1.875rem;
+  padding-bottom: 81px;
+  padding-bottom: 5.0625rem;
+  position: relative;
+}
+.medical-content__bg::before {
+  position: absolute;
+  content: url(/src/images/top/bottom-deco-1.svg);
+  bottom: 0;
+  left: 12px;
+  left: 0.75rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 25px;
+  width: 1.5625rem;
+  height: 25px;
+  height: 1.5625rem;
+  z-index: 101;
+}
+.medical-content__bg::after {
+  position: absolute;
+  content: url(/src/images/top/bottom-deco-2.svg);
+  bottom: -24px;
+  bottom: -1.5rem;
+  right: 8px;
+  right: 0.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  width: 53px;
+  width: 3.3125rem;
+  height: 58px;
+  height: 3.625rem;
+  z-index: 101;
 }
 
 .medical-content__items {
@@ -1173,6 +1191,22 @@ select::-ms-expand {
   width: 100%;
   max-width: 295px;
   max-width: 18.4375rem;
+}
+
+.medical-content__deco-bottom {
+  background-image: url(/src/images/common/bg-bottom.png);
+  width: 100%;
+  height: 28px;
+  height: 1.75rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__deco-bottom {
+    background-size: cover;
+    height: 6.0625rem;
+  }
 }
 
 .medical-menu {
@@ -1700,35 +1734,25 @@ select::-ms-expand {
 }
 
 .treatment-guidance__deco-top {
-  height: 80px;
-  height: 5rem;
+  height: 85px;
+  height: 5.3125rem;
   width: 100%;
-  position: relative;
+  background-image: url(/src/images/top/bg-top.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center bottom;
 }
 @media screen and (min-width: 768px) {
   .treatment-guidance__deco-top {
     height: 12.5625rem;
-  }
-}
-.treatment-guidance__deco-top::before {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: inherit;
-  background-image: url(/src/images/top/bg-top.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-@media screen and (min-width: 768px) {
-  .treatment-guidance__deco-top {
     background-size: cover;
   }
 }
 
 .treatment-guidance-bg {
   background-color: #DFF1FD;
+  padding-top: 30px;
+  padding-top: 1.875rem;
   padding-bottom: 94px;
   padding-bottom: 5.875rem;
   position: relative;
@@ -1750,7 +1774,8 @@ select::-ms-expand {
 .treatment-guidance-bg::after {
   position: absolute;
   content: url(/src/images/top/bottom-deco-2.svg);
-  bottom: 0;
+  bottom: -24px;
+  bottom: -1.5rem;
   right: 8px;
   right: 0.5rem;
   -webkit-transform: translateY(-50%);
@@ -1868,9 +1893,18 @@ select::-ms-expand {
 }
 
 .treatment-guidance__deco-bottom {
-  height: 58px;
-  height: 3.625rem;
-  background-color: #DFF1FD;
-  position: relative;
+  background-image: url(/src/images/common/bg-bottom.png);
+  width: 100%;
+  height: 28px;
+  height: 1.75rem;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .treatment-guidance__deco-bottom {
+    background-size: cover;
+    height: 6.0625rem;
+  }
 }
 /*# sourceMappingURL=styles.css.map */

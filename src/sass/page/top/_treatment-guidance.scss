@@ -11,45 +11,22 @@
 }
 
 .treatment-guidance__deco-top{
-    height: rem(80);
+    height: rem(85);
     width: 100%;
-    position: relative;
+    background-image: url(/src/images/top/bg-top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 
     @include mq(md) {
         height: rem(201);
+        background-size: cover;
     }
-
-    &::before {
-        content: "";
-        position: absolute;
-        bottom: 0;
-        left: 0;
-        width: 100%;
-        height: inherit;
-        background-image: url(/src/images/top/bg-top.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-    }
-
-        @include mq(md) {
-            background-size: cover;
-        }
 }
-    // &::after {
-    //     content: "";
-    //     position: absolute;
-    //     bottom: rem(-28);
-    //     left: 0;
-    //     width: 100%;
-    //     height: rem(30);
-    //     background: url(/src/images/top/bg-bottom.svg);
-    //     background-size: contain;
-    //     background-repeat: no-repeat;
-    //     z-index: 100;
-    // }
 
 .treatment-guidance-bg {
     background-color: $sub-color2;
+    padding-top: rem(30);
     padding-bottom: rem(94);
     position: relative;
 
@@ -66,7 +43,7 @@
     &::after{
         position: absolute;
         content: url(/src/images/top/bottom-deco-2.svg);
-        bottom: 0;
+        bottom: rem(-24);
         right: rem(8);
         transform: translateY(-50%);
         width: rem(53);
@@ -162,7 +139,15 @@
 }
 
 .treatment-guidance__deco-bottom {
-    height: rem(58);
-    background-color: $sub-color2;
-    position: relative;
+    background-image: url(/src/images/common/bg-bottom.png);
+    width: 100%;
+    height: rem(28);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include mq(md) {
+        background-size: cover;
+        height: rem(97);
+    }
 }

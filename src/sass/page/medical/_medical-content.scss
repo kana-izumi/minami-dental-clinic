@@ -6,33 +6,43 @@
 .medical-content__deco-top {
     height: rem(85);
     width: 100%;
-    position: relative;
+    background-image: url(/src/images/top/bg-top.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
 
     @include mq(md) {
         height: rem(201);
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        top: rem(13);
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background-image: url(/src/images/top/bg-top.svg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
-
-        @include mq(md) {
-            background-size: cover;
-        }
+        background-size: cover;
     }
 }
 
 .medical-content__bg {
     background-color: $sub-color2;
     padding-top: rem(30);
+    padding-bottom: rem(81);
+    position: relative;
+
+    &::before{
+        position: absolute;
+        content: url(/src/images/top/bottom-deco-1.svg);
+        bottom: 0;
+        left: rem(12);
+        transform: translateY(-50%);
+        width: rem(25);
+        height: rem(25);
+        z-index: 101;
+    }
+    &::after{
+        position: absolute;
+        content: url(/src/images/top/bottom-deco-2.svg);
+        bottom: rem(-24);
+        right: rem(8);
+        transform: translateY(-50%);
+        width: rem(53);
+        height: rem(58);
+        z-index: 101;
+    }
 }
 
 .medical-content__items {
@@ -66,4 +76,18 @@
     margin-top: rem(20);
     width: 100%;
     max-width: rem(295);
+}
+
+.medical-content__deco-bottom {
+    background-image: url(/src/images/common/bg-bottom.png);
+    width: 100%;
+    height: rem(28);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include mq(md) {
+        background-size: cover;
+        height: rem(97);
+    }
 }
