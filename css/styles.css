@@ -395,9 +395,16 @@ select::-ms-expand {
 }
 
 .footer-info__logo {
-  width: 311px;
-  width: 19.4375rem;
+  width: 100%;
+  max-width: 311px;
+  max-width: 19.4375rem;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .footer-info__logo {
+    width: 100%;
+    max-width: ren(400);
+  }
 }
 
 .footer-info__address {
@@ -446,6 +453,13 @@ select::-ms-expand {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (min-width: 768px) {
+  .footer-info__contact {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .footer-info__contact-web {
   display: inline-block;
@@ -491,6 +505,11 @@ select::-ms-expand {
   font-size: 14px;
   font-size: 0.875rem;
 }
+@media screen and (min-width: 768px) {
+  .footer-info__contact-mail {
+    margin-left: 1.25rem;
+  }
+}
 .footer-info__contact-mail::before {
   position: absolute;
   content: "";
@@ -528,6 +547,13 @@ select::-ms-expand {
   width: 100%;
   padding-top: 100%; /* = height ÷ width × 100 */
 }
+@media screen and (min-width: 768px) {
+  .footer-info-map {
+    padding-top: 50%;
+    margin-left: 2.5rem;
+  }
+}
+
 .footer-info-map iframe {
   position: absolute;
   top: 0;
@@ -540,10 +566,26 @@ select::-ms-expand {
   padding: 60px 0 60px;
   padding: 3.75rem 0 3.75rem;
 }
+@media screen and (min-width: 768px) {
+  .footer-nav {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 
 .footer-nav__item:not(:first-child) {
   margin-top: 40px;
   margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .footer-nav__item:not(:first-child) {
+    margin: 0;
+    margin-left: 2.5rem;
+  }
 }
 
 .footer-nav__item-list li {

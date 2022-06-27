@@ -2,12 +2,22 @@
 
 .footer-nav {
     padding: rem(60) 0 rem(60);
+
+    @include mq(md) {
+        display: flex;
+        justify-content: center;
+    }
 }
 
 .footer-nav__item {
 
     &:not(:first-child) {
         margin-top: rem(40);
+
+        @include mq(md) {
+            margin: 0;
+            margin-left: rem(40);
+        }
     }
 }
 

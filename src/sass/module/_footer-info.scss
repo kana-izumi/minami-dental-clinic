@@ -13,11 +13,18 @@
 }
 
 .footer-info__body {
+
 }
 
 .footer-info__logo {
-    width: rem(311);
+    width: 100%;
+    max-width: rem(311);
     margin: 0 auto;
+
+    @include mq(md) {
+        width: 100%;
+        max-width: ren(400);
+    }
 }
 
 .footer-info__address {
@@ -53,6 +60,10 @@
     margin-top: rem(20);
     display: flex;
     justify-content: space-between;
+
+    @include mq(md) {
+        justify-content: center;
+    }
 }
 
 .footer-info__contact-web {
@@ -91,6 +102,10 @@
     border: rem(1) solid $main-color;
     font-size: rem(14);
 
+    @include mq(md) {
+        margin-left: rem(20);
+    }
+
     &::before {
         position: absolute;
         content: "";
@@ -122,6 +137,8 @@
     padding-top: 100%; /* = height ÷ width × 100 */
 
     @include mq(md) {
+        padding-top: 50%;
+        margin-left: rem(40);
     }
 }
 
