@@ -1,0 +1,91 @@
+@use "global" as *;
+
+.greeting-boss {
+    margin-top: rem(60);
+}
+
+.greeting-boss__inner {
+
+}
+
+.greeting-boss__content {
+
+    @include mq(md) {
+        display: flex;
+        margin-top: rem(60);
+    }
+}
+
+.greeting-boss__message {
+    flex: 0 0 50%;
+}
+.greeting-boss__message-title {
+    font-size: rem(20);
+    line-height: 1.6;
+    font-weight: bold;
+    margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: 0;
+    }
+}
+
+.greeting-boss__message-text {
+    font-size: rem(14);
+    line-height: 1.7;
+    margin-top: rem(32);
+}
+
+.greeting-boss__messageーauthor {
+    font-size: rem(14);
+    line-height: 1.7;
+    margin-top: rem(40);
+    text-align: right;
+}
+
+.greeting-boss__img--sp {
+    margin-top: rem(40);
+    background-image: url(/src/images/staff/staff1.jpg);
+    background-size: contain;
+    background-position: center center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: rem(446);
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.greeting-boss__career {
+    margin-top: rem(40);
+}
+
+.greeting-boss__career-list dt{
+    border-bottom: rem(1) solid $black;
+    padding-bottom: rem(8);
+}
+
+.greeting-boss__career-list + .greeting-boss__career-list {
+    margin-top: rem(40);
+}
+
+.greeting-boss__career-list dd {
+    margin-top: rem(16);
+}
+
+.greeting-boss__img--sp {
+
+}
+
+.greeting-boss__img--pc {
+
+    @include mq(md) {
+        background-image: url(/src/images/staff/staff1.jpg);
+        background-size: contain;
+        background-position: top center;
+        background-repeat: no-repeat;
+        width: 100%;
+        margin-left: rem(80);
+    }
+}
