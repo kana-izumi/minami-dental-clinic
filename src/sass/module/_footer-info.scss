@@ -23,7 +23,7 @@
 
     @include mq(md) {
         width: 100%;
-        max-width: ren(400);
+        max-width: rem(400);
     }
 }
 

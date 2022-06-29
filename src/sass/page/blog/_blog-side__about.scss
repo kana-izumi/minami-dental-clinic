@@ -1,0 +1,62 @@
+@use "global" as *;
+
+
+.blog-side__about-title {
+    font-size: rem(16);
+    padding-left: rem(34);
+    padding-bottom: rem(8);
+    border-bottom: rem(1) solid #888888;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        background-image: url(/src/images/blog/sidebar-icon_1.png);
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;
+        width: rem(24);
+        height: rem(24);
+        top: 40%;
+        left: 0;
+        transform: translateY(-40%);
+    }
+}
+
+.blog-side__about-img {
+    margin-top: rem(20);
+}
+
+.blog-side__about-text {
+    margin-top: rem(20);
+}
+
+.blog-side__about-text p {
+    font-size: rem(14);
+    line-height: 1.714;
+
+    &:not(:first-child) {
+        margin-top: rem(14);
+    }
+}
+
+.blog-side__about-link {
+    display: inline-block;
+    padding-right: rem(18);
+    font-size: rem(14);
+    color: $main-color;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        background-image: url(/src/images/blog/arrow.png);
+        background-position: center center;
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: rem(18);
+        height: rem(18);
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
