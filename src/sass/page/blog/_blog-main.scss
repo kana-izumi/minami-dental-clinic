@@ -3,6 +3,11 @@
 
 .blog-main {
     margin-top: rem(52);
+
+    @include mq(md) {
+        width: 69.356%;
+        margin-right: rem(30);
+    }
 }
 
 .blog-main__items {

@@ -1,14 +1,11 @@
 @use "global" as *;
 
-.blog-side__about {
-    margin-top: rem(100);
 
-    @include mq(md) {
-        margin-top: rem(80);
-    }
+.blog-side__category {
+    margin-top: rem(60);
 }
 
-.blog-side__about-title {
+.blog-side__category-title {
     font-size: rem(16);
     padding-left: rem(34);
     padding-bottom: rem(8);
@@ -18,7 +15,7 @@
     &::before {
         content: "";
         position: absolute;
-        background-image: url(/src/images/blog/sidebar-icon_1.png);
+        background-image: url(/src/images/blog/sidebar-icon_3.png);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -30,40 +27,30 @@
     }
 }
 
-.blog-side__about-img {
+.blog-side__category-items {
     margin-top: rem(20);
+    margin-left: rem(20);
 }
 
-.blog-side__about-text {
-    margin-top: rem(20);
-}
-
-.blog-side__about-text p {
-    font-size: rem(14);
-    line-height: 1.714;
-
-    &:not(:first-child) {
-        margin-top: rem(14);
-    }
-}
-
-.blog-side__about-link {
-    display: inline-block;
-    padding-right: rem(18);
-    font-size: rem(14);
-    color: $main-color;
+.blog-side__category-item {
+    padding-left: rem(12);
     position: relative;
 
-    &::after {
+    &:not(:first-child) {
+        margin-top: rem(20);
+    }
+
+    &::before {
         content: "";
         position: absolute;
-        background-image: url(/src/images/blog/arrow.png);
+        background-image: url(/src/images/blog/icon-arrow-blue.png);
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
-        width: rem(18);
-        height: rem(18);
+        width: rem(6);
+        height: rem(12);
         top: 50%;
+        left: 0;
         transform: translateY(-50%);
     }
 }
