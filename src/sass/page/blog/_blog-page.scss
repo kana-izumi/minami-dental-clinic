@@ -1,0 +1,67 @@
+@use "global" as *;
+
+.blog-page__title1 {
+    font-size: rem(20);
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
+}
+
+.blog-page__info {
+    display: flex;
+    margin-top: rem(20);
+    align-items: center;
+}
+
+.blog-page__date {
+    color: $main-color;
+}
+
+.blog-page_category {
+    margin-left: rem(32);
+    color: $white;
+    background-color: $main-color;
+    padding: rem(6) rem(12);
+    border-radius: rem(12);
+    font-size: rem(11);
+}
+
+.blog-page__content1 {
+    margin-top: rem(60);
+}
+
+.blog-page__text1 {
+    font-size: rem(14);
+}
+
+.blog-page__text1 a {
+    text-decoration: underline;
+    color: $main-color
+}
+
+.blog-page__content2 {
+    margin-top: rem(60);
+}
+
+.blog-page__title2 {
+    font-size: rem(18);
+    color: $main-color;
+
+    @include mq(md) {
+        font-size: rem(24);
+    }
+}
+
+.blog-page__content3 {
+
+}
+
+.blog-page__title3 {
+    font-size: rem(16);
+    color: $main-color;
+
+    @include mq(md) {
+        font-size: rem(20);
+    }
+}
