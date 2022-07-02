@@ -64,6 +64,7 @@
 .blog-main__pagination {
     display: flex;
     align-items: center;
+    justify-content: center;
 }
 
 .blog-main__pagination li {
@@ -91,6 +92,7 @@
 
     @include mq(md) {
         font-size: rem(14);
+        width: rem(82);
     }
 
     &::before {
@@ -121,7 +123,7 @@
     position: relative;
     width: rem(70);
     height: rem(30);
-    padding-right: rem(36);
+    padding-right: rem(25);
     padding-left: rem(7);
     padding-top: rem(7);
     font-size: rem(11);

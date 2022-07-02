@@ -1107,6 +1107,9 @@ select::-ms-expand {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .blog-main__pagination li:not(:first-child) {
@@ -1139,6 +1142,7 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .blog-main__pre {
     font-size: 0.875rem;
+    width: 5.125rem;
   }
 }
 .blog-main__pre::before {
@@ -1177,8 +1181,8 @@ select::-ms-expand {
   width: 4.375rem;
   height: 30px;
   height: 1.875rem;
-  padding-right: 36px;
-  padding-right: 2.25rem;
+  padding-right: 25px;
+  padding-right: 1.5625rem;
   padding-left: 7px;
   padding-left: 0.4375rem;
   padding-top: 7px;
