@@ -27,8 +27,6 @@ body {
 }
 
 .mv-sub__img {
-  max-width: 335px;
-  max-width: 20.9375rem;
   width: 100%;
 }
 @media screen and (min-width: 768px) {
