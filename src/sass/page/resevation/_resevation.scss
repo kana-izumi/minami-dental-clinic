@@ -1,0 +1,61 @@
+@use "global" as *;
+
+.resevation {
+
+}
+
+.resevation__inner {
+    margin-top: rem(60);
+
+    @include mq(md) {
+        margin-top: rem(80);
+    }
+}
+
+.resevation__message + .resevation__message {
+    margin-top: rem(40);
+}
+
+.resevation__title {
+    font-size: rem(20);
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
+}
+
+.resevation__info {
+   position: relative;
+}
+
+.resevation__tel {
+    display: inline-block;
+    font-size: rem(32);
+    padding-left: rem(40);
+    font-weight: $bold;
+    color: $main-color;
+    position: relative;
+    margin-top: rem(28);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: rem(28);
+        height: rem(28);
+        transform: translateY(-50%);
+        background: url(/src/images/top/icon_tel.svg);
+    }
+}
+
+.resevation__time {
+    font-size: rem(12);
+    color: $main-color;
+}
+
+.resevation__text {
+    font-size: rem(14);
+    line-height: 1.714;
+    margin-top: rem(28);
+}

@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width,initial-scale=1.0" />
   <meta name="format-detection" content="telephone=no" />
   <!-- meta情報 -->
-  <title>お問い合わせフォーム</title>
+  <title>WEB予約</title>
   <meta name="description" content="街の皆さまの笑顔を守るアットホームな歯医者さん" />
   <meta name="keywords" content="" />
   <!-- ogp -->
@@ -123,29 +123,39 @@
           <img src="./src/images/contact/page-contact_top.jpg" alt="">
         </div>
         <div class="mv-sub__heading">
-          <h2 class="mv-sub__title">お問い合わせ</h2>
-          <span class="mv-sub__lead">CONTACT</span>
+          <h2 class="mv-sub__title">WEB予約</h2>
+          <span class="mv-sub__lead">RESERVE</span>
         </div>
         <div class="bread">
           <ul class="bread__list">
             <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">お問い合わせ</a></li>
+            <li class="bread__item"><a href="#">WEB予約</a></li>
           </ul>
         </div>
       </div>
     </div>
     <!-- /.main-visual -->
-    <section class="contact">
-      <div class="contact__inner inner">
-        <div class="contact__message">
-          <p>お急ぎの方は、お電話(TEL 03-1234-5678)での連絡がスムーズです。<p>
-          <p>以下のフォームからお問い合わせ頂いた場合、ご連絡が2～3日後になる場合がございます。</p>
-          <p>また、メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。</p>
-          <p><span>※3営業日以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。<span></p>
+    <section class="resevation">
+      <div class="resevation__inner inner">
+        <div class="resevation__message">
+          <h2 class="resevation__title">お電話でのご予約/ご相談</h2>
+          <div class="resevation__info">
+            <div class="resevation__tel">03-1234-5678</div>
+            <div class="resevation__time">(年中無休 AM9:00〜PM22:00)</div>
+          </div>
+          <p class="resevation__text">お急ぎの方は電話での連絡がスムーズです。<br>
+            混雑状況によっては当日受診をご利用いただけない場合がございます。<br>
+            あらかじめご了承ください。</p>
+        </div>
+        <div class="resevation__message">
+          <h2 class="resevation__title">メールでのご予約/ご相談</h2>
+          <p class="resevation__text">【ご予約に関しての注意点】<br>
+            メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br>
+            ※24時間以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。</p>
         </div>
         <div class="contact__wrapper">
           <div class="section-header">
-            <h2 class="section-header__title">お問い合わせ<br>フォーム</h2>
+            <h2 class="section-header__title">予約フォーム</h2>
           </div>
           <form class="contact-form" action="">
             <dl class="contact-form__dl">
@@ -165,9 +175,41 @@
                     <dt class="contact-form__label"><label for="your-email">メールアドレス</label></dt>
                     <dd class="contact-form__input"><input type="email" id="your-email" placeholder="sample@gmail.com"></dd>
                 </div>
+                <div class="contact-form__radio">
+                  <dt class="contact-form__label"><label for="your-radio">初診/再診</label></dt>
+                  <div class="contact-form__radio-body">
+                    <label><input type="radio" id="your-radio" checked><span>初診</span></label>
+                    <label><input type="radio" id="your-radio"><span>再診</span></label>
+                  </div>
+                </div>
+                <div class="contact-form__check">
+                  <dt class="contact-form__label"><label for="your-medical">診療内容</label>
+                  <p>※(複数選択可)</p>
+                  </dt>
+                  <div class="contact-form__check-body">
+                    <label for=""><input type="checkbox"><span>虫歯</span></label>
+                    <label for=""><input type="checkbox"><span>被せ物がとれた</span></label>
+                    <label for=""><input type="checkbox"><span>矯正歯科</span></label>
+                    <label for=""><input type="checkbox"><span>咬み合わせ</span></label>
+                    <label for=""><input type="checkbox"><span>歯周病</span></label>
+                    <label for=""><input type="checkbox"><span>小児歯科</span></label>
+                    <label for=""><input type="checkbox"><span>入れ歯</span></label>
+                    <label for=""><input type="checkbox"><span>インプラント</span></label>
+                    <label for=""><input type="checkbox"><span>その外</span></label>
+                  </div>
+              </div>
+              <div class="contact-form__row">
+                <dt class="contact-form__label"><label for="your-contact">ご連絡方法</label></dt>
+                <dd class="contact-form__select">
+                    <select name="" id="your-contact">
+                        <option value="">メール</option>
+                        <option value="">電話</option>
+                    </select>
+                </dd>
+            </div>
                 <div class="contact-form__row">
                     <dt class="contact-form__label"><label for="your-text">お問い合わせ内容</label></dt>
-                    <dd class="contact-form__text"><textarea name="" id="your-tex" placeholder="ご自由にご記入ください。"></textarea></dd>
+                    <dd class="contact-form__text"><textarea name="" id="your-text" placeholder="ご自由にご記入ください。"></textarea></dd>
                 </div>
                 <div class="contact-form__btn">
                     <input type="submit" value="送　信">
