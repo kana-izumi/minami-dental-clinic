@@ -1851,18 +1851,41 @@ select::-ms-expand {
   padding-bottom: 28px;
   padding-bottom: 1.75rem;
 }
+@media screen and (min-width: 768px) {
+  .contact-form__check {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
 .contact-form__check-body {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
+.contact-form__check-body:nth-last-of-type(1), .contact-form__check-body :nth-last-of-type(2), .contact-form__check-body :nth-last-of-type(3) {
+  margin-top: 0;
+}
+
+.contact-form__check-body label {
+  display: inline-block;
+  white-space: nowrap;
+  margin-top: 16px;
+  margin-top: 1rem;
+}
 
 .contact-form__check span {
+  display: inline-block;
   font-size: 14px;
   font-size: 0.875rem;
   padding-left: 32px;
   padding-left: 2rem;
   position: relative;
+  margin-right: 16px;
+  margin-right: 1rem;
 }
 .contact-form__check span::before {
   content: "";
@@ -1904,6 +1927,19 @@ select::-ms-expand {
   padding: 0.8125rem 1rem;
   margin-top: 12px;
   margin-top: 0.75rem;
+}
+@media screen and (min-width: 768px) {
+  .contact-form__select {
+    width: calc(100% - 15rem);
+  }
+}
+
+.contact-form__select select {
+  background: transparent url(/src/images/contact/select-arrow.png);
+  background-position: right 10px;
+  background-position: right 0.625rem;
+  background-repeat: no-repeat;
+  background-size: 1.25rem 1.25rem;
 }
 
 .contact-form__text {

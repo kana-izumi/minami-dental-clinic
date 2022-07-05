@@ -164,16 +164,36 @@ br {
     border-top: rem(1) solid #DDDDDD;
     padding-top: rem(28);
     padding-bottom: rem(28);
+
+    @include mq(md) {
+        display: flex;
+        align-items: center;
+    }
 }
 
 .contact-form__check-body {
     margin-top: rem(20);
+
+    &:nth-last-of-type(1),:nth-last-of-type(2),:nth-last-of-type(3) {
+        margin-top: 0;
+    }
+
+
+}
+
+.contact-form__check-body label {
+    display: inline-block;
+    white-space: nowrap;
+    // テキストの途中改行がされなくなる
+    margin-top: rem(16);
 }
 
 .contact-form__check span {
+    display: inline-block;
     font-size: rem(14);
     padding-left: rem(32);
     position: relative;
+    margin-right: rem(16);
 
 
     &::before {
@@ -207,6 +227,17 @@ br {
         background: #F6F6F6;
         padding: rem(13) rem(16);
         margin-top: rem(12);
+
+        @include mq(md) {
+            width: calc(100% - rem(240));
+        }
+}
+
+.contact-form__select select {
+    background: transparent url(/src/images/contact/select-arrow.png);
+    background-position: right rem(10);
+    background-repeat: no-repeat;
+    background-size: rem(20) rem(20);
 }
 
 
