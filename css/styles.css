@@ -1861,9 +1861,6 @@ select::-ms-expand {
             align-items: center;
   }
 }
-.contact-form__check [type=checkbox]:checked + span::after {
-  display: block;
-}
 
 .contact-form__check-body {
   margin-top: 20px;
@@ -1923,6 +1920,9 @@ select::-ms-expand {
   border-bottom: 1px solid #1391E6;
   border-left: 1px solid #1391E6;
   display: none;
+}
+.contact-form__check-body span [type=checkbox]:checked + span::after {
+  display: block;
 }
 
 .contact-form__select {
@@ -2284,6 +2284,14 @@ select::-ms-expand {
   .medical-menu_item + .medical-menu_item {
     margin-top: 0;
     margin-left: 1rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .resevation {
+    max-width: 45.5rem;
+    width: 100%;
+    margin: 0 auto;
   }
 }
 

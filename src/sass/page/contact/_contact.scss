@@ -169,17 +169,11 @@ br {
         display: flex;
         align-items: center;
     }
-
-    [type="checkbox"]:checked + span {
-        &::after {
-            display: block;
-        }
-    }
 }
 
 .contact-form__check-body {
     margin-top: rem(20);
-    
+
     &:nth-last-of-type(1),:nth-last-of-type(2),:nth-last-of-type(3) {
         margin-top: 0;
     }
@@ -226,6 +220,12 @@ br {
         border-bottom: 1px solid $main-color;
         border-left: 1px solid  $main-color;
         display: none;
+    }
+
+    [type="checkbox"]:checked + span {
+        &::after {
+            display: block;
+        }
     }
 }
 
