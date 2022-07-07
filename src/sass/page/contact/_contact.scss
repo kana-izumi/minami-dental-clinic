@@ -91,7 +91,8 @@ br {
     }
 
     [type="text"],
-    [type="email"]{
+    [type="email"],
+    [type="date"] {
         background: #F6F6F6;
         padding: rem(13) rem(16);
         width: 100%;
@@ -178,55 +179,55 @@ br {
         margin-top: 0;
     }
 
-}
-
-.contact-form__check-body label {
-    display: inline-block;
-    white-space: nowrap;
-    // テキストの途中改行がされなくなる
-    margin-top: rem(16);
-}
-
-.contact-form__check-body span {
-    display: inline-block;
-    font-size: rem(14);
-    padding-left: rem(32);
-    position: relative;
-    margin-right: rem(16);
-
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: rem(24);
-        height: rem(24);
-        border: rem(1) solid $main-color;
-        left: 0;
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #fff;
+    label {
+        display: inline-block;
+        white-space: nowrap;
+        // テキストの途中改行がされなくなる
+        margin-top: rem(16);
     }
 
-    &::after {
-        content: "";
-        position: absolute;
-        width: rem(11);
-        height: rem(6);
-        border: rem(1) solid $main-color;
-        left: rem(7);
-        top: 50%;
-        transform: rotate(-45deg) translateY(-50%);
-        border: none;
-        border-bottom: 1px solid $main-color;
-        border-left: 1px solid  $main-color;
-        display: none;
-    }
+    span {
+        display: inline-block;
+        font-size: rem(14);
+        padding-left: rem(32);
+        position: relative;
+        margin-right: rem(16);
 
-    [type="checkbox"]:checked + span {
-        &::after {
-            display: block;
+        &::before {
+            content: "";
+            position: absolute;
+            width: rem(24);
+            height: rem(24);
+            border: rem(1) solid $main-color;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            background-color: #fff;
         }
-    }
+
+        &::after {
+            content: "";
+            position: absolute;
+            width: rem(11);
+            height: rem(6);
+            border: rem(1) solid $main-color;
+            left: rem(7);
+            top: 50%;
+            transform: rotate(-45deg) translateY(-50%);
+            border: none;
+            border-bottom: 1px solid $main-color;
+            border-left: 1px solid  $main-color;
+            transition: opacity 0.3s ease 0s;
+            display: none;
+        }
+}
+
+        [type="checkbox"]:checked + span {
+            &::after {
+                display: block;
+            }
+        }
+
 }
 
 
@@ -242,9 +243,16 @@ br {
         @include mq(md) {
             width: calc(100% - rem(240));
         }
+
+        select {
+            width: 100%;
+        }
 }
 
-
+/* スピンボタン（上下ボタン）を非表示 */
+input[type=date]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
 
 .contact-form__text {
     margin-top: rem(12);
