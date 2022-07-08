@@ -22,6 +22,7 @@
 
     @include mq(md) {
         margin-top: rem(21);
+        max-width: rem(538);
     }
 }
 
@@ -29,7 +30,10 @@
     display: flex;
     margin-left: rem(16);
     align-items: center;
+}
 
+.news__heading-title {
+    letter-spacing: 0.16em;
 }
 
 .news__heading-lead {
@@ -37,24 +41,26 @@
     color: $main-color;
     margin-left: rem(16);
     text-transform: uppercase;
+    letter-spacing: 0.01em;
 }
 
 .news__heading-link {
+    margin-left: rem(64);
+
     a {
         font-size: rem(11);
         color: #888888;
         text-decoration: underline;
         text-decoration-color: #888888;
-        margin-left: rem(64);
     }
 }
 
 .news__body {
-    margin-top: rem(7);
+    margin-top: rem(6);
     border-top: rem(1) solid $black;
     border-bottom: rem(1) solid $black;
-    padding-top: rem(14);
-    padding-bottom: rem(13);
+    padding-top: rem(10);
+    padding-bottom: rem(10);
     position: relative;
 }
 
@@ -89,7 +95,7 @@
     max-width: rem(335);
     border-radius: rem(12);
     overflow: hidden;
-    margin-top: rem(-20);
+    margin-top: rem(-24);
     // position: absolute;
     right: rem(20);
     z-index: 200;

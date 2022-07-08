@@ -249,11 +249,6 @@ br {
         }
 }
 
-/* スピンボタン（上下ボタン）を非表示 */
-input[type=date]::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-}
-
 .contact-form__text {
     margin-top: rem(12);
 
