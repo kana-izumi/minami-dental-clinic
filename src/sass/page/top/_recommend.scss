@@ -14,6 +14,7 @@
     @include mq(md) {
         display: flex;
         align-self: stretch;
+        margin-top: rem(51);
     }
 }
 
@@ -39,15 +40,21 @@
     margin: rem(12) auto 0;
 }
 .recommend__item-img {
-    width: rem(220);
+    width: rem(275);
     margin: rem(12) auto 0;
     text-align: center;
 }
 
 .recommend__item-text {
     line-height: 1.714;
-    margin-top: rem(14);
+    margin-top: rem(19);
+    margin-right: rem(26);
+    margin-left: rem(26);
     font-size: rem(14);
+
+    @include mq(md) {
+        margin-top: rem(26);
+    }
 }
 
 .recommend__item-text--red {

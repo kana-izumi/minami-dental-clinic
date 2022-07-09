@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.resevation__link {
+    display: none;
+
+    @include mq(md) {
+        position: fixed;
+        width: rem(92);
+        position: absolute;
+        top: rem(40);
+        right: 0;
+        z-index: 101;
+    }
+}

@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .main-visual {
-
+  position: relative;
 }
 
 .main-visual__inner {
@@ -17,7 +17,6 @@
 }
 
 .main-visual__items {
-  position: relative;
 }
 
 .swiper {
@@ -44,11 +43,19 @@
 }
 
 .swiper-button-next {
-  right: rem(-22);
+  right: rem(-6);
+
+  @include mq(md) {
+    right: rem(35);
+  }
 }
 
 .swiper-button-prev {
-  left: rem(-22);
+  right: rem(-6);
+
+  @include mq(md) {
+    right: rem(35);
+  }
 }
 /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev:after,

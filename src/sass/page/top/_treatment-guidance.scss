@@ -1,13 +1,17 @@
 @use "global" as *;
 
 .treatment-guidance {
-    margin-top: rem(185);
+    margin-top: rem(60);
     padding-top: rem(30);
 
     @include mq(md) {
         margin-top: rem(140);
         padding-top: 0;
     }
+}
+
+.treatment-guidance__inner {
+    padding-top: rem(30);
 }
 
 .treatment-guidance__deco-top{
@@ -26,9 +30,12 @@
 
 .treatment-guidance-bg {
     background-color: $sub-color2;
-    padding-top: rem(30);
-    padding-bottom: rem(94);
+    padding-bottom: rem(60);
     position: relative;
+
+    @include mq(md) {
+        padding-bottom: rem(94);
+    }
 
     &::before{
         position: absolute;
