@@ -2,6 +2,65 @@
 
 .staff-blog {
     margin-top: rem(100);
+
+    @include mq(md) {
+        margin-top: rem(154);
+    }
+}
+
+.staff-blog-header {
+    position: relative;
+    text-align: center;
+}
+
+.staff-blog__title {
+    font-size: rem(20);
+    font-weight: $bold;
+    display: inline-block;
+    letter-spacing: 0.08em;
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: rem(48);
+        height: rem(12);
+        top: 50%;
+        left: rem(28);
+        transform: translateY(-50%);
+        background: url(/src/images/common/section-title.deco.svg);
+        background-repeat: no-repeat;
+
+        @include mq(md) {
+            width: rem(67);
+            height: rem(20);
+            left: rem(290);
+            background: url(/src/images/top/title-deco.svg);
+        }
+    }
+
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: rem(48);
+        height: rem(12);
+        top: 50%;
+        right: rem(28);
+        transform: translateY(-50%);
+        background: url(/src/images/common/section-title.deco.svg);
+        background-repeat: no-repeat;
+
+        @include mq(md) {
+            width: rem(67);
+            height: rem(20);
+            right: rem(310);
+            background: url(/src/images/top/title-deco.svg);
+        }
+    }
 }
 
 .staff-blog__items {
@@ -19,6 +78,10 @@
 
         &:not(:first-child) {
             margin-top: rem(20);
+
+            @include mq(md) {
+                margin-top: rem(50);
+            }
         }
 
     @include mq(md) {
@@ -26,7 +89,7 @@
         box-shadow: 0 3px 6px #00000029;
         border-radius: rem(20);
         width: calc(33.3% - rem(40) * 2 / 3);
-        margin-top: rem(50);
+        min-height: rem(300);
 
         &:nth-child(-n+3) {
         margin-top: 0;
@@ -39,13 +102,12 @@
 }
 
 
-.staff-blog__img {
-    @include mq(sm) {
-        width: 75.9398496%;
-    }
+.staff-blog__img img{
 
     @include mq(md) {
         width: 100%;
+        height: rem(188);
+        border-radius: rem(20) rem(20) 0 0;
     }
 }
 
@@ -53,9 +115,9 @@
 .staff-blog__body {
     margin-left: rem(10);
     
-    @include mq(sm) {
+    @include mq(md) {
         margin-left: 0;
-        padding: rem(24) rem(24) rem(19);
+        padding: rem(20) rem(20) rem(20);
         position: relative;
     }
 }
@@ -78,8 +140,12 @@
     }
 }
 
-.staff-blog__title {
+.staff-blog__head {
     font-size: rem(14);
+
+    @include mq(md) {
+        font-size: rem(16);
+    }
 }
 
 .staff-blog__date {

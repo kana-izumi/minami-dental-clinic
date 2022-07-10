@@ -1,12 +1,68 @@
 @use "global" as *;
 
 .recommend {
-    margin-top: rem(100);
+    margin-top: rem(96);
 
-    @include mq(sm) {
-        margin-top: rem(227);
+    @include mq(md) {
+        margin-top: rem(230);
     }
 }
+
+.recommend-header {
+    position: relative;
+    text-align: center;
+}
+
+.recommend-header__title {
+    font-size: rem(20);
+    font-weight: $bold;
+    display: inline-block;
+    letter-spacing: 0.08em;
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: rem(48);
+        height: rem(12);
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+        background: url(/src/images/common/section-title.deco.svg);
+        background-repeat: no-repeat;
+
+        @include mq(md) {
+            width: rem(67);
+            height: rem(20);
+            left: rem(260);
+            background: url(/src/images/top/title-deco.svg);
+        }
+    }
+
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: rem(48);
+        height: rem(12);
+        top: 50%;
+        right: 0;
+        transform: translateY(-50%);
+        background: url(/src/images/common/section-title.deco.svg);
+        background-repeat: no-repeat;
+
+        @include mq(md) {
+            width: rem(67);
+            height: rem(20);
+            right: rem(260);
+            background: url(/src/images/top/title-deco.svg);
+        }
+    }
+}
+
 
 .recommend__items {
     margin-top: rem(40);
@@ -54,6 +110,8 @@
 
     @include mq(md) {
         margin-top: rem(26);
+        margin-right: 0;
+        margin-left: 0;
     }
 }
 

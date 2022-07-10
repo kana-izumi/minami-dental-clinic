@@ -4,11 +4,11 @@
     display: none;
 
     @include mq(md) {
-        position: fixed;
         width: rem(92);
         position: absolute;
-        top: rem(40);
+        top: rem(60);
         right: 0;
         z-index: 101;
+        display: block;
     }
 }

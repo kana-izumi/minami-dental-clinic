@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .treatment-guidance {
-    margin-top: rem(60);
+    margin-top: rem(70);
     padding-top: rem(30);
 
     @include mq(md) {
@@ -12,6 +12,63 @@
 
 .treatment-guidance__inner {
     padding-top: rem(30);
+
+    @include mq(md) {
+        padding-top: 0;
+    }
+}
+
+.treatment-guidance__header {
+    position: relative;
+    text-align: center;
+}
+
+.treatment-guidance__title {
+    font-size: rem(20);
+    font-weight: $bold;
+    display: inline-block;
+    letter-spacing: 0.08em;
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: rem(48);
+        height: rem(12);
+        top: 50%;
+        left: rem(225);
+        transform: translateY(-50%);
+        background: url(/src/images/common/section-title.deco.svg);
+
+        @include mq(md) {
+            left: rem(346);
+            width: rem(67);
+            height: rem(20);
+            background: url(/src/images/top/title-deco.svg);
+        }
+    }
+
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: rem(48);
+        height: rem(12);
+        top: 50%;
+        right: rem(225);
+        transform: translateY(-50%);
+        background: url(/src/images/common/section-title.deco.svg);
+
+        @include mq(md) {
+            left: rem(346);
+            width: rem(67);
+            height: rem(20);
+            background: url(/src/images/top/title-deco.svg);
+        }
+    }
 }
 
 .treatment-guidance__deco-top{
@@ -32,10 +89,6 @@
     background-color: $sub-color2;
     padding-bottom: rem(60);
     position: relative;
-
-    @include mq(md) {
-        padding-bottom: rem(94);
-    }
 
     &::before{
         position: absolute;
