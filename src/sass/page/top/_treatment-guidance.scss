@@ -63,7 +63,7 @@
         background: url(/src/images/common/section-title.deco.svg);
 
         @include mq(md) {
-            left: rem(346);
+            right: rem(346);
             width: rem(67);
             height: rem(20);
             background: url(/src/images/top/title-deco.svg);
@@ -80,7 +80,7 @@
     background-position: center bottom;
 
     @include mq(md) {
-        height: rem(201);
+        height: rem(210);
         background-size: cover;
     }
 }

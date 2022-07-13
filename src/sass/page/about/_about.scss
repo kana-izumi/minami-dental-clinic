@@ -103,6 +103,11 @@
     position: relative;
     color: $main-color;
 
+    &:hover {
+        background-color: $main-color;
+        color: $white;
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -114,6 +119,12 @@
         background: url(/src/images/top/icon-arrow-blue-btn.svg);
         background-size: cover;
         background-repeat: no-repeat;
+    }
+
+    &:hover::after {
+        background: url(/src/images/top/arrow-right-white.svg);
+        right: rem(6);
+        transition: all .3s;
     }
 }
 

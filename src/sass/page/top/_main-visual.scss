@@ -10,6 +10,7 @@
   margin-left: rem(20);
 
   @include mq(md) {
+    margin-top: rem(28);
     margin-right: rem(58);
     margin-left: rem(62);
   }
@@ -50,10 +51,10 @@
 }
 
 .swiper-button-prev {
-  right: rem(-6);
+  left: rem(-6);
 
   @include mq(md) {
-    right: rem(35);
+    left: rem(35);
   }
 }
 /* 前へ次への矢印カスタマイズ */
