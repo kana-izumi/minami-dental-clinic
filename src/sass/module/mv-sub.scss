@@ -7,6 +7,14 @@
 
 .mv-sub__inner {
     margin-top: rem(20);
+    margin-right: rem(20);
+    margin-left: rem(20);
+
+    @include mq(md) {
+        margin-top: rem(31);
+        margin-right: rem(60);
+        margin-left: rem(60);
+    }
 }
 
 .mv-sub__img {
@@ -21,18 +29,28 @@
 .mv-sub__heading {
     color: $white;
     position: absolute;
-    top: 50%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
 }
 
 .mv-sub__title {
-    letter-spacing: em;
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+        font-size: rem(32);
+        letter-spacing: 0.1em;
+    }
 }
 
 .mv-sub__lead {
     display: inline-block;
     margin-top: rem(10);
     letter-spacing: 0.12em;
+
+    @include mq(md) {
+        margin-top: rem(17);
+        letter-spacing: 0.1em;
+    }
 }

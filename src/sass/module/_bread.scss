@@ -1,5 +1,14 @@
 @use "global" as *;
 
+.bread {
+    margin-top: rem(10);
+
+    @include mq(md) {
+        margin-top: rem(10);
+    }
+
+}
+
 .bread__list {
     display: flex;
 

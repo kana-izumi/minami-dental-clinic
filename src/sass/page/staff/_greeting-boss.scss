@@ -2,6 +2,10 @@
 
 .greeting-boss {
     margin-top: rem(60);
+
+    @include mq(md) {
+        margin-top: rem(77);
+    }
 }
 
 .greeting-boss__inner {
