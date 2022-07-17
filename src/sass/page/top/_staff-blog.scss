@@ -158,6 +158,7 @@
     text-align: center;
 
     @include mq(md) {
+        margin-top: rem(90);
         margin: rem(60) auto 0;
     }
 }
