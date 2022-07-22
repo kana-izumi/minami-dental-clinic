@@ -23,11 +23,11 @@
   <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet">
   <!-- css -->
   <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="./css/styles.css">
+  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/styles.css')); ?>">
   <!-- JavaScript -->
   <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
   <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script defer src="./js/script.js"></script>
+  <script defer src="<?php echo esc_url(get_theme_file_uri('/js/script.js')); ?>"></script>
 </head>
 <body>
   <!-- <div class="section-header">
@@ -48,16 +48,16 @@
     <div class="header__inner">
       <div class="header__block">
         <div class="header__logo">
-          <img src="./images/common/logo.svg" alt="ロゴ画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/images/common/logo.svg')); ?>" alt="ロゴ画像">
         </div>
           <nav class="header-nav u-desktop">
             <ul class="header-nav__list">
-              <li><img src="/src/images/common/icon-nav01.svg" alt=""><a href="">ホーム</li></a>
-              <li><img src="/src/images/common/icon-nav02.svg" alt=""><a href="">当院について</li></a>
-              <li><img src="/src/images/common/icon-nav03.svg" alt=""><a href="">診療案内</li></a>
-              <li><img src="/src/images/common/icon-nav04.svg" alt=""><a href="">スタッフ紹介</li></a>
-              <li><img src="/src/images/common/icon-nav05.svg" alt=""><a href="">スタッフブログ</li></a>
-              <li><img src="/src/images/common/icon-nav07.svg" alt=""><a href="">お問い合わせ</li></a>
+              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav01.svg')); ?>" alt="">ホーム</li></a>
+              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="">当院について</li></a>
+              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="">治療案内</li></a>
+              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="">スタッフ紹介</li></a>
+              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="">スタッフブログ</li></a>
+              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="">お問い合わせ</li></a>
             </ul>
             <div class="header__info">
               <p class="header__info-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
@@ -70,7 +70,7 @@
       <div class="drawer u-mobile">
         <div class="drawer__inner inner">
           <div class="drawer__header-logo">
-            <img src="./images/common/logo-drawer.svg" alt="ロゴ画像">
+            <img src="<?php echo esc_url(get_theme_file_uri('/images/common/logo-drawer.svg')); ?>" alt="ロゴ画像">
           </div>
             <div class="drawer__icon">
               <div class="drawer__icon-bars">
@@ -85,27 +85,27 @@
   <div class="drawer__content">
     <div class="drawer__content-items">
           <div class="drawer__content-item">
-            <img src="./src/images/common/icon-01.svg">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>">
             <a href="">ホーム</a>
           </div>
           <div class="drawer__content-item">
-            <img src="./src/images/common/icon-02.svg" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>" alt="">
             <a href="">当院について</a>
           </div>
           <div class="drawer__content-item">
-            <img src="./src/images/common/icon-03.svg" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-03.svg')); ?>" alt="">
             <a href="">診療案内</a>
           </div>
           <div class="drawer__content-item">
-            <img src="./src/images/common/icon-04.svg" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-04.svg')); ?>" alt="">
             <a href="">スタッフ紹介</a>
           </div>
           <div class="drawer__content-item">
-            <img src="./src/images/common/icon-05.svg" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-05.svg')); ?>" alt="">
             <a href="">スタッフブログ</a>
           </div>
           <div class="drawer__content-item">
-            <img src="./src/images/common/icon-07.svg" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-07.svg')); ?>" alt="">
             <a href="">お問い合わせ</a>
           </div>
         </div>
@@ -121,30 +121,30 @@
         <div class="swiper-wrapper">
           <div class="swiper-slide">
             <div class="main-visual__img1 u-mobile">
-              <img src="./src/images/top/top-01-sp.jpg" alt="メイン画像">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-01-sp.jpg')); ?>" alt="メイン画像">
             </div>
             <div class="main-visual__img1 u-desktop">
-              <img src="./src/images/top/top-01.jpg" alt="メイン画像">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-01.jpg')); ?>" alt="メイン画像">
             </div>
           </div>
           <div class="swiper-slide">
             <div class="main-visual__img2 u-mobile">
-              <img src="./src/images/top/top-02-sp.jpg" alt="メイン画像">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-02-sp.jpg')); ?>" alt="メイン画像">
             </div>
             <div class="main-visual__img1 u-desktop">
-              <img src="./src/images/top/top-02.jpg" alt="メイン画像">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-02.jpg')); ?>" alt="メイン画像">
             </div>
           </div>
           <div class="swiper-slide">
             <div class="main-visual__img3 u-mobile">
-              <img src="./src/images/top/top-03-sp.jpg" alt="メイン画像">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-03-sp.jpg')); ?>" alt="メイン画像">
             </div>
             <div class="main-visual__img1 u-desktop">
-              <img src="./src/images/top/top-03.jpg" alt="メイン画像">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-03.jpg')); ?>" alt="メイン画像">
             </div>
           </div>
           <div class="main-visual__catch">
-            <img src="./src/images/top/top-text.svg" alt="">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-text.svg')); ?>" alt="">
           </div>
         </div>
       </div>
