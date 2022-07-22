@@ -66,9 +66,14 @@
     position: relative;
 }
 
+.news__body li {
+    display: flex;
+}
+
 .news__info-date {
     width: rem(96);
     font-size: rem(12);
+    display: inline-block;
 }
 
 .news__info-text {

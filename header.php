@@ -55,11 +55,11 @@
             <nav class="header-nav u-desktop">
                 <ul class="header-nav__list">
                     <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav01.svg')); ?>" alt="<?php echo esc_url(home_url('/'))?>">ホーム</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="<?php echo esc_url(home_url('/'))?>">当院について</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="<?php echo esc_url(home_url('/'))?>">治療案内</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="<?php echo esc_url(home_url('/'))?>">スタッフ紹介</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="<?php echo esc_url(home_url('/'))?>">スタッフブログ</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="<?php echo esc_url(home_url('/'))?>">お問い合わせ</li></a>
+                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="<?php echo esc_url(home_url('/about'))?>">当院について</li></a>
+                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="<?php echo esc_url(home_url('/medical'))?>">治療案内</li></a>
+                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="<?php echo esc_url(home_url('/staff'))?>">スタッフ紹介</li></a>
+                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="<?php echo esc_url(home_url('/blog'))?>">スタッフブログ</li></a>
+                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="<?php echo esc_url(home_url('/contact'))?>">お問い合わせ</li></a>
                 </ul>
             <div class="header__info">
                 <p class="header__info-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
