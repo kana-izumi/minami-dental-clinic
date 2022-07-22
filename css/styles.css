@@ -862,11 +862,11 @@ select::-ms-expand {
   }
 }
 
-.resevation__link {
+.reservation__link {
   display: none;
 }
 @media screen and (min-width: 768px) {
-  .resevation__link {
+  .reservation__link {
     width: 5.75rem;
     position: absolute;
     top: 3.75rem;

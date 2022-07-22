@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.resevation__link {
+.reservation__link {
     display: none;
 
     @include mq(md) {

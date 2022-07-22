@@ -1,118 +1,4 @@
-<!DOCTYPE html>
-<html lang="ja">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-  <meta name="format-detection" content="telephone=no" />
-  <!-- meta情報 -->
-  <title>みなみ歯科クリニック</title>
-  <meta name="description" content="街の皆さまの笑顔を守るアットホームな歯医者さん" />
-  <meta name="keywords" content="" />
-  <!-- ogp -->
-  <meta property="og:title" content="" />
-  <meta property="og:type" content="" />
-  <meta property="og:url" content="" />
-  <meta property="og:image" content="" />
-  <meta property="og:site_name" content="" />
-  <meta property="og:description" content="" />
-  <!-- ファビコン -->
-  <link rel="”icon”" href="" />
-  <!-- GoogleFont -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet">
-  <!-- css -->
-  <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/styles.css')); ?>">
-  <!-- JavaScript -->
-  <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-  <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-  <script defer src="<?php echo esc_url(get_theme_file_uri('/js/script.js')); ?>"></script>
-</head>
-<body>
-  <!-- <div class="section-header">
-      <span class="section-header__icon-left1"></span>
-      <span class="section-header__icon-left2"></span>
-      <span class="section-header__icon-left3"></span>
-      <span class="section-header__icon-left4"></span>
-      <span class="section-header__icon-left5"></span>
-      <h2 class="section-header__title">当院の3つのおすすめ</h2>
-      <span class="section-header__icon-right1"></span>
-      <span class="section-header__icon-right2"></span>
-      <span class="section-header__icon-right3"></span>
-      <span class="section-header__icon-right4"></span>
-      <span class="section-header__icon-right5"></span>
-  </div> -->
-
-  <div class="header">
-    <div class="header__inner">
-      <div class="header__block">
-        <div class="header__logo">
-          <img src="<?php echo esc_url(get_theme_file_uri('/images/common/logo.svg')); ?>" alt="ロゴ画像">
-        </div>
-          <nav class="header-nav u-desktop">
-            <ul class="header-nav__list">
-              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav01.svg')); ?>" alt="">ホーム</li></a>
-              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="">当院について</li></a>
-              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="">治療案内</li></a>
-              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="">スタッフ紹介</li></a>
-              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="">スタッフブログ</li></a>
-              <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="">お問い合わせ</li></a>
-            </ul>
-            <div class="header__info">
-              <p class="header__info-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
-              <p class="header__info-tel">03-1234-5678</p>
-            </div>
-          </nav>
-      </div>
-
-      <!-- drawer -->
-      <div class="drawer u-mobile">
-        <div class="drawer__inner inner">
-          <div class="drawer__header-logo">
-            <img src="<?php echo esc_url(get_theme_file_uri('/images/common/logo-drawer.svg')); ?>" alt="ロゴ画像">
-          </div>
-            <div class="drawer__icon">
-              <div class="drawer__icon-bars">
-                <div class="drawer__icon-bar1"><a href=""></a></div>
-                <div class="drawer__icon-bar2"><a href=""></a></div>
-                <div class="drawer__icon-bar3"><a href=""></a></div>
-              </div>
-            </div>
-        </div>
-      </div>
-
-  <div class="drawer__content">
-    <div class="drawer__content-items">
-          <div class="drawer__content-item">
-            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>">
-            <a href="">ホーム</a>
-          </div>
-          <div class="drawer__content-item">
-            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>" alt="">
-            <a href="">当院について</a>
-          </div>
-          <div class="drawer__content-item">
-            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-03.svg')); ?>" alt="">
-            <a href="">診療案内</a>
-          </div>
-          <div class="drawer__content-item">
-            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-04.svg')); ?>" alt="">
-            <a href="">スタッフ紹介</a>
-          </div>
-          <div class="drawer__content-item">
-            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-05.svg')); ?>" alt="">
-            <a href="">スタッフブログ</a>
-          </div>
-          <div class="drawer__content-item">
-            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-07.svg')); ?>" alt="">
-            <a href="">お問い合わせ</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- /.header -->
+<?php get_header(); ?>
 
     <div class="main-visual">
       <div class="main-visual__inner">
@@ -153,8 +39,8 @@
       <div class="swiper-pagination"></div>
     </div>
       </div>
-      <div class="resevation__link">
-        <a href=""><img src="/src/images/common/btn-reserve.png" alt="WEB予約はこちら"></a>
+      <div class="reservation__link">
+        <a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/btn-reserve.png')); ?>" alt="WEB予約はこちら"></a>
       </div>
     </div>
 
@@ -168,12 +54,20 @@
             <p class="news__heading-link"><a href="">過去のお知らせはこちら</a></p>
           </div>
           <div class="news__body">
-            <time class="news__info-date">2021/01/01</time>
-            <a class="news__info-text" href="">年末年始の営業時間のお知らせ</a>
+            <?php if(have_posts()): ?>
+            <ul>
+              <?php while(have_posts()): the_post(); ?>
+              <li>
+                <time class="news__info-date">2021/01/01</time>
+                <a class="news__info-text" href="">年末年始の営業時間のお知らせ</a>
+              </li>
+              <?php endwhile;?>
+            </ul>
+            <?php endif; ?>
           </div>
         </div>
         <div class="news__medical-time">
-          <img src="./src/images/top/medical-time-pc.jpg" alt="">
+          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/medical-time-pc.jpg')); ?>" alt="">
         </div>
       </div>
     </section>
@@ -192,7 +86,7 @@
         </div>
       </div>
       <div class="about__img">
-        <img src="./src/images/top/concept-img1.jpg" alt="">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/concept-img1.jpg')); ?>" alt="">
       </div>
     </section>
     <div class="recommend">
@@ -203,10 +97,10 @@
         <div class="recommend__items">
           <div class="recommend__item">
             <div class="recommend__item-title">
-              <img src="./src/images/top/recommend-1.svg" alt="">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/recommend-1.svg')); ?>" alt="">
             </div>
             <div class="recommend__item-img">
-              <img src="./src/images/top/recommend-img-01.svg" alt="">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/recommend-img-01.svg')); ?>" alt="">
             </div>
             <div class="recommend__item-text">
               <p>歯の治療において、小さな違和感は大きなストレスにつながります。<br>
@@ -215,10 +109,10 @@
           </div>
           <div class="recommend__item">
             <div class="recommend__item-title">
-              <img src="./src/images/top/recommend-2.svg" alt="">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/recommend-2.svg')); ?>" alt="">
             </div>
             <div class="recommend__item-img">
-              <img src="./src/images/top/recommend-img-02.svg" alt="">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/recommend-img-02.svg')); ?>" alt="">
             </div>
             <div class="recommend__item-text">
               <p>「通いやすさ」も医院選びの重要なポイントと考え、2019年のリニューアルを期に更に駅の近くへ場所を移しました。</p>
@@ -226,10 +120,10 @@
           </div>
           <div class="recommend__item">
             <div class="recommend__item-title">
-              <img src="./src/images/top/recommend-3.svg" alt="">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/recommend-3.svg')); ?>" alt="">
             </div>
             <div class="recommend__item-img">
-              <img src="./src/images/top/recommend-img-03.svg" alt="">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/recommend-img-03.svg')); ?>" alt="">
             </div>
             <div class="recommend__item-text">
               <p>朝から夜までお仕事をされている方のために、診療時間を見直しました。
@@ -251,7 +145,7 @@
             <div class="treatment-guidance__flex">
               <div class="treatment-guidance__item">
                 <div class="treatment-guidance-img">
-                  <img src="./src/images/top/medical_1.jpg" alt="一般治療">
+                  <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/medical_1.jpg')); ?>" alt="一般治療">
                 </div>
                 <div class="treatment-guidance__content">
                   <p class="treatment-guidance__content-title">一般診療</p>
@@ -261,7 +155,7 @@
               </div>
               <div class="treatment-guidance__item">
                 <div class="treatment-guidance-img">
-                  <img src="./src/images/top/medical_2.jpg" alt="特殊治療">
+                  <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/medical_2.jpg')); ?>" alt="特殊治療">
                 </div>
                 <div class="treatment-guidance__content">
                   <p class="treatment-guidance__content-title">特殊診療</p>
@@ -271,9 +165,9 @@
               </div>
             </div>
               <div class="treatment-guidance__text">
-                <p>当院では、患者さんの歯の健康状態や治療方針を丁寧にカウンセリングし、十分ご理解していただいた上で治療いたします。<br>
+                <>当院では、患者さんの歯の健康状態や治療方針を丁寧にカウンセリングし、十分ご理解していただいた上で治療いたします。<br>
                   痛みに配慮することと、可能な限り削らない・抜かない治療に努めております。<br>
-                  <span class="treatment-guidance__text--red">※特殊性の高い矯正治療などは保険の適応外となります。 これらの治療を行う際は事前に詳細と費用のご説明いたします。</span></p>
+                  <p class="treatment-guidance__text--red">※特殊性の高い矯正治療などは保険の適応外となります。 これらの治療を行う際は事前に詳細と費用のご説明いたします。</p>
               </div>
             </div>
           </div>
@@ -289,7 +183,7 @@
         <div class="staff-blog__items">
           <a class="staff-blog__item">
               <figure class="staff-blog__img">
-                <img src="./src/images/top/staff-blog.jpg" alt="ブログカード1">
+                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/staff-blog.jpg')); ?>" alt="ブログカード1">
               </figure>
               <div class="staff-blog__body">
                 <div class="staff-blog__category">お知らせ</div>
@@ -299,7 +193,7 @@
           </a>
           <a class="staff-blog__item">
               <figure class="staff-blog__img">
-                <img src="./src/images/top/staff-blog.jpg" alt="ブログカード1">
+                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/staff-blog.jpg')); ?>" alt="ブログカード1">
               </figure>
               <div class="staff-blog__body">
                 <div class="staff-blog__category">お知らせ</div>
@@ -355,104 +249,4 @@
       </div>
     </section>
     <!-- /.staff-blog -->
-    <footer class="footer">
-      <div class="footer__inner inner">
-        <div class="footer-info">
-          <div class="footer-info__left">
-            <div class="footer-info__logo">
-              <img src="./src/images/common/logo.svg" alt="">
-            </div>
-            <div class="footer-info__address">〒166-0001 東京都杉並区阿佐谷北7-3-1</div>
-            <div class="footer-info__tel">03-1234-5678</div>
-            <div class="footer-info__time">(年中無休 AM9:00〜PM22:00)</div>
-            <div class="footer-info__contact">
-            <div class="footer-info__contact-web">
-              <a href="">WEB予約</a>
-            </div>
-            <div class="footer-info__contact-mail">
-              <a href="">お問い合わせ</a>
-            </div>
-          </div>
-          <div class="footer-info__medical-time">
-            <img src="./src/images/top/medical-time-pc.jpg" alt="">
-          </div>
-        </div>
-        <div class="footer-info__right">
-          <div class="footer-info-map">
-            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3239.865606084968!2d139.6339344152595!3d35.70492468018874!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6018f2767eb9e92b%3A0xc2d0573363890acc!2z6Zi_5L2Q44O26LC36aeF!5e0!3m2!1sja!2sjp!4v1655384440199!5m2!1sja!2sjp" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-          </div>
-        </div>
-    </div>
-    <!-- /.footer-info -->
-      <nav class="footer-nav">
-        <div class="footer-nav__item">
-          <ul>
-            <li><a href="">TOP</a></li>
-          </ul>
-        </div>
-        <div class="footer-nav__item">
-          <dt>当院について</dt>
-          <dd>
-            <ul class="footer-nav__item-list">
-              <li><a href="">ポリシーと特徴</a></li>
-              <li><a href="">当院の様子</a></li>
-            </ul>
-          </dd>
-        </div>
-        <div class="footer-nav__item">
-          <dt>スタッフ紹介</dt>
-          <dd>
-            <ul class="footer-nav__item-list">
-              <li><a href="">院長のあいさつ</a></li>
-              <li><a href="">スタッフ</a></li>
-              <li><a href="">スタッフブログ</a></li>
-            </ul>
-          </dd>
-        </div>
-        <div class="footer-nav__item">
-          <dt>治療内容</dt>
-          <div class="footer-nav__item-flex">
-            <dd>
-              <ul class="footer-nav__item-list">
-                <li><a href="">一般歯科</a></li>
-                <li><a href="">小児歯科</a></li>
-                <li><a href="">予防歯科</a></li>
-                <li><a href="">入れ歯</a></li>
-              </ul>
-            </dd>
-            <dd>
-              <ul class="footer-nav__item-list footer-nav__sub">
-                <li><a href="">矯正歯科</a></li>
-                <li><a href="">ホワイトニング</a></li>
-                <li><a href="">口腔外科</a></li>
-                <li><a href="">レーザー治療</a></li>
-              </ul>
-            </dd>
-          </div>
-        </div>
-        <div class="footer-nav__item">
-          <dt>お問い合わせ</dt>
-          <dd>
-            <ul class="footer-nav__item-list">
-              <li><a href="">お問い合わせフォーム</a></li>
-              <li><a href="">WEB予約</a></li>
-            </ul>
-          </dd>
-        </div>
-      </nav>
-    </div>
-      <div class="footer__copyright">
-        <small>&copy;2020-2021 みなみ歯科クリニック</small>
-      </div>
-      <div class="footer-bottom">
-        <div class="footer-bottom__tel">
-          <img src="./src/images/common/footer-bottom.png" alt="電話番号">
-        </div>
-        <div class="footer-bottom__link">
-          <a href=""><img src="./src/images/common/footer.bottom2.png" alt="WEB予約はこちら"></a>
-        </div>
-      </div>
-  </footer>
-    <!-- /.footer -->
-</body>
-</html>
+<?php get_footer(); ?>
