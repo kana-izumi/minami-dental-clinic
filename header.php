@@ -30,7 +30,7 @@
 <script defer src="<?php echo esc_url(get_theme_file_uri('/js/script.js')); ?>"></script>
 <?php wp_head();?>
 </head>
-<body>
+<bod <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <!-- <div class="section-header">
       <span class="section-header__icon-left1"></span>
@@ -54,12 +54,12 @@
         </div>
             <nav class="header-nav u-desktop">
                 <ul class="header-nav__list">
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav01.svg')); ?>" alt="<?php echo esc_url(home_url('/'))?>">ホーム</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="<?php echo esc_url(home_url('/about'))?>">当院について</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="<?php echo esc_url(home_url('/medical'))?>">治療案内</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="<?php echo esc_url(home_url('/staff'))?>">スタッフ紹介</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="<?php echo esc_url(home_url('/blog'))?>">スタッフブログ</li></a>
-                    <li><a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="<?php echo esc_url(home_url('/contact'))?>">お問い合わせ</li></a>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav01.svg')); ?>" alt="">ホーム</li></a>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>about"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="">当院について</li></a>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="">治療案内</li></a>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>staff"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="">スタッフ紹介</li></a>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>blog"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="">スタッフブログ</li></a>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>contact"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="">お問い合わせ</li></a>
                 </ul>
             <div class="header__info">
                 <p class="header__info-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
@@ -88,27 +88,27 @@
         <div class="drawer__content-items">
             <div class="drawer__content-item">
                 <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>">
-                <a href="">ホーム</a>
+                <a href="<?php echo esc_url(home_url('/'))?>">ホーム</a>
             </div>
             <div class="drawer__content-item">
                 <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>" alt="">
-                <a href="">当院について</a>
+                <a href="<?php echo esc_url(home_url('/'))?>about">当院について</a>
             </div>
             <div class="drawer__content-item">
                 <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-03.svg')); ?>" alt="">
-                <a href="">診療案内</a>
+                <a href="<?php echo esc_url(home_url('/'))?>medical">診療案内</a>
             </div>
             <div class="drawer__content-item">
                 <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-04.svg')); ?>" alt="">
-                <a href="">スタッフ紹介</a>
+                <a href="<?php echo esc_url(home_url('/'))?>staff">スタッフ紹介</a>
             </div>
             <div class="drawer__content-item">
                 <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-05.svg')); ?>" alt="">
-                <a href="">スタッフブログ</a>
+                <a href="<?php echo esc_url(home_url('/'))?>blog">スタッフブログ</a>
             </div>
             <div class="drawer__content-item">
                 <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-07.svg')); ?>" alt="">
-                <a href="">お問い合わせ</a>
+                <a href="<?php echo esc_url(home_url('/'))?>contact">お問い合わせ</a>
             </div>
             </div>
         </div>

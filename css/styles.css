@@ -3075,11 +3075,18 @@ select::-ms-expand {
   position: relative;
 }
 
+.news__body li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .news__info-date {
   width: 96px;
   width: 6rem;
   font-size: 12px;
   font-size: 0.75rem;
+  display: inline-block;
 }
 
 .news__info-text {
