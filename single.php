@@ -3,10 +3,10 @@
     <div class="mv-sub">
       <div class="mv-sub__inner inner">
         <div class="mv-sub__img u-mobile">
-          <img src="./src/images/blog/archive_top-sp.jpg" alt="スタッフブログ画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top-sp.jpg')); ?>" alt="スタッフブログ画像">
         </div>
         <div class="mv-sub__img u-desktop">
-          <img src="./src/images/blog/archive_top.jpg" alt="スタッフブログ画像">
+          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top.jpg')); ?>" alt="スタッフブログ画像">
         </div>
         <div class="mv-sub__heading">
           <h2 class="mv-sub__title">スタッフブログ</h2>

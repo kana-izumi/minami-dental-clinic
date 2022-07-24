@@ -51,7 +51,7 @@
         <div class="news__info">
           <div class="news__heading">
             <h3 class="news__heading-title">お知らせ<span class="news__heading-lead">news</span></h3>
-            <p class="news__heading-link"><a href="<?php the_permalink(); ?>">過去のお知らせはこちら</a></p>
+            <p class="news__heading-link"><a href="<?php echo esc_url(home_url('/'))?>news">過去のお知らせはこちら</a></p>
           </div>
           <div class="news__body">
             <?php if(have_posts()): ?>
