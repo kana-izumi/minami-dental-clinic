@@ -19,7 +19,7 @@
         // left: 3%;
         width: 100%;
         height:rem(307);
-        background-image: url(/src/images/top/concept-bg.svg);
+        background-image: url(../src/images/top/concept-bg.svg);
         background-size: cover;
         background-repeat: no-repeat;
         z-index: 90;
@@ -31,7 +31,7 @@
             // left: 3%;
             width: 100%;
             height:rem(725);
-            background-image: url(/src/images/top/concept-bg.svg);
+            background-image: url(../src/images/top/concept-bg.svg);
             background-size: cover;
             background-repeat: no-repeat;
             z-index: 90;
@@ -116,13 +116,13 @@
         top: 50%;
         right: rem(12);
         transform: translateY(-50%);
-        background: url(/src/images/top/icon-arrow-blue-btn.svg);
+        background: url(../src/images/top/icon-arrow-blue-btn.svg);
         background-size: cover;
         background-repeat: no-repeat;
     }
 
     &:hover::after {
-        background: url(/src/images/top/arrow-right-white.svg);
+        background: url(../src/images/top/arrow-right-white.svg);
         right: rem(6);
         transition: all .3s;
     }

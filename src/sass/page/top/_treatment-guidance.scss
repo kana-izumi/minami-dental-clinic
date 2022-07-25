@@ -60,13 +60,13 @@
         top: 50%;
         right: rem(225);
         transform: translateY(-50%);
-        background: url(/src/images/common/section-title.deco.svg);
+        background: url(../src/images/common/section-title.deco.svg);
 
         @include mq(md) {
             right: rem(346);
             width: rem(67);
             height: rem(20);
-            background: url(/src/images/top/title-deco.svg);
+            background: url(../src/images/top/title-deco.svg);
         }
     }
 }
@@ -74,7 +74,7 @@
 .treatment-guidance__deco-top{
     height: rem(85);
     width: 100%;
-    background-image: url(/src/images/top/bg-top.svg);
+    background-image: url(../src/images/top/bg-top.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -92,7 +92,7 @@
 
     &::before{
         position: absolute;
-        content: url(/src/images/top/bottom-deco-1.svg);
+        content: url(../src/images/top/bottom-deco-1.svg);
         bottom: 0;
         left: rem(12);
         transform: translateY(-50%);
@@ -102,7 +102,7 @@
     }
     &::after{
         position: absolute;
-        content: url(/src/images/top/bottom-deco-2.svg);
+        content: url(../src/images/top/bottom-deco-2.svg);
         bottom: rem(-24);
         right: rem(8);
         transform: translateY(-50%);
@@ -199,7 +199,7 @@
 }
 
 .treatment-guidance__deco-bottom {
-    background-image: url(/src/images/common/bg-bottom.png);
+    background-image: url(../src/images/common/bg-bottom.png);
     width: 100%;
     height: rem(28);
     background-size: contain;

@@ -69,11 +69,11 @@
 }
 /* 前への矢印カスタマイズ */
 .swiper-button-prev:after {
-  background-image: url(/src/images/top/arrow-left.svg);
+  background-image: url(../src/images/top/arrow-left.svg);
 }
 /* 次への矢印カスタマイズ */
 .swiper-button-next:after {
-  background-image: url(/src/images/top/arrow-right.svg);
+  background-image: url(../src/images/top/arrow-right.svg);
 }
 /* 画像サイズ調整 */
 .swiper-slide img {

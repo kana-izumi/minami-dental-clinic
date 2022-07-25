@@ -21,31 +21,15 @@ body {
   position: relative;
 }
 
-.mv-sub__inner {
-  margin-top: 20px;
-  margin-top: 1.25rem;
-  margin-right: 20px;
-  margin-right: 1.25rem;
-  margin-left: 20px;
-  margin-left: 1.25rem;
-}
 @media screen and (min-width: 768px) {
   .mv-sub__inner {
-    margin-top: 1.9375rem;
-    margin-right: 3.75rem;
-    margin-left: 3.75rem;
+    margin: 1.9375rem auto 0;
   }
 }
 
 .mv-sub__img {
   width: 100%;
 }
-@media screen and (min-width: 768px) {
-  .mv-sub__img {
-    max-width: 72.5rem;
-  }
-}
-
 .mv-sub__heading {
   color: #fff;
   position: absolute;

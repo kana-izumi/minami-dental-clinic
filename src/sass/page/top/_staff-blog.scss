@@ -183,11 +183,11 @@
         transform: translate(-50%,-50%);
         width: rem(13);
         height: rem(13);
-        background-image: url(/src/images/top/icon-arrow-blue-btn.svg);
+        background-image: url(../src/images/top/icon-arrow-blue-btn.svg);
     }
 
     &:hover::after {
-        background: url(/src/images/top/arrow-right-white.svg);
+        background: url(../src/images/top/arrow-right-white.svg);
         right: rem(0);
         transition: all .3s;
     }
