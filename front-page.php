@@ -54,14 +54,23 @@
             <p class="news__heading-link"><a href="<?php echo esc_url(home_url('/'))?>news">過去のお知らせはこちら</a></p>
           </div>
           <div class="news__body">
-            <?php if(have_posts()): ?>
+            <?php $argc = array(
+              'post_type' => 'post' ,
+              'posts_per_page' => '1'
+            );
+            $the_query = new WP_Query($argc);
+            ?>
+            <?php if($the_query -> have_posts()): ?>
             <ul>
-              <?php while(have_posts()): the_post(); ?>
+              <?php while($the_query -> have_posts()): $the_query -> the_post(); ?>
               <li>
-                <time class="news__info-date"><?php echo get_the_date('Y.m.d'); ?></time>
-                <a class="news__info-text" href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
+                <a href="<?php the_permalink(); ?>">
+                  <time class="news__info-date"><?php echo get_the_date('Y.m.d'); ?></time>
+                  <div class="news__info-text"><?php the_title(); ?></div>
+              </a>
               </li>
               <?php endwhile;?>
+              <?php wp_reset_postdata(); ?>
             </ul>
             <?php endif; ?>
           </div>
