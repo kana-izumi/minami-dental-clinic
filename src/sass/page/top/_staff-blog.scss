@@ -31,14 +31,14 @@
         top: 50%;
         left: rem(28);
         transform: translateY(-50%);
-        background: url(/src/images/common/section-title.deco.svg);
+        background: url(../src/images/common/section-title.deco.svg);
         background-repeat: no-repeat;
 
         @include mq(md) {
             width: rem(67);
             height: rem(20);
             left: rem(290);
-            background: url(/src/images/top/title-deco.svg);
+            background: url(../src/images/top/title-deco.svg);
         }
     }
 
@@ -51,14 +51,14 @@
         top: 50%;
         right: rem(28);
         transform: translateY(-50%);
-        background: url(/src/images/common/section-title.deco.svg);
+        background: url(../src/images/common/section-title.deco.svg);
         background-repeat: no-repeat;
 
         @include mq(md) {
             width: rem(67);
             height: rem(20);
             right: rem(310);
-            background: url(/src/images/top/title-deco.svg);
+            background: url(../src/images/top/title-deco.svg);
         }
     }
 }

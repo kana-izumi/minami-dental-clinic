@@ -41,13 +41,13 @@
         top: 50%;
         left: rem(225);
         transform: translateY(-50%);
-        background: url(/src/images/common/section-title.deco.svg);
+        background: url(../src/images/common/section-title.deco.svg);
 
         @include mq(md) {
             left: rem(346);
             width: rem(67);
             height: rem(20);
-            background: url(/src/images/top/title-deco.svg);
+            background: url(../src/images/top/title-deco.svg);
         }
     }
 

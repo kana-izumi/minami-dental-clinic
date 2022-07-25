@@ -81,7 +81,7 @@
           <p class="about__message">私たちは最新の医療技術を追求すると共に、患者様とのコミュニケーションを大事することで、気軽に通いやすく些細なことでも相談できる「街の掛かり付け医」を目指しております。<br>
             お子様からご高齢の方まで、快適な空間で治療が受けられる場を作り、地域医療に貢献しきたいと考えております。</p>
             <div class="about__link">
-              <a class="about__link-btn" href="">当院について</a>
+              <a class="about__link-btn" href="<?php echo esc_url(home_url('/'))?>about">当院について</a>
             </div>
         </div>
       </div>
