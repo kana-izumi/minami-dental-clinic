@@ -2027,7 +2027,8 @@ select::-ms-expand {
 }
 .contact-form__input [type=text],
 .contact-form__input [type=email],
-.contact-form__input [type=date] {
+.contact-form__input [type=date],
+.contact-form__input [type=tel] {
   background: #F6F6F6;
   padding: 13px 16px;
   padding: 0.8125rem 1rem;

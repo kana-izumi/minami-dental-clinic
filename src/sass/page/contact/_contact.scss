@@ -26,6 +26,14 @@
     }
 }
 
+.contact-header {
+
+}
+
+.contact-header__title {
+
+}
+
 br {
     @include mq(md) {
         display: none;
@@ -92,12 +100,13 @@ br {
 
     [type="text"],
     [type="email"],
-    [type="date"] {
+    [type="date"] ,
+    [type="tel"] {
         background: #F6F6F6;
         padding: rem(13) rem(16);
         width: 100%;
     }
-} 
+}
 
 .contact-form__radio-body {
     margin-top: rem(20);
