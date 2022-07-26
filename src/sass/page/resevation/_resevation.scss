@@ -1,6 +1,6 @@
 @use "global" as *;
 
-.resevation {
+.reservation {
 
     @include mq(md) {
         max-width: rem(728);
@@ -9,7 +9,7 @@
     }
 }
 
-.resevation__inner {
+.reservation__inner {
     margin-top: rem(60);
 
     @include mq(md) {
@@ -17,11 +17,11 @@
     }
 }
 
-.resevation__message + .resevation__message {
+.reservation__message + .reservation__message {
     margin-top: rem(40);
 }
 
-.resevation__title {
+.reservation__title {
     font-size: rem(20);
 
     @include mq(md) {
@@ -29,11 +29,11 @@
     }
 }
 
-.resevation__info {
+.reservation__info {
    position: relative;
 }
 
-.resevation__tel {
+.reservation__tel {
     display: inline-block;
     font-size: rem(32);
     padding-left: rem(40);
@@ -54,12 +54,12 @@
     }
 }
 
-.resevation__time {
+.reservation__time {
     font-size: rem(12);
     color: $main-color;
 }
 
-.resevation__text {
+.reservation__text {
     font-size: rem(14);
     line-height: 1.714;
     margin-top: rem(28);

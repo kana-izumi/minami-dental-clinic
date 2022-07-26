@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <div class="mv-sub">
-      <div class="mv-sub__inner inner">
+      <div class="mv-sub__inner">
         <div class="mv-sub__img u-mobile">
           <img src="<?php echo esc_url(get_theme_file_uri('/src/images/contact/page-contact_top-sp.jpg')); ?>" alt="">
         </div>
