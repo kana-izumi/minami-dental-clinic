@@ -46,7 +46,7 @@
           </div>
           <?php while(have_posts()) : the_post(); ?>
           <?php the_content(); ?>
-          <?php echo do_shortcode('[contact-form-7 id="41" title="WEB予約ページ"]')?>
+          <?php echo do_shortcode('[contact-form-7 id="41" title="WEB予約ページ"]'); ?>
           <?php endwhile;?>
           <?php endif; ?>
         </div>

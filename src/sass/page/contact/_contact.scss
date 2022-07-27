@@ -225,63 +225,93 @@ br {
     }
 }
 
-.contact-form__check-body {
-    margin-top: rem(20);
+.wpcf7-list-item.first {
+    margin: 0;
+  }
+  .wpcf7-list-item-label {
+    cursor: pointer;
+    display: flex;
+  }
+  /* デフォルトのボタン */
+  input[type="radio"] {
+    opacity: 0; // デフォルトのボタンを非表示
+    position: absolute;
+  }
+  /* チェック前のボタン */
+  .wpcf7-list-item-label::before {
+    background: #fff;
+    border: 1px solid #333;
+    border-radius: 100%; // ラジオボタンっぽく丸くする
+    content: "";
+    height: 1.2em;
+    margin-bottom: auto;
+    margin-right: .5em;
+    margin-top: auto;
+    transition: background-color .5s; // 色をじんわり変化させる
+    width: 1.2em;
+  }
+  /* チェック後のボタン */
+  input[type="radio"]:checked + .wpcf7-list-item-label::before {
+    background-color: #7fbfff; // チェック後の中心の色
+    box-shadow: inset 0 0 0 3px #fff; // 中心の色のスタイル
+  }
+// .contact-form__check-body {
+//     margin-top: rem(20);
 
-    &:nth-last-of-type(1),:nth-last-of-type(2),:nth-last-of-type(3) {
-        margin-top: 0;
-    }
+//     &:nth-last-of-type(1),:nth-last-of-type(2),:nth-last-of-type(3) {
+//         margin-top: 0;
+//     }
 
-    label {
-        display: inline-block;
-        white-space: nowrap;
-        // テキストの途中改行がされなくなる
-        margin-top: rem(16);
-    }
+//     label {
+//         display: inline-block;
+//         white-space: nowrap;
+//         // テキストの途中改行がされなくなる
+//         margin-top: rem(16);
+//     }
 
-    span {
-        display: inline-block;
-        font-size: rem(14);
-        padding-left: rem(32);
-        position: relative;
-        margin-right: rem(16);
+//     span {
+//         display: inline-block;
+//         font-size: rem(14);
+//         padding-left: rem(32);
+//         position: relative;
+//         margin-right: rem(16);
 
-        &::before {
-            content: "";
-            position: absolute;
-            width: rem(24);
-            height: rem(24);
-            border: rem(1) solid $main-color;
-            left: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            background-color: #fff;
-        }
+//         &::before {
+//             content: "";
+//             position: absolute;
+//             width: rem(24);
+//             height: rem(24);
+//             border: rem(1) solid $main-color;
+//             left: 0;
+//             top: 50%;
+//             transform: translateY(-50%);
+//             background-color: #fff;
+//         }
 
-        &::after {
-            content: "";
-            position: absolute;
-            width: rem(11);
-            height: rem(6);
-            border: rem(1) solid $main-color;
-            left: rem(7);
-            top: 50%;
-            transform: rotate(-45deg) translateY(-50%);
-            border: none;
-            border-bottom: 1px solid $main-color;
-            border-left: 1px solid  $main-color;
-            transition: opacity 0.3s ease 0s;
-            display: none;
-        }
-}
+//         &::after {
+//             content: "";
+//             position: absolute;
+//             width: rem(11);
+//             height: rem(6);
+//             border: rem(1) solid $main-color;
+//             left: rem(7);
+//             top: 50%;
+//             transform: rotate(-45deg) translateY(-50%);
+//             border: none;
+//             border-bottom: 1px solid $main-color;
+//             border-left: 1px solid  $main-color;
+//             transition: opacity 0.3s ease 0s;
+//             display: none;
+//         }
+// }
 
-        [type="checkbox"]:checked + span {
-            &::after {
-                display: block;
-            }
-        }
+//         [type="checkbox"]:checked + span {
+//             &::after {
+//                 display: block;
+//             }
+//         }
 
-}
+// }
 
 
 .contact-form__select{
