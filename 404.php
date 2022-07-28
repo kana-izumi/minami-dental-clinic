@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <div class="container_404">
 	<main>
-		<div id="error">
+		<div class="error">
 			お探しのページが見つかりません。
 		</div>
 	</main>

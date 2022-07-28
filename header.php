@@ -23,11 +23,9 @@
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet">
 <!-- //css -->
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
-<link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/styles.css')); ?>">
 <!-- //JavaScript -->
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
-<script defer src="<?php echo esc_url(get_theme_file_uri('/js/script.js')); ?>"></script>
 <?php wp_head();?>
 </head>
 <bod <?php body_class(); ?>>

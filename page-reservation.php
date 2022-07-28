@@ -27,7 +27,7 @@
           <h2 class="reservation__title">お電話でのご予約/ご相談</h2>
           <div class="reservation__info">
             <div class="reservation__tel">03-1234-5678</div>
-            <div class="reservation__time">(年中無休 AM9:00〜PM22:00)</div>
+            <div class="reservation__time">&emsp;&emsp;(年中無休 AM9:00〜PM22:00)</div>
           </div>
           <p class="reservation__text">お急ぎの方は電話での連絡がスムーズです。<br>
             混雑状況によっては当日受診をご利用いただけない場合がございます。<br>
