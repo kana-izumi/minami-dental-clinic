@@ -22,14 +22,11 @@
     </div>
     <section class="contact contact-thanks">
       <div class="contact-thanks__inner inner">
-      <?php if(have_posts()): ?>
         <div class="contact__message contact-thanks__message">
-        <?php while(have_posts()) : the_post(); ?>
-          <?php the_content(); ?>
-          <?php echo do_shortcode('[contact-form-7 id="39" title="お問い合わせ完了"]')?>
+          <p>お問い合わせありがとうございました。</p>
+          <p>3営業日以内に返信いたしますので、しばらくお待ちいただけますと幸いです。</p>
+          <p><span>※3営業日以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。</span></p>
         </div>
-        <?php endwhile; ?>
-        <?php endif; ?>
       </div>
     </section>
 
