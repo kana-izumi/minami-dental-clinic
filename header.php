@@ -4,27 +4,27 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <meta name="format-detection" content="telephone=no" />
-<!-- meta情報 -->
+<!-- // meta情報 -->
 <title><?php bloginfo('name')?></title>
 <meta name="description" content="街の皆さまの笑顔を守るアットホームな歯医者さん" />
 <meta name="keywords" content="" />
-<!-- ogp -->
+<!-- //ogp -->
 <meta property="og:title" content="" />
 <meta property="og:type" content="" />
 <meta property="og:url" content="" />
 <meta property="og:image" content="" />
 <meta property="og:site_name" content="" />
 <meta property="og:description" content="" />
-<!-- ファビコン -->
+<!-- // ファビコン -->
 <link rel="”icon”" href="" />
-<!-- GoogleFont -->
+<!-- //GoogleFont -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@500;700&display=swap" rel="stylesheet">
-<!-- css -->
+<!-- //css -->
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('/css/styles.css')); ?>">
-<!-- JavaScript -->
+<!-- //JavaScript -->
 <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <script defer src="<?php echo esc_url(get_theme_file_uri('/js/script.js')); ?>"></script>
@@ -32,20 +32,7 @@
 </head>
 <bod <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-<!-- <div class="section-header">
-      <span class="section-header__icon-left1"></span>
-      <span class="section-header__icon-left2"></span>
-      <span class="section-header__icon-left3"></span>
-      <span class="section-header__icon-left4"></span>
-      <span class="section-header__icon-left5"></span>
-      <h2 class="section-header__title">当院の3つのおすすめ</h2>
-      <span class="section-header__icon-right1"></span>
-      <span class="section-header__icon-right2"></span>
-      <span class="section-header__icon-right3"></span>
-      <span class="section-header__icon-right4"></span>
-      <span class="section-header__icon-right5"></span>
-  </div> -->
-
+<!-- //header -->
 <div class="header">
     <div class="header__inner">
         <div class="header__block">
@@ -68,7 +55,7 @@
             </nav>
         </div>
 
-    <!-- drawer -->
+<!-- //drawer -->
     <div class="drawer u-mobile">
         <div class="drawer__inner inner">
             <div class="drawer__header-logo">
@@ -114,4 +101,3 @@
         </div>
         </div>
     </div>
-<!-- /.header -->

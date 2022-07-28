@@ -44,8 +44,6 @@
       </div>
     </div>
 
-    <!-- /.main-visual -->
-
     <section class="news">
       <div class="news__inner">
         <div class="news__info">
@@ -80,7 +78,6 @@
         </div>
       </div>
     </section>
-    <!-- /.news -->
 
     <section class="about">
       <div class="about__inner inner">
@@ -142,7 +139,7 @@
         </div>
       </div>
     </div>
-    <!-- /.concept -->
+
     <section class="treatment-guidance">
       <div class="treatment-guidance__deco-top"></div>
       <div class="treatment-guidance-bg">
@@ -183,7 +180,7 @@
       </div>
       <div class="treatment-guidance__deco-bottom"></div>
     </section>
-    <!-- /.treatment-guidance -->
+
     <section class="staff-blog">
       <div class="staff-blog__inner inner">
         <div class="staff-blog-header">
@@ -210,5 +207,5 @@
         </div>
       </div>
     </section>
-    <!-- /.staff-blog -->
+
 <?php get_footer(); ?>

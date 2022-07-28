@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 
     <div class="mv-sub">
-      <div class="mv-sub__inner inner">
+      <div class="mv-sub__inner">
         <div class="mv-sub__img u-mobile">
           <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top-sp.jpg')); ?>" alt="スタッフブログ画像">
         </div>
@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <!-- /.mv-sub -->
+
     <div class="blog-page blog-wrapper inner">
       <article class="blog-main">
         <div class="blog-main__inner">
@@ -70,5 +70,4 @@
       </article>
 <?php get_sidebar(); ?>
     </div>
-    <!-- /.staff.blog -->
 <?php get_footer(); ?>

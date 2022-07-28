@@ -18,13 +18,13 @@
         </div>
           <?php } ?>
         <?php } ?>
-          <!-- <ul class="bread__list">
+          <ul class="bread__list">
             <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
             <li class="bread__item"><a href="#">スタッフ紹介</a></li>
-          </ul> -->
+          </ul>
       </div>
     </div>
-    <!-- /.mv-sub -->
+
     <div class="blog blog-wrapper inner">
       <article class="blog-main">
         <div class="blog-main__inner">
@@ -55,5 +55,4 @@
       </article>
 <?php get_sidebar();?>
     </div>
-    <!-- /.staff.blog -->
 <?php get_footer(); ?>

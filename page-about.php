@@ -19,8 +19,6 @@
         </div>
       </div>
     </div>
-    <!-- /.main-visual -->
-
     <section class="about-sub">
       <div class="about-sub__content1">
         <div class="about-sub__inner inner">
@@ -51,7 +49,7 @@
         </div>
       </div>
     </section>
-    <!-- /.concept -->
+
     <div class="about-picture">
       <div class="about-picture__inner inner">
         <div class="section-header">
@@ -67,5 +65,4 @@
         </div>
       </div>
     </div>
-    <!-- /.concept-picture -->
 <?php get_footer(); ?>

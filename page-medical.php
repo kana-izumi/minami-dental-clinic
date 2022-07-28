@@ -19,7 +19,6 @@
         </div>
       </div>
     </div>
-    <!-- /.main-visual -->
 
     <section class="medical-menu">
       <div class="medical-menu__inner inner">
@@ -47,7 +46,7 @@
         </ul>
       </div>
     </section>
-    <!-- /.medical-menu -->
+
     <div class="medical-content">
       <div class="medical-content__deco-top"></div>
       <div class="medical-content__bg">
@@ -222,6 +221,4 @@
       <div class="medical-content__deco-bottom"></div>
     </div>
   </div>
-
-    <!-- /.concept-picture -->
 <?php get_footer(); ?>

@@ -26,7 +26,6 @@
             </div>
             </div>
         </div>
-        <!-- /.footer-info -->
         <nav class="footer-nav">
             <div class="footer-nav__item">
             <ul>
@@ -96,7 +95,7 @@
             </div>
         </div>
     </footer>
-        <!-- /.footer -->
+
         <?php wp_footer(); ?>
     </body>
     </html>

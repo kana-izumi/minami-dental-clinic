@@ -19,7 +19,7 @@
         </div>
       </div>
     </div>
-    <!-- /.mv-sub -->
+
     <div class="blog blog-wrapper inner">
       <article class="blog-main">
         <div class="blog-main__inner">
@@ -140,5 +140,5 @@
       </article>
 <?php get_sidebar(); ?>
     </div>
-    <!-- /.staff.blog -->
+
 <?php get_footer();?>

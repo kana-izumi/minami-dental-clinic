@@ -20,7 +20,6 @@
         </div>
       </div>
     </div>
-    <!-- /.main-visual -->
     <section class="contact contact-thanks">
       <div class="contact-thanks__inner inner">
       <?php if(have_posts()): ?>

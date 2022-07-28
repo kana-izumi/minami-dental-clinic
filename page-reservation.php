@@ -20,7 +20,7 @@
         </div>
       </div>
     </div>
-    <!-- /.main-visual -->
+
     <section class="reservation">
       <div class="reservation__inner inner">
         <div class="reservation__message">
