@@ -9,13 +9,13 @@
           <img src="./src/images/contact/page-contact_top.jpg" alt="">
         </div>
         <div class="mv-sub__heading">
-          <h2 class="mv-sub__title">お問い合わせ</h2>
-          <span class="mv-sub__lead">CONTACT</span>
+          <h2 class="mv-sub__title">WEB予約</h2>
+          <span class="mv-sub__lead">RESERVE</span>
         </div>
         <div class="bread">
           <ul class="bread__list">
             <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">お問い合わせ完了</a></li>
+            <li class="bread__item"><a href="#">WEB予約完了</a></li>
           </ul>
         </div>
       </div>
