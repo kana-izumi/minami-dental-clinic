@@ -1,6 +1,6 @@
 <?php get_header(); ?>
     <div class="mv-sub">
-      <div class="mv-sub__inner inner">
+      <div class="mv-sub__inner">
         <div class="mv-sub__img u-mobile">
           <img src="<?php echo esc_url(get_theme_file_uri('/src/images/about/page-about_top-sp.jpg')); ?>" alt="">
         </div>
@@ -10,13 +10,13 @@
         <div class="mv-sub__heading">
           <h2 class="mv-sub__title">当院について</h2>
           <span class="mv-sub__lead">ABOUT OUR CLINIC</span>
-        </div>
-        <div class="bread">
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">当院について</a></li>
-          </ul>
-        </div>
+        </div
+        <?php if(!is_front_page()){?>
+        <?php if(function_exists('bcn_display')){ ?>
+        <div class="bread vocab="http://schema.org/" typeof="BreadcrumbList"></div>
+        <?php bcn_display(); ?>
+        <?php }?>
+        <?php }?>
       </div>
     </div>
     <section class="about-sub">

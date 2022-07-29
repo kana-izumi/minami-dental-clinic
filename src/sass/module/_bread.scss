@@ -2,6 +2,8 @@
 
 .bread {
     margin-top: rem(10);
+    color: #C2C2C2;
+    font-size: rem(12);
 
     @include mq(md) {
         margin-top: rem(10);
@@ -18,7 +20,6 @@
 }
 
 .bread__item a {
-    font-size: rem(12); /* リンクの文字サイズを調整 */
 }
 
 .bread__item{
@@ -36,5 +37,4 @@
 }
 
 .bread__item-grey {
-    color: #C2C2C2;
 }
