@@ -2097,7 +2097,8 @@ select::-ms-expand {
   padding: 0.8125rem 1rem;
   width: 100%;
 }
-.contact-form__input [type=date] + [type=date] {
+
+.contact-form__input [type=date] {
   margin-top: 20px;
   margin-top: 1.25rem;
 }

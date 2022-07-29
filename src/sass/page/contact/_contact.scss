@@ -144,8 +144,9 @@
         padding: rem(13) rem(16);
         width: 100%;
     }
-
-    [type="date"] + [type="date"]{
+}
+.contact-form__input{
+    [type="date"] {
             margin-top: rem(20);
     }
 }
