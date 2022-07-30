@@ -23,68 +23,48 @@
 
     <div class="blog-page blog-wrapper inner">
       <article class="blog-main">
+        <?php if(have_posts()) : ?>
+          <?php while(have_posts()) : the_post() ;?>
+          <?php endwhile; ?>
+        <?php endif; ?>
         <div class="blog-main__inner">
-          <h1 class="blog-page__title1">[見出し1]下層ページのタイトルタイトルタイトルタイトルタイトルタイトルタイトルタイトル</h1>
+          <h1 class="blog-page__title1"><?php the_title(); ?></h1>
             <div class="blog-page__info">
-              <div class="blog-page__date">2021.01.01</div>
-              <div class="blog-page_category">カテゴリ1</div>
+              <div class="blog-page__date"><?php echo get_the_date('Y.m.d'); ?></div>
+              <div class="blog-page_category"><?php the_category('')?></div>
             </div>
             <div class="blog-page__content1">
-              <div class="blog-page__text1">
-                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。<a href="">リンクが入ります。</a>テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                &nbsp;
-                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              </div>
+              <?php the_content(); ?>
             </div>
-            <div class="blog-page__content2">
-              <h2 class="blog-page__title2">見出し2見出し2見出し2見出し2</h2>
-              <figure class="blog-page__img">
-                <img src="./src/images/blog/biog-page.jpg" alt="">
-              </figure>
+          </div>
+          <!-- <div class="blog-page__pager">
+            <ul class="blog-page__pagination">
+              <li class="blog-page__pagination-pre"><a href="#">前の記事へ</a></li>
+              <li class="blog-page__pagination-all"><a href="#">記事一覧</a></li>
+              <li class="blog-page__pagination-next"><a href="#">次の記事へ</a></li>
+            </ul>
+          </div> -->
+          <?php
+            $prevpost = get_adjacent_post(true, '', true); //前の記事
+            $nextpost = get_adjacent_post(true, '', false); //次の記事
+            if( $prevpost or $nextpost ){ //前の記事、次の記事いずれか存在しているとき
+              ?>
+            <div class="Pager">
+              <?php
+            if ( $prevpost ) { //前の記事が存在しているとき
+              echo '<a href="' . get_permalink($prevpost->ID) . '">前の記事へ</a>';
+            } else { //前の記事が存在しないとき
+              echo '<a href="' . network_site_url('/') . '">記事一覧</a>';
+            }
+            if ( $nextpost ) { //次の記事が存在しているとき
+              echo '<a href="' . get_permalink($nextpost->ID) . '">次の記事へ</a>';
+            } else { //次の記事が存在しないとき
+              echo '<a href="' . network_site_url('/') . '">記事一覧</a>';
+            }
+            ?>
             </div>
-            <div class="blog-page__content3">
-              <h3 class="blog-page__title3">見出し3見出し3見出し3見出し3</h3>
-              <div class="blog-page__text2">
-                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-              </div>
-            </div>
-            <div class="blog-page__content4">
-              <h4 class="blog-page__title4">見出し4見出し4見出し4見出し4</h4>
-              <div class="blog-page__text2">
-                <p>テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。テキストが入ります。</p>
-                <ul>
-                  <li>リスト1</li>
-                  <li>リスト2</li>
-                  <li>リスト3</li>
-                </ul>
-            </div>
-            <!-- </div>
-            <div class="blog-page__pager">
-              <ul class="blog-page__pagination">
-                  <li class="blog-page__pagination-pre"><a href="#">前の記事へ</a></li>
-                  <li class="blog-page__pagination-all"><a href="#">記事一覧</a></li>
-                  <li class="blog-page__pagination-next"><a href="#">次の記事へ</a></li>
-              </ul>
-            </div> -->
-            <?php if (paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
-              <!-- pagination -->
-              <div class="blog-page__pager">
-                <?php
-                echo
-                  paginate_links(
-                    array(
-                      'end_size' => 1,
-                      'mid_size' => 1,
-                      'prev_next' => true,
-                      'prev_text' => '<i class="fas fa-angle-left"></i>',
-                      'next_text' => '<i class="fas fa-angle-right"></i>',
-                    )
-                  );
-                ?>
-              </div><!-- /pagination -->
-            <?php endif; ?>
+            <?php } ?>
+          </article>
+          <?php get_sidebar(); ?>
         </div>
-      </article>
-<?php get_sidebar(); ?>
-    </div>
 <?php get_footer(); ?>
