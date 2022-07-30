@@ -1,0 +1,40 @@
+@use "global" as *;
+
+.bread {
+    margin-top: rem(10);
+    color: #C2C2C2;
+    font-size: rem(12);
+
+    @include mq(md) {
+        margin-top: rem(10);
+    }
+
+}
+
+.bread__list {
+    display: flex;
+
+    @include mq(md) {
+        padding-left: rem(30);
+    }
+}
+
+.bread__item a {
+}
+
+.bread__item{
+
+    &::after {
+    content: '\003e';
+    margin-left: rem(5);
+    margin-right: rem(5);
+    color: $black;
+    }
+}
+
+.bread__item:last-child::after {
+        content: ""; /* 最後のliの後ろには区切り文字を表示しない */
+}
+
+.bread__item-grey {
+}

@@ -1,0 +1,52 @@
+@use "global" as *;
+
+.footer-nav {
+    padding: rem(60) 0 rem(60);
+
+    @include mq(md) {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.footer-nav__item {
+
+    &:not(:first-child) {
+        margin-top: rem(40);
+
+        @include mq(md) {
+            margin: 0;
+            margin-left: rem(40);
+        }
+    }
+}
+
+.footer-nav__item-list li{
+    position: relative;
+    margin-top: rem(20);
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translate(-50%,-50%);
+        width:0;
+        height:0;
+        border-style:solid;
+        border-width: 6px 0 6px 6px;
+        border-color: transparent transparent transparent $main-color;
+    }
+}
+.footer-nav__item-list a {
+    margin-left: rem(6);
+}
+
+.footer-nav__item-flex {
+    display: flex;
+
+}
+
+.footer-nav__sub {
+    margin-left: rem(20);
+}

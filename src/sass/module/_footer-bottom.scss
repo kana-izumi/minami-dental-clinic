@@ -1,0 +1,21 @@
+@use "global" as *;
+
+.footer-bottom {
+    display: flex;
+    height: rem(60);
+    background-color: $white;
+    justify-content: space-around;
+    padding: rem(10) 0;
+
+    @include mq(md) {
+        display: none;
+    }
+}
+
+.footer-bottom__tel {
+    width: rem(170);
+}
+
+.footer-bottom__link {
+    width: rem(157);
+}

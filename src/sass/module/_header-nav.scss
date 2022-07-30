@@ -1,0 +1,84 @@
+@use "global" as *;
+
+.header-nav {
+  @include mq(md) {
+    display: flex;
+    height: inherit;
+    align-items: center;
+  }
+}
+
+.header-nav__list {
+
+  @include mq(md) {
+    display: flex;
+    font-size: rem(11);
+    text-align: center;
+  }
+}
+
+.header-nav__list li {
+
+  @include mq(md) {
+    position: relative;
+
+    &:not(:first-child){
+      margin-left: rem(27);
+    }
+
+    &.is-active {
+      &::after {
+        position: absolute;
+        content: "";
+        bottom: rem(-6);
+        left: 50%;
+        transform: translateX(-50%);
+        width: rem(20);
+        height: rem(2);
+        background-color: $main-color;
+      }
+    }
+  }
+}
+
+.header-nav__list img {
+  @include mq(md) {
+    margin: 0 auto;
+    width: rem(24);
+  }
+}
+
+.header__info {
+  @include mq(md) {
+    margin-left: rem(32);
+  }
+}
+
+.header__info-address {
+  @include mq(md) {
+    font-size: rem(12);
+    text-align: right;
+  }
+}
+
+.header__info-tel {
+  @include mq(md) {
+    display: inline-block;
+    font-size: rem(32);
+    padding-left: rem(16);
+    font-weight: $bold;
+    color: $main-color;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: rem(28);
+        height: rem(28);
+        transform: translate(-50%,-50%);
+        background: url(../src/images/top/icon_tel.svg);
+    }
+  }
+}

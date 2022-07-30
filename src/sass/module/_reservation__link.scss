@@ -1,0 +1,14 @@
+@use "global" as *;
+
+.reservation__link {
+    display: none;
+
+    @include mq(md) {
+        width: rem(92);
+        position: absolute;
+        top: rem(60);
+        right: 0;
+        z-index: 101;
+        display: block;
+    }
+}

@@ -1,0 +1,164 @@
+@use "global" as *;
+
+.footer-info {
+    padding: rem(32) rem(10) rem(20) rem(10);
+    background-color: $white;
+    border-radius: rem(8);
+    text-align: center;
+
+    @include mq(md) {
+        display: flex;
+        padding: rem(40) rem(50);
+    }
+}
+
+.footer-info__left {
+    max-width: rem(477);
+    width: 100%;
+}
+
+.footer-info__logo {
+    width: 100%;
+    max-width: rem(311);
+    margin: 0 auto;
+
+    @include mq(md) {
+        width: 100%;
+        max-width: rem(400);
+    }
+}
+
+.footer-info__address {
+    margin-top: rem(12);
+    font-size: rem(14);
+}
+
+.footer-info__tel {
+    display: inline-block;
+    font-size: rem(32);
+    padding-left: rem(32);
+    font-weight: $bold;
+    color: $main-color;
+    position: relative;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: rem(28);
+        height: rem(28);
+        transform: translate(-50%,-50%);
+        background: url(../src/images/top/icon_tel.svg);
+    }
+}
+
+.footer-info__time {
+    font-size: rem(12);
+    color: $main-color;
+    text-align: center;
+}
+
+.footer-info__contact {
+    margin-top: rem(20);
+    display: flex;
+    justify-content: space-between;
+
+    @include mq(md) {
+        justify-content: center;
+    }
+}
+
+.footer-info__contact-web {
+    display: inline-block;
+    padding: rem(17) rem(60);
+    max-width: rem(220);
+    width: 100%;
+    background-color: $main-color;
+    position: relative;
+    color: $white;
+    border-radius: rem(30);
+    font-size: rem(14);
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: rem(62);
+        transform: translate(-50%,-50%);
+        width: rem(25);
+        height: rem(14);
+        background: url(../src/images/top/icon-pc.svg);
+    }
+}
+
+.footer-info__contact-web a {
+    margin-left: rem(16);
+}
+
+
+.footer-info__contact-mail {
+    display: inline-block;
+    max-width: rem(220);
+    width: 100%;
+    padding: rem(16) rem(46);
+    background-color: $white;
+    position: relative;
+    color: $main-color;
+    border-radius: rem(30);
+    border: rem(1) solid $main-color;
+    font-size: rem(14);
+
+    @include mq(md) {
+        margin-left: rem(20);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 50%;
+        left: rem(46);
+        transform: translate(-50%,-50%);
+        width: rem(22);
+        height: rem(22);
+        background: url(../src/images/top/icon-mail.svg);
+    }
+}
+
+.footer-info__contact-mail a {
+    margin-left: rem(16);
+}
+
+.footer-info__medical-time {
+    background-color: #fff;
+    box-shadow: 0 3px 6px #00000029;
+    border-radius: rem(12);
+    overflow: hidden;
+    margin: rem(20) auto 0;
+}
+
+.footer-info__right {
+    max-width: rem(385);
+    width: 100%;
+}
+
+.footer-info-map {
+    margin-top: rem(20);
+    position: relative;
+    width: 100%;
+    padding-top: 100%; /* = height ÷ width × 100 */
+
+    @include mq(md) {
+        padding-top: 100%;
+        margin-left: rem(40);
+    }
+}
+
+
+.footer-info-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}

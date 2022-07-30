@@ -1,0 +1,20 @@
+@use "global" as *;
+
+.footer {
+    background: $sub-color2;
+    margin-top: rem(132);
+    padding-top: rem(32);
+    position: relative;
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: rem(-32);
+        left: 0;
+        width: 100%;
+        height: rem(32);
+        background: url(../src/images/top/wave.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+}

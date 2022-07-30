@@ -1,0 +1,147 @@
+@use "global" as *;
+
+.about {
+    margin-top: rem(53);
+    padding-top: rem(110);
+    position: relative;
+
+    @include mq(md) {
+        padding-top: rem(180);
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        top: 0;
+        // left: 3%;
+        width: 100%;
+        height:rem(307);
+        background-image: url(../src/images/top/concept-bg.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        z-index: 90;
+
+        @include mq(md) {
+            position: absolute;
+            content: "";
+            top: 0;
+            // left: 3%;
+            width: 100%;
+            height:rem(725);
+            background-image: url(../src/images/top/concept-bg.svg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            z-index: 90;
+            }
+    }
+}
+
+.about__inner {
+    flex: 0 1 37%;
+    position: relative;
+    z-index: 100;
+
+    @include mq(md) {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.about__body {
+    max-width: rem(407);
+}
+
+.about__heading-lead {
+    font-size: rem(11);
+    color: $main-color;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
+}
+
+.about__heading-title {
+    font-size: rem(20);
+    margin-top: rem(15);
+    letter-spacing: 0.1em;
+
+    @include mq(md) {
+        font-size: rem(28);
+        margin-top: rem(25);
+    }
+}
+
+.about__message {
+    margin-top: rem(32);
+    font-size: rem(14);
+    line-height: 1.7;
+}
+
+.about__link {
+    margin-top: rem(34);
+    text-align: center;
+
+    @include mq(md) {
+        margin-top: rem(40);
+        text-align: left;
+    }
+}
+
+.about__link-btn {
+    display: inline-block;
+    font-size: rem(14);
+    padding: rem(10) rem(40);
+    border: 1px solid $main-color;
+    border-radius: rem(24);
+    background-color: $white;
+    text-align: center;
+    position: relative;
+    color: $main-color;
+
+    &:hover {
+        background-color: $main-color;
+        color: $white;
+    }
+
+    &::after {
+        content: "";
+        position: absolute;
+        width: rem(12);
+        height: rem(12);
+        top: 50%;
+        right: rem(12);
+        transform: translateY(-50%);
+        background: url(../src/images/top/icon-arrow-blue-btn.svg);
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &:hover::after {
+        background: url(../src/images/top/arrow-right-white.svg);
+        right: rem(6);
+        transition: all .3s;
+    }
+}
+
+.about__img {
+    margin-top: rem(40);
+    margin-right: rem(40);
+
+    @include mq(sm) {
+        margin: 0;
+        flex: 0 0 50%;
+        position: relative;
+        z-index: 101;
+        overflow: hidden;
+        border-radius: rem(0) rem(20) rem(20) rem(0);
+    }
+
+    @include mq(md) {
+
+    }
+}

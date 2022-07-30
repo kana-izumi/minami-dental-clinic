@@ -1,0 +1,7 @@
+@use "global" as *;
+
+.blog-side {
+    @include mq(md) {
+        width: 30.643%;
+    }
+}

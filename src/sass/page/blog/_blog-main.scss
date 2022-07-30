@@ -1,0 +1,148 @@
+@use "global" as *;
+
+
+.blog-main {
+    margin-top: rem(52);
+
+    @include mq(md) {
+        width: 69.356%;
+        margin-right: rem(30);
+    }
+}
+
+.blog-main__items {
+    margin-top: rem(40);
+}
+
+.blog-main__item {
+        display: flex;
+
+        &:not(:first-child) {
+            margin-top: rem(20);
+        }
+}
+
+.blog-main__img {
+    width: 75.9398496%;
+}
+
+
+.blog-main__body {
+    margin-left: rem(10);
+    position: relative;
+}
+
+
+.blog-main__category {
+    display: inline-block;
+    font-size: rem(10);
+    color: $white;
+    padding: rem(3) rem(8);
+    line-height: 1.5;
+    background-color: $main-color;
+    border-radius: rem(50);
+}
+
+.blog-main__title {
+    font-size: rem(14);
+    margin-top: rem(8);
+}
+
+.blog-main__date {
+    font-size: rem(11);
+    color: #888888;
+}
+
+.blog-main__pager {
+    margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(100);
+    }
+}
+
+.blog-main__pagination {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.blog-main__pagination li {
+
+    &:not(:first-child) {
+        margin-left: rem(7);
+    }
+}
+
+.blog-main__pre ,
+.blog-main__next {
+    background-color: $main-color;
+    color: $white;
+    border-radius: rem(4);
+}
+
+.blog-main__pre {
+    position: relative;
+    width: rem(70);
+    height: rem(30);
+    padding-left: rem(36);
+    padding-top: rem(7);
+    padding-bottom: rem(7);
+    font-size: rem(11);
+
+    @include mq(md) {
+        font-size: rem(14);
+        width: rem(82);
+    }
+
+    &::before {
+        position: absolute;
+        content: "";
+        width: rem(16);
+        height: rem(16);
+        background-image: url(../src/images/blog/arrow-circle-left.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        top: 50%;
+        left: rem(10);
+        transform: translateY(-50%);
+    }
+}
+
+.blog-main__all {
+    color: $main-color;
+    border: rem(1) solid $main-color;
+    border-radius: rem(4);
+    width: rem(30);
+    height: rem(30);
+    text-align: center;
+}
+
+.blog-main__next {
+    position: relative;
+    width: rem(70);
+    height: rem(30);
+    padding-right: rem(25);
+    padding-left: rem(7);
+    padding-top: rem(7);
+    font-size: rem(11);
+
+    @include mq(md) {
+        font-size: rem(14);
+    }
+
+    &::after {
+        position: absolute;
+        content: "";
+        width: rem(16);
+        height: rem(16);
+        background-image: url(../src/images/blog/arrow-circle-right.png);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+        top: 50%;
+        right: rem(10);
+        transform: translateY(-50%);
+    }
+}
