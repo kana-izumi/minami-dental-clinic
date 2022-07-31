@@ -151,7 +151,7 @@
              );
               ?>
               </div><!-- /pagination -->
-<?php endif; ?>
+            <?php endif; ?>
           </div>
         </div>
       </article>

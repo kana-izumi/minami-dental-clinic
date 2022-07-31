@@ -130,10 +130,15 @@
 }
 
 .contact-form__input {
-    margin-top: rem(12);
 
     @include mq(md) {
         width: calc(100% - rem(240));
+    }
+
+    [type="text"],
+    [type="email"],
+    [type="tel"] {
+        margin-top: rem(12);
     }
 
     [type="text"],
@@ -388,5 +393,14 @@ checked状態
         background-color: $white;
         border: rem(1) solid $main-color;
         border-radius: rem(24);
+
+        &:hover {
+            background-color: $main-color;
+            color: $white;
+        }
     }
+}
+
+.wpcf7-form-control .has-spinner .wpcf7-submit {
+
 }

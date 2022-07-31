@@ -2073,14 +2073,16 @@ select::-ms-expand {
   font-size: 0.75rem;
 }
 
-.contact-form__input {
-  margin-top: 12px;
-  margin-top: 0.75rem;
-}
 @media screen and (min-width: 768px) {
   .contact-form__input {
     width: calc(100% - 15rem);
   }
+}
+.contact-form__input [type=text],
+.contact-form__input [type=email],
+.contact-form__input [type=tel] {
+  margin-top: 12px;
+  margin-top: 0.75rem;
 }
 .contact-form__input [type=text],
 .contact-form__input [type=email],
@@ -2324,6 +2326,10 @@ checked状態
   border: 1px solid #1391E6;
   border: 0.0625rem solid #1391E6;
   border-radius: 1.5rem;
+}
+.contact-form__btn [type=submit]:hover {
+  background-color: #1391E6;
+  color: #fff;
 }
 
 .medical-content {
@@ -2770,7 +2776,7 @@ checked状態
 .greeting-boss__img--sp {
   margin-top: 40px;
   margin-top: 2.5rem;
-  background-image: url(/src/images/staff/staff1.jpg);
+  background-image: url(../src/images/staff/staff1.jpg);
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -2808,7 +2814,7 @@ checked状態
 
 @media screen and (min-width: 768px) {
   .greeting-boss__img--pc {
-    background-image: url(/src/images/staff/staff1.jpg);
+    background-image: url(../src/images/staff/staff1.jpg);
     background-size: contain;
     background-position: top center;
     background-repeat: no-repeat;

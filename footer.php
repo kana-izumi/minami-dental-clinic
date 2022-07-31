@@ -10,10 +10,10 @@
                 <div class="footer-info__time">(年中無休 AM9:00〜PM22:00)</div>
                 <div class="footer-info__contact">
                 <div class="footer-info__contact-web">
-                <a href="">WEB予約</a>
+                <a href="<?php echo esc_url(home_url('/'))?>reservation">WEB予約</a>
                 </div>
                 <div class="footer-info__contact-mail">
-                <a href="">お問い合わせ</a>
+                <a href="<?php echo esc_url(home_url('/'))?>contact">お問い合わせ</a>
                 </div>
             </div>
             <div class="footer-info__medical-time">

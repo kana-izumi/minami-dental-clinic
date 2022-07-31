@@ -33,8 +33,10 @@
               <h2 class="contact-header__title"><?php the_title(); ?><br>フォーム</h2>
             </div>
             <?php while(have_posts()) : the_post(); ?>
+            <form class="contact-form" action="">
               <?php the_content(); ?>
               <?php echo do_shortcode('[contact-form-7 id="33" title="お問い合わせ"]')?>
+            </form>
             <?php endwhile;?>
           <?php endif; ?>
         </div>
