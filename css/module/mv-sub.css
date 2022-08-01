@@ -21,6 +21,10 @@ body {
   position: relative;
 }
 
+.mv-sub__inner {
+  margin: 20px 60px;
+  margin: 1.25rem 3.75rem;
+}
 @media screen and (min-width: 768px) {
   .mv-sub__inner {
     margin: 1.9375rem 3.75rem;
@@ -30,6 +34,7 @@ body {
 .mv-sub__img {
   width: 100%;
 }
+
 .mv-sub__heading {
   color: #fff;
   position: absolute;

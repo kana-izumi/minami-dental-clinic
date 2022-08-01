@@ -6,24 +6,16 @@
 }
 
 .mv-sub__inner {
-    // margin-top: rem(20);
-    // margin-right: rem(20);
-    // margin-left: rem(20);
+    margin: rem(20) rem(60);
 
     @include mq(md) {
         margin: rem(31) rem(60);
-        // margin-right: rem(60);
-        // margin-left: rem(60);
     }
 }
 
 .mv-sub__img {
-    // max-width: rem(335);
     width: 100%;
 
-    @include mq(md) {
-        // max-width: rem(1160);
-    }
 }
 
 .mv-sub__heading {

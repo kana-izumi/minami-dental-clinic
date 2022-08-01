@@ -26,3 +26,11 @@ $recruit = home_url('/reservation-thanks');
     </script>
 EOC;
 }
+
+/*---------------------------------------------
+アイキャッチ画像設定
+-----------------------------------------------*/
+
+add_action('init' , function(){
+    add_theme_support('post_thumbnails');
+});
