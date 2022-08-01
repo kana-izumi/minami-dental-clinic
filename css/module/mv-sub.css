@@ -22,8 +22,8 @@ body {
 }
 
 .mv-sub__inner {
-  margin: 20px 60px;
-  margin: 1.25rem 3.75rem;
+  margin: 20px 20px;
+  margin: 1.25rem 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .mv-sub__inner {
@@ -33,12 +33,27 @@ body {
 
 .mv-sub__img {
   width: 100%;
+  height: 188px;
+  height: 11.75rem;
+  background-image: url(../src/images/about/page-about_top-sp.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .mv-sub__img {
+    height: 23.125rem;
+    background-image: url(../src/images/about/page-about_top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
 
 .mv-sub__heading {
   color: #fff;
   position: absolute;
-  top: 47%;
+  top: 44%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -60,11 +75,14 @@ body {
   margin-top: 10px;
   margin-top: 0.625rem;
   letter-spacing: 0.12em;
+  font-size: 12px;
+  font-size: 0.75rem;
 }
 @media screen and (min-width: 768px) {
   .mv-sub__lead {
     margin-top: 1.0625rem;
     letter-spacing: 0.1em;
+    font-size: 0.875rem;
   }
 }
 /*# sourceMappingURL=mv-sub.css.map */

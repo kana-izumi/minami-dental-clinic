@@ -1,25 +1,4 @@
-<?php get_header(); ?>
-    <div class="mv-sub">
-      <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/about/page-about_top-sp.jpg')); ?>" alt="">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/about/page-about_top.jpg')); ?>" alt="">
-        </div>
-        <div class="mv-sub__heading">
-          <h2 class="mv-sub__title">当院について</h2>
-          <span class="mv-sub__lead">ABOUT OUR CLINIC</span>
-        </div>
-        <?php if (!is_front_page()) { ?>
-	      <?php if (function_exists('bcn_display')) { ?>
-		      <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
-			     <?php bcn_display(); ?>
-		      </div>
-	      <?php } ?>
-        <?php } ?>
-      </div>
-    </div>
+<?php get_header(); ?>s
     <section class="about-sub">
       <div class="about-sub__content1">
         <div class="about-sub__inner inner">

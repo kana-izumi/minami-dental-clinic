@@ -2,11 +2,10 @@
 
 .mv-sub {
     position: relative;
-
 }
 
 .mv-sub__inner {
-    margin: rem(20) rem(60);
+    margin: rem(20) rem(20);
 
     @include mq(md) {
         margin: rem(31) rem(60);
@@ -15,13 +14,25 @@
 
 .mv-sub__img {
     width: 100%;
+    height: rem(188);
+    background-image: url(../src/images/about/page-about_top-sp.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
 
+    @include mq(md) {
+        height: rem(370);
+        background-image: url(../src/images/about/page-about_top.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
 }
 
 .mv-sub__heading {
     color: $white;
     position: absolute;
-    top: 47%;
+    top: 44%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
@@ -40,9 +51,11 @@
     display: inline-block;
     margin-top: rem(10);
     letter-spacing: 0.12em;
+    font-size: rem(12);
 
     @include mq(md) {
         margin-top: rem(17);
         letter-spacing: 0.1em;
+        font-size: rem(14);
     }
 }

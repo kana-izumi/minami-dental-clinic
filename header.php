@@ -99,3 +99,65 @@
         </div>
         </div>
     </div>
+<?php if(is_front_page()): ?>
+    <div class="main-visual">
+      <div class="main-visual__inner">
+    <div class="main-visual__items">
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="main-visual__img1 u-mobile">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-01-sp.jpg')); ?>" alt="メイン画像">
+            </div>
+            <div class="main-visual__img1 u-desktop">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-01.jpg')); ?>" alt="メイン画像">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="main-visual__img2 u-mobile">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-02-sp.jpg')); ?>" alt="メイン画像">
+            </div>
+            <div class="main-visual__img1 u-desktop">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-02.jpg')); ?>" alt="メイン画像">
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="main-visual__img3 u-mobile">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-03-sp.jpg')); ?>" alt="メイン画像">
+            </div>
+            <div class="main-visual__img1 u-desktop">
+              <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-03.jpg')); ?>" alt="メイン画像">
+            </div>
+          </div>
+          <div class="main-visual__catch">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/top-text.svg')); ?>" alt="">
+          </div>
+        </div>
+      </div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+      <div class="swiper-pagination"></div>
+    </div>
+      </div>
+      <div class="reservation__link">
+        <a href="<?php echo esc_url(home_url('/'))?>reservation"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/btn-reserve.png')); ?>" alt="WEB予約はこちら"></a>
+      </div>
+    </div>
+<?php else: ?>
+    <div class="mv-sub">
+      <div class="mv-sub__inner">
+        <div class="mv-sub__img"></div>
+        <div class="mv-sub__heading">
+          <h2 class="mv-sub__title">当院について</h2>
+          <span class="mv-sub__lead">ABOUT OUR CLINIC</span>
+        </div>
+        <?php if (!is_front_page()) { ?>
+	      <?php if (function_exists('bcn_display')) { ?>
+		      <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+			     <?php bcn_display(); ?>
+		      </div>
+	      <?php } ?>
+        <?php } ?>
+      </div>
+    </div>
+<?php endif; ?>
