@@ -15,17 +15,9 @@
 .mv-sub__img {
     width: 100%;
     height: rem(188);
-    background-image: url(../src/images/about/page-about_top-sp.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
 
     @include mq(md) {
         height: rem(370);
-        background-image: url(../src/images/about/page-about_top.jpg);
-        background-size: contain;
-        background-repeat: no-repeat;
-        background-position: center center;
     }
 }
 

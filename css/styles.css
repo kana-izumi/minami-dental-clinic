@@ -941,18 +941,10 @@ select::-ms-expand {
   width: 100%;
   height: 188px;
   height: 11.75rem;
-  background-image: url(../src/images/about/page-about_top-sp.jpg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center center;
 }
 @media screen and (min-width: 768px) {
   .mv-sub__img {
     height: 23.125rem;
-    background-image: url(../src/images/about/page-about_top.jpg);
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center center;
   }
 }
 
@@ -989,6 +981,22 @@ select::-ms-expand {
     margin-top: 1.0625rem;
     letter-spacing: 0.1em;
     font-size: 0.875rem;
+  }
+}
+
+.about-mv {
+  background-image: url(../src/images/about/page-about_top-sp.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .about-mv {
+    height: 23.125rem;
+    background-image: url(../src/images/about/page-about_top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 

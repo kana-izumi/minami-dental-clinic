@@ -99,7 +99,7 @@
         </div>
         </div>
     </div>
-<?php if(is_front_page()): ?>
+<?php if (is_front_page()) { ?>
     <div class="main-visual">
       <div class="main-visual__inner">
     <div class="main-visual__items">
@@ -142,11 +142,10 @@
       <div class="reservation__link">
         <a href="<?php echo esc_url(home_url('/'))?>reservation"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/btn-reserve.png')); ?>" alt="WEB予約はこちら"></a>
       </div>
-    </div>
-<?php else: ?>
+<?php } elseif (is_page( 'about' )) { ?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img"></div>
+        <div class="mv-sub__img about-mv"></div>
         <div class="mv-sub__heading">
           <h2 class="mv-sub__title">当院について</h2>
           <span class="mv-sub__lead">ABOUT OUR CLINIC</span>
@@ -160,4 +159,9 @@
         <?php } ?>
       </div>
     </div>
-<?php endif; ?>
+<?php } elseif (is_home() || is_single()) { ?>
+<?php } elseif (is_page( 'staff' )) { ?>
+<?php } elseif (is_page([ 'contact' , 'contact-thanks'])) { ?>
+<?php } elseif (is_page([ 'reservation' , 'reservation-thanks'])) { ?>
+<?php } else { ?>
+<?php } ?>

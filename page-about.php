@@ -1,4 +1,4 @@
-<?php get_header(); ?>s
+<?php get_header(); ?>
     <section class="about-sub">
       <div class="about-sub__content1">
         <div class="about-sub__inner inner">
