@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-
+<?php get_template_part('includes/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
         <div class="mv-sub__img u-mobile">
@@ -25,10 +25,8 @@
       <article class="blog-main">
         <?php if(have_posts()) : ?>
           <?php while(have_posts()) : the_post() ;?>
-          <?php endwhile; ?>
-        <?php endif; ?>
-        <div class="blog-main__inner">
-          <h1 class="blog-page__title1"><?php the_title(); ?></h1>
+          <div class="blog-main__inner">
+            <h1 class="blog-page__title1"><?php the_title(); ?></h1>
             <div class="blog-page__info">
               <div class="blog-page__date"><?php echo get_the_date('Y.m.d'); ?></div>
               <div class="blog-page_category"><?php the_category('')?></div>
@@ -37,34 +35,24 @@
               <?php the_content(); ?>
             </div>
           </div>
-          <!-- <div class="blog-page__pager">
+          <?php endwhile; ?>
+        <?php endif; ?>
+          <div class="blog-page__pager">
             <ul class="blog-page__pagination">
-              <li class="blog-page__pagination-pre"><a href="#">前の記事へ</a></li>
-              <li class="blog-page__pagination-all"><a href="#">記事一覧</a></li>
-              <li class="blog-page__pagination-next"><a href="#">次の記事へ</a></li>
+              <li ><a class="blog-page__pagination-pre" href="#">前の記事へ</a></li>
+              <li><a  class="blog-page__pagination-all" href="#">記事一覧</a></li>
+              <li><a  class="blog-page__pagination-next" href="#">次の記事へ</a></li>
             </ul>
-          </div> -->
+          </div>
           <?php
-            $prevpost = get_adjacent_post(true, '', true); //前の記事
-            $nextpost = get_adjacent_post(true, '', false); //次の記事
-            if( $prevpost or $nextpost ){ //前の記事、次の記事いずれか存在しているとき
-              ?>
-            <div class="Pager">
-              <?php
-            if ( $prevpost ) { //前の記事が存在しているとき
-              echo '<a href="' . get_permalink($prevpost->ID) . '">前の記事へ</a>';
-            } else { //前の記事が存在しないとき
-              echo '<a href="' . network_site_url('/') . '">記事一覧</a>';
-            }
-            if ( $nextpost ) { //次の記事が存在しているとき
-              echo '<a href="' . get_permalink($nextpost->ID) . '">次の記事へ</a>';
-            } else { //次の記事が存在しないとき
-              echo '<a href="' . network_site_url('/') . '">記事一覧</a>';
-            }
-            ?>
-            </div>
-            <?php } ?>
+          $link = get_next_posts_link('前の記事へ');
+          if ($link) {
+            $link = str_replace('<a' , '<a class="blog-page__pagination-pre"' , $link);
+            echo $link;
+          }
+          ?>
           </article>
-          <?php get_sidebar(); ?>
+            <?php get_sidebar(); ?>
+          </div>
         </div>
 <?php get_footer(); ?>

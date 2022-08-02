@@ -1,4 +1,4 @@
-    <footer class="footer">
+<footer class="footer">
         <div class="footer__inner inner">
             <div class="footer-info">
             <div class="footer-info__left">

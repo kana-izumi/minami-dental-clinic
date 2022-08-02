@@ -1,4 +1,21 @@
 <?php get_header(); ?>
+<?php get_template_part('includes/header')?>
+<div class="mv-sub">
+      <div class="mv-sub__inner">
+        <div class="mv-sub__img about-mv"></div>
+        <div class="mv-sub__heading">
+          <h2 class="mv-sub__title">当院について</h2>
+          <span class="mv-sub__lead">ABOUT OUR CLINIC</span>
+        </div>
+        <?php if (!is_front_page()) { ?>
+	      <?php if (function_exists('bcn_display')) { ?>
+		      <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+			     <?php bcn_display(); ?>
+		      </div>
+	      <?php } ?>
+        <?php } ?>
+      </div>
+    </div>
     <section class="about-sub">
       <div class="about-sub__content1">
         <div class="about-sub__inner inner">
