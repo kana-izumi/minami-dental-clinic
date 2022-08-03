@@ -67,12 +67,3 @@ function change_set_blog($query) {
 }
 add_action( 'pre_get_posts', 'change_set_blog' );
 
-//カスタム投稿タイプ【ブログ】：アーカイブページ抜粋文の長さ変更
-function change_excerpt_length(){
-	$length = 80;
-	if(is_post_type_archive('blog')){
-		return 50; //リターンした時点で処理は終了する
-	}
-	return $length; // デフォルト110文字
-}
- add_filter('excerpt_length', 'change_excerpt_length',999);

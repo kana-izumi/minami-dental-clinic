@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+<?php get_template_part('includes/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
         <div class="mv-sub__img u-mobile">
@@ -33,7 +34,7 @@
                   <div class="blog-main__body">
                     <div class="blog-main__category">お知らせ</div>
                     <p class="blog-main__title"><?php the_title(); ?></p>
-                    <time class="blog-main__date" datetime="2020-02-14"><?php the_date( 'Y.m.d' ); ?></time>
+                    <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date( 'Y.m.d' ); ?></time>
                   </div>
               </a>
             <?php endwhile; ?>
