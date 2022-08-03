@@ -1350,6 +1350,9 @@ select::-ms-expand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .blog-main__item:not(:first-child) {
   margin-top: 20px;
@@ -1383,6 +1386,11 @@ select::-ms-expand {
   font-size: 0.875rem;
   margin-top: 8px;
   margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-main__title {
+    margin: 1rem 0 1rem;
+  }
 }
 
 .blog-main__date {

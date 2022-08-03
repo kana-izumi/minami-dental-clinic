@@ -23,107 +23,20 @@
     <div class="blog blog-wrapper inner">
       <article class="blog-main">
         <div class="blog-main__inner">
+        <?php if(have_posts()) : ?>
           <div class="blog-main__items">
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-            </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/blog.jpg')); ?>" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-            </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-            </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-            </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-            </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
+            <?php while (have_posts()) : the_post() ;?>
+              <a class="blog-main__item" href="<?php the_permalink(); ?>">
+                  <figure class="blog-main__img">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/blog.jpg')); ?>" alt="ブログカード1">
+                  </figure>
+                  <div class="blog-main__body">
+                    <div class="blog-main__category">お知らせ</div>
+                    <p class="blog-main__title"><?php the_title(); ?></p>
+                    <time class="blog-main__date" datetime="2020-02-14"><?php the_date( 'Y.m.d' ); ?></time>
+                  </div>
               </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
-            <a class="blog-main__item">
-                <figure class="blog-main__img">
-                  <img src="./src/images/blog/blog.jpg" alt="ブログカード1">
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
-                  <p class="blog-main__title">記事のタイトルが入ります。記事のタイトルが入ります…</p>
-                  <time class="blog-main__date" datetime="2020-02-14">2020.02.14</time>
-                </div>
-              </a>
+            <?php endwhile; ?>
             <div class="blog-main__pager">
               <ul class="blog-main__pagination">
                   <li class="blog-main__pre"><a href="#"><span>前へ</span></a></li>
@@ -135,6 +48,7 @@
                   <li class="blog-main__next"><a href="#"><span>次へ</span></a></li>
               </ul>
             </div>
+          <?php endif; ?>
             <?php if (paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
             <!-- pagination -->
              <div class="pagination">

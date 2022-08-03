@@ -16,6 +16,7 @@
 
 .blog-main__item {
         display: flex;
+        align-items: center;
 
         &:not(:first-child) {
             margin-top: rem(20);
@@ -46,6 +47,10 @@
 .blog-main__title {
     font-size: rem(14);
     margin-top: rem(8);
+
+    @include mq(md) {
+        margin: rem(16) 0 rem(16);
+    }
 }
 
 .blog-main__date {
