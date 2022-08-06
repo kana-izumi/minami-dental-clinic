@@ -15,7 +15,7 @@
     &::before {
         content: "";
         position: absolute;
-        background-image: url(/src/images/blog/sidebar-icon_3.png);
+        background-image: url(../src/images/blog/sidebar-icon_3.png);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -43,7 +43,7 @@
     &::before {
         content: "";
         position: absolute;
-        background-image: url(/src/images/blog/icon-arrow-blue.png);
+        background-image: url(../src/images/blog/icon-arrow-blue.png);
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;

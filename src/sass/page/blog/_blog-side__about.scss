@@ -18,7 +18,7 @@
     &::before {
         content: "";
         position: absolute;
-        background-image: url(/src/images/blog/sidebar-icon_1.png);
+        background-image: url(../src/images/blog/sidebar-icon_1.png);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -57,7 +57,7 @@
     &::after {
         content: "";
         position: absolute;
-        background-image: url(/src/images/blog/arrow.png);
+        background-image: url(../src/images/blog/arrow.png);
         background-position: center center;
         background-size: contain;
         background-repeat: no-repeat;
