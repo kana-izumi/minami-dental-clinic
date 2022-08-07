@@ -29,7 +29,7 @@
             <h1 class="blog-page__title1"><?php the_title(); ?></h1>
             <div class="blog-page__info">
               <div class="blog-page__date"><?php echo get_the_date('Y.m.d'); ?></div>
-              <div class="blog-page_category"><?php the_category('')?></div>
+              <div class="blog-page_category">お知らせ<?php the_category();?></div>
             </div>
             <div class="blog-page__content1">
               <?php the_content(); ?>
