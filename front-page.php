@@ -1,5 +1,5 @@
 <?php get_header(); ?>
-<?php get_template_part('includes/header')?>
+<?php get_template_part('template-parts/header')?>
 <div class="main-visual">
       <div class="main-visual__inner">
     <div class="main-visual__items">
@@ -178,32 +178,5 @@
       </div>
       <div class="treatment-guidance__deco-bottom"></div>
     </section>
-
-    <section class="staff-blog">
-      <div class="staff-blog__inner inner">
-        <div class="staff-blog-header">
-          <h2 class="staff-blog__title">スタッフブログ</h2>
-        </div>
-        <div class="staff-blog__items">
-          <?php if(have_posts()):?>
-            <?php while(have_posts()): the_post();?>
-            <a class="staff-blog__item">
-                <figure class="staff-blog__img">
-                  <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/staff-blog.jpg')); ?>" alt="ブログカード1">
-                </figure>
-                <div class="staff-blog__body">
-                  <div class="staff-blog__category">お知らせ</div>
-                  <p class="staff-blog__head"><?php the_title(); ?></p>
-                  <time class="staff-blog__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
-                </div>
-            </a>
-            <?php endwhile; ?>
-          <?php endif;?>
-          <div class="staff-blog__link">
-            <a href="" class="staff-blog__link-btn">スタッフブログ一覧はこちら</a>
-          </div>
-        </div>
-      </div>
-    </section>
-
+    <?php get_template_part('template-parts/pickup_by_tag')?>
 <?php get_footer(); ?>
