@@ -13,8 +13,8 @@
             ));
             ?>
       <?php foreach ($pickup_posts as $post) : setup_postdata($post); ?>
-          <?php if(have_posts()):?>
-            <?php while(have_posts()): the_post();?>
+            <?php if(have_posts()):?>
+                <?php while(have_posts()): the_post();?>
               <a class="staff-blog__item">
                   <figure class="staff-blog__img">
                     <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/staff-blog.jpg')); ?>" alt="ブログカード1">
