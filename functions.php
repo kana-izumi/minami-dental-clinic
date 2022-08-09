@@ -9,24 +9,26 @@ function my_theme_scripts(){
 }
 add_action('wp_enqueue_scripts' , 'my_theme_scripts');
 
-// // Contact Form7の送信ボタンをクリックした後の遷移先設定
-// add_action( 'wp_footer', 'add_origin_thanks_page' );
-// function add_origin_thanks_page() {
-// $thanks = home_url('/contact-thanks');
-// $recruit = home_url('/reservation-thanks');
-//     echo <<< EOC
-//     <script>
-//         var thanksPage = {
-//         33: '{$thanks}',
-//         52: '{$recruit}',
-//     };
-//     document.addEventListener( 'wpcf7mailsent', function( event ) {
-//     location = thanksPage[event.detail.contactFormId];
-//     }, false );
-//     </script>
-// EOC;
-// }
+/*---------------------------------------------
+Contact Form7の送信ボタンをクリックした後の遷移先設定
+-----------------------------------------------*/
 
+add_action( 'wp_footer', 'add_thanks_page' );
+function add_thanks_page() {
+echo <<< EOD
+<script>
+document.addEventListener( 'wpcf7mailsent', function( event ) {
+if ( '33' == event.detail.contactFormId ) {
+location = 'https://hoge.com/contact/contact_thanks';
+}
+else
+if ( '52' == event.detail.contactFormId ) {
+location = 'https://hoge.com/campaign/coupon_thanks';
+}
+}, false );
+</script>
+EOD;
+}
 /*---------------------------------------------
 アイキャッチ画像設定
 -----------------------------------------------*/
