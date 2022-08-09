@@ -70,7 +70,14 @@
     }
 }
 
+
 .page-numbers {
+    color: $main-color;
+    border: rem(1) solid $main-color;
+    border-radius: rem(4);
+    width: rem(30);
+    height: rem(30);
+    text-align: center;
 
     &:not(:first-child) {
         margin-left: rem(7);
@@ -89,7 +96,7 @@
     width: rem(70);
     height: rem(30);
     padding-left: rem(36);
-    padding-top: rem(7);
+    padding-top: rem(4);
     padding-bottom: rem(7);
     font-size: rem(11);
 
@@ -112,14 +119,6 @@
     }
 }
 
-.page-numbers {
-    color: $main-color;
-    border: rem(1) solid $main-color;
-    border-radius: rem(4);
-    width: rem(30);
-    height: rem(30);
-    text-align: center;
-}
 
 .next{
     position: relative;
@@ -127,7 +126,7 @@
     height: rem(30);
     padding-right: rem(25);
     padding-left: rem(7);
-    padding-top: rem(7);
+    padding-top: rem(4);
     font-size: rem(11);
 
     @include mq(md) {
@@ -148,3 +147,4 @@
         transform: translateY(-50%);
     }
 }
+

@@ -196,8 +196,6 @@
         foreach( $information as $post ):
         setup_postdata( $post );
         ?>
-            <?php if(have_posts()):?>
-                <?php while(have_posts()): the_post();?>
               <a class="staff-blog__item" href="<?php the_permalink(); ?>">
                   <figure class="staff-blog__img">
                     <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/staff-blog.jpg')); ?>" alt="ブログカード1">
@@ -208,8 +206,6 @@
                     <time class="staff-blog__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
                   </div>
               </a>
-            <?php endwhile; ?>
-          <?php endif;?>
           <?php
             endforeach;
             wp_reset_postdata();
