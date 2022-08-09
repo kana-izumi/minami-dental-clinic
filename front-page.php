@@ -178,5 +178,50 @@
       </div>
       <div class="treatment-guidance__deco-bottom"></div>
     </section>
-    <?php get_template_part('template-parts/pickup_by_tag')?>
+    <section class="staff-blog">
+      <div class="staff-blog__inner inner">
+        <div class="staff-blog-header">
+          <h2 class="staff-blog__title">スタッフブログ</h2>
+        </div>
+        <div class="staff-blog__items">
+        <?php
+          $information= get_posts( array(
+          //ここで取得条件を指定する
+          'posts_per_page' => 6 ,
+          'post_type' => 'blog' ,
+          ));
+          if( $information):
+          ?>
+        <?php
+        foreach( $information as $post ):
+        setup_postdata( $post );
+        ?>
+            <?php if(have_posts()):?>
+                <?php while(have_posts()): the_post();?>
+              <a class="staff-blog__item" href="<?php the_permalink(); ?>">
+                  <figure class="staff-blog__img">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/staff-blog.jpg')); ?>" alt="ブログカード1">
+                  </figure>
+                  <div class="staff-blog__body">
+                    <div class="staff-blog__category">お知らせ</div>
+                    <p class="staff-blog__head"><?php the_title(); ?></p>
+                    <time class="staff-blog__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
+                  </div>
+              </a>
+            <?php endwhile; ?>
+          <?php endif;?>
+          <?php
+            endforeach;
+            wp_reset_postdata();
+            ?>
+          <?php else: ?>
+            <p>表示できる情報はありません。</p>
+          <?php endif; ?>
+          <div class="staff-blog__link">
+            <a href="<?php echo esc_url(home_url('/'))?>blog" class="staff-blog__link-btn">スタッフブログ一覧はこちら</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
 <?php get_footer(); ?>
