@@ -24,13 +24,11 @@
 <!-- //css -->
 <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
 <!-- //JavaScript -->
-<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <?php wp_head();?>
 </head>
 <bod <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-
 
 
 <?php if (is_front_page()) { ?>

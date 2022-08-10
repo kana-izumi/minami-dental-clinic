@@ -10,26 +10,6 @@ function my_theme_scripts(){
 add_action('wp_enqueue_scripts' , 'my_theme_scripts');
 
 /*---------------------------------------------
-Contact Form7の送信ボタンをクリックした後の遷移先設定
------------------------------------------------*/
-
-add_action( 'wp_footer', 'add_thanks_page' );
-function add_thanks_page() {
-echo <<< EOD
-<script>
-document.addEventListener( 'wpcf7mailsent', function( event ) {
-if ( '33' == event.detail.contactFormId ) {
-location = 'https://hoge.com/contact/contact_thanks';
-}
-else
-if ( '52' == event.detail.contactFormId ) {
-location = 'https://hoge.com/campaign/coupon_thanks';
-}
-}, false );
-</script>
-EOD;
-}
-/*---------------------------------------------
 アイキャッチ画像設定
 -----------------------------------------------*/
 function setup_post_thumnails(){
@@ -68,4 +48,3 @@ function change_set_blog($query) {
 	}
 }
 add_action( 'pre_get_posts', 'change_set_blog' );
-
