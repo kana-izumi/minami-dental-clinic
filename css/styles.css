@@ -1517,6 +1517,22 @@ select::-ms-expand {
           transform: translateY(-50%);
 }
 
+.blog-mv {
+  background-image: url(../src/images/blog/archive_top-sp.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .blog-mv {
+    height: 23.125rem;
+    background-image: url(../src/images/blog/archive_top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
 .blog-page__title1 {
   font-size: 20px;
   font-size: 1.25rem;
@@ -2671,6 +2687,22 @@ checked状態
   .medical-menu_item + .medical-menu_item {
     margin-top: 0;
     margin-left: 1rem;
+  }
+}
+
+.medical-mv {
+  background-image: url(../src/images/medical/page-medical_top-sp.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .medical-mv {
+    height: 23.125rem;
+    background-image: url(../src/images/medical/page-medical_top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
   }
 }
 

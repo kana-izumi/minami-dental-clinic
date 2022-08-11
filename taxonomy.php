@@ -12,12 +12,13 @@
           <h2 class="mv-sub__title">スタッフブログ</h2>
           <span class="mv-sub__lead">STAFF BLOG</span>
         </div>
-        <div class="bread">
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">スタッフ紹介</a></li>
-          </ul>
-        </div>
+        <?php if (!is_front_page()) { ?>
+	      <?php if (function_exists('bcn_display')) { ?>
+		      <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+          <?php bcn_display();?>
+		      </div>
+	      <?php } ?>
+        <?php } ?>
       </div>
     </div>
 

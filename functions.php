@@ -14,6 +14,7 @@ add_action('wp_enqueue_scripts' , 'my_theme_scripts');
 -----------------------------------------------*/
 function setup_post_thumnails(){
 	add_theme_support('post-thumbnails');
+    add_image_size('blog', 244, 153, true);
 }
 add_action('after_setup_theme', 'setup_post_thumnails');
 
@@ -35,16 +36,15 @@ function get_main_image() {
 }
 
 /*---------------------------------------------
-メインクエリの変更（ブログのアーカイブページにて表示件数を10件にする）
+メインクエリの変更
 ----------------------------------------------*/
-// カスタム投稿タイプ【ブログ】：メインクエリの変更（アーカイブページにて表示件数を10件にする）
-function change_set_blog($query) {
-	if ( is_admin() || ! $query->is_main_query() ){
-		return;
-	}
-	if ( $query->is_post_type_archive('blog')) {
-		$query->set( 'posts_per_page', '10' );
-		return;
-	}
+function topNews_posts_per_page($query){
+    if(is_admin() || !$query->is_main_query()){
+       return;
+    }
+    if($query->is_front_page()){
+       $query->set('posts_per_page','1');
+       return;
+    }
 }
-add_action( 'pre_get_posts', 'change_set_blog' );
+add_action('pre_get_posts','topNews_posts_per_page');

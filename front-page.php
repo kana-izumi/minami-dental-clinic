@@ -198,10 +198,14 @@
         ?>
               <a class="staff-blog__item" href="<?php the_permalink(); ?>">
                   <figure class="staff-blog__img">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/staff-blog.jpg')); ?>" alt="ブログカード1">
+                  <?php if (has_post_thumbnail()) { ?>
+									<?php the_post_thumbnail('blog'); ?>
+								<?php } else { ?>
+									<img src="<?php echo esc_url(get_theme_file_uri('/img/noimage.jpg')); ?>">
+								<?php } ?>
                   </figure>
                   <div class="staff-blog__body">
-                    <div class="staff-blog__category">お知らせ</div>
+                    <div class="staff-blog__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
                     <p class="staff-blog__head"><?php the_title(); ?></p>
                     <time class="staff-blog__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
                   </div>

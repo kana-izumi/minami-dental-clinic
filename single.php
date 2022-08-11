@@ -2,22 +2,18 @@
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top-sp.jpg')); ?>" alt="スタッフブログ画像">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top.jpg')); ?>" alt="スタッフブログ画像">
-        </div>
-        <div class="mv-sub__heading">
-          <h2 class="mv-sub__title">スタッフブログ</h2>
-          <span class="mv-sub__lead">STAFF BLOG</span>
-        </div>
-        <div class="bread">
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">スタッフ紹介</a></li>
-          </ul>
-        </div>
+        <div class="mv-sub__img blog-mv"></div>
+          <div class="mv-sub__heading">
+            <h2 class="mv-sub__title">スタッフブログ</h2>
+            <span class="mv-sub__lead">STAFF BLOG</span>
+          </div>
+          <?php if (!is_front_page()) { ?>
+          <?php if (function_exists('bcn_display')) { ?>
+            <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <?php bcn_display();?>
+            </div>
+          <?php } ?>
+          <?php } ?>
       </div>
     </div>
 
@@ -48,7 +44,7 @@
               }
               ?>
               </li>
-              <li><a class="blog-page__pagination-all" href="#">記事一覧</a></li>
+              <li><a class="blog-page__pagination-all" href="<?php echo esc_url(home_url('/'))?>archive">記事一覧</a></li>
               <li>
               <?php
               $link = get_next_posts_link('前の記事へ');

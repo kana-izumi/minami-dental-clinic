@@ -2,22 +2,18 @@
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/medical/page-medical_top-sp.jpg')); ?>" alt="">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/medical/page-medical_top.jpg')); ?>" alt="">
-        </div>
+      <div class="mv-sub__img medical-mv"></div>
         <div class="mv-sub__heading">
           <h2 class="mv-sub__title">診療案内</h2>
           <span class="mv-sub__lead">MEDICAL</span>
         </div>
-        <div class="bread">
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">診療案内</a></li>
-          </ul>
-        </div>
+        <?php if (!is_front_page()) { ?>
+          <?php if (function_exists('bcn_display')) { ?>
+            <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <?php bcn_display();?>
+            </div>
+          <?php } ?>
+          <?php } ?>
       </div>
     </div>
 
@@ -29,8 +25,15 @@
         </div>
         <ul class="medical-menu__list">
           <li class="medical-menu_item">一般歯科</li>
+          <?php
+          $terms = get_terms( 'plan_general');
+          foreach ( $terms as $term ){
+            echo '<li class="medical-menu_item"><a href="'.get_term_link($term->slug, 'plan_general').'">'.$term->name.'</a></li>'; //タームのリンク
+          }
+          ?>
           <li class="medical-menu_item">小児歯科</li>
           <li class="medical-menu_item">予防歯科</li>
+
         </ul>
       </div>
       <div class="medical-menu__inner inner">

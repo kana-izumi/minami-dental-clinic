@@ -33,7 +33,11 @@
           ?>
               <a class="blog-main__item">
                 <figure class="blog-main__img">
-                  <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/blog.jpg')); ?>" alt="ブログカード1">
+                <?php if (has_post_thumbnail()) { ?>
+									<?php the_post_thumbnail('blog'); ?>
+								<?php } else { ?>
+									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/img.png')); ?>">
+								<?php } ?>
                 </figure>
                 <div class="blog-main__body">
                   <div class="blog-main__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>

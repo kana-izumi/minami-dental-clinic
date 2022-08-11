@@ -2,22 +2,18 @@
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top-sp.jpg')); ?>" alt="スタッフブログ画像">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top.jpg')); ?>" alt="スタッフブログ画像">
-        </div>
-        <div class="mv-sub__heading">
-          <h2 class="mv-sub__title">スタッフブログ</h2>
-          <span class="mv-sub__lead">STAFF BLOG</span>
-        </div>
-        <div class="bread">
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">スタッフ紹介</a></li>
-          </ul>
-        </div>
+        <div class="mv-sub__img blog-mv"></div>
+          <div class="mv-sub__heading">
+            <h2 class="mv-sub__title">スタッフブログ</h2>
+            <span class="mv-sub__lead">STAFF BLOG</span>
+          </div>
+          <?php if (!is_front_page()) { ?>
+          <?php if (function_exists('bcn_display')) { ?>
+            <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <?php bcn_display();?>
+            </div>
+          <?php } ?>
+          <?php } ?>
       </div>
     </div>
 
@@ -29,7 +25,11 @@
             <?php while (have_posts()) : the_post() ;?>
               <a class="blog-main__item" href="<?php the_permalink(); ?>">
                   <figure class="blog-main__img">
-                    <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/blog.jpg')); ?>" alt="ブログカード1">
+                  <?php if (has_post_thumbnail()) { ?>
+									<?php the_post_thumbnail('blog'); ?>
+								<?php } else { ?>
+									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/img.png')); ?>">
+								<?php } ?>
                   </figure>
                   <div class="blog-main__body">
                     <div class="blog-main__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
