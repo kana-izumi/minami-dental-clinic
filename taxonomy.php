@@ -39,7 +39,7 @@
         <?php endif; ?>
           <div class="blog-page__pager">
             <ul class="blog-page__pagination">
-              <li><a class="blog-page__pagination-pre" href="#">前の記事へ</a></li>
+              <li ><a class="blog-page__pagination-pre" href="#">前の記事へ</a></li>
               <li><a class="blog-page__pagination-all" href="#">記事一覧</a></li>
               <li><a class="blog-page__pagination-next" href="#">次の記事へ</a></li>
             </ul>
