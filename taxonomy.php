@@ -21,38 +21,41 @@
       </div>
     </div>
 
-    <div class="blog-page blog-wrapper inner">
+    <div class="blog blog-wrapper inner">
       <article class="blog-main">
+        <div class="blog-main__inner">
         <?php if(have_posts()) : ?>
-          <?php while(have_posts()) : the_post() ;?>
-          <div class="blog-main__inner">
-            <h1 class="blog-page__title1"><?php the_title(); ?></h1>
-            <div class="blog-page__info">
-              <div class="blog-page__date"><?php echo get_the_date('Y.m.d'); ?></div>
-              <div class="blog-page_category"><?php single_term_title(); ?></div>
-            </div>
-            <div class="blog-page__content1">
-              <?php the_content(); ?>
-            </div>
-          </div>
-          <?php endwhile; ?>
-        <?php endif; ?>
-          <div class="blog-page__pager">
-            <ul class="blog-page__pagination">
-              <li ><a class="blog-page__pagination-pre" href="#">前の記事へ</a></li>
-              <li><a class="blog-page__pagination-all" href="#">記事一覧</a></li>
-              <li><a class="blog-page__pagination-next" href="#">次の記事へ</a></li>
-            </ul>
-          </div>
-          <?php
-          $link = get_next_posts_link('前の記事へ');
-          if ($link) {
-            $link = str_replace('<a' , '<a class="blog-page__pagination-pre"' , $link);
-            echo $link;
-          }
-          ?>
-          </article>
-            <?php get_sidebar(); ?>
+          <div class="blog-main__items">
+            <?php while (have_posts()) : the_post() ;?>
+              <a class="blog-main__item" href="<?php the_permalink(); ?>">
+                  <figure class="blog-main__img">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/blog.jpg')); ?>" alt="ブログカード1">
+                  </figure>
+                  <div class="blog-main__body">
+                    <div class="blog-main__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
+                    <p class="blog-main__title"><?php the_title(); ?></p>
+                    <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date( 'Y.m.d' ); ?></time>
+                  </div>
+              </a>
+            <?php endwhile; ?>
+          <?php endif; ?>
+          <!-- pagination -->
+            <?php if (paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
+            <?php
+            $args = array(
+            	'mid_size' => 2,
+            	'prev_text' => '前へ',
+            	'next_text' => '次へ',
+            	'screen_reader_text' => 'ページャー'
+            );
+            the_posts_pagination($args);
+            ?>
+            <!-- /pagination -->
+            <?php endif; ?>
           </div>
         </div>
-<?php get_footer(); ?>
+      </article>
+<?php get_sidebar(); ?>
+    </div>
+
+<?php get_footer();?>

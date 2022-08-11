@@ -29,7 +29,7 @@
             <h1 class="blog-page__title1"><?php the_title(); ?></h1>
             <div class="blog-page__info">
               <div class="blog-page__date"><?php echo get_the_date('Y.m.d'); ?></div>
-              <div class="blog-page_category">お知らせ<?php the_category();?></div>
+              <div class="blog-page_category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
             </div>
             <div class="blog-page__content1">
               <?php the_content(); ?>
@@ -48,7 +48,7 @@
               }
               ?>
               </li>
-              <li><a  class="blog-page__pagination-all" href="#">記事一覧</a></li>
+              <li><a class="blog-page__pagination-all" href="#">記事一覧</a></li>
               <li>
               <?php
               $link = get_next_posts_link('前の記事へ');

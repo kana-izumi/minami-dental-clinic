@@ -32,26 +32,15 @@
                     <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/blog.jpg')); ?>" alt="ブログカード1">
                   </figure>
                   <div class="blog-main__body">
-                    <div class="blog-main__category">お知らせ<?php the_category(); ?></div>
+                    <div class="blog-main__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
                     <p class="blog-main__title"><?php the_title(); ?></p>
                     <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date( 'Y.m.d' ); ?></time>
                   </div>
               </a>
             <?php endwhile; ?>
-            <!-- <div class="blog-main__pager">
-              <ul class="blog-main__pagination">
-                  <li class="blog-main__pre"><a href="#"><span>前へ</span></a></li>
-                  <li class="blog-main__all"><a href="#" class="active"><span>1</span></a></li>
-                  <li class="blog-main__all"><a href="#"><span>2</span></a></li>
-                  <li class="blog-main__all"><a href="#"><span>3</span></a></li>
-                  <li class="blog-main__all"><a href="#"><span>‥</span></a></li>
-                  <li class="blog-main__all"><a href="#"><span>20</span></a></li>
-                  <li class="blog-main__next"><a href="#"><span>次へ</span></a></li>
-              </ul>
-            </div> -->
           <?php endif; ?>
+          <!-- pagination -->
             <?php if (paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
-            <!-- pagination -->
             <?php
             $args = array(
             	'mid_size' => 2,

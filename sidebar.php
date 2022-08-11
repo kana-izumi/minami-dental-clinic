@@ -36,7 +36,7 @@
                   <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/blog.jpg')); ?>" alt="ブログカード1">
                 </figure>
                 <div class="blog-main__body">
-                  <div class="blog-main__category">お知らせ</div>
+                  <div class="blog-main__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
                   <p class="blog-main__title"><?php the_title(); ?></p>
                   <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
                 </div>
@@ -53,10 +53,15 @@
           <div class="blog-side__category">
             <h3 class="blog-side__category-title">カテゴリー</h3>
             <ul class="blog-side__category-items">
-              <li class="blog-side__category-item"><a href="">テキスト</a></li>
-              <li class="blog-side__category-item"><a href="">テキスト</a></li>
-              <li class="blog-side__category-item"><a href="">テキスト</a></li>
-              <li class="blog-side__category-item"><a href="">テキスト</a></li>
+              <?php
+				      $args = [
+				      	'taxonomy' => 'blog_category'
+				      ];
+				      $terms = get_terms($args);
+				      foreach ($terms as $term) {
+				      	echo '<li class="blog-side__category-item"><a href="' . get_term_link($term) . '">' . $term->name . '</a></li>';
+				      }
+				      ?>
             </ul>
           </div>
       </aside>
