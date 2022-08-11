@@ -11,7 +11,7 @@
 .medical-content__deco-top {
     height: rem(85);
     width: 100%;
-    background-image: url(/src/images/top/bg-top.svg);
+    background-image: url(../src/images/top/bg-top.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -30,7 +30,7 @@
 
     &::before{
         position: absolute;
-        content: url(/src/images/top/bottom-deco-1.svg);
+        content: url(../src/images/top/bottom-deco-1.svg);
         bottom: 0;
         left: rem(12);
         transform: translateY(-50%);
@@ -40,7 +40,7 @@
     }
     &::after{
         position: absolute;
-        content: url(/src/images/top/bottom-deco-2.svg);
+        content: url(../src/images/top/bottom-deco-2.svg);
         bottom: rem(-24);
         right: rem(8);
         transform: translateY(-50%);
@@ -57,7 +57,7 @@
     border-radius: rem(20);
     position: relative;
 
-    @include mq(md) {
+        @include mq(md) {
         padding: rem(60) rem(60);
     }
 
@@ -68,7 +68,7 @@
         right: rem(20);
         width: rem(80);
         height: rem(60);
-        background-image: url(/src/images/medical/tag-01.svg);
+        background-image: url(../src/images/medical/tag-01.svg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -98,7 +98,7 @@
         right: rem(20);
         width: rem(80);
         height: rem(60);
-        background-image: url(/src/images/medical/tag-02.svg);
+        background-image: url(../src/images/medical/tag-02.svg);
         background-repeat: no-repeat;
         background-position: center center;
         background-size: contain;
@@ -169,7 +169,7 @@
 }
 
 .medical-content__deco-bottom {
-    background-image: url(/src/images/common/bg-bottom.png);
+    background-image: url(../src/images/common/bg-bottom.png);
     width: 100%;
     height: rem(28);
     background-size: contain;

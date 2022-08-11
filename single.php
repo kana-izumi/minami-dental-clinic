@@ -39,18 +39,27 @@
         <?php endif; ?>
           <div class="blog-page__pager">
             <ul class="blog-page__pagination">
-              <li ><a class="blog-page__pagination-pre" href="#">前の記事へ</a></li>
+              <li >
+              <?php
+              $link = get_previous_posts_link('前の記事へ');
+              if ($link) {
+                $link = str_replace('<a' , '<a class="blog-page__pagination-pre"' , $link);
+                echo $link;
+              }
+              ?>
+              </li>
               <li><a  class="blog-page__pagination-all" href="#">記事一覧</a></li>
-              <li><a  class="blog-page__pagination-next" href="#">次の記事へ</a></li>
+              <li>
+              <?php
+              $link = get_next_posts_link('前の記事へ');
+              if ($link) {
+                $link = str_replace('<a' , '<a class="blog-page__pagination-next"' , $link);
+                echo $link;
+              }
+              ?>
+              </li>
             </ul>
           </div>
-          <?php
-          $link = get_next_posts_link('前の記事へ');
-          if ($link) {
-            $link = str_replace('<a' , '<a class="blog-page__pagination-pre"' , $link);
-            echo $link;
-          }
-          ?>
           </article>
             <?php get_sidebar(); ?>
           </div>
