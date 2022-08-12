@@ -15,6 +15,7 @@ add_action('wp_enqueue_scripts' , 'my_theme_scripts');
 function setup_post_thumnails(){
 	add_theme_support('post-thumbnails');
     add_image_size('blog', 244, 153, true);
+    add_image_size('medical', 420, 315, true);
 }
 add_action('after_setup_theme', 'setup_post_thumnails');
 

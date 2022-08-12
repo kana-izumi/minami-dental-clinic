@@ -7,7 +7,7 @@
         </div>
             <nav class="header-nav u-desktop">
                 <ul class="header-nav__list">
-                    <li><a href="<?php echo esc_url(home_url('/'))?>"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav01.svg')); ?>" alt="">ホーム</li></a>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.png')); ?>" alt="">ホーム</li></a>
                     <li><a href="<?php echo esc_url(home_url('/'))?>about"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="">当院について</li></a>
                     <li><a href="<?php echo esc_url(home_url('/'))?>medical"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="">治療案内</li></a>
                     <li><a href="<?php echo esc_url(home_url('/'))?>staff"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="">スタッフ紹介</li></a>
