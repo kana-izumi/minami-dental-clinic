@@ -24,16 +24,12 @@
           <span class="medical-menu__category">保険対象</span>
         </div>
         <ul class="medical-menu__list">
-          <li class="medical-menu_item">一般歯科</li>
-          <?php
-          $terms = get_terms( 'plan_general');
-          foreach ( $terms as $term ){
-            echo '<li class="medical-menu_item"><a href="'.get_term_link($term->slug, 'plan_general').'">'.$term->name.'</a></li>'; //タームのリンク
-          }
-          ?>
-          <li class="medical-menu_item">小児歯科</li>
-          <li class="medical-menu_item">予防歯科</li>
-
+        <?php
+        $terms = get_terms( 'plan_general', 'hide_empty=0' );
+        foreach ( $terms as $term ) {
+            echo '<li class="medical-menu_item"><a href="">' . $term->name . '</a></li>';
+        }
+        ?>
         </ul>
       </div>
       <div class="medical-menu__inner inner">
@@ -42,11 +38,12 @@
           <span class="medical-menu__category medical-menu__category--red">実費</span>
         </div>
         <ul class="medical-menu__list">
-          <li class="medical-menu_item">入れ歯</li>
-          <li class="medical-menu_item">矯正歯科</li>
-          <li class="medical-menu_item">ホワイトニング</li>
-          <li class="medical-menu_item">口腔外科</li>
-          <li class="medical-menu_item">レーザー治療</li>
+          <?php
+        $terms = get_terms( 'plan_special', 'hide_empty=0' );
+        foreach ( $terms as $term ) {
+            echo '<li class="medical-menu_item">' . $term->name . '</li>';
+        }
+        ?>
         </ul>
       </div>
     </section>
@@ -58,7 +55,7 @@
           <div class="section-header">
             <h2 class="section-header__title">一般治療</h2>
           </div>
-          <div class="medical-content__items1">
+          <div id="#medical_<?php echo the_ID();?>" class="medical-content__items1">
             <div class="medical-content__item">
               <div class="medical-content__heading">
                 <h3 class="medical-content__title">一般歯科</h3>
