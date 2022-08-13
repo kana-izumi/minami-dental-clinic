@@ -2678,6 +2678,17 @@ checked状態
     padding: 1.1875rem 2rem;
   }
 }
+.medical-menu_item:hover {
+  padding: 11px 32px 17px 32px;
+  padding: 0.6875rem 2rem 1.0625rem 2rem;
+  background-image: url(../src/images/medical/medical-hover.png);
+  background-color: #dff1fd;
+  background-position: bottom 5px center;
+  background-position: bottom 0.3125rem center;
+  background-repeat: no-repeat;
+  -webkit-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
 
 .medical-menu_item + .medical-menu_item {
   margin-top: 16px;
@@ -2688,6 +2699,10 @@ checked状態
     margin-top: 0;
     margin-left: 1rem;
   }
+}
+
+.medical-menu_item a {
+  display: block;
 }
 
 .medical-mv {

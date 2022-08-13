@@ -45,7 +45,16 @@
     border-radius: rem(12);
 
     @include mq(md) {
-        padding: rem(19) rem(32 );
+        padding: rem(19) rem(32);
+    }
+
+    &:hover {
+        padding: rem(11) rem(32) rem(17) rem(32);
+        background-image: url(../src/images/medical/medical-hover.png);
+        background-color: #dff1fd;
+        background-position: bottom rem(5) center;
+        background-repeat: no-repeat;
+        transition: 0.3s ease-out;
     }
 }
 
@@ -56,4 +65,8 @@
         margin-top: 0;
         margin-left: rem(16);
     }
+}
+
+.medical-menu_item a {
+    display: block;
 }

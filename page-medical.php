@@ -31,9 +31,9 @@
         $termchildren = get_term_children( $term_id, $taxonomy_name );
         foreach ( $termchildren as $child ) :?>
          <?php $term = get_term_by( 'id', $child, $taxonomy_name );?>
-         <li class="medical-menu_item"><a href="<?php get_the_ID(); ?>">
+         <li class="medical-menu_item"><a href="#common<?php get_the_ID(); ?>">
             <?php echo $term->name; //ターム名 ?>
-         </a></li>
+          </li></a>
         <?php endforeach; ?>
         </ul>
       </div>
@@ -49,7 +49,7 @@
         $termchildren = get_term_children( $term_id, $taxonomy_name );
         foreach ( $termchildren as $child ) :?>
          <?php $term = get_term_by( 'id', $child, $taxonomy_name );?>
-         <li class="medical-menu_item"><a href="#<?php the_ID();?>">
+         <li class="medical-menu_item"><a href="#specal">
             <?php echo $term->name; //ターム名 ?>
          </a></li>
         <?php endforeach; ?>
@@ -76,15 +76,15 @@
             $the_query = new WP_Query($args); if($the_query->have_posts()):
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-          <div id="<?php the_ID();?>" class="medical-content__items1">
+          <div id="common<?php get_the_ID(); ?>" class="medical-content__items1">
             <div class="medical-content__item">
               <div class="medical-content__heading">
-                <h3 class="medical-content__title"><?php the_field( 'title' ); ?></h3>
-                <span class="medical-content__lead"><?php the_field( 'subtitle' ); ?></span>
+                <h3 class="medical-content__title"><?php the_title(); ?></h3>
+                <span class="medical-content__lead"><?php the_field( 'text' ); ?></span>
               </div>
               <div class="medical-content__body">
                 <div class="medical-content__text">
-                  <p><?php echo nl2br(get_post_meta($post->ID, 'text', true)); ?></p>
+                  <p><?php echo nl2br(get_post_meta($post->ID, 'textarea', true)); ?></p>
                 </div>
                 <div class="medical-content__img">
                 <?php if (has_post_thumbnail()) { ?>
@@ -122,15 +122,15 @@
             $the_query = new WP_Query($args); if($the_query->have_posts()):
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-          <div class="medical-content__items2">
+          <div id="specal" class="medical-content__items2">
             <div class="medical-content__item">
               <div class="medical-content__heading">
-                <h3 class="medical-content__title"><?php the_field( 'title' ); ?></h3>
-                <span class="medical-content__lead"><?php the_field( 'subtitle' ); ?></span>
+                <h3 class="medical-content__title"><?php the_title(); ?></h3>
+                <span class="medical-content__lead"><?php the_field( 'text' ); ?></span>
               </div>
               <div class="medical-content__body">
                 <div class="medical-content__text">
-                  <p><?php echo nl2br(get_post_meta($post->ID, 'text', true)); ?></p>
+                  <p><?php echo nl2br(get_post_meta($post->ID, 'textarea', true)); ?></p>
                 </div>
                 <div class="medical-content__img">
                 <?php if (has_post_thumbnail()) { ?>
