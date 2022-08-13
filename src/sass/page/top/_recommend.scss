@@ -37,7 +37,7 @@
         @include mq(md) {
             width: rem(67);
             height: rem(20);
-            left: rem(260);
+            left: rem(200);
             background: url(../src/images/top/title-deco.svg);
         }
     }
@@ -57,7 +57,7 @@
         @include mq(md) {
             width: rem(67);
             height: rem(20);
-            right: rem(260);
+            right: rem(200);
             background: url(../src/images/top/title-deco.svg);
         }
     }

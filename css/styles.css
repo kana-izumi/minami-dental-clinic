@@ -174,18 +174,12 @@ select::-ms-expand {
 }
 
 .bread {
-  margin-top: 10px;
-  margin-top: 0.625rem;
+  margin-left: 30px;
+  margin-left: 1.875rem;
   color: #C2C2C2;
   font-size: 12px;
   font-size: 0.75rem;
 }
-@media screen and (min-width: 768px) {
-  .bread {
-    margin-top: 0.625rem;
-  }
-}
-
 .bread__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -933,7 +927,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .mv-sub__inner {
-    margin: 1.9375rem 3.75rem;
+    margin: 1.25rem 3.75rem;
   }
 }
 
@@ -951,7 +945,7 @@ select::-ms-expand {
 .mv-sub__heading {
   color: #fff;
   position: absolute;
-  top: 44%;
+  top: 47%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
@@ -2806,6 +2800,68 @@ checked状態
   }
 }
 
+.greeting-boss-header {
+  position: relative;
+  text-align: center;
+}
+
+.greeting-boss__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 0.08em;
+}
+@media screen and (min-width: 768px) {
+  .greeting-boss__title {
+    font-size: 1.75rem;
+  }
+}
+.greeting-boss__title::before {
+  position: absolute;
+  content: "";
+  width: 48px;
+  width: 3rem;
+  height: 12px;
+  height: 0.75rem;
+  top: 50%;
+  left: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../src/images/common/section-title.deco.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .greeting-boss__title::before {
+    width: 4.1875rem;
+    height: 1.25rem;
+    left: 16.25rem;
+    background: url(../src/images/top/title-deco.svg);
+  }
+}
+.greeting-boss__title::after {
+  position: absolute;
+  content: "";
+  width: 48px;
+  width: 3rem;
+  height: 12px;
+  height: 0.75rem;
+  top: 50%;
+  right: 0;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../src/images/common/section-title.deco.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .greeting-boss__title::after {
+    width: 4.1875rem;
+    height: 1.25rem;
+    right: 16.25rem;
+    background: url(../src/images/top/title-deco.svg);
+  }
+}
+
 @media screen and (min-width: 768px) {
   .greeting-boss__content {
     display: -webkit-box;
@@ -2817,8 +2873,8 @@ checked状態
 
 .greeting-boss__message {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+      -ms-flex: 0 0 46%;
+          flex: 0 0 46%;
 }
 
 .greeting-boss__message-title {
@@ -2832,6 +2888,9 @@ checked状態
 @media screen and (min-width: 768px) {
   .greeting-boss__message-title {
     margin-top: 0;
+    font-size: 1.75rem;
+    line-height: 1.35;
+    letter-spacing: 0.08em;
   }
 }
 
@@ -2842,6 +2901,19 @@ checked状態
   margin-top: 32px;
   margin-top: 2rem;
 }
+@media screen and (min-width: 768px) {
+  .greeting-boss__message-text {
+    margin-top: 2.5625rem;
+  }
+}
+
+.greeting-boss__message-text2 {
+  font-size: 14px;
+  font-size: 0.875rem;
+  line-height: 1.7;
+  margin-top: 22px;
+  margin-top: 1.375rem;
+}
 
 .greeting-boss__messageーauthor {
   font-size: 14px;
@@ -2850,6 +2922,11 @@ checked状態
   margin-top: 40px;
   margin-top: 2.5rem;
   text-align: right;
+}
+@media screen and (min-width: 768px) {
+  .greeting-boss__messageーauthor {
+    margin-top: 1rem;
+  }
 }
 
 .greeting-boss__img--sp {
@@ -2873,6 +2950,12 @@ checked状態
   margin-top: 40px;
   margin-top: 2.5rem;
 }
+@media screen and (min-width: 768px) {
+  .greeting-boss__career {
+    margin-top: 3.5rem;
+    font-size: 0.875rem;
+  }
+}
 
 .greeting-boss__career-list dt {
   border-bottom: 1px solid #393939;
@@ -2882,13 +2965,13 @@ checked状態
 }
 
 .greeting-boss__career-list + .greeting-boss__career-list {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 28px;
+  margin-top: 1.75rem;
 }
 
 .greeting-boss__career-list dd {
-  margin-top: 16px;
-  margin-top: 1rem;
+  margin-top: 17px;
+  margin-top: 1.0625rem;
 }
 
 @media screen and (min-width: 768px) {
@@ -2986,6 +3069,34 @@ checked状態
   padding: 1.125rem;
 }
 
+.greeting-swiper {
+  margin-top: 100px;
+  margin-top: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .greeting-swiper {
+    margin-top: 10rem;
+  }
+}
+
+.greeting-swiper__wrapper {
+  -webkit-transition-timing-function: linear;
+          transition-timing-function: linear;
+}
+
+.greeting-swiper__item img {
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+  max-width: 12.5rem;
+}
+@media screen and (min-width: 768px) {
+  .greeting-swiper__item img {
+    width: 100%;
+    max-width: 18.75rem;
+  }
+}
+
 .staff-mv {
   background-image: url(../src/images/staff/page-staff_top-sp.jpg);
   background-size: contain;
@@ -2994,7 +3105,6 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .staff-mv {
-    height: 23.125rem;
     background-image: url(../src/images/staff/page-staff_top.jpg);
     background-size: contain;
     background-repeat: no-repeat;
@@ -3350,7 +3460,7 @@ checked状態
   .recommend-header__title::before {
     width: 4.1875rem;
     height: 1.25rem;
-    left: 16.25rem;
+    left: 12.5rem;
     background: url(../src/images/top/title-deco.svg);
   }
 }
@@ -3372,7 +3482,7 @@ checked状態
   .recommend-header__title::after {
     width: 4.1875rem;
     height: 1.25rem;
-    right: 16.25rem;
+    right: 12.5rem;
     background: url(../src/images/top/title-deco.svg);
   }
 }

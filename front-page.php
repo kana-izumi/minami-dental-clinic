@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <?php get_template_part('template-parts/header')?>
 <div class="main-visual">
-      <div class="main-visual__inner">
+  <div class="main-visual__inner">
     <div class="main-visual__items">
       <div class="swiper mySwiper">
         <div class="swiper-wrapper">

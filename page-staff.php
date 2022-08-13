@@ -19,8 +19,8 @@
     <!-- /.mv-sub -->
     <div class="greeting-boss">
       <div class="greeting-boss__inner inner">
-        <div class="section-header">
-          <h2 class="section-header__title">院長のあいさつ</h2>
+        <div class="greeting-boss-header">
+          <h2 class="greeting-boss__title">院長のあいさつ</h2>
         </div>
         <div class="greeting-boss__content">
           <div class="greeting-boss__message">
@@ -29,7 +29,8 @@
             </p>
             <p class="greeting-boss__message-text">
               当院は治療はもちろん、予防歯科にも力を入れておりますので、お口に関する相談だけでもお越しいただきたいと考えております。<br>
-              &nbsp;
+            </p>
+            <p class="greeting-boss__message-text2">
               「患部を直すこと」より「未然に防ぐこと」が最も良い歯科医療と言えますので、些細なことでも気軽に話せる街の歯医者さんとして、明るい街づくりに貢献していきたいと考えております。
             </p>
             <p class="greeting-boss__messageーauthor">
@@ -58,6 +59,42 @@
       </div>
     </div>
     <!-- /.greeting-boss -->
+    <!-- スワイパー -->
+<div class="swiper greeting-swiper">
+  <div class="swiper-wrapper greeting-swiper__wrapper">
+    <div class="swiper-slide greeting-swiper__item">
+      <img
+        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-1.jpg')); ?>"
+        alt=""
+      />
+    </div>
+    <div class="swiper-slide greeting-swiper__item">
+    <img
+        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-1.jpg')); ?>"
+        alt=""
+      />
+    </div>
+    <div class="swiper-slide greeting-swiper__item">
+      <img
+        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-3.jpg')); ?>"
+        alt=""
+      />
+    </div>
+    <div class="swiper-slide greeting-swiper__item">
+      <img
+        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-4.jpg')); ?>"
+        alt=""
+      />
+    </div>
+    <div class="swiper-slide greeting-swiper__item">
+      <img
+        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1.jpg')); ?>"
+        alt=""
+      />
+    </div>
+  </div>
+</div>
+<!-- /.スワイパー -->
     <div class="greeting-staff">
       <div class="greeting-staff__inner inner">
         <div class="section-header">

@@ -8,7 +8,7 @@
     margin: rem(20) rem(20);
 
     @include mq(md) {
-        margin: rem(31) rem(60);
+        margin: rem(20) rem(60);
     }
 }
 
@@ -24,7 +24,7 @@
 .mv-sub__heading {
     color: $white;
     position: absolute;
-    top: 44%;
+    top: 47%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;

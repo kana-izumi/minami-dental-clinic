@@ -1,12 +1,12 @@
 @use "global" as *;
 
 .bread {
-    margin-top: rem(10);
+    margin-left: rem(30);
     color: #C2C2C2;
     font-size: rem(12);
 
     @include mq(md) {
-        margin-top: rem(10);
+
     }
 
 }
@@ -17,9 +17,6 @@
     @include mq(md) {
         padding-left: rem(30);
     }
-}
-
-.bread__item a {
 }
 
 .bread__item{

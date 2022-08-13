@@ -6,7 +6,6 @@
     background-position: center center;
 
     @include mq(md) {
-        height: rem(370);
         background-image: url(../src/images/staff/page-staff_top.jpg);
         background-size: contain;
         background-repeat: no-repeat;
