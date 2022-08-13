@@ -2,24 +2,20 @@
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/page-staff_top-sp.jpg')); ?>" alt="">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/page-staff_top.jpg')); ?>" alt="">
-        </div>
-        <div class="mv-sub__heading">
-          <h2 class="mv-sub__title">スタッフ紹介</h2>
-          <span class="mv-sub__lead">STAFF</span>
-        </div>
-        <div class="bread">
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">スタッフ紹介</a></li>
-          </ul>
+        <div class="mv-sub__img staff-mv"></div>
+          <div class="mv-sub__heading">
+            <h2 class="mv-sub__title">スタッフ紹介</h2>
+            <span class="mv-sub__lead">STAFF</span>
+          </div>
+          <?php if (!is_front_page()) { ?>
+            <?php if (function_exists('bcn_display')) { ?>
+              <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+              <?php bcn_display();?>
+              </div>
+            <?php } ?>
+            <?php } ?>
         </div>
       </div>
-    </div>
     <!-- /.mv-sub -->
     <div class="greeting-boss">
       <div class="greeting-boss__inner inner">
@@ -69,167 +65,99 @@
         </div>
         <div class="greeting-staff__content">
           <h4 class="greeting-staff__title">歯科衛生士</h4>
+          <!-- 特定のカテゴリー内の特定タームの記事を表示（サブループ） -->
+          <?php
+            $args = array(
+              'post_type' => 'staffs', // カスタム投稿名を指定
+              'taxonomy' => 'staffs_category' ,//タクソノミー名を指定
+              'term' => 'dental-hygienist',//タームのスラッグを指定
+              'order' => 'ASC', //最新順'DESC'・古い順'ASC'
+              'posts_per_page' => -1 // 表示件数(−1で全ての記事表示)
+            );
+            $the_query = new WP_Query($args); if($the_query->have_posts()):
+          ?>
           <div class="greeting-staff__items">
+            <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
             <div class="greeting-staff__item">
               <div class="greeting-staff__img">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff2.jpg')); ?>" alt="スタッフ">
+              <?php if (has_post_thumbnail()) { ?>
+									<?php the_post_thumbnail('staff'); ?>
+								<?php } else { ?>
+									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/img.png')); ?>">
+								<?php } ?>
               </div>
                 <div class="greeting-staff__name">
-                  <p>歯科衛生士 <span>鈴木 太郎</span></p>
+                  <p><?php echo get_the_term_list( $post->ID, 'staffs_category'); ?><span><?php the_title(); ?></span></p>
                 </div>
                   <table class="greeting-staff__list">
                     <tr>
                       <th>出身地</th>
-                      <td>北海道</td>
+                      <td><?php the_field( 'birthplace' ); ?></td>
                     </tr>
                     <tr>
                       <th>趣味</th>
-                      <td>スキー、料理</td>
+                      <td><?php the_field( 'hobby' ); ?></td>
                     </tr>
                     <tr>
                       <th>好きな食べ物</th>
-                      <td>お寿司、うなぎ</td>
+                      <td><?php the_field( 'text' ); ?></td>
                     </tr>
                   </table>
                 </div>
-            <div class="greeting-staff__item">
-              <div class="greeting-staff__img">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff3.jpg')); ?>" alt="スタッフ">
-              </div>
-                <div class="greeting-staff__name">
-                  <p>歯科衛生士 <span>山田 花子</span></p>
-                </div>
-                  <table class="greeting-staff__list">
-                    <tr>
-                      <th>出身地</th>
-                      <td>北海道</td>
-                    </tr>
-                    <tr>
-                      <th>趣味</th>
-                      <td>スキー、料理</td>
-                    </tr>
-                    <tr>
-                      <th>好きな食べ物</th>
-                      <td>お寿司、うなぎ</td>
-                    </tr>
-                  </table>
-                </div>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php else: ?>
+          <!-- 投稿が無い場合の処理 -->
+          <?php endif; ?>
             </div>
           </div>
         <div class="greeting-staff__content">
           <h4 class="greeting-staff__title">歯科助手</h4>
+          <!-- 特定のカテゴリー内の特定タームの記事を表示（サブループ） -->
+          <?php
+            $args = array(
+              'post_type' => 'staffs', // カスタム投稿名を指定
+              'taxonomy' => 'staffs_category' ,//タクソノミー名を指定
+              'term' => 'dental-assistant',//タームのスラッグを指定
+              'order' => 'ASC', //最新順'DESC'・古い順'ASC'
+              'posts_per_page' => -1 // 表示件数(−1で全ての記事表示)
+            );
+            $the_query = new WP_Query($args); if($the_query->have_posts()):
+          ?>
           <div class="greeting-staff__items">
+          <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
             <div class="greeting-staff__item">
               <div class="greeting-staff__img">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff4.jpg')); ?>" alt="スタッフ">
+              <?php if (has_post_thumbnail()) { ?>
+									<?php the_post_thumbnail('staff'); ?>
+								<?php } else { ?>
+									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/img.png')); ?>">
+								<?php } ?>
               </div>
                 <div class="greeting-staff__name">
-                  <p>歯科衛生士 <span>山田 花子</span></p>
+                  <p><?php echo get_the_term_list( $post->ID, 'staffs_category'); ?><span><?php the_title(); ?></span></p>
                 </div>
                   <table class="greeting-staff__list">
                     <tr>
                       <th>出身地</th>
-                      <td>北海道</td>
+                      <td><?php the_field( 'birthplace' ); ?></td>
                     </tr>
                     <tr>
                       <th>趣味</th>
-                      <td>スキー、料理</td>
+                      <td><?php the_field( 'hobby' ); ?></td>
                     </tr>
                     <tr>
                       <th>好きな食べ物</th>
-                      <td>お寿司、うなぎ</td>
+                      <td><?php the_field( 'text' ); ?></td>
                     </tr>
                   </table>
                 </div>
-            <div class="greeting-staff__item">
-              <div class="greeting-staff__img">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff5.jpg')); ?>" alt="スタッフ">
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php else: ?>
+                <!-- 投稿が無い場合の処理 -->
+                <?php endif; ?>
               </div>
-                <div class="greeting-staff__name">
-                  <p>歯科衛生士 <span>山田 花子</span></p>
-                </div>
-                  <table class="greeting-staff__list">
-                    <tr>
-                      <th>出身地</th>
-                      <td>北海道</td>
-                    </tr>
-                    <tr>
-                      <th>趣味</th>
-                      <td>スキー、料理</td>
-                    </tr>
-                    <tr>
-                      <th>好きな食べ物</th>
-                      <td>お寿司、うなぎ</td>
-                    </tr>
-                  </table>
-                </div>
-            <div class="greeting-staff__item">
-              <div class="greeting-staff__img">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff6.jpg')); ?>" alt="スタッフ">
-              </div>
-                <div class="greeting-staff__name">
-                  <p>歯科衛生士 <span>山田 花子</span></p>
-                </div>
-                  <table class="greeting-staff__list">
-                    <tr>
-                      <th>出身地</th>
-                      <td>北海道</td>
-                    </tr>
-                    <tr>
-                      <th>趣味</th>
-                      <td>スキー、料理</td>
-                    </tr>
-                    <tr>
-                      <th>好きな食べ物</th>
-                      <td>お寿司、うなぎ</td>
-                    </tr>
-                  </table>
-                </div>
-            <div class="greeting-staff__item">
-              <div class="greeting-staff__img">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff7.jpg')); ?>" alt="スタッフ">
-              </div>
-                <div class="greeting-staff__name">
-                  <p>歯科衛生士 <span>山田 花子</span></p>
-                </div>
-                  <table class="greeting-staff__list">
-                    <tr>
-                      <th>出身地</th>
-                      <td>北海道</td>
-                    </tr>
-                    <tr>
-                      <th>趣味</th>
-                      <td>スキー、料理</td>
-                    </tr>
-                    <tr>
-                      <th>好きな食べ物</th>
-                      <td>お寿司、うなぎ</td>
-                    </tr>
-                  </table>
-                </div>
-            <div class="greeting-staff__item">
-              <div class="greeting-staff__img">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff8.jpg')); ?>" alt="スタッフ">
-              </div>
-                <div class="greeting-staff__name">
-                  <p>歯科衛生士 <span>山田 花子</span></p>
-                </div>
-                  <table class="greeting-staff__list">
-                    <tr>
-                      <th>出身地</th>
-                      <td>北海道</td>
-                    </tr>
-                    <tr>
-                      <th>趣味</th>
-                      <td>スキー、料理</td>
-                    </tr>
-                    <tr>
-                      <th>好きな食べ物</th>
-                      <td>お寿司、うなぎ</td>
-                    </tr>
-                  </table>
-                </div>
-            </div>
           </div>
         </div>
       </div>

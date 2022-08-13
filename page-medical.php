@@ -134,7 +134,7 @@
                 </div>
                 <div class="medical-content__img">
                 <?php if (has_post_thumbnail()) { ?>
-									<?php the_post_thumbnail('medical'); ?>
+									<?php the_post_thumbnail('staff'); ?>
 								<?php } else { ?>
 									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/img.png')); ?>">
 								<?php } ?>

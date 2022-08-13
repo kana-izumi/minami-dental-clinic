@@ -2686,8 +2686,6 @@ checked状態
   background-position: bottom 5px center;
   background-position: bottom 0.3125rem center;
   background-repeat: no-repeat;
-  -webkit-transition: 0.3s ease-out;
-  transition: 0.3s ease-out;
 }
 
 .medical-menu_item + .medical-menu_item {
@@ -2986,6 +2984,22 @@ checked状態
 .greeting-staff__list td {
   padding: 18px;
   padding: 1.125rem;
+}
+
+.staff-mv {
+  background-image: url(../src/images/staff/page-staff_top-sp.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .staff-mv {
+    height: 23.125rem;
+    background-image: url(../src/images/staff/page-staff_top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
 }
 
 .main-visual {
