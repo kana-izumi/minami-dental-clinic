@@ -60,41 +60,41 @@
     </div>
     <!-- /.greeting-boss -->
     <!-- スワイパー -->
-<div class="swiper greeting-swiper">
-  <div class="swiper-wrapper greeting-swiper__wrapper">
-    <div class="swiper-slide greeting-swiper__item">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-1.jpg')); ?>"
-        alt=""
-      />
+    <div class="swiper mySwiper2">
+      <div class="swiper-wrapper mySwiper2__wrapper">
+        <div class="swiper-slide mySwiper2__item">
+          <img
+            src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-1.jpg')); ?>"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide mySwiper2__item">
+        <img
+            src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-1.jpg')); ?>"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide mySwiper2__item">
+          <img
+            src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-3.jpg')); ?>"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide mySwiper2__item">
+          <img
+            src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-4.jpg')); ?>"
+            alt=""
+          />
+        </div>
+        <div class="swiper-slide mySwiper2__item">
+          <img
+            src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1.jpg')); ?>"
+            alt=""
+          />
+        </div>
+      </div>
     </div>
-    <div class="swiper-slide greeting-swiper__item">
-    <img
-        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-1.jpg')); ?>"
-        alt=""
-      />
-    </div>
-    <div class="swiper-slide greeting-swiper__item">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-3.jpg')); ?>"
-        alt=""
-      />
-    </div>
-    <div class="swiper-slide greeting-swiper__item">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1-4.jpg')); ?>"
-        alt=""
-      />
-    </div>
-    <div class="swiper-slide greeting-swiper__item">
-      <img
-        src="<?php echo esc_url(get_theme_file_uri('/src/images/staff/staff-slider1.jpg')); ?>"
-        alt=""
-      />
-    </div>
-  </div>
-</div>
-<!-- /.スワイパー -->
+    <!-- /.スワイパー -->
     <div class="greeting-staff">
       <div class="greeting-staff__inner inner">
         <div class="section-header">

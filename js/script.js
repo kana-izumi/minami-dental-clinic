@@ -61,16 +61,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     keyboard: true,
   });
 
+  var swiper = new Swiper(".mySwiper2", {
+    loop: true, // ループ有効
+    slidesPerView: 3, // 一度に表示する枚数
+    spaceBetween: 20,
+    speed: 8000, // ループの時間
+    allowTouchMove: false, // スワイプ無効
+    autoplay: {
+      delay: 0, // 途切れなくループ
+    },
+  });
 });
 
-// スタッフ紹介スワイパー
-const swiper = new Swiper(".swiper", {
-  loop: true, // ループ有効
-  slidesPerView: 3, // 一度に表示する枚数
-  speed: 6000, // ループの時間
-  allowTouchMove: false, // スワイプ無効
-  autoplay: {
-    delay: 0, // 途切れなくループ
-  },
-});
+
 

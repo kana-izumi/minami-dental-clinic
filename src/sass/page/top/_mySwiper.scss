@@ -1,0 +1,87 @@
+
+@use "global" as *;
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.swiper-slide .swiper-slide-active {
+  width: 44.8%;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev,
+.swiper-button-next {
+  height: 50px;
+  width: 50px;
+  position: absolute;
+}
+
+.swiper-button-next {
+  right: rem(-6);
+
+  @include mq(md) {
+    right: rem(35);
+  }
+}
+
+.swiper-button-prev {
+  left: rem(-6);
+
+  @include mq(md) {
+    left: rem(35);
+  }
+}
+/* 前へ次への矢印カスタマイズ */
+.swiper-button-prev:after,
+.swiper-button-next:after {
+  background-repeat: no-repeat;
+  background-size: contain;
+  content: "";
+  height: 50px;
+  margin: auto;
+  width: 50px;
+}
+/* 前への矢印カスタマイズ */
+.swiper-button-prev:after {
+  background-image: url(../src/images/top/arrow-left.svg);
+}
+/* 次への矢印カスタマイズ */
+.swiper-button-next:after {
+  background-image: url(../src/images/top/arrow-right.svg);
+}
+/* 画像サイズ調整 */
+.swiper-slide img {
+  height: auto;
+  width: 100%;
+}
+
+.swiper-pagination ,
+.swiper-pagination-bullets ,
+.swiper-pagination-horizontal {
+  display: flex;
+  flex-direction: column;
+  left: -21px;
+}
+
+.swiper-horizontal>.swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+  left: rem(-19);
+}
+
+
+
+.swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 
+.swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
+  margin: 4px var(--swiper-pagination-bullet-horizontal-gap,4px);
+}

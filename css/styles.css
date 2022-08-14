@@ -2985,6 +2985,16 @@ checked状態
   }
 }
 
+.greeting-staff {
+  margin-top: 100px;
+  margin-top: 6.25rem;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff {
+    margin-top: 10rem;
+  }
+}
+
 .greeting-staff__title {
   border-bottom: 1px solid #707070;
   border-bottom: 0.0625rem solid #707070;
@@ -3069,32 +3079,33 @@ checked状態
   padding: 1.125rem;
 }
 
-.greeting-swiper {
+.mySwiper2 {
+  width: 100%;
+  height: 100%;
   margin-top: 100px;
   margin-top: 6.25rem;
 }
 @media screen and (min-width: 768px) {
-  .greeting-swiper {
+  .mySwiper2 {
     margin-top: 10rem;
   }
 }
 
-.greeting-swiper__wrapper {
+.mySwiper2__wrapper {
   -webkit-transition-timing-function: linear;
           transition-timing-function: linear;
 }
 
-.greeting-swiper__item img {
-  height: auto;
-  width: 100%;
-  max-width: 200px;
-  max-width: 12.5rem;
+.mySwiper2__item {
+  text-align: center;
 }
-@media screen and (min-width: 768px) {
-  .greeting-swiper__item img {
-    width: 100%;
-    max-width: 18.75rem;
-  }
+
+.mySwiper2__item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .staff-mv {
@@ -3110,10 +3121,6 @@ checked状態
     background-repeat: no-repeat;
     background-position: center center;
   }
-}
-
-.main-visual {
-  position: relative;
 }
 
 .main-visual__inner {
@@ -3132,9 +3139,29 @@ checked状態
   }
 }
 
+.main-visual__catch {
+  position: absolute;
+  bottom: 38px;
+  bottom: 2.375rem;
+  left: 20px;
+  left: 1.25rem;
+  z-index: 100;
+  max-width: 265px;
+  max-width: 16.5625rem;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .main-visual__catch {
+    max-width: 25.9375rem;
+    left: 3.75rem;
+    bottom: 2.8125rem;
+  }
+}
+
 .swiper {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .swiper-slide .swiper-slide-active {
@@ -3154,6 +3181,7 @@ checked状態
 .swiper-button-next {
   height: 50px;
   width: 50px;
+  position: absolute;
 }
 
 .swiper-button-next {
@@ -3226,25 +3254,6 @@ checked状態
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
 .swiper-pagination-horizontal.swiper-pagination-bullets .swiper-pagination-bullet {
   margin: 4px 4px;
-}
-
-.main-visual__catch {
-  position: absolute;
-  bottom: 38px;
-  bottom: 2.375rem;
-  left: 20px;
-  left: 1.25rem;
-  z-index: 100;
-  max-width: 265px;
-  max-width: 16.5625rem;
-  width: 100%;
-}
-@media screen and (min-width: 768px) {
-  .main-visual__catch {
-    max-width: 25.9375rem;
-    left: 3.75rem;
-    bottom: 2.8125rem;
-  }
 }
 
 .news__inner {
