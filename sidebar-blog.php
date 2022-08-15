@@ -1,8 +1,5 @@
 <aside class="blog-side">
-    <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
-    <?php dynamic_sidebar( 'sidebar' ); ?>
-    <?php endif; ?>
-          <div class="blog-side__about">
+    <div class="blog-side__about">
             <div class="blog-side__about-title">
               <h3>クリニックの紹介</h3>
             </div>
@@ -25,7 +22,7 @@
               <!-- 新着記事表示 -->
             <?php
             $args = array(
-            'post_type' => 'post',
+            'post_type' => 'blog',
             'posts_per_page' => 5,
             'orderby' => 'date',
             'order' => 'DESC',
@@ -36,9 +33,9 @@
               <a class="blog-main__item">
                 <figure class="blog-main__img">
                 <?php if (has_post_thumbnail()) { ?>
-									<?php the_post_thumbnail('blog'); ?>
+									<?php the_post_thumbnail('sidebar'); ?>
 								<?php } else { ?>
-									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/img.png')); ?>">
+									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/noimg.png')); ?>">
 								<?php } ?>
                 </figure>
                 <div class="blog-main__body">

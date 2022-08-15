@@ -33,31 +33,32 @@
           </div>
           <?php endwhile; ?>
         <?php endif; ?>
+        <!-- ページネーション -->
           <div class="blog-page__pager">
             <ul class="blog-page__pagination">
-              <li >
-              <?php
-              $link = get_previous_posts_link('前の記事へ');
-              if ($link) {
-                $link = str_replace('<a' , '<a class="blog-page__pagination-pre"' , $link);
-                echo $link;
-              }
-              ?>
-              </li>
-              <li><a class="blog-page__pagination-all" href="<?php echo esc_url(home_url('/'))?>archive">記事一覧</a></li>
-              <li>
-              <?php
-              $link = get_next_posts_link('前の記事へ');
-              if ($link) {
-                $link = str_replace('<a' , '<a class="blog-page__pagination-next"' , $link);
-                echo $link;
-              }
-              ?>
-              </li>
+            <?php $nextpost = get_adjacent_post(false, '', false); if ($nextpost) : ?>
+            <li>
+                <a class="blog-page__pagination-pre" href="<?php echo get_permalink($nextpost->ID); ?>">
+                前の記事へ
+                </a>
+            </li>
+            <?php endif; ?>
+            <li>
+              <a class="blog-page__pagination-all" href="<?php echo esc_url(home_url('/'))?>archive">
+              記事一覧
+              </a>
+            </li>
+            <?php $prevpost = get_adjacent_post(false, '', true); if ($prevpost) : ?>
+            <li>
+                <a class="blog-page__pagination-next" href="<?php echo get_permalink($nextpost->ID); ?>">
+                次の記事へ
+                </a>
+            </li>
+            <?php endif; ?>
             </ul>
           </div>
           </article>
-            <?php get_sidebar(); ?>
+            <?php get_sidebar('blog'); ?>
           </div>
         </div>
 <?php get_footer(); ?>

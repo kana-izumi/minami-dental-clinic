@@ -17,6 +17,7 @@ function setup_post_thumnails(){
     add_image_size('blog', 244, 153, true);
     add_image_size('medical', 420, 315, true);
     add_image_size('staff', 280, 280, true);
+    add_image_size('sidebar', 120, 90, true);
 }
 add_action('after_setup_theme', 'setup_post_thumnails');
 
@@ -65,21 +66,4 @@ function my_menu_init() {
     );
   }
   add_action('init', 'my_menu_init');
-
-/*---------------------------------------------
-ウィジェットの登録
-----------------------------------------------*/
-function my_widget_init() {
-  register_sidebar(
-  array(
-  'name' => 'サイドバー', //表示するエリア名
-  'id' => 'sidebar', //id
-  'before_widget' => '<div id="%1$s" class="widget %2$s">',
-  'after_widget' => '</div>',
-  'before_title' => '<div class="blog-side__post-title">',
-  'after_title' => '</div>',
-  )
-  );
-  }
-  add_action( 'widgets_init', 'my_widget_init' );
 

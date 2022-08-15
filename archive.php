@@ -28,7 +28,7 @@
                   <?php if (has_post_thumbnail()) { ?>
 									<?php the_post_thumbnail('blog'); ?>
 								<?php } else { ?>
-									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/img.png')); ?>">
+									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/noimg.png')); ?>">
 								<?php } ?>
                   </figure>
                   <div class="blog-main__body">
@@ -55,7 +55,7 @@
           </div>
         </div>
       </article>
-<?php get_sidebar(); ?>
+<?php get_sidebar('blog'); ?>
     </div>
 
 <?php get_footer();?>
