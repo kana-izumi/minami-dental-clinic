@@ -50,3 +50,36 @@ function topNews_posts_per_page($query){
     }
 }
 add_action('pre_get_posts','topNews_posts_per_page');
+
+
+/*---------------------------------------------
+メニューの変更
+----------------------------------------------*/
+function my_menu_init() {
+    register_nav_menus(
+      array(
+        'global' => 'ヘッダーメニュー',
+        'drawer' => 'ドロワーメニュー',
+        'footer' => 'フッターメニュー'
+      )
+    );
+  }
+  add_action('init', 'my_menu_init');
+
+/*---------------------------------------------
+ウィジェットの登録
+----------------------------------------------*/
+function my_widget_init() {
+  register_sidebar(
+  array(
+  'name' => 'サイドバー', //表示するエリア名
+  'id' => 'sidebar', //id
+  'before_widget' => '<div id="%1$s" class="widget %2$s">',
+  'after_widget' => '</div>',
+  'before_title' => '<div class="blog-side__post-title">',
+  'after_title' => '</div>',
+  )
+  );
+  }
+  add_action( 'widgets_init', 'my_widget_init' );
+

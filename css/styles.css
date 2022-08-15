@@ -3256,6 +3256,21 @@ checked状態
   margin: 4px 4px;
 }
 
+.news-mv {
+  background-image: url(../src/images/blog/archive_top-sp.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .news-mv {
+    background-image: url(../src/images/blog/archive_top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+
 .news__inner {
   display: -webkit-box;
   display: -ms-flexbox;

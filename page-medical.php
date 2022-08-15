@@ -1,3 +1,8 @@
+<?php
+/*
+Template Name: 診察案内
+*/
+?>
 <?php get_header(); ?>
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">

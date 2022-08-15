@@ -1,4 +1,7 @@
 <aside class="blog-side">
+    <?php if ( is_active_sidebar( 'sidebar' ) ) : ?>
+    <?php dynamic_sidebar( 'sidebar' ); ?>
+    <?php endif; ?>
           <div class="blog-side__about">
             <div class="blog-side__about-title">
               <h3>クリニックの紹介</h3>
@@ -19,18 +22,17 @@
               <h3>新着記事</h3>
             </div>
             <div class="blog-main__items">
+              <!-- 新着記事表示 -->
             <?php
-          $information= get_posts( array(
-          //ここで取得条件を指定する
-          'posts_per_page' => 5 ,
-          'post_type' => 'blog' ,
-          ));
-          if( $information):
-          ?>
-          <?php
-          foreach( $information as $post ):
-          setup_postdata( $post );
-          ?>
+            $args = array(
+            'post_type' => 'post',
+            'posts_per_page' => 5,
+            'orderby' => 'date',
+            'order' => 'DESC',
+            );
+            $new_posts = get_posts($args);
+            foreach($new_posts as $post): setup_postdata( $post );
+            ?>
               <a class="blog-main__item">
                 <figure class="blog-main__img">
                 <?php if (has_post_thumbnail()) { ?>
@@ -45,13 +47,7 @@
                   <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
                 </div>
               </a>
-              <?php
-            endforeach;
-            wp_reset_postdata();
-            ?>
-          <?php else: ?>
-            <p>表示できる新着情報はありません。</p>
-          <?php endif; ?>
+              <?php endforeach; wp_reset_postdata(); ?>
             </div>
           </div>
           <div class="blog-side__category">

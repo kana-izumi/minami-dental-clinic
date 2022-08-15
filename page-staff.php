@@ -1,3 +1,9 @@
+<?php
+/*
+Template Name: スタッフ紹介
+*/
+?>
+
 <?php get_header(); ?>
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">

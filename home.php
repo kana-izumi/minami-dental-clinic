@@ -1,27 +1,19 @@
 <?php get_header(); ?>
-
+<?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top-sp.jpg')); ?>" alt="スタッフブログ画像">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/blog/archive_top.jpg')); ?>" alt="スタッフブログ画像">
-        </div>
+        <div class="mv-sub__img news-mv"></div>
         <div class="mv-sub__heading">
           <h2 class="mv-sub__title">お知らせ一覧</h2>
           <span class="mv-sub__lead">NEWS</span>
         </div>
-        <?php if(!is_front_page()) { ?>
-          <?php if(function_exists('bcn_display')) { ?>
-        <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
-        </div>
+        <?php if (!is_front_page()) { ?>
+          <?php if (function_exists('bcn_display')) { ?>
+            <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <?php bcn_display();?>
+            </div>
           <?php } ?>
-        <?php } ?>
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">スタッフ紹介</a></li>
-          </ul>
+          <?php } ?>
       </div>
     </div>
 
@@ -50,22 +42,18 @@
                   <li class="blog-main__next"><a href="#"><span>次へ</span></a></li>
               </ul>
             </div>
-            <?php if (paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
             <!-- pagination -->
-             <div class="pagination">
+            <?php if (paginate_links()) : //ページが1ページ以上あれば以下を表示 ?>
             <?php
-             echo
-             paginate_links(
-             array(
-               'end_size' => 1,
-               'mid_size' => 1,
-               'prev_next' => true,
-               'prev_text' => '<i class="fas fa-angle-left"></i>',
-               'next_text' => '<i class="fas fa-angle-right"></i>',
-             )
-             );
-              ?>
-              </div><!-- /pagination -->
+            $args = array(
+            	'mid_size' => 2,
+            	'prev_text' => '前へ',
+            	'next_text' => '次へ',
+            	'screen_reader_text' => 'ページャー'
+            );
+            the_posts_pagination($args);
+            ?>
+            <!-- /pagination -->
             <?php endif; ?>
           </div>
         </div>

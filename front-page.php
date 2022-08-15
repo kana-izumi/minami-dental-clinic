@@ -201,7 +201,7 @@
                   <?php if (has_post_thumbnail()) { ?>
 									<?php the_post_thumbnail('blog'); ?>
 								<?php } else { ?>
-									<img src="<?php echo esc_url(get_theme_file_uri('/img/noimage.jpg')); ?>">
+									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/20200501_noimage.jpg')); ?>">
 								<?php } ?>
                   </figure>
                   <div class="staff-blog__body">

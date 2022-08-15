@@ -1,0 +1,15 @@
+@use "global" as *;
+
+.news-mv {
+    background-image: url(../src/images/blog/archive_top-sp.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include mq(md) {
+        background-image: url(../src/images/blog/archive_top.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+}
