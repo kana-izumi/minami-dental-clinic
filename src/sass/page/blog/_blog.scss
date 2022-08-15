@@ -6,3 +6,20 @@
         display: flex;
     }
 }
+
+.blog__icon {
+    width: rem(40);
+    height: rem(40);
+    background-color: #EE5A6D;
+    border-radius: 50%;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: rem(10);
+
+    position: absolute;
+    content: "";
+    top: rem(-9);
+    left: rem(-9);
+}

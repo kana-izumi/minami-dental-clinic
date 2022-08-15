@@ -25,6 +25,19 @@
             <?php while (have_posts()) : the_post() ;?>
               <a class="blog-main__item" href="<?php the_permalink(); ?>">
                   <figure class="blog-main__img">
+                  <?php
+                  $days = 3;
+                  $today = date_i18n('U');
+                  $entry_day = get_the_time('U');
+                  $keika = date('U',($today - $entry_day)) / 86400;
+                  if ( $days > $keika ):
+                      $limit = 3;
+                      $num = $wp_query->current_post;
+                      if ( $limit > $num ):
+                          echo '<div class="blog__icon">NEW</div>';
+                      endif;
+                  endif;
+                  ?>
                   <?php if (has_post_thumbnail()) { ?>
 									<?php the_post_thumbnail('blog'); ?>
 								<?php } else { ?>

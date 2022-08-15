@@ -18,7 +18,7 @@
             <div class="blog-side__post-title">
               <h3>新着記事</h3>
             </div>
-            <div class="blog-main__items">
+            <div class="blog-side__post-items">
               <!-- 新着記事表示 -->
             <?php
             $args = array(
@@ -30,8 +30,8 @@
             $new_posts = get_posts($args);
             foreach($new_posts as $post): setup_postdata( $post );
             ?>
-              <a class="blog-main__item">
-                <figure class="blog-main__img">
+              <a class="blog-side__post-item">
+                <figure class="blog-side__post-img">
                 <?php if (has_post_thumbnail()) { ?>
 									<?php the_post_thumbnail('sidebar'); ?>
 								<?php } else { ?>
