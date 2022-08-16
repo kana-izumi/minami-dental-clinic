@@ -5,20 +5,30 @@
         <div class="header__logo">
             <img src="<?php echo esc_url(get_theme_file_uri('/images/common/logo.svg')); ?>" alt="ロゴ画像">
         </div>
-            <nav class="header-nav u-desktop">
+        <?php
+        $args = [
+            'theme_location' => 'header_menu',
+            'container' => 'nav',
+            'container_class' => 'header-nav u-desktop',
+            'menu_class' => 'header-nav__list', //ulタグのclass追加
+            'add_li_class' => 'header-nav__item', // liタグへclass追加
+        ];
+        wp_nav_menu($args);
+        ?>
+            <!-- <nav class="header-nav u-desktop">
                 <ul class="header-nav__list">
-                    <li><a href="<?php echo esc_url(home_url('/'))?>"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.png')); ?>" alt="">ホーム</li></a>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>about"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="">当院について</li></a>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="">治療案内</li></a>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>staff"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="">スタッフ紹介</li></a>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>blog"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="">スタッフブログ</li></a>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>contact"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="">お問い合わせ</li></a>
+                    <li class="header-nav__item"><a href="<?php echo esc_url(home_url('/'))?>"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.png')); ?>" alt="">ホーム</li></a>
+                    <li class="header-nav__item"><a href="<?php echo esc_url(home_url('/'))?>about"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav02.svg')); ?>" alt="">当院について</li></a>
+                    <li class="header-nav__item"><a href="<?php echo esc_url(home_url('/'))?>medical"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav03.svg')); ?>" alt="">治療案内</li></a>
+                    <li class="header-nav__item"><a href="<?php echo esc_url(home_url('/'))?>staff"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav04.svg')); ?>" alt="">スタッフ紹介</li></a>
+                    <li class="header-nav__item"><a href="<?php echo esc_url(home_url('/'))?>blog"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav05.svg')); ?>" alt="">スタッフブログ</li></a>
+                    <li class="header-nav__item"><a href="<?php echo esc_url(home_url('/'))?>contact"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-nav07.svg')); ?>" alt="">お問い合わせ</li></a>
                 </ul>
             <div class="header__info">
                 <p class="header__info-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
                 <p class="header__info-tel">03-1234-5678</p>
             </div>
-            </nav>
+            </nav> -->
         </div>
 
 <!-- //drawer -->
@@ -39,6 +49,12 @@
 
     <div class="drawer__content">
         <div class="drawer__content-items">
+        <?php
+        $args = [
+        	'theme_location' => 'drawer_menu'
+        ];
+        wp_nav_menu($args);
+        ?>
             <div class="drawer__content-item">
                 <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>">
                 <a href="<?php echo esc_url(home_url('/'))?>">ホーム</a>

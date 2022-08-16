@@ -27,6 +27,12 @@
             </div>
         </div>
         <nav class="footer-nav">
+        <?php
+        $args = [
+        	'theme_location' => 'footer_menu'
+        ];
+        wp_nav_menu($args);
+        ?>
             <div class="footer-nav__item">
             <ul>
                 <li><a href="">TOP</a></li>
