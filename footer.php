@@ -27,63 +27,57 @@
             </div>
         </div>
         <nav class="footer-nav">
-        <?php
-        $args = [
-        	'theme_location' => 'footer_menu'
-        ];
-        wp_nav_menu($args);
-        ?>
             <div class="footer-nav__item">
             <ul>
-                <li><a href="">TOP</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>">TOP</a></li>
             </ul>
             </div>
             <div class="footer-nav__item">
-            <dt>当院について</dt>
+            <dt><a href="<?php echo esc_url(home_url('/'))?>about">当院について</a></dt>
             <dd>
                 <ul class="footer-nav__item-list">
-                <li><a href="">ポリシーと特徴</a></li>
-                <li><a href="">当院の様子</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>about#policy">ポリシーと特徴</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>about#about-img">当院の様子</a></li>
                 </ul>
             </dd>
             </div>
             <div class="footer-nav__item">
-            <dt>スタッフ紹介</dt>
+            <dt><a href="<?php echo esc_url(home_url('/'))?>staff">スタッフ紹介</a></dt>
             <dd>
                 <ul class="footer-nav__item-list">
-                <li><a href="">院長のあいさつ</a></li>
-                <li><a href="">スタッフ</a></li>
-                <li><a href="">スタッフブログ</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>staff#boss">院長のあいさつ</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>staff#staff">スタッフ</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>blog#blog">スタッフブログ</a></li>
                 </ul>
             </dd>
             </div>
             <div class="footer-nav__item">
-            <dt>治療内容</dt>
+            <dt><a href="<?php echo esc_url(home_url('/'))?>medical">治療内容</a></dt>
             <div class="footer-nav__item-flex">
                 <dd>
                 <ul class="footer-nav__item-list">
-                    <li><a href="">一般歯科</a></li>
-                    <li><a href="">小児歯科</a></li>
-                    <li><a href="">予防歯科</a></li>
-                    <li><a href="">入れ歯</a></li>
+                    <li><a href="#common<?php get_the_ID(); ?>">一般歯科</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">小児歯科</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">予防歯科</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">入れ歯</a></li>
                 </ul>
                 </dd>
                 <dd>
                 <ul class="footer-nav__item-list footer-nav__sub">
-                    <li><a href="">矯正歯科</a></li>
-                    <li><a href="">ホワイトニング</a></li>
-                    <li><a href="">口腔外科</a></li>
-                    <li><a href="">レーザー治療</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">矯正歯科</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">ホワイトニング</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">口腔外科</a></li>
+                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">レーザー治療</a></li>
                 </ul>
                 </dd>
             </div>
             </div>
             <div class="footer-nav__item">
-            <dt>お問い合わせ</dt>
+            <dt><a href="<?php echo esc_url(home_url('/'))?>contact">お問い合わせ</a></dt>
             <dd>
                 <ul class="footer-nav__item-list">
-                <li><a href="">お問い合わせフォーム</a></li>
-                <li><a href="">WEB予約</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>contact">お問い合わせフォーム</a></li>
+                <li><a href="<?php echo esc_url(home_url('/'))?>reservation">WEB予約</a></li>
                 </ul>
             </dd>
             </div>

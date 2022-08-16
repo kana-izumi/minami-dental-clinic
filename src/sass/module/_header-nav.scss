@@ -40,6 +40,23 @@
     }
   }
 }
+.header-nav__item {
+
+  &:hover {
+    color: #1391E6;
+
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: rem(-6);
+      left: 50%;
+      transform: translateX(-50%);
+      width: rem(20);
+      height: rem(2);
+      background-color: $main-color;
+    }
+  }
+}
 
 .header-nav__list img {
   @include mq(md) {

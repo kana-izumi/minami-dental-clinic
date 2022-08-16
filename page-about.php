@@ -23,7 +23,7 @@ Template Name: 当院について
       </div>
     </div>
     <section class="about-sub">
-      <div class="about-sub__content1">
+      <div id="policy" class="about-sub__content1">
         <div class="about-sub__inner inner">
           <div class="about-sub__body">
             <span class="about-sub__heading-lead">POLICY</span>
@@ -53,7 +53,7 @@ Template Name: 当院について
       </div>
     </section>
 
-    <div class="about-picture">
+    <div id="about-img" class="about-picture">
       <div class="about-picture__inner inner">
         <div class="section-header">
           <h2 class="section-header__title">院内の様子</h2>

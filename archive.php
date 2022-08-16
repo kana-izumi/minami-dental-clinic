@@ -17,7 +17,7 @@
       </div>
     </div>
 
-    <div class="blog blog-wrapper inner">
+    <div id="blog" class="blog blog-wrapper inner">
       <article class="blog-main">
         <div class="blog-main__inner">
         <?php if(have_posts()) : ?>

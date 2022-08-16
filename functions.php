@@ -52,36 +52,23 @@ function topNews_posts_per_page($query){
 }
 add_action('pre_get_posts','topNews_posts_per_page');
 
-
 /*---------------------------------------------
-メニューの変更
+サンクスページへ遷移
 ----------------------------------------------*/
-function register_my_menus(){
-	$args = [
-		'header_menu' => 'ヘッダー',
-        'drawer_menu' => 'ドロワー',
-		'footer_menu' => 'フッター'
-	];
-	register_nav_menus($args);
-}
-add_action('after_setup_theme','register_my_menus');
 
-// wp_nav_menuのliにclass追加
-function add_additional_class_on_li($classes, $item, $args)
-{
-  if (isset($args->add_li_class)) {
-    $classes['class'] = $args->add_li_class;
-  }
-  return $classes;
-}
-add_filter('nav_menu_css_class', 'add_additional_class_on_li', 1, 3);
-
-// wp_nav_menuのaにclass追加
-function add_additional_class_on_a($classes, $item, $args)
-{
-  if (isset($args->add_li_class)) {
-    $classes['class'] = $args->add_a_class;
-  }
-  return $classes;
-}
-add_filter('nav_menu_link_attributes', 'add_additional_class_on_a', 1, 3);
+add_action( 'wp_footer', 'add_origin_thanks_page' );
+ function add_origin_thanks_page() {
+ $thanks = home_url('contact-thanks/');
+ $recruit = home_url('reservation-thanks/');
+   echo <<< EOC
+     <script>
+       var thanksPage = {
+         33: '{$thanks}',
+         52: '{$recruit}',
+       };
+     document.addEventListener( 'wpcf7mailsent', function( event ) {
+       location = thanksPage[event.detail.contactFormId];
+     }, false );
+     </script>
+   EOC;
+ }

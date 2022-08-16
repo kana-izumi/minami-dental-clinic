@@ -36,7 +36,7 @@ Template Name: 診察案内
         $termchildren = get_term_children( $term_id, $taxonomy_name );
         foreach ( $termchildren as $child ) :?>
          <?php $term = get_term_by( 'id', $child, $taxonomy_name );?>
-         <li class="medical-menu_item"><a href="#common<?php get_the_ID(); ?>">
+         <li class="medical-menu_item"><a href="#<?php get_the_ID(); ?>">
             <?php echo $term->name; //ターム名 ?>
           </li></a>
         <?php endforeach; ?>
@@ -54,7 +54,7 @@ Template Name: 診察案内
         $termchildren = get_term_children( $term_id, $taxonomy_name );
         foreach ( $termchildren as $child ) :?>
          <?php $term = get_term_by( 'id', $child, $taxonomy_name );?>
-         <li class="medical-menu_item"><a href="#specal">
+         <li class="medical-menu_item"><a href="<?php echo esc_url(home_url('/'))?>medical#specal">
             <?php echo $term->name; //ターム名 ?>
          </a></li>
         <?php endforeach; ?>
@@ -81,8 +81,8 @@ Template Name: 診察案内
             $the_query = new WP_Query($args); if($the_query->have_posts()):
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-          <div id="common<?php get_the_ID(); ?>" class="medical-content__items1">
-            <div class="medical-content__item">
+          <div class="medical-content__items1">
+            <div id="<?php get_the_ID(); ?>" class="medical-content__item">
               <div class="medical-content__heading">
                 <h3 class="medical-content__title"><?php the_title(); ?></h3>
                 <span class="medical-content__lead"><?php the_field( 'text' ); ?></span>

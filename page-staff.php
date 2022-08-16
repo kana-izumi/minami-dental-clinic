@@ -23,7 +23,7 @@ Template Name: スタッフ紹介
         </div>
       </div>
     <!-- /.mv-sub -->
-    <div class="greeting-boss">
+    <div id="boss" class="greeting-boss">
       <div class="greeting-boss__inner inner">
         <div class="greeting-boss-header">
           <h2 class="greeting-boss__title">院長のあいさつ</h2>
@@ -101,7 +101,7 @@ Template Name: スタッフ紹介
       </div>
     </div>
     <!-- /.スワイパー -->
-    <div class="greeting-staff">
+    <div id="staff" class="greeting-staff">
       <div class="greeting-staff__inner inner">
         <div class="section-header">
           <h2 class="section-header__title">スタッフ紹介</h2>
