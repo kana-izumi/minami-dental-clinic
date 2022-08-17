@@ -1,0 +1,12 @@
+@use "global" as *;
+
+.back-to-top {
+    position: fixed;
+    right: rem(20);
+    bottom: rem(40);
+}
+
+.back-to-top img {
+    width: 100%;
+    max-width: rem(52);
+}

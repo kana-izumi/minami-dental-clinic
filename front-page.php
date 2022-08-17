@@ -40,7 +40,10 @@
     </div>
       </div>
       <div class="reservation__link">
-        <a href="<?php echo esc_url(home_url('/'))?>reservation"><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/btn-reserve.png')); ?>" alt="WEB予約はこちら"></a>
+        <a href="<?php echo esc_url(home_url('/'))?>reservation">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/web-icon.svg')); ?>" alt="WEB予約はこちら">
+        <p>WEB予約<br>はこちら</p>
+        </a>
       </div>
     <section class="news">
       <div class="news__inner">

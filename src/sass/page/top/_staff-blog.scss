@@ -101,20 +101,32 @@
     }
 }
 
+.staff-blog__img {
+    cursor: pointer;
+    overflow: hidden; /* これが無いと枠ごと大きくなる */
+}
+
 
 .staff-blog__img img{
+    height: auto;
+    transition: transform .6s ease; /* ゆっくり変化させる */
+    width: 100%;
 
     @include mq(md) {
         width: 100%;
         height: rem(188);
         border-radius: rem(20) rem(20) 0 0;
     }
+
+    &:hover {
+        transform: scale(1.1); /* 拡大 */
+    }
 }
 
 
 .staff-blog__body {
     margin-left: rem(10);
-    
+
     @include mq(md) {
         margin-left: 0;
         padding: rem(20) rem(20) rem(20);
@@ -145,6 +157,10 @@
 
     @include mq(md) {
         font-size: rem(16);
+    }
+
+    &:hover {
+        color: $main-color;
     }
 }
 

@@ -4,11 +4,39 @@
     display: none;
 
     @include mq(md) {
-        width: rem(92);
         position: absolute;
-        top: rem(60);
+
+        background: $main-color;
+        border-radius: 20px 0 0 20px;
+        cursor: pointer;
+        display: flex;
+        flex-direction: column;
+        height: 120px;
+        position: fixed;
         right: 0;
-        z-index: 101;
-        display: block;
+        top: 176px;
+        transition: 0.3s ease;
+        width: 92px;
+        z-index: 30;
+
+        &:hover {
+            background: $sub-color1;
+        }
+    }
+}
+
+.reservation__link img {
+    max-width: rem(48);
+    margin-top: rem(21);
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.reservation__link p {
+    @include mq(md){
+        color: $white;
+        font-size: rem(14);
+        text-align: center;
+        margin-top: rem(12);
     }
 }

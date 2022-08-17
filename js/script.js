@@ -33,19 +33,40 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
+// トップに戻る
+  $(function () {
+    // スクロールしたら「トップに戻る」ボタンが表示される
+    const toTopButton = $(".js-to-top");
+    const scrollHeight = 100;
+    toTopButton.hide();
+    $(window).scroll(function () {
+      if ($(this).scrollTop() > 100) {
+        toTopButton.fadeIn();
+      } else {
+        toTopButton.fadeOut();
+      }
+    });
+
+    // 「トップに戻る」ボタンをクリックしたらスクロールで戻る
+    toTopButton.click(function () {
+      $("body,html").animate({ scrollTop: 0 }, 800);
+      return false;
+    });
+  });
+
 
 
   // スムーススクロール (絶対パスのリンク先が現在のページであった場合でも作動)
 
-  // $(document).on('click', 'a[href*="#"]', function () {
-  //   let time = 400;
-  //   let header = $('header').innerHeight();
-  //   let target = $(this.hash);
-  //   if (!target.length) return;
-  //   let targetY = target.offset().top - header;
-  //   $('html,body').animate({ scrollTop: targetY }, time, 'swing');
-  //   return false;
-  // });
+  $(document).on('click', 'a[href*="#"]', function () {
+    let time = 400;
+    let header = $('header').innerHeight();
+    let target = $(this.hash);
+    if (!target.length) return;
+    let targetY = target.offset().top - header;
+    $('html,body').animate({ scrollTop: targetY }, time, 'swing');
+    return false;
+  });
 
   // スワイパー
   var swiper = new Swiper(".mySwiper", {

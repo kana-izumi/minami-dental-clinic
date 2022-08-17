@@ -90,6 +90,11 @@
         height: rem(14);
         background: url(../src/images/top/icon-pc.svg);
     }
+
+    &:hover {
+        background-color: $sub-color1;
+        cursor: pointer;
+    }
 }
 
 .footer-info__contact-web a {
@@ -122,6 +127,17 @@
         width: rem(22);
         height: rem(22);
         background: url(../src/images/top/icon-mail.svg);
+    }
+
+    &:hover {
+        background-color: $main-color;
+        color: $white;
+        cursor: pointer;
+    }
+
+    &:hover::before {
+        background-image: url(../src/images/top/icon-mail-white.svg);
+        background-repeat: no-repeat;
     }
 }
 
