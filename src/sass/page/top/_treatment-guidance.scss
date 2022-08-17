@@ -144,6 +144,21 @@
 .treatment-guidance-img {
     overflow: hidden;
     border-radius: rem(20);
+
+    // &:hover {
+    //     outline: rem(2) solid rgb(255, 255, 255);
+	//     outline-offset: rem(-10);
+    //     border-radius: rem(20);
+    // }
+}
+
+.treatment-guidance-img img{
+    height: auto;
+    transition: transform .6s ease;/* ゆっくり変化させる */
+
+    // &:hover {
+    //     transform: scale(1.1);/* 拡大 */
+    // }
 }
 
 .treatment-guidance__content {
@@ -151,7 +166,7 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    text-align: center; 
+    text-align: center;
     color: $white;
 }
 

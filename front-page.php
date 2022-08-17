@@ -147,14 +147,14 @@
           </div>
           <div class="treatment-guidance__items">
             <div class="treatment-guidance__flex">
-              <div class="treatment-guidance__item">
-                <div class="treatment-guidance-img">
+              <div class="treatment-guidance__item banner">
+                <div class="treatment-guidance-img bg-zoom">
                   <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/medical_1.jpg')); ?>" alt="一般治療">
-                </div>
-                <div class="treatment-guidance__content">
-                  <p class="treatment-guidance__content-title">一般診療</p>
-                  <p class="treatment-guidance__content-border"></p>
-                  <p class="treatment-guidance__content-lead">虫歯・入れ歯・小児歯科</p>
+                  <div class="treatment-guidance__content">
+                    <p class="treatment-guidance__content-title">一般診療</p>
+                    <p class="treatment-guidance__content-border"></p>
+                    <p class="treatment-guidance__content-lead">虫歯・入れ歯・小児歯科</p>
+                  </div>
                 </div>
               </div>
               <div class="treatment-guidance__item">

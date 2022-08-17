@@ -49,13 +49,6 @@ html {
 a {
   text-decoration: none;
   color: inherit;
-  -webkit-transition: opacity 0.3s;
-  transition: opacity 0.3s;
-}
-@media screen and (min-width: 768px) {
-  a:hover {
-    opacity: 0.8;
-  }
 }
 
 *,
@@ -723,6 +716,13 @@ select::-ms-expand {
 
 @media screen and (min-width: 768px) {
   .header-nav__item {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column; /*縦に並べる*/
     position: relative;
   }
   .header-nav__item:not(:first-child) {
@@ -730,10 +730,13 @@ select::-ms-expand {
   }
 }
 
-.header-nav__item:hover {
+.header-nav__item a:hover {
   color: #1391E6;
+  fill: #1391E6;
+  -webkit-transition: all 0.6s ease;
+  transition: all 0.6s ease;
 }
-.header-nav__item:hover::after {
+.header-nav__item a:hover::after {
   position: absolute;
   content: "";
   bottom: -6px;
@@ -746,10 +749,11 @@ select::-ms-expand {
   height: 2px;
   height: 0.125rem;
   background-color: #1391E6;
+  border-radius: 1.875rem;
 }
 
 @media screen and (min-width: 768px) {
-  .header-nav__list svg {
+  .header-nav__item svg {
     margin: 0 auto;
     width: 1.5rem;
   }
@@ -4067,6 +4071,14 @@ checked状態
 .treatment-guidance-img {
   overflow: hidden;
   border-radius: 1.25rem;
+}
+
+.treatment-guidance-img img {
+  height: auto;
+  -webkit-transition: -webkit-transform 0.6s ease;
+  transition: -webkit-transform 0.6s ease;
+  transition: transform 0.6s ease;
+  transition: transform 0.6s ease, -webkit-transform 0.6s ease; /* ゆっくり変化させる */
 }
 
 .treatment-guidance__content {

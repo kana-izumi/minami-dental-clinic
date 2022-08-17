@@ -20,6 +20,8 @@
 .header-nav__item {
 
   @include mq(md) {
+    display: flex;
+    flex-direction: column; /*縦に並べる*/
     position: relative;
 
     &:not(:first-child){
@@ -27,10 +29,12 @@
     }
   }
 }
-.header-nav__item {
+.header-nav__item a{
 
   &:hover {
-    color: #1391E6;
+    color: $main-color;
+    fill: $main-color;
+    transition: all 0.6s ease;
 
     &::after {
       position: absolute;
@@ -41,11 +45,12 @@
       width: rem(20);
       height: rem(2);
       background-color: $main-color;
+      border-radius: rem(30);
     }
   }
 }
 
-.header-nav__list svg {
+.header-nav__item svg {
   @include mq(md) {
     margin: 0 auto;
     width: rem(24);
