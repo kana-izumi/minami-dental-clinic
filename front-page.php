@@ -60,7 +60,7 @@
             <ul>
               <?php while($the_query -> have_posts()): $the_query -> the_post(); ?>
               <li>
-                <a href="<?php the_permalink(); ?>">
+                <a href="<?php the_permalink(); ?>" class="news__body-link">
                   <time class="news__info-date"><?php echo get_the_date('Y.m.d'); ?></time>
                   <div class="news__info-text"><?php the_title(); ?></div>
               </a>
