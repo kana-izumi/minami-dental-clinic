@@ -129,6 +129,7 @@
 
 .treatment-guidance__item {
     position: relative;
+
 }
 
 .treatment-guidance__item +
@@ -145,20 +146,43 @@
     overflow: hidden;
     border-radius: rem(20);
 
-    // &:hover {
-    //     outline: rem(2) solid rgb(255, 255, 255);
-	//     outline-offset: rem(-10);
-    //     border-radius: rem(20);
-    // }
+    &:hover {
+        outline: rem(2) solid rgb(255, 255, 255);
+	    outline-offset: rem(-10);
+        border-radius: rem(20);
+        transition: transform .6s ease;
+        z-index: 10;
+    }
+}
+
+.treatment-guidance-img::before {
+    overflow: hidden;
+    border-radius: rem(20);
+    background: rgba(0, 0, 0, .3);/* マスクの色(黒の30%) */
+    bottom: 0;
+    content: '';
+    height: auto;
+    left: 0;
+    opacity: 0;/* 最初は透明（非表示） */
+    position: absolute;
+    right: 0;
+    top: 0;
+    transition: opacity .6s ease;/* ゆっくりopacityのみへ変化させる */
+    width: 100%;
+  }
+
+.treatment-guidance-img:hover::before {
+    opacity: 1;/* hoverしたら透過しない(表示させる) */
+    z-index: 9;
 }
 
 .treatment-guidance-img img{
     height: auto;
     transition: transform .6s ease;/* ゆっくり変化させる */
 
-    // &:hover {
-    //     transform: scale(1.1);/* 拡大 */
-    // }
+    &:hover {
+        transform: scale(1.1);/* 拡大 */
+    }
 }
 
 .treatment-guidance__content {

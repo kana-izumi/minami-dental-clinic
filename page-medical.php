@@ -62,12 +62,12 @@ Template Name: 診察案内
       </div>
     </section>
 
-    <div class="medical-content">
+    <div id="common"  class="medical-content">
       <div class="medical-content__deco-top"></div>
       <div class="medical-content__bg">
         <div class="medical-content__inner inner">
           <div class="section-header">
-            <h2 class="section-header__title">一般治療</h2>
+            <h2 class="section-header__title">一般診療</h2>
           </div>
           <!-- 特定のカテゴリー内の特定タームの記事を表示（サブループ） -->
           <?php
@@ -109,7 +109,7 @@ Template Name: 診察案内
         </div>
       </div>
       <div class="medical-content__deco-bottom"></div>
-  <div class="medical-content">
+  <div  id="specail" class="medical-content">
     <div class="medical-content__deco-top"></div>
       <div class="medical-content__bg">
         <div class="medical-content__inner inner">
