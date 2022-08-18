@@ -6,13 +6,14 @@
     @include mq(md) {
         display: flex;
         justify-content: center;
+        padding: rem(34) 0 rem(55);
     }
 }
 
 .footer-nav__item {
 
     &:not(:first-child) {
-        margin-top: rem(40);
+        margin-top: rem(45);
 
         @include mq(md) {
             margin: 0;

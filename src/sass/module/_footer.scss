@@ -17,4 +17,9 @@
         background-repeat: no-repeat;
         background-size: cover;
     }
+
+    @include mq(md) {
+        margin-top: rem(201);
+        padding-top: rem(56);
+    }
 }

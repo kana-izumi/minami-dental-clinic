@@ -83,6 +83,14 @@
         height: rem(210);
         background-size: cover;
     }
+
+    @include mq(lg) {
+        height: rem(210);
+    }
+
+    @include mq(xl) {
+        height: rem(320);
+    }
 }
 
 .treatment-guidance-bg {

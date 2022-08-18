@@ -170,8 +170,8 @@ select::-ms-expand {
   position: fixed;
   right: 20px;
   right: 1.25rem;
-  bottom: 40px;
-  bottom: 2.5rem;
+  bottom: 103px;
+  bottom: 6.4375rem;
 }
 
 .back-to-top img {
@@ -385,6 +385,11 @@ select::-ms-expand {
   padding-top: 17px;
   padding-top: 1.0625rem;
 }
+@media screen and (min-width: 768px) {
+  .footer__copyright {
+    padding-top: 0.6875rem;
+  }
+}
 .footer__copyright small {
   color: #fff;
   font-size: 14px;
@@ -455,8 +460,8 @@ select::-ms-expand {
 }
 
 .footer-info__address {
-  margin-top: 12px;
-  margin-top: 0.75rem;
+  margin-top: 7px;
+  margin-top: 0.4375rem;
   font-size: 14px;
   font-size: 0.875rem;
 }
@@ -465,8 +470,8 @@ select::-ms-expand {
   display: inline-block;
   font-size: 32px;
   font-size: 2rem;
-  padding-left: 32px;
-  padding-left: 2rem;
+  padding-left: 35px;
+  padding-left: 2.1875rem;
   font-weight: 700;
   color: #1391E6;
   position: relative;
@@ -475,14 +480,18 @@ select::-ms-expand {
   content: "";
   position: absolute;
   top: 50%;
-  left: 0;
-  width: 28px;
-  width: 1.75rem;
-  height: 28px;
-  height: 1.75rem;
+  left: 11%;
+  width: 18%;
+  height: 79%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   background: url(../src/images/top/icon_tel.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .footer-info__tel {
+    margin-top: 1.125rem;
+  }
 }
 
 .footer-info__time {
@@ -490,6 +499,8 @@ select::-ms-expand {
   font-size: 0.75rem;
   color: #1391E6;
   text-align: center;
+  margin-top: -5px;
+  margin-top: -0.3125rem;
 }
 
 .footer-info__contact {
@@ -524,12 +535,16 @@ select::-ms-expand {
   font-size: 14px;
   font-size: 0.875rem;
 }
+@media screen and (min-width: 768px) {
+  .footer-info__contact-web {
+    font-size: 1rem;
+  }
+}
 .footer-info__contact-web::before {
   position: absolute;
   content: "";
   top: 50%;
-  left: 62px;
-  left: 3.875rem;
+  left: 34%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 25px;
@@ -544,8 +559,8 @@ select::-ms-expand {
 }
 
 .footer-info__contact-web a {
-  margin-left: 16px;
-  margin-left: 1rem;
+  margin-left: 30px;
+  margin-left: 1.875rem;
 }
 
 .footer-info__contact-mail {
@@ -567,14 +582,14 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .footer-info__contact-mail {
     margin-left: 1.25rem;
+    font-size: 1rem;
   }
 }
 .footer-info__contact-mail::before {
   position: absolute;
   content: "";
   top: 50%;
-  left: 46px;
-  left: 2.875rem;
+  left: 26%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   width: 22px;
@@ -648,12 +663,13 @@ select::-ms-expand {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 2.125rem 0 3.4375rem;
   }
 }
 
 .footer-nav__item:not(:first-child) {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 45px;
+  margin-top: 2.8125rem;
 }
 @media screen and (min-width: 768px) {
   .footer-nav__item:not(:first-child) {
@@ -717,6 +733,12 @@ select::-ms-expand {
   background: url(../src/images/top/wave.svg);
   background-repeat: no-repeat;
   background-size: cover;
+}
+@media screen and (min-width: 768px) {
+  .footer {
+    margin-top: 12.5625rem;
+    padding-top: 3.5rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -3286,7 +3308,7 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .main-visual__inner {
-    margin-top: 1.75rem;
+    margin-top: 2.5rem;
     margin-right: 3.625rem;
     margin-left: 3.875rem;
   }
@@ -3314,13 +3336,22 @@ checked状態
 .swiper-button-prev,
 .swiper-button-next {
   height: 50px;
+  height: 3.125rem;
   width: 50px;
+  width: 3.125rem;
   position: absolute;
+  top: 24%;
 }
 @media screen and (min-width: 768px) {
   .swiper-button-prev,
 .swiper-button-next {
     top: 30%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .swiper-button-prev,
+.swiper-button-next {
+    top: 40%;
   }
 }
 
@@ -3394,13 +3425,25 @@ checked状態
 .swiper-horizontal > .swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom, .swiper-pagination-fraction {
-  left: -19px;
-  left: -1.1875rem;
+  left: -18px;
+  left: -1.125rem;
+}
+@media screen and (min-width: 768px) {
+  .swiper-horizontal > .swiper-pagination-bullets,
+.swiper-pagination-bullets.swiper-pagination-horizontal,
+.swiper-pagination-custom, .swiper-pagination-fraction {
+    left: -1.75rem;
+  }
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: 58px;
-  bottom: 3.625rem;
+  bottom: 57px;
+  bottom: 3.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .swiper-pagination-bullets.swiper-pagination-horizontal {
+    bottom: 3.1875rem;
+  }
 }
 
 .swiper-horizontal > .swiper-pagination-bullets .swiper-pagination-bullet,
@@ -3461,7 +3504,9 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .news__info {
-    margin-top: -1.25rem;
+    margin-top: -3.75rem;
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
     max-width: 33.625rem;
   }
 }
@@ -3498,6 +3543,11 @@ checked状態
   margin-left: 64px;
   margin-left: 4rem;
 }
+@media screen and (min-width: 768px) {
+  .news__heading-link {
+    margin-left: 3.5rem;
+  }
+}
 .news__heading-link a {
   font-size: 11px;
   font-size: 0.6875rem;
@@ -3519,6 +3569,11 @@ checked状態
   padding-bottom: 10px;
   padding-bottom: 0.625rem;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .news__body {
+    padding-left: 0.875rem;
+  }
 }
 
 .news__body-link {
@@ -3555,8 +3610,8 @@ checked状態
 }
 
 .news__info-date {
-  width: 96px;
-  width: 6rem;
+  width: 91px;
+  width: 5.6875rem;
   font-size: 12px;
   font-size: 0.75rem;
   display: inline-block;
@@ -3568,6 +3623,11 @@ checked状態
   font-size: 14px;
   font-size: 0.875rem;
 }
+@media screen and (min-width: 768px) {
+  .news__info-text {
+    margin-left: 0;
+  }
+}
 
 .news__medical-time {
   background-color: #fff;
@@ -3578,8 +3638,10 @@ checked状態
   max-width: 20.9375rem;
   border-radius: 0.75rem;
   overflow: hidden;
-  margin-top: -35px;
-  margin-top: -2.1875rem;
+  margin-top: -71px;
+  margin-top: -4.4375rem;
+  margin-left: auto;
+  margin-right: auto;
   right: 20px;
   right: 1.25rem;
   z-index: 200;
@@ -3589,6 +3651,8 @@ checked状態
     right: 6.25rem;
     max-width: 29.8125rem;
     margin-left: 3.9375rem;
+    margin-top: -5.1875rem;
+    margin-right: 0;
   }
 }
 
@@ -3637,7 +3701,7 @@ checked状態
   .recommend-header__title::before {
     width: 4.1875rem;
     height: 1.25rem;
-    left: 12.5rem;
+    left: 16.25rem;
     background: url(../src/images/top/title-deco.svg);
   }
 }
@@ -3659,7 +3723,7 @@ checked状態
   .recommend-header__title::after {
     width: 4.1875rem;
     height: 1.25rem;
-    right: 12.5rem;
+    right: 16.25rem;
     background: url(../src/images/top/title-deco.svg);
   }
 }
@@ -3780,7 +3844,7 @@ checked状態
   .staff-blog__title::before {
     width: 4.1875rem;
     height: 1.25rem;
-    left: 18.125rem;
+    left: 18.75rem;
     background: url(../src/images/top/title-deco.svg);
   }
 }
@@ -3803,7 +3867,7 @@ checked状態
   .staff-blog__title::after {
     width: 4.1875rem;
     height: 1.25rem;
-    right: 19.375rem;
+    right: 18.75rem;
     background: url(../src/images/top/title-deco.svg);
   }
 }
@@ -3937,19 +4001,20 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .staff-blog__link {
-    margin-top: 5.625rem;
-    margin: 3.75rem auto 0;
+    margin: 4.0625rem auto 0;
   }
 }
 
 .staff-blog__link-btn {
   border: 1px solid #1391E6;
   border: 0.0625rem solid #1391E6;
-  padding: 10px 40px;
-  padding: 0.625rem 2.5rem;
+  padding: 10px 45px;
+  padding: 0.625rem 2.8125rem;
   border-radius: 1.5rem;
   color: #1391E6;
   position: relative;
+  font-size: 14px;
+  font-size: 0.875rem;
 }
 .staff-blog__link-btn:hover {
   background-color: #1391E6;
@@ -4075,6 +4140,16 @@ checked状態
   .treatment-guidance__deco-top {
     height: 13.125rem;
     background-size: cover;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .treatment-guidance__deco-top {
+    height: 13.125rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .treatment-guidance__deco-top {
+    height: 20rem;
   }
 }
 

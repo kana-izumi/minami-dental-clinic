@@ -20,12 +20,17 @@
 /* 前へ次への矢印カスタマイズ */
 .swiper-button-prev,
 .swiper-button-next {
-  height: 50px;
-  width: 50px;
+  height: rem(50);
+  width: rem(50);
   position: absolute;
+  top: 24%;
 
   @include mq(md) {
   top: 30%;
+  }
+
+  @include mq(xl) {
+  top: 40%;
   }
 }
 
@@ -83,11 +88,19 @@
 .swiper-horizontal>.swiper-pagination-bullets,
 .swiper-pagination-bullets.swiper-pagination-horizontal,
 .swiper-pagination-custom, .swiper-pagination-fraction {
-  left: rem(-19);
+  left: rem(-18);
+
+  @include mq(md) {
+  left: rem(-28);
+  }
 }
 
 .swiper-pagination-bullets.swiper-pagination-horizontal {
-  bottom: rem(58);
+  bottom: rem(57);
+
+  @include mq(md) {
+    bottom: rem(51);
+  }
 }
 
 .swiper-horizontal>.swiper-pagination-bullets .swiper-pagination-bullet, 

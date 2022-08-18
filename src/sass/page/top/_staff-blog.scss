@@ -37,7 +37,7 @@
         @include mq(md) {
             width: rem(67);
             height: rem(20);
-            left: rem(290);
+            left: rem(300);
             background: url(../src/images/top/title-deco.svg);
         }
     }
@@ -57,7 +57,7 @@
         @include mq(md) {
             width: rem(67);
             height: rem(20);
-            right: rem(310);
+            right: rem(300);
             background: url(../src/images/top/title-deco.svg);
         }
     }
@@ -174,17 +174,17 @@
     text-align: center;
 
     @include mq(md) {
-        margin-top: rem(90);
-        margin: rem(60) auto 0;
+        margin: rem(65) auto 0;
     }
 }
 
 .staff-blog__link-btn {
     border: rem(1) solid $main-color;
-    padding: rem(10) rem(40);
+    padding: rem(10) rem(45);
     border-radius: rem(24);
     color: $main-color;
     position: relative;
+    font-size: rem(14);
 
     &:hover {
         background-color: $main-color;
