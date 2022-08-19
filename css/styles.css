@@ -170,8 +170,13 @@ select::-ms-expand {
   position: fixed;
   right: 20px;
   right: 1.25rem;
-  bottom: 103px;
-  bottom: 6.4375rem;
+  bottom: 169px;
+  bottom: 10.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .back-to-top {
+    bottom: 6.4375rem;
+  }
 }
 
 .back-to-top img {
@@ -188,12 +193,21 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .bread {
+    margin-top: 0.25rem;
     margin-left: 1.875rem;
   }
 }
 
-.post .post-page .current-item {
+.bread span {
+  color: #c2c2c2;
+  padding-right: 4px;
+  padding-right: 0.25rem;
+}
+
+.bread span:not(:first-child) span {
   color: #393939;
+  padding-left: 5px;
+  padding-left: 0.3125rem;
 }
 
 .bread__list {
@@ -388,14 +402,15 @@ select::-ms-expand {
 
 .footer__copyright {
   background: #1391E6;
-  height: 115px;
-  height: 7.1875rem;
+  height: 123px;
+  height: 7.6875rem;
   text-align: center;
-  padding-top: 17px;
-  padding-top: 1.0625rem;
+  padding-top: 15px;
+  padding-top: 0.9375rem;
 }
 @media screen and (min-width: 768px) {
   .footer__copyright {
+    height: 7.1875rem;
     padding-top: 0.6875rem;
   }
 }
@@ -426,9 +441,11 @@ select::-ms-expand {
 .footer-bottom__tel {
   width: 170px;
   width: 10.625rem;
+  display: inline-block;
 }
 
 .footer-bottom__link {
+  display: inline-block;
   width: 157px;
   width: 9.8125rem;
 }
@@ -484,6 +501,8 @@ select::-ms-expand {
   font-weight: 700;
   color: #1391E6;
   position: relative;
+  margin-top: 20px;
+  margin-top: 1.25rem;
 }
 .footer-info__tel::before {
   content: "";
@@ -547,8 +566,13 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .footer-info__contact-web a {
     max-width: 13.75rem;
-    padding: 1.0625rem 3.6875rem 1.0625rem 5.9375rem;
+    padding: 1.0625rem 3rem 1.0625rem 5.9375rem;
     font-size: 1rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .footer-info__contact-web a {
+    padding: 1.0625rem 3.6875rem 1.0625rem 5.9375rem;
   }
 }
 .footer-info__contact-web a::before {
@@ -664,8 +688,8 @@ select::-ms-expand {
 }
 
 .footer-nav {
-  padding: 60px 0 60px;
-  padding: 3.75rem 0 3.75rem;
+  padding: 63px 0 58px;
+  padding: 3.9375rem 0 3.625rem;
 }
 @media screen and (min-width: 768px) {
   .footer-nav {
@@ -680,8 +704,8 @@ select::-ms-expand {
 }
 
 .footer-nav__item:not(:first-child) {
-  margin-top: 45px;
-  margin-top: 2.8125rem;
+  margin-top: 39px;
+  margin-top: 2.4375rem;
 }
 @media screen and (min-width: 768px) {
   .footer-nav__item:not(:first-child) {
@@ -692,8 +716,8 @@ select::-ms-expand {
 
 .footer-nav__item-list li {
   position: relative;
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 18px;
+  margin-top: 1.125rem;
 }
 .footer-nav__item-list li::before {
   content: "";
@@ -707,6 +731,11 @@ select::-ms-expand {
   border-style: solid;
   border-width: 6px 0 6px 6px;
   border-color: transparent transparent transparent #1391E6;
+}
+@media screen and (min-width: 768px) {
+  .footer-nav__item-list li {
+    margin-top: 1.25rem;
+  }
 }
 
 .footer-nav__item-list a {
@@ -729,8 +758,8 @@ select::-ms-expand {
   background: #DFF1FD;
   margin-top: 132px;
   margin-top: 8.25rem;
-  padding-top: 32px;
-  padding-top: 2rem;
+  padding-top: 16px;
+  padding-top: 1rem;
   position: relative;
 }
 .footer::before {
@@ -952,7 +981,7 @@ select::-ms-expand {
     -webkit-transition: 0.3s ease;
     transition: 0.3s ease;
     width: 92px;
-    z-index: 30;
+    z-index: 200;
   }
   .reservation__link:hover {
     background: #0060A0;
@@ -997,30 +1026,44 @@ select::-ms-expand {
 .section-header__title::before {
   position: absolute;
   content: "";
-  width: 67px;
-  width: 4.1875rem;
-  height: 20px;
-  height: 1.25rem;
+  width: 55px;
+  width: 3.4375rem;
+  height: 14px;
+  height: 0.875rem;
   top: 50%;
-  left: 258px;
-  left: 16.125rem;
+  left: 16%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/top/title-deco.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .section-header__title::before {
+    width: 4.1875rem;
+    height: 1.25rem;
+    left: 34%;
+  }
 }
 .section-header__title::after {
   position: absolute;
   content: "";
-  width: 67px;
-  width: 4.1875rem;
-  height: 20px;
-  height: 1.25rem;
+  width: 55px;
+  width: 3.4375rem;
+  height: 14px;
+  height: 0.875rem;
   top: 50%;
-  right: 258px;
-  right: 16.125rem;
+  right: 18%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/top/title-deco.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .section-header__title::after {
+    width: 4.1875rem;
+    height: 1.25rem;
+    right: 34%;
+  }
 }
 
 .mv-sub {
@@ -1043,6 +1086,11 @@ select::-ms-expand {
   height: 11.75rem;
 }
 @media screen and (min-width: 768px) {
+  .mv-sub__img {
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
   .mv-sub__img {
     height: 23.125rem;
   }
@@ -1099,10 +1147,15 @@ select::-ms-expand {
     background-position: center center;
   }
 }
+@media screen and (min-width: 1440px) {
+  .about-mv {
+    height: 31.25rem;
+  }
+}
 
 .about-picture {
-  margin-top: 100px;
-  margin-top: 6.25rem;
+  margin-top: 93px;
+  margin-top: 5.8125rem;
 }
 @media screen and (min-width: 768px) {
   .about-picture {
@@ -1269,6 +1322,14 @@ select::-ms-expand {
     background: url(../src/images/top/title-deco.svg);
   }
 }
+@media screen and (min-width: 1440px) {
+  .about-sub__title::before {
+    left: 43.75rem;
+    width: 4.1875rem;
+    height: 1.25rem;
+    background: url(../src/images/top/title-deco.svg);
+  }
+}
 .about-sub__title::after {
   position: absolute;
   content: "";
@@ -1299,16 +1360,24 @@ select::-ms-expand {
     background: url(../src/images/top/title-deco.svg);
   }
 }
+@media screen and (min-width: 1440px) {
+  .about-sub__title::after {
+    right: 43.75rem;
+    width: 4.1875rem;
+    height: 1.25rem;
+    background: url(../src/images/top/title-deco.svg);
+  }
+}
 
 .about-sub__deco {
   position: relative;
-  padding-top: 104px;
-  padding-top: 6.5rem;
+  padding-top: 140px;
+  padding-top: 8.75rem;
 }
 .about-sub__deco::before {
   position: absolute;
   content: "";
-  top: 0;
+  top: 5%;
   width: 100%;
   height: 82.2vw;
   background-image: url(../src/images/top/concept-bg.svg);
@@ -1329,12 +1398,19 @@ select::-ms-expand {
     z-index: 90;
   }
 }
+@media screen and (min-width: 768px) {
+  .about-sub__deco {
+    padding-top: 6.5rem;
+  }
+}
 
 .about-sub__inner1 {
   position: relative;
   z-index: 101;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 20px;
+  margin-right: 1.25rem;
+  margin-left: 20px;
+  margin-left: 1.25rem;
   letter-spacing: 0.11em;
 }
 @media screen and (min-width: 600px) {
@@ -1346,6 +1422,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .about-sub__inner1 {
+    margin-right: auto;
     margin-left: 5.8125rem;
     margin-top: 1.625rem;
     letter-spacing: 0.14em;
@@ -1355,8 +1432,10 @@ select::-ms-expand {
 .about-sub__inner2 {
   position: relative;
   z-index: 101;
-  margin-right: auto;
-  margin-left: auto;
+  margin-right: 20px;
+  margin-right: 1.25rem;
+  margin-left: 20px;
+  margin-left: 1.25rem;
   letter-spacing: 0.11em;
 }
 @media screen and (min-width: 600px) {
@@ -1368,6 +1447,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .about-sub__inner2 {
+    margin-left: auto;
     margin-right: 5.8125rem;
     margin-top: 1.625rem;
     letter-spacing: 0.14em;
@@ -1388,8 +1468,8 @@ select::-ms-expand {
 }
 
 .about-sub__content2 {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 88px;
+  margin-top: 5.5rem;
 }
 @media screen and (min-width: 768px) {
   .about-sub__content2 {
@@ -2787,18 +2867,24 @@ checked状態
 }
 
 .medical-content {
-  margin-top: 100px;
-  margin-top: 6.25rem;
+  margin-top: 114px;
+  margin-top: 7.125rem;
 }
 @media screen and (min-width: 768px) {
   .medical-content {
-    margin-top: 10rem;
+    margin-top: 9.375rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .medical-content:not(:first-child) {
+    margin-top: 9.75rem;
   }
 }
 
 .medical-content__deco-top {
-  height: 85px;
-  height: 5.3125rem;
+  height: 70px;
+  height: 4.375rem;
   width: 100%;
   background-image: url(../src/images/top/bg-top.svg);
   background-size: contain;
@@ -2807,7 +2893,13 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .medical-content__deco-top {
-    height: 12.5625rem;
+    height: 10rem;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__deco-top {
+    height: 12.8125rem;
     background-size: cover;
   }
 }
@@ -2816,8 +2908,8 @@ checked状態
   background-color: #DFF1FD;
   padding-top: 30px;
   padding-top: 1.875rem;
-  padding-bottom: 81px;
-  padding-bottom: 5.0625rem;
+  padding-bottom: 115px;
+  padding-bottom: 7.1875rem;
   position: relative;
 }
 .medical-content__bg::before {
@@ -2849,19 +2941,32 @@ checked状態
   height: 3.625rem;
   z-index: 101;
 }
+@media screen and (min-width: 768px) {
+  .medical-content__bg {
+    padding-top: 0;
+    padding-bottom: 5.0625rem;
+  }
+}
 
 .medical-content__items1 {
   padding: 24px 20px;
   padding: 1.5rem 1.25rem;
   background-color: #fff;
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 35px;
+  margin-top: 2.1875rem;
   border-radius: 1.25rem;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .medical-content__items1 {
     padding: 3.75rem 3.75rem;
+    margin-top: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__items1 {
+    padding: 3.4375rem 3.75rem;
+    margin-top: 3.25rem;
   }
 }
 .medical-content__items1::after {
@@ -2885,19 +2990,39 @@ checked状態
     height: 5rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .medical-content__items1::after {
+    width: 6.25rem;
+    height: 5rem;
+    right: 3.75rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .medical-content__items1 + .medical-content__items1 {
+    margin-top: 3rem;
+  }
+}
 
 .medical-content__items2 {
   padding: 24px 20px;
   padding: 1.5rem 1.25rem;
   background-color: #fff;
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 36px;
+  margin-top: 2.25rem;
   border-radius: 1.25rem;
   position: relative;
 }
 @media screen and (min-width: 768px) {
   .medical-content__items2 {
     padding: 3.75rem 3.75rem;
+    margin-top: 2.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__items2 {
+    padding: 3.4375rem 3.75rem;
+    margin-top: 3.25rem;
   }
 }
 .medical-content__items2::after {
@@ -2921,6 +3046,21 @@ checked状態
     height: 5rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .medical-content__items2::after {
+    right: 3.75rem;
+  }
+}
+
+.medical-content__items2 + .medical-content__items2 {
+  margin-top: 33px;
+  margin-top: 2.0625rem;
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__items2 + .medical-content__items2 {
+    margin-top: 3.0625rem;
+  }
+}
 
 .medical-content__heading {
   border-bottom: 1px solid #C2C2C2;
@@ -2938,10 +3078,31 @@ checked状態
             align-items: center;
   }
 }
+@media screen and (min-width: 1024px) {
+  .medical-content__heading {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-bottom: 2.25rem;
+  }
+}
 
 .medical-content__title {
   font-size: 20px;
   font-size: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__title {
+    font-size: 1.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__title {
+    letter-spacing: 0.1em;
+  }
 }
 
 .medical-content__lead {
@@ -2949,12 +3110,19 @@ checked状態
   font-size: 14px;
   font-size: 0.875rem;
   color: #1391E6;
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 17px;
+  margin-top: 1.0625rem;
+  letter-spacing: 0.07em;
 }
 @media screen and (min-width: 768px) {
   .medical-content__lead {
     margin-left: 1.25rem;
+    margin-top: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__lead {
+    margin-left: 2.8125rem;
     margin-top: 0;
   }
 }
@@ -2972,8 +3140,8 @@ checked状態
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.714;
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 16px;
+  margin-top: 1rem;
 }
 @media screen and (min-width: 768px) {
   .medical-content__text {
@@ -2987,9 +3155,6 @@ checked状態
 .medical-content__img {
   margin-top: 20px;
   margin-top: 1.25rem;
-  width: 100%;
-  max-width: 295px;
-  max-width: 18.4375rem;
 }
 @media screen and (min-width: 768px) {
   .medical-content__img {
@@ -2999,6 +3164,30 @@ checked状態
     max-width: 100%;
     margin-left: 2.5rem;
     margin-top: 0;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__img {
+    margin-left: 1.25rem;
+  }
+}
+
+.medical-content__img img {
+  width: 100%;
+  max-width: 295px;
+  max-width: 18.4375rem;
+  height: 221px;
+  height: 13.8125rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-content__img img {
+    max-width: 100%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-content__img img {
+    max-width: 100%;
+    height: 19.6875rem;
   }
 }
 
@@ -3022,6 +3211,11 @@ checked状態
   margin-top: 60px;
   margin-top: 3.75rem;
 }
+@media screen and (min-width: 768px) {
+  .medical-menu {
+    margin-top: 5rem;
+  }
+}
 
 .medical-menu__inner + .medical-menu__inner {
   margin-top: 80px;
@@ -3037,6 +3231,16 @@ checked状態
           align-items: center;
 }
 
+.medical-menu__title {
+  font-size: 20px;
+  font-size: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-menu__title {
+    font-size: 1.75rem;
+  }
+}
+
 .medical-menu__category {
   padding: 8px 12px;
   padding: 0.5rem 0.75rem;
@@ -3049,6 +3253,11 @@ checked状態
   letter-spacing: 0.12em;
   font-size: 14px;
   font-size: 0.875rem;
+}
+@media screen and (min-width: 768px) {
+  .medical-menu__category {
+    margin-left: 1.8125rem;
+  }
 }
 
 .medical-menu__category--red {
@@ -3079,7 +3288,14 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .medical-menu_item {
+    padding: 1.1875rem 1.75rem;
+    font-size: 1.5rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .medical-menu_item {
     padding: 1.1875rem 2rem;
+    font-size: 1.5rem;
   }
 }
 .medical-menu_item:hover {
@@ -3121,6 +3337,11 @@ checked状態
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .medical-mv {
+    height: 31.25rem;
   }
 }
 
@@ -3207,7 +3428,7 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .greeting-boss {
-    margin-top: 4.8125rem;
+    margin-top: 4.3125rem;
   }
 }
 
@@ -3236,7 +3457,7 @@ checked状態
   height: 12px;
   height: 0.75rem;
   top: 50%;
-  left: 0;
+  left: 30%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/common/section-title.deco.svg);
@@ -3258,7 +3479,7 @@ checked状態
   height: 12px;
   height: 0.75rem;
   top: 50%;
-  right: 0;
+  right: 30%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/common/section-title.deco.svg);
@@ -3317,6 +3538,11 @@ checked状態
     margin-top: 2.5625rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .greeting-boss__message-text {
+    margin-top: 2.75rem;
+  }
+}
 
 .greeting-boss__message-text2 {
   font-size: 14px;
@@ -3363,26 +3589,69 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .greeting-boss__career {
-    margin-top: 3.5rem;
+    margin-top: 3.8125rem;
     font-size: 0.875rem;
   }
 }
 
-.greeting-boss__career-list dt {
+.greeting-boss__career-title {
   border-bottom: 1px solid #393939;
   border-bottom: 0.0625rem solid #393939;
   padding-bottom: 8px;
   padding-bottom: 0.5rem;
 }
 
+.greeting-boss__career-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+
+.greeting-boss__career-text:not(:first-child) {
+  margin-left: 16px;
+  margin-left: 1rem;
+}
+
+.greeting-boss__career-text--down {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 65px;
+  margin-left: 4.0625rem;
+}
+
+.greeting-boss__career-text2 {
+  margin-top: 16px;
+  margin-top: 1rem;
+}
+
 .greeting-boss__career-list + .greeting-boss__career-list {
   margin-top: 28px;
   margin-top: 1.75rem;
+}
+@media screen and (min-width: 768px) {
+  .greeting-boss__career-list + .greeting-boss__career-list {
+    margin-top: 2.0625rem;
+  }
 }
 
 .greeting-boss__career-list dd {
   margin-top: 17px;
   margin-top: 1.0625rem;
+  display: inline-block;
+}
+@media screen and (min-width: 768px) {
+  .greeting-boss__career-list dd {
+    margin-top: 0.9375rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .greeting-boss__career-item {
+    margin-right: 1rem;
+  }
 }
 
 @media screen and (min-width: 768px) {

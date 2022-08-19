@@ -17,6 +17,10 @@
     height: rem(188);
 
     @include mq(md) {
+        height: rem(300);
+    }
+
+    @include mq(lg) {
         height: rem(370);
     }
 }

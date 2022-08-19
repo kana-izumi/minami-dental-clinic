@@ -38,6 +38,11 @@ body {
 }
 @media screen and (min-width: 768px) {
   .mv-sub__img {
+    height: 18.75rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mv-sub__img {
     height: 23.125rem;
   }
 }

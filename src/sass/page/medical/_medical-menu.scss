@@ -2,6 +2,10 @@
 
 .medical-menu {
     margin-top: rem(60);
+
+    @include mq(md) {
+        margin-top: rem(80);
+    }
 }
 
 .medical-menu__inner + .medical-menu__inner {
@@ -13,6 +17,14 @@
     align-items: center;
 }
 
+.medical-menu__title {
+    font-size: rem(20);
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
+}
+
 .medical-menu__category {
     padding: rem(8) rem(12);
     background-color: $main-color;
@@ -22,6 +34,10 @@
     font-weight: $bold;
     letter-spacing: 0.12em;
     font-size: rem(14);
+
+    @include mq(md) {
+        margin-left: rem(29);
+    }
 }
 
 .medical-menu__category--red {
@@ -45,7 +61,13 @@
     border-radius: rem(12);
 
     @include mq(md) {
+        padding: rem(19) rem(28);
+        font-size: rem(24);
+    }
+
+    @include mq(lg) {
         padding: rem(19) rem(32);
+        font-size: rem(24);
     }
 
     &:hover {

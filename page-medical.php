@@ -20,6 +20,12 @@ Template Name: 診察案内
           <?php } ?>
           <?php } ?>
       </div>
+      <div class="reservation__link">
+        <a href="<?php echo esc_url(home_url('/'))?>reservation">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/web-icon.svg')); ?>" alt="WEB予約はこちら">
+        <p>WEB予約<br>はこちら</p>
+        </a>
+      </div>
     </div>
 
     <section class="medical-menu">

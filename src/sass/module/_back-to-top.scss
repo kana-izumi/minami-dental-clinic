@@ -3,7 +3,11 @@
 .back-to-top {
     position: fixed;
     right: rem(20);
-    bottom: rem(103);
+    bottom: rem(169);
+
+    @include mq(md) {
+        bottom: rem(103);
+    }
 }
 
 .back-to-top img {

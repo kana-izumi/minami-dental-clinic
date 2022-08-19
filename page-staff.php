@@ -21,6 +21,12 @@ Template Name: スタッフ紹介
             <?php } ?>
             <?php } ?>
         </div>
+        <div class="reservation__link">
+        <a href="<?php echo esc_url(home_url('/'))?>reservation">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/web-icon.svg')); ?>" alt="WEB予約はこちら">
+        <p>WEB予約<br>はこちら</p>
+        </a>
+      </div>
       </div>
     <!-- /.mv-sub -->
     <div id="boss" class="greeting-boss">
@@ -45,18 +51,29 @@ Template Name: スタッフ紹介
             </p>
             <div class="greeting-boss__img--sp"></div>
             <div class="greeting-boss__career">
+              <div class="greeting-boss__career-list">
+                <p class="greeting-boss__career-title">経歴</dt>
+              <div class="greeting-boss__career-block">
+                <p class="greeting-boss__career-text">2004年<p>
+                <p class="greeting-boss__career-text">東京医科歯科大学歯学部 卒業</p>
+              </div>
+              <div class="greeting-boss__career-block">
+                <p class="greeting-boss__career-text">2008年</p>
+                <p class="greeting-boss__career-text">東京歯科大学歯学研究科大学院修了<p>
+              </div>
+                  <p class="greeting-boss__career-text--down">博士(歯学)取得</p>
+              <div class="greeting-boss__career-block">
+                <p class="greeting-boss__career-text">2012年</p>
+                <p class="greeting-boss__career-text">みなみ歯科クリニック 開院</p>
+              </div>
+              </div>
               <dl class="greeting-boss__career-list">
-                <dt>経歴</dt>
-                <dd>2004年 東京医科歯科大学歯学部 卒業</dd>
-                <dd>2008年 東京歯科大学歯学研究科大学院修了<br>
-                  博士(歯学)取得</dd>
-                <dd>2012年 みなみ歯科クリニック 開院</dd>
-              </dl>
-              <dl class="greeting-boss__career-list">
-                <dt>資格</dt>
-                <dd>歯科医師臨床研修指導歯科医</dd>
-                <dd>博士(歯学)</dd>
-                <dd>衛生検査技師</dd>
+                <p class="greeting-boss__career-title">資格</dt>
+              <div class="greeting-boss__career-block2">
+                <p class="greeting-boss__career-text2">歯科医師臨床研修指導歯科医</p>
+                <p class="greeting-boss__career-text2">博士(歯学)<p>
+                <p class="greeting-boss__career-text2">衛生検査技師</p>
+              </div>
               </dl>
             </div>
           </div>

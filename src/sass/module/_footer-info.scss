@@ -40,6 +40,7 @@
     font-weight: $bold;
     color: $main-color;
     position: relative;
+    margin-top: rem(20);
 
     &::before {
         content: "";
@@ -92,8 +93,12 @@
 
     @include mq(md) {
         max-width: rem(220);
-        padding: rem(17) rem(59) rem(17) rem(95);
+        padding: rem(17) rem(48) rem(17) rem(95);
         font-size: rem(16);
+    }
+
+    @include mq(lg) {
+        padding: rem(17) rem(59) rem(17) rem(95);
     }
 
     &::before {

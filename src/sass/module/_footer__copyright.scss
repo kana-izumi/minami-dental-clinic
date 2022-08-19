@@ -2,11 +2,12 @@
 
 .footer__copyright {
     background: $main-color;
-    height: rem(115);
+    height: rem(123);
     text-align: center;
-    padding-top: rem(17);
+    padding-top: rem(15);
 
     @include mq(md) {
+        height: rem(115);
         padding-top: rem(11);
     }
 

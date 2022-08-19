@@ -5,12 +5,21 @@
     font-size: rem(12);
 
     @include mq(md) {
+        margin-top: rem(4);
         margin-left: rem(30);
     }
 }
 
-.post .post-page .current-item {
-    color: #393939;
+.bread span {
+    color: #c2c2c2;
+    padding-right: rem(4);
+}
+
+.bread span {
+    &:not(:first-child) span {
+        color: #393939;
+        padding-left: rem(5);
+    }
 }
 
 .bread__list {

@@ -84,12 +84,17 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   var swiper = new Swiper(".mySwiper2", {
     loop: true, // ループ有効
-    slidesPerView: 3, // 一度に表示する枚数
+    slidesPerView: 2.5, // 一度に表示する枚数
     spaceBetween: 20,
     speed: 8000, // ループの時間
     allowTouchMove: false, // スワイプ無効
     autoplay: {
       delay: 0, // 途切れなくループ
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+      }
     },
   });
 });

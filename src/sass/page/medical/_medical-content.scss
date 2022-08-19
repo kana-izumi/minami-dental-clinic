@@ -1,15 +1,23 @@
 @use "global" as *;
 
 .medical-content {
-    margin-top: rem(100);
+    margin-top: rem(114);
 
     @include mq(md) {
-        margin-top: rem(160);
+        margin-top: rem(150);
+    }
+}
+
+.medical-content {
+    &:not(:first-child) {
+        @include mq(lg) {
+            margin-top: rem(156);
+        }
     }
 }
 
 .medical-content__deco-top {
-    height: rem(85);
+    height: rem(70);
     width: 100%;
     background-image: url(../src/images/top/bg-top.svg);
     background-size: contain;
@@ -17,7 +25,12 @@
     background-position: center bottom;
 
     @include mq(md) {
-        height: rem(201);
+        height: rem(160);
+        background-size: cover;
+    }
+
+    @include mq(lg) {
+        height: rem(205);
         background-size: cover;
     }
 }
@@ -25,7 +38,7 @@
 .medical-content__bg {
     background-color: $sub-color2;
     padding-top: rem(30);
-    padding-bottom: rem(81);
+    padding-bottom: rem(115);
     position: relative;
 
     &::before{
@@ -48,18 +61,29 @@
         height: rem(58);
         z-index: 101;
     }
+
+    @include mq(md) {
+        padding-top: 0;
+        padding-bottom: rem(81);
+    }
 }
 
 .medical-content__items1 {
     padding: rem(24) rem(20);
     background-color: $white;
-    margin-top: rem(40);
+    margin-top: rem(35);
     border-radius: rem(20);
     position: relative;
 
         @include mq(md) {
         padding: rem(60) rem(60);
-    }
+        margin-top: rem(40);
+        }
+
+        @include mq(lg) {
+        padding: rem(55) rem(60);
+        margin-top: rem(52);
+        }
 
     &::after {
         content: "";
@@ -77,18 +101,37 @@
             width: rem(100);
             height: rem(80);
         }
+
+        @include mq(lg) {
+            width: rem(100);
+            height: rem(80);
+            right: rem(60);
+        }
+    }
+}
+
+.medical-content__items1 +
+.medical-content__items1 {
+    @include mq(lg) {
+        margin-top: rem(48);
     }
 }
 
 .medical-content__items2 {
     padding: rem(24) rem(20);
     background-color: $white;
-    margin-top: rem(40);
+    margin-top: rem(36);
     border-radius: rem(20);
     position: relative;
 
     @include mq(md) {
         padding: rem(60) rem(60);
+        margin-top: rem(40);
+    }
+
+    @include mq(lg) {
+        padding: rem(55) rem(60);
+        margin-top: rem(52);
     }
 
     &::after {
@@ -107,6 +150,19 @@
             width: rem(100);
             height: rem(80);
         }
+
+        @include mq(lg) {
+            right: rem(60);
+        }
+    }
+}
+
+.medical-content__items2 +
+.medical-content__items2 {
+    margin-top: rem(33);
+
+    @include mq(lg) {
+        margin-top: rem(49);
     }
 }
 
@@ -118,20 +174,40 @@
         display: flex;
         align-items: center;
     }
+
+    @include mq(lg) {
+        display: flex;
+        align-items: center;
+        padding-bottom: rem(36);
+    }
 }
 
 .medical-content__title {
     font-size: rem(20);
+
+    @include mq(md) {
+        font-size: rem(28);
+    }
+
+    @include mq(lg) {
+        letter-spacing: 0.1em;
+    }
 }
 
 .medical-content__lead {
     display: inline-block;
     font-size: rem(14);
     color: $main-color;
-    margin-top: rem(20);
+    margin-top: rem(17);
+    letter-spacing: 0.07em;
 
     @include mq(md) {
         margin-left: rem(20);
+        margin-top: 0;
+    }
+
+    @include mq(lg) {
+        margin-left: rem(45);
         margin-top: 0;
     }
 }
@@ -147,7 +223,7 @@
 .medical-content__text {
     font-size: rem(14);
     line-height: 1.714;
-    margin-top: rem(20);
+    margin-top: rem(16);
 
     @include mq(md) {
         flex: 0 1 50%;
@@ -157,14 +233,31 @@
 
 .medical-content__img {
     margin-top: rem(20);
-    width: 100%;
-    max-width: rem(295);
 
     @include mq(md) {
         flex: 0 0 50%;
         max-width: 100%;
         margin-left: rem(40);
         margin-top: 0;
+    }
+
+    @include mq(lg) {
+        margin-left: rem(20);
+    }
+}
+
+.medical-content__img img{
+    width: 100%;
+    max-width: rem(295);
+    height: rem(221);
+
+    @include mq(md) {
+        max-width: 100%;
+    }
+
+    @include mq(lg) {
+        max-width: 100%;
+        height: rem(315);
     }
 }
 

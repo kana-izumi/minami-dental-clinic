@@ -87,12 +87,12 @@
             <small>&copy;2020-2021 みなみ歯科クリニック</small>
         </div>
         <div class="footer-bottom">
-            <div class="footer-bottom__tel">
+            <a href="0312345678" class="footer-bottom__tel">
             <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/footer-bottom.png')); ?>" alt="電話番号">
-            </div>
-            <div class="footer-bottom__link">
-            <a href=""><img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/footer.bottom2.png')); ?>" alt="WEB予約はこちら"></a>
-            </div>
+            </a>
+            <a href="<?php echo esc_url(home_url('/'))?>reservation" class="footer-bottom__link">
+            <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/footer.bottom2.png')); ?>" alt="WEB予約はこちら">
+            </a>
         </div>
     </footer>
     <a href="#" class="back-to-top js-to-top">

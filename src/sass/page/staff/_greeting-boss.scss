@@ -4,7 +4,7 @@
     margin-top: rem(60);
 
     @include mq(md) {
-        margin-top: rem(77);
+        margin-top: rem(69);
     }
 }
 
@@ -33,7 +33,7 @@
         width: rem(48);
         height: rem(12);
         top: 50%;
-        left: 0;
+        left: 30%;
         transform: translateY(-50%);
         background: url(../src/images/common/section-title.deco.svg);
         background-repeat: no-repeat;
@@ -53,7 +53,7 @@
         width: rem(48);
         height: rem(12);
         top: 50%;
-        right: 0;
+        right: 30%;
         transform: translateY(-50%);
         background: url(../src/images/common/section-title.deco.svg);
         background-repeat: no-repeat;
@@ -100,6 +100,9 @@
     @include mq(md) {
         margin-top: rem(41);
     }
+    @include mq(lg) {
+        margin-top: rem(44);
+    }
 }
 
 .greeting-boss__message-text2 {
@@ -137,22 +140,57 @@
     margin-top: rem(40);
 
     @include mq(md) {
-        margin-top: rem(56);
+        margin-top: rem(61);
         font-size: rem(14);
     }
 }
 
-.greeting-boss__career-list dt{
+.greeting-boss__career-title {
     border-bottom: rem(1) solid $black;
     padding-bottom: rem(8);
 }
 
+.greeting-boss__career-block {
+    display: flex;
+    margin-top: rem(16);
+}
+
+.greeting-boss__career-text {
+    &:not(:first-child) {
+        margin-left: rem(16);
+    }
+}
+
+.greeting-boss__career-text--down {
+    display: flex;
+    margin-left: rem(65);
+}
+
+.greeting-boss__career-text2 {
+    margin-top: rem(16);
+}
+
 .greeting-boss__career-list + .greeting-boss__career-list {
     margin-top: rem(28);
+
+    @include mq(md) {
+        margin-top: rem(33);
+    }
 }
 
 .greeting-boss__career-list dd {
     margin-top: rem(17);
+    display: inline-block;
+
+    @include mq(md) {
+        margin-top: rem(15);
+    }
+}
+
+.greeting-boss__career-item {
+    @include mq(md) {
+        margin-right: rem(16);
+    }
 }
 
 .greeting-boss__img--sp {
