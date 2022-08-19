@@ -1,14 +1,16 @@
 @use "global" as *;
 
 .bread {
-    margin-left: rem(30);
-    color: #C2C2C2;
+    margin-top: rem(10);
     font-size: rem(12);
 
     @include mq(md) {
-
+        margin-left: rem(30);
     }
+}
 
+.post .post-page .current-item {
+    color: #393939;
 }
 
 .bread__list {

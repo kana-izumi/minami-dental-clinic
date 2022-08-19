@@ -3,7 +3,7 @@
 .reservation__link {
     display: none;
 
-    @include mq(md) {
+    @include mq(lg) {
         position: absolute;
 
         background: $main-color;

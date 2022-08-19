@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .main-visual {
-  // position: relative;
+  position: relative;
 }
 
 .main-visual__inner {
@@ -19,6 +19,18 @@
 .main-visual__items {
 }
 
+.main-visual__catch {
+  bottom: rem(40);
+  left: rem(20);
+  width: rem(265);
+  position: absolute;
+
+  @include mq(md) {
+    bottom: rem(51);
+    left: rem(63);
+    width: rem(415);
+  }
+}
 
 
 

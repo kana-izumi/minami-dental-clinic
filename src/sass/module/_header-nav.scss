@@ -1,7 +1,7 @@
 @use "global" as *;
 
 .header-nav {
-  @include mq(md) {
+  @include mq(lg) {
     display: flex;
     height: inherit;
     align-items: center;
@@ -10,7 +10,7 @@
 
 .header-nav__list {
 
-  @include mq(md) {
+  @include mq(lg) {
     display: flex;
     font-size: rem(11);
     text-align: center;
@@ -19,7 +19,7 @@
 
 .header-nav__item {
 
-  @include mq(md) {
+  @include mq(lg) {
     display: flex;
     flex-direction: column; /*縦に並べる*/
     position: relative;
@@ -51,27 +51,27 @@
 }
 
 .header-nav__item svg {
-  @include mq(md) {
+  @include mq(lg) {
     margin: 0 auto;
     width: rem(24);
   }
 }
 
 .header__info {
-  @include mq(md) {
+  @include mq(lg) {
     margin-left: rem(32);
   }
 }
 
 .header__info-address {
-  @include mq(md) {
+  @include mq(lg) {
     font-size: rem(12);
     text-align: right;
   }
 }
 
 .header__info-tel {
-  @include mq(md) {
+  @include mq(lg) {
     display: inline-block;
     font-size: rem(32);
     padding-left: rem(16);

@@ -29,6 +29,11 @@
   top: 30%;
   }
 
+  @include mq(md) {
+  top: 30%;
+  }
+
+
   @include mq(xl) {
   top: 40%;
   }

@@ -150,26 +150,30 @@
           </div>
           <div class="treatment-guidance__items">
             <div class="treatment-guidance__flex">
-              <a href="<?php echo esc_url(home_url('/'))?>medical#common" class="treatment-guidance__item">
+              <div class="treatment-guidance__content">
+                <a href="<?php echo esc_url(home_url('/'))?>medical#common" class="treatment-guidance__item">
                 <div class="treatment-guidance-img">
                   <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/medical_1.jpg')); ?>" alt="一般治療">
-                  <div class="treatment-guidance__content">
-                    <p class="treatment-guidance__content-title">一般診療</p>
-                    <p class="treatment-guidance__content-border"></p>
-                    <p class="treatment-guidance__content-lead">虫歯・入れ歯・小児歯科</p>
+                    <div class="treatment-guidance__content-inner">
+                      <p class="treatment-guidance__content-title">一般診療</p>
+                      <p class="treatment-guidance__content-border"></p>
+                      <p class="treatment-guidance__content-lead">虫歯・入れ歯・小児歯科</p>
+                    </div>
                   </div>
-                </div>
-              </a>
-              <a href="<?php echo esc_url(home_url('/'))?>medical#specail" class="treatment-guidance__item">
-                <div class="treatment-guidance-img">
-                  <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/medical_2.jpg')); ?>" alt="特殊治療">
-                </div>
-                <div class="treatment-guidance__content">
-                  <p class="treatment-guidance__content-title">特殊診療</p>
-                  <p class="treatment-guidance__content-border"></p>
-                  <p class="treatment-guidance__content-lead">インプラント・ホワイトニング<br>予防歯科・口腔外科・審美歯科</p>
-                </div>
-              </a>
+                </a>
+              </div>
+              <div class="treatment-guidance__content">
+                <a href="<?php echo esc_url(home_url('/'))?>medical#specail" class="treatment-guidance__item">
+                  <div class="treatment-guidance-img">
+                    <img src="<?php echo esc_url(get_theme_file_uri('/src/images/top/medical_2.jpg')); ?>" alt="特殊治療">
+                  </div>
+                    <div class="treatment-guidance__content-inner">
+                      <p class="treatment-guidance__content-title">特殊診療</p>
+                      <p class="treatment-guidance__content-border"></p>
+                      <p class="treatment-guidance__content-lead">インプラント・ホワイトニング<br>予防歯科・口腔外科・審美歯科</p>
+                    </div>
+                  </a>
+              </div>
             </div>
               <div class="treatment-guidance__text">
                 当院では、患者さんの歯の健康状態や治療方針を丁寧にカウンセリングし、十分ご理解していただいた上で治療いたします。<br>

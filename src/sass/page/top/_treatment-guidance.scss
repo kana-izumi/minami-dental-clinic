@@ -80,12 +80,12 @@
     background-position: center bottom;
 
     @include mq(md) {
-        height: rem(210);
+        height: rem(150);
         background-size: cover;
     }
 
     @include mq(lg) {
-        height: rem(210);
+        height: rem(190);
     }
 
     @include mq(xl) {
@@ -140,11 +140,11 @@
 
 }
 
-.treatment-guidance__item +
-    .treatment-guidance__item  {
+.treatment-guidance__content +
+    .treatment-guidance__content  {
         margin-top: rem(20);
 
-        @include mq(sm) {
+        @include mq(md) {
             margin-top: 0;
             margin-left: rem(80);
         }
@@ -194,6 +194,10 @@
 }
 
 .treatment-guidance__content {
+    position: relative;
+}
+
+.treatment-guidance__content-inner {
     position: absolute;
     top: 50%;
     left: 50%;
