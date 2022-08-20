@@ -88,14 +88,14 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
     spaceBetween: 10,
     speed: 8000, // ループの時間
     allowTouchMove: false, // スワイプ無効
-    width: 400,
+    width: 500,
     autoplay: {
       delay: 0, // 途切れなくループ
     },
     breakpoints: {
       768: {
         slidesPerView: 3,
-        spaceBetween: 10,
+        spaceBetween: 20,
         width: 920,
         autoplay: {
           delay: 0, // 途切れなくループ

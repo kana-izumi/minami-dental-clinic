@@ -3,6 +3,10 @@
 
 .blog-side__category {
     margin-top: rem(60);
+
+    @include mq(md) {
+        margin-top: rem(52);
+    }
 }
 
 .blog-side__category-title {
@@ -30,6 +34,10 @@
 .blog-side__category-items {
     margin-top: rem(20);
     margin-left: rem(20);
+
+    @include mq(md) {
+        margin-top: rem(16);
+    }
 }
 
 .blog-side__category-item {

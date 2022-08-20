@@ -33,7 +33,7 @@
         width: rem(48);
         height: rem(12);
         top: 50%;
-        left: 30%;
+        left: 8%;
         transform: translateY(-50%);
         background: url(../src/images/common/section-title.deco.svg);
         background-repeat: no-repeat;
@@ -52,7 +52,7 @@
         width: rem(48);
         height: rem(12);
         top: 50%;
-        right: 30%;
+        right: 8%;
         transform: translateY(-50%);
         background: url(../src/images/common/section-title.deco.svg);
         background-repeat: no-repeat;
@@ -94,7 +94,7 @@
 .greeting-boss__message-text {
     font-size: rem(14);
     line-height: 1.7;
-    margin-top: rem(32);
+    margin-top: rem(22);
 
     @include mq(md) {
         margin-top: rem(41);
@@ -136,7 +136,7 @@
 }
 
 .greeting-boss__career {
-    margin-top: rem(40);
+    margin-top: rem(34);
 
     @include mq(md) {
         margin-top: rem(61);
@@ -155,6 +155,7 @@
 }
 
 .greeting-boss__career-text {
+    font-size: rem(13);
     &:not(:first-child) {
         margin-left: rem(16);
     }
@@ -162,18 +163,20 @@
 
 .greeting-boss__career-text--down {
     display: flex;
-    margin-left: rem(65);
+    margin-left: rem(63);
+    font-size: rem(13);
 }
 
 .greeting-boss__career-text2 {
     margin-top: rem(16);
+    font-size: rem(13);
 }
 
 .greeting-boss__career-list + .greeting-boss__career-list {
-    margin-top: rem(28);
+    margin-top: rem(41);
 
     @include mq(md) {
-        margin-top: rem(33);
+        margin-top: rem(41);
     }
 }
 

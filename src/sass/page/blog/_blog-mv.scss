@@ -12,4 +12,7 @@
         background-repeat: no-repeat;
         background-position: center center;
     }
+    @include mq(xl) {
+        height: rem(500);
+    }
 }

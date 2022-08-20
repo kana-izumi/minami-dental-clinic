@@ -15,6 +15,12 @@
           <?php } ?>
           <?php } ?>
       </div>
+      <div class="reservation__link">
+        <a href="<?php echo esc_url(home_url('/'))?>reservation">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/web-icon.svg')); ?>" alt="WEB予約はこちら">
+        <p>WEB予約<br>はこちら</p>
+        </a>
+      </div>
     </div>
 
     <div id="blog" class="blog blog-wrapper inner">
@@ -46,7 +52,7 @@
                   </figure>
                   <div class="blog-main__body">
                     <div class="blog-main__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
-                    <p class="blog-main__title"><?php the_title(); ?></p>
+                    <p class="blog-main__title"><?php echo mb_substr($post-> post_title, 0, 30); ?></p>
                     <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date( 'Y.m.d' ); ?></time>
                   </div>
               </a>

@@ -30,20 +30,22 @@
             $new_posts = get_posts($args);
             foreach($new_posts as $post): setup_postdata( $post );
             ?>
+            <div class="blog-side__post-block">
               <a class="blog-side__post-item">
                 <figure class="blog-side__post-img">
-                <?php if (has_post_thumbnail()) { ?>
-									<?php the_post_thumbnail('sidebar'); ?>
-								<?php } else { ?>
-									<img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/noimg.png')); ?>">
-								<?php } ?>
-                </figure>
-                <div class="blog-main__body">
-                  <div class="blog-main__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
-                  <p class="blog-main__title"><?php the_title(); ?></p>
-                  <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
+                  <?php if (has_post_thumbnail()) { ?>
+                    <?php the_post_thumbnail('sidebar'); ?>
+                    <?php } else { ?>
+                      <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/noimg.png')); ?>">
+                      <?php } ?>
+                    </figure>
+                  </a>
+                    <a class="blog-side__body">
+                      <div class="blog-side__tag"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
+                      <p class="blog-side__title"><?php echo mb_substr($post-> post_title, 0, 20); ?></p>
+                      <time class="blog-side__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
+                    </a>
                 </div>
-              </a>
               <?php endforeach; wp_reset_postdata(); ?>
             </div>
           </div>

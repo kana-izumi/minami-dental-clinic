@@ -1735,8 +1735,8 @@ select::-ms-expand {
   }
 }
 .blog-main {
-  margin-top: 52px;
-  margin-top: 3.25rem;
+  margin-top: 61px;
+  margin-top: 3.8125rem;
 }
 @media screen and (min-width: 768px) {
   .blog-main {
@@ -1774,9 +1774,18 @@ select::-ms-expand {
 }
 
 .blog-main__img img {
-  max-width: none;
-  display: block;
+  max-width: 133px;
+  max-width: 8.3125rem;
+  height: 101px;
+  height: 6.3125rem;
   width: auto;
+}
+@media screen and (min-width: 768px) {
+  .blog-main__img img {
+    max-width: none;
+    display: block;
+    width: auto;
+  }
 }
 
 .blog-main__body {
@@ -1795,11 +1804,16 @@ select::-ms-expand {
   font-size: 10px;
   font-size: 0.625rem;
   color: #fff;
-  padding: 4px 12px;
-  padding: 0.25rem 0.75rem;
+  padding: 2px 12px;
+  padding: 0.125rem 0.75rem;
   line-height: 1.5;
   background-color: #1391E6;
   border-radius: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-main__category {
+    padding: 0.25rem 0.75rem;
+  }
 }
 
 .blog-main__title {
@@ -1836,8 +1850,8 @@ select::-ms-expand {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 57px;
+  margin-top: 3.5625rem;
 }
 @media screen and (min-width: 768px) {
   .nav-links {
@@ -1957,6 +1971,11 @@ select::-ms-expand {
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .blog-mv {
+    height: 31.25rem;
   }
 }
 
@@ -2198,13 +2217,18 @@ select::-ms-expand {
           transform: translateY(-50%);
 }
 
+.current {
+  background-color: #1391E6;
+  color: #fff;
+}
+
 .blog-side__about {
   margin-top: 100px;
   margin-top: 6.25rem;
 }
 @media screen and (min-width: 768px) {
   .blog-side__about {
-    margin-top: 5rem;
+    margin-top: 3.5625rem;
   }
 }
 
@@ -2218,6 +2242,12 @@ select::-ms-expand {
   border-bottom: 1px solid #888888;
   border-bottom: 0.0625rem solid #888888;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .blog-side__about-title {
+    font-size: 0.875rem;
+    padding-bottom: 0.625rem;
+  }
 }
 .blog-side__about-title::before {
   content: "";
@@ -2240,6 +2270,12 @@ select::-ms-expand {
   margin-top: 20px;
   margin-top: 1.25rem;
 }
+@media screen and (min-width: 768px) {
+  .blog-side__about-img {
+    font-size: 0.875rem;
+    margin-top: 1.375rem;
+  }
+}
 
 .blog-side__about-img img {
   max-width: 100%;
@@ -2258,8 +2294,8 @@ select::-ms-expand {
   line-height: 1.714;
 }
 .blog-side__about-text p:not(:first-child) {
-  margin-top: 14px;
-  margin-top: 0.875rem;
+  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 
 .blog-side__about-link {
@@ -2286,10 +2322,20 @@ select::-ms-expand {
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
 }
+@media screen and (min-width: 768px) {
+  .blog-side__about-link {
+    margin-top: 0.625rem;
+  }
+}
 
 .blog-side__category {
   margin-top: 60px;
   margin-top: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-side__category {
+    margin-top: 3.25rem;
+  }
 }
 
 .blog-side__category-title {
@@ -2326,6 +2372,11 @@ select::-ms-expand {
   margin-left: 20px;
   margin-left: 1.25rem;
 }
+@media screen and (min-width: 768px) {
+  .blog-side__category-items {
+    margin-top: 1rem;
+  }
+}
 
 .blog-side__category-item {
   padding-left: 12px;
@@ -2356,6 +2407,11 @@ select::-ms-expand {
 .blog-side__post {
   margin-top: 60px;
   margin-top: 3.75rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-side__post {
+    margin-top: 3.4375rem;
+  }
 }
 
 .blog-side__post-title {
@@ -2390,8 +2446,13 @@ select::-ms-expand {
   margin-top: 40px;
   margin-top: 2.5rem;
 }
+@media screen and (min-width: 768px) {
+  .blog-side__post-items {
+    margin-top: 0.875rem;
+  }
+}
 
-.blog-side__post-item {
+.blog-side__post-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2399,9 +2460,11 @@ select::-ms-expand {
       -ms-flex-align: center;
           align-items: center;
 }
-.blog-side__post-item:not(:first-child) {
-  margin-top: 20px;
-  margin-top: 1.25rem;
+
+@media screen and (min-width: 768px) {
+  .blog-side__post-block + .blog-side__post-block {
+    margin-top: 0.9375rem;
+  }
 }
 
 .blog-side__post-img img {
@@ -2409,10 +2472,67 @@ select::-ms-expand {
   display: block;
   width: auto;
 }
+@media screen and (min-width: 768px) {
+  .blog-side__post-img img {
+    width: 7.5rem;
+    height: 5.625rem;
+  }
+}
+
+.blog-side__body {
+  margin-left: 10px;
+  margin-left: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-side__body {
+    margin-left: 0.3125rem;
+  }
+}
+
+.blog-side__tag {
+  display: inline-block;
+  font-size: 10px;
+  font-size: 0.625rem;
+  color: #fff;
+  padding: 4px 12px;
+  padding: 0.25rem 0.75rem;
+  line-height: 1.5;
+  background-color: #1391E6;
+  border-radius: 3.125rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-side__tag {
+    padding: 0.125rem 0.5rem;
+  }
+}
+
+.blog-side__title {
+  font-size: 14px;
+  font-size: 0.875rem;
+  margin-top: 8px;
+  margin-top: 0.5rem;
+}
+@media screen and (min-width: 768px) {
+  .blog-side__title {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+  }
+}
+
+.blog-side__date {
+  font-size: 11px;
+  font-size: 0.6875rem;
+  color: #888888;
+}
+@media screen and (min-width: 768px) {
+  .blog-side__date {
+    font-size: 0.75rem;
+  }
+}
 
 @media screen and (min-width: 768px) {
   .blog-side {
-    width: 30.643%;
+    width: 31%;
   }
 }
 
@@ -3457,7 +3577,7 @@ checked状態
   height: 12px;
   height: 0.75rem;
   top: 50%;
-  left: 30%;
+  left: 8%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/common/section-title.deco.svg);
@@ -3467,7 +3587,7 @@ checked状態
   .greeting-boss__title::before {
     width: 4.1875rem;
     height: 1.25rem;
-    left: 16.25rem;
+    left: 30%;
     background: url(../src/images/top/title-deco.svg);
   }
 }
@@ -3479,7 +3599,7 @@ checked状態
   height: 12px;
   height: 0.75rem;
   top: 50%;
-  right: 30%;
+  right: 8%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/common/section-title.deco.svg);
@@ -3489,7 +3609,7 @@ checked状態
   .greeting-boss__title::after {
     width: 4.1875rem;
     height: 1.25rem;
-    right: 16.25rem;
+    right: 30%;
     background: url(../src/images/top/title-deco.svg);
   }
 }
@@ -3530,8 +3650,8 @@ checked状態
   font-size: 14px;
   font-size: 0.875rem;
   line-height: 1.7;
-  margin-top: 32px;
-  margin-top: 2rem;
+  margin-top: 22px;
+  margin-top: 1.375rem;
 }
 @media screen and (min-width: 768px) {
   .greeting-boss__message-text {
@@ -3584,8 +3704,8 @@ checked状態
 }
 
 .greeting-boss__career {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 34px;
+  margin-top: 2.125rem;
 }
 @media screen and (min-width: 768px) {
   .greeting-boss__career {
@@ -3609,6 +3729,10 @@ checked状態
   margin-top: 1rem;
 }
 
+.greeting-boss__career-text {
+  font-size: 13px;
+  font-size: 0.8125rem;
+}
 .greeting-boss__career-text:not(:first-child) {
   margin-left: 16px;
   margin-left: 1rem;
@@ -3618,22 +3742,26 @@ checked状態
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-left: 65px;
-  margin-left: 4.0625rem;
+  margin-left: 63px;
+  margin-left: 3.9375rem;
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .greeting-boss__career-text2 {
   margin-top: 16px;
   margin-top: 1rem;
+  font-size: 13px;
+  font-size: 0.8125rem;
 }
 
 .greeting-boss__career-list + .greeting-boss__career-list {
-  margin-top: 28px;
-  margin-top: 1.75rem;
+  margin-top: 41px;
+  margin-top: 2.5625rem;
 }
 @media screen and (min-width: 768px) {
   .greeting-boss__career-list + .greeting-boss__career-list {
-    margin-top: 2.0625rem;
+    margin-top: 2.5625rem;
   }
 }
 
@@ -3671,7 +3799,69 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .greeting-staff {
-    margin-top: 10rem;
+    margin-top: 10.125rem;
+  }
+}
+
+.greeting-staff__header {
+  position: relative;
+  text-align: center;
+}
+
+.greeting-staff__head {
+  font-size: 20px;
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: inline-block;
+  letter-spacing: 0.08em;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff__head {
+    font-size: 1.75rem;
+  }
+}
+.greeting-staff__head::before {
+  position: absolute;
+  content: "";
+  width: 48px;
+  width: 3rem;
+  height: 12px;
+  height: 0.75rem;
+  top: 50%;
+  left: 8%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../src/images/common/section-title.deco.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff__head::before {
+    width: 4.1875rem;
+    height: 1.25rem;
+    left: 30%;
+    background: url(../src/images/top/title-deco.svg);
+  }
+}
+.greeting-staff__head::after {
+  position: absolute;
+  content: "";
+  width: 48px;
+  width: 3rem;
+  height: 12px;
+  height: 0.75rem;
+  top: 50%;
+  right: 8%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background: url(../src/images/common/section-title.deco.svg);
+  background-repeat: no-repeat;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff__head::after {
+    width: 4.1875rem;
+    height: 1.25rem;
+    right: 30%;
+    background: url(../src/images/top/title-deco.svg);
   }
 }
 
@@ -3685,6 +3875,17 @@ checked状態
 .greeting-staff__content {
   margin-top: 40px;
   margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff__content {
+    margin-top: 3.5625rem;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .greeting-staff__content + .greeting-staff__content {
+    margin-top: 2.6875rem;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -3710,14 +3911,26 @@ checked状態
   width: 100%;
   max-width: 335px;
   max-width: 20.9375rem;
+  height: 335px;
+  height: 20.9375rem;
   margin-top: 40px;
   margin-top: 2.5rem;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff__img {
+    height: auto;
+  }
 }
 
 .greeting-staff__name {
   text-align: center;
-  margin-top: 16px;
-  margin-top: 1rem;
+  margin-top: 10px;
+  margin-top: 0.625rem;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff__name {
+    margin-top: 1rem;
+  }
 }
 
 .greeting-staff__name p {
@@ -3749,9 +3962,13 @@ checked状態
 
 .greeting-staff__list th {
   background-color: #DFF1FD;
-  padding: 18px;
-  padding: 1.125rem;
+  padding: 18px 7px 18px 17px;
   font-weight: 500;
+}
+@media screen and (min-width: 768px) {
+  .greeting-staff__list th {
+    padding: 1.125rem;
+  }
 }
 
 .greeting-staff__list td {
@@ -3800,6 +4017,11 @@ checked状態
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .staff-mv {
+    height: 31.25rem;
   }
 }
 

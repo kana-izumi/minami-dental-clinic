@@ -2,6 +2,10 @@
 
 .blog-side__post {
     margin-top: rem(60);
+
+    @include mq(md) {
+        margin-top: rem(55);
+    }
 }
 
 .blog-side__post-title {
@@ -28,19 +32,78 @@
 
 .blog-side__post-items {
     margin-top: rem(40);
+
+    @include mq(md) {
+        margin-top: rem(14);
+    }
 }
 
 .blog-side__post-item {
-    display: flex;
-        align-items: center;
 
-        &:not(:first-child) {
-            margin-top: rem(20);
-        }
+        // &:not(:first-child) {
+        //     margin-top: rem(20);
+        // }
+}
+
+.blog-side__post-block {
+    display: flex;
+    align-items: center;
+}
+
+.blog-side__post-block + .blog-side__post-block {
+    @include mq(md) {
+        margin-top: rem(15);
+    }
 }
 
 .blog-side__post-img img {
     max-width: none;
     display: block;
     width: auto;
+
+    @include mq(md) {
+        width: rem(120);
+        height: rem(90);
+    }
+}
+
+.blog-side__body {
+    margin-left: rem(10);
+
+    @include mq(md) {
+        margin-left: rem(5);
+    }
+}
+
+.blog-side__tag {
+    display: inline-block;
+    font-size: rem(10);
+    color: $white;
+    padding: rem(4) rem(12);
+    line-height: 1.5;
+    background-color: $main-color;
+    border-radius: rem(50);
+
+    @include mq(md) {
+        padding: rem(2) rem(8);
+    }
+}
+
+.blog-side__title {
+    font-size: rem(14);
+    margin-top: rem(8);
+
+    @include mq(md) {
+        font-size: rem(14);
+        margin-top: rem(8);
+    }
+}
+
+.blog-side__date {
+    font-size: rem(11);
+    color: #888888;
+
+    @include mq(md) {
+        font-size: rem(12);
+    }
 }

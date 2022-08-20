@@ -4,6 +4,10 @@
   height: rem(60);
   box-shadow: 0 3px 6px #00000029;
 
+  // position: fixed; /* ウィンドウを基準に画面に固定 */
+  // top: 0; /* 上下の固定位置を上から0pxにする */
+  // left: 0; /* 左右の固定位置を左から0pxにする */
+
   @include mq(md) {
     height: rem(80);
   }
