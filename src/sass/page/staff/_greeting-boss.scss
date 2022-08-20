@@ -41,11 +41,10 @@
         @include mq(md) {
             width: rem(67);
             height: rem(20);
-            left: rem(260);
+            left: 30%;
             background: url(../src/images/top/title-deco.svg);
         }
     }
-
 
     &::after {
         position: absolute;
@@ -61,7 +60,7 @@
         @include mq(md) {
             width: rem(67);
             height: rem(20);
-            right: rem(260);
+            right: 30%;
             background: url(../src/images/top/title-deco.svg);
         }
     }

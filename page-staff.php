@@ -120,8 +120,8 @@ Template Name: スタッフ紹介
     <!-- /.スワイパー -->
     <div id="staff" class="greeting-staff">
       <div class="greeting-staff__inner inner">
-        <div class="section-header">
-          <h2 class="section-header__title">スタッフ紹介</h2>
+        <div class="greeting-staff__header">
+          <h2 class="greeting-staff__head">スタッフ紹介</h2>
         </div>
         <div class="greeting-staff__content">
           <h4 class="greeting-staff__title">歯科衛生士</h4>
