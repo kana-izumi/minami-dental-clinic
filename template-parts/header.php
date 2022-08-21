@@ -1,9 +1,9 @@
 <!-- //header -->
-<div class="header">
+<header class="header">
     <div class="header__inner">
         <div class="header__block">
         <div class="header__logo">
-            <img src="<?php echo esc_url(get_theme_file_uri('/images/common/logo.svg')); ?>" alt="ロゴ画像">
+            <a href="<?php echo esc_url(home_url('/'))?>"><img src="<?php echo esc_url(get_theme_file_uri('/images/common/logo.svg')); ?>" alt="ロゴ画像"></a>
         </div>
             <nav class="header-nav u-desktop">
                 <ul class="header-nav__list">
@@ -99,21 +99,19 @@
                 </div>
             </div>
         </div>
-
     <div class="drawer__content">
         <div class="drawer__content-items">
-        <!-- <?php
-        $args = [
-        	'theme_location' => 'drawer_menu'
-        ];
-        wp_nav_menu($args);
-        ?> -->
             <div class="drawer__content-item">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>">
+            <svg id="icon-01" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+            <g id="home">
+              <rect id="長方形_23351" data-name="長方形 23351" width="24" height="24" fill="#fff" opacity="0"/>
+              <path id="パス_43759" data-name="パス 43759" d="M20.42,10.18,12.71,2.3a1,1,0,0,0-1.42,0L3.58,10.19A2,2,0,0,0,3,11.62V20a2,2,0,0,0,1.89,2H19.11A2,2,0,0,0,21,20V11.62a2.07,2.07,0,0,0-.58-1.44ZM10,20V14h4v6Zm9,0H16V13a1,1,0,0,0-1-1H9a1,1,0,0,0-1,1v7H5V11.58l7-7.15,7,7.19Z" fill="#fff"/>
+            </g>
+            </svg>
                 <a href="<?php echo esc_url(home_url('/'))?>">ホーム</a>
             </div>
             <div class="drawer__content-item">
-                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-01.svg')); ?>" alt="">
+                <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/icon-02.svg')); ?>" alt="">
                 <a href="<?php echo esc_url(home_url('/'))?>about">当院について</a>
             </div>
             <div class="drawer__content-item">
@@ -135,4 +133,4 @@
             </div>
         </div>
         </div>
-    </div>
+    </header>

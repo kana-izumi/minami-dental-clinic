@@ -2,9 +2,11 @@
 
 .medical-menu {
     margin-top: rem(60);
+    margin-bottom: rem(137);
 
     @include mq(md) {
         margin-top: rem(80);
+        margin-bottom: rem(202);
     }
 }
 

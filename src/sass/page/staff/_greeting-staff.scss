@@ -2,9 +2,11 @@
 
 .greeting-staff {
     margin-top: rem(100);
+    margin-bottom: rem(137);
 
     @include mq(md) {
         margin-top: rem(162);
+        margin-bottom: rem(202);
     }
 }
 .greeting-staff__header {

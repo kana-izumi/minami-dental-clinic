@@ -4,11 +4,17 @@
   height: rem(60);
   box-shadow: 0 3px 6px #00000029;
 
-  // position: fixed; /* ウィンドウを基準に画面に固定 */
-  // top: 0; /* 上下の固定位置を上から0pxにする */
-  // left: 0; /* 左右の固定位置を左から0pxにする */
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  width: 100%;
+  z-index: 400;
 
   @include mq(md) {
+    height: rem(70);
+  }
+
+  @include mq(xl) {
     height: rem(80);
   }
 }
@@ -17,6 +23,11 @@
   height: inherit;
   max-width: rem(1200);
   margin: 0 auto;
+
+  @include mq(md) {
+    padding-right: rem(20);
+    padding-left: rem(20);
+  }
 }
 
 .header__logo {
@@ -36,10 +47,8 @@
   }
 }
 
+
 .header__block {
-  @include mq(sm) {
-    height: inherit;
-  }
 
   @include mq(md) {
     display: flex;

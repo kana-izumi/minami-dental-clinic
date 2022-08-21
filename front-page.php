@@ -213,7 +213,7 @@
                   </figure>
                   <div class="staff-blog__body">
                     <div class="staff-blog__category"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
-                    <p class="staff-blog__head"><?php the_title(); ?></p>
+                    <p class="staff-blog__head"><?php echo mb_substr($post-> post_title, 0, 30); ?></p>
                     <time class="staff-blog__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
                   </div>
               </a>

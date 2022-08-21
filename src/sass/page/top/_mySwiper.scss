@@ -23,19 +23,19 @@
   height: rem(50);
   width: rem(50);
   position: absolute;
-  top: 24%;
+  top: 3.2%;
 
   @include mq(md) {
-  top: 30%;
+  top: 10%;
   }
 
-  @include mq(md) {
-  top: 30%;
+  @include mq(lg) {
+  top: 4.9%;
   }
 
 
   @include mq(xl) {
-  top: 40%;
+  top: 3.2%;
   }
 }
 
@@ -63,6 +63,7 @@
   height: rem(50);
   margin: auto;
   width: rem(50);
+  position: absolute;
 }
 /* 前への矢印カスタマイズ */
 .swiper-button-prev:after {

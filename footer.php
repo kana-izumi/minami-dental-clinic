@@ -86,7 +86,8 @@
         <div class="footer__copyright">
             <small>&copy;2020-2021 みなみ歯科クリニック</small>
         </div>
-        <div class="footer-bottom">
+
+        <div class="footer-bottom footer-bottom--fixed">
             <a href="0312345678" class="footer-bottom__tel">
             <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/footer-bottom.png')); ?>" alt="電話番号">
             </a>

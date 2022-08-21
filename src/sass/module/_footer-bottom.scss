@@ -12,6 +12,14 @@
     }
 }
 
+.footer-bottom--fixed {
+    position: fixed; /* ウィンドウを基準に画面に固定 */
+    bottom: 0; /* 上下の固定位置を上から0pxにする */
+    left: 0; /* 左右の固定位置を左から0pxにする */
+    width: 100%;
+    z-index: 400;
+}
+
 .footer-bottom__tel {
     width: rem(170);
     display: inline-block;

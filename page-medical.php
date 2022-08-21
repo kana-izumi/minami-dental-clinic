@@ -66,7 +66,7 @@ Template Name: 診察案内
         <?php endforeach; ?>
         </ul>
       </div>
-    </section>
+
 
     <div id="common"  class="medical-content">
       <div class="medical-content__deco-top"></div>
@@ -163,4 +163,5 @@ Template Name: 診察案内
       <div class="medical-content__deco-bottom"></div>
     </div>
   </div>
+</section>
 <?php get_footer(); ?>

@@ -5,7 +5,7 @@
     padding-top: rem(30);
 
     @include mq(md) {
-        margin-top: rem(127);
+        margin-top: rem(136);
         padding-top: 0;
     }
 }
@@ -85,7 +85,7 @@
     }
 
     @include mq(lg) {
-        height: rem(190);
+        height: rem(203);
     }
 
     @include mq(xl) {

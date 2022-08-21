@@ -2,7 +2,7 @@
 
 .footer {
     background: $sub-color2;
-    margin-top: rem(132);
+    // margin-top: rem(132);
     padding-top: rem(16);
     position: relative;
 
@@ -19,7 +19,7 @@
     }
 
     @include mq(md) {
-        margin-top: rem(191);
+        // margin-top: rem(191);
         padding-top: rem(50);
     }
 }

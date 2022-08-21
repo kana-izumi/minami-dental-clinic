@@ -39,7 +39,7 @@
 								<?php } ?>
                 </figure>
                 <div class="blog-main__body">
-                  <div class="blog-main__category"><?php get_the_category(); ?></div>
+                  <div class="blog-main__category"><?php /* 1個だけ出力する例 */ if ( !empty( $tmp_cat = get_the_category() ) ) { echo $tmp_cat[0]->cat_name; } ?></div>
                   <p class="blog-main__title"><?php the_title(); ?></p>
                   <time class="blog-main__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
                 </div>

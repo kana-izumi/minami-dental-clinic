@@ -280,6 +280,10 @@ select::-ms-expand {
   right: 16px;
   right: 1rem;
   z-index: 300;
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 .drawer__icon.is-active .drawer__icon-bar1 {
   -webkit-transform: rotate(-45deg);
@@ -305,8 +309,8 @@ select::-ms-expand {
   height: 32px;
   height: 2rem;
   position: relative;
-  margin-right: 12px;
-  margin-right: 0.75rem;
+  margin-right: 7px;
+  margin-right: 0.4375rem;
 }
 
 .drawer__icon-bar1,
@@ -347,6 +351,10 @@ select::-ms-expand {
   z-index: 299;
   -webkit-transform: translateX(105%);
           transform: translateX(105%);
+  -webkit-transition: -webkit-transform 0.5s ease 0s;
+  transition: -webkit-transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s;
+  transition: transform 0.5s ease 0s, -webkit-transform 0.5s ease 0s;
 }
 .drawer__content.is-active {
   -webkit-transform: translateX(0);
@@ -400,6 +408,10 @@ select::-ms-expand {
   right: 0;
 }
 
+.drawer__content-item svg {
+  fill: #fff;
+}
+
 .error {
   padding: 100px;
   padding: 6.25rem;
@@ -442,6 +454,14 @@ select::-ms-expand {
   .footer-bottom {
     display: none;
   }
+}
+
+.footer-bottom--fixed {
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  bottom: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  width: 100%;
+  z-index: 400;
 }
 
 .footer-bottom__tel {
@@ -762,8 +782,6 @@ select::-ms-expand {
 
 .footer {
   background: #DFF1FD;
-  margin-top: 132px;
-  margin-top: 8.25rem;
   padding-top: 16px;
   padding-top: 1rem;
   position: relative;
@@ -783,7 +801,6 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .footer {
-    margin-top: 11.9375rem;
     padding-top: 3.125rem;
   }
 }
@@ -822,7 +839,7 @@ select::-ms-expand {
     position: relative;
   }
   .header-nav__item:not(:first-child) {
-    margin-left: 1.6875rem;
+    margin-left: 1.625rem;
   }
 }
 
@@ -895,8 +912,18 @@ select::-ms-expand {
   height: 3.75rem;
   -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
           box-shadow: 0 3px 6px rgba(0, 0, 0, .1607843137);
+  position: fixed; /* ウィンドウを基準に画面に固定 */
+  top: 0; /* 上下の固定位置を上から0pxにする */
+  left: 0; /* 左右の固定位置を左から0pxにする */
+  width: 100%;
+  z-index: 400;
 }
 @media screen and (min-width: 768px) {
+  .header {
+    height: 4.375rem;
+  }
+}
+@media screen and (min-width: 1440px) {
   .header {
     height: 5rem;
   }
@@ -907,6 +934,12 @@ select::-ms-expand {
   max-width: 1200px;
   max-width: 75rem;
   margin: 0 auto;
+}
+@media screen and (min-width: 768px) {
+  .header__inner {
+    padding-right: 1.25rem;
+    padding-left: 1.25rem;
+  }
 }
 
 .header__logo {
@@ -929,11 +962,6 @@ select::-ms-expand {
   display: none;
 }
 
-@media screen and (min-width: 600px) {
-  .header__block {
-    height: inherit;
-  }
-}
 @media screen and (min-width: 768px) {
   .header__block {
     display: -webkit-box;
@@ -1077,12 +1105,12 @@ select::-ms-expand {
 }
 
 .mv-sub__inner {
-  margin: 20px 20px;
-  margin: 1.25rem 1.25rem;
+  margin: 81px 20px 20px;
+  margin: 5.0625rem 1.25rem 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .mv-sub__inner {
-    margin: 1.25rem 3.75rem;
+    margin: 6.5625rem 3.75rem 4.1875rem;
   }
 }
 
@@ -1113,7 +1141,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .mv-sub__heading {
-    top: 49%;
+    top: 48%;
   }
 }
 
@@ -1167,16 +1195,14 @@ select::-ms-expand {
 .about-picture {
   margin-top: 93px;
   margin-top: 5.8125rem;
+  margin-bottom: 137px;
+  margin-bottom: 8.5625rem;
 }
 @media screen and (min-width: 768px) {
   .about-picture {
     margin-top: 9.6875rem;
+    margin-bottom: 12.625rem;
   }
-}
-
-.about-picture__inner {
-  max-width: 1000px;
-  max-width: 62.5rem;
 }
 
 .about-picture__items {
@@ -2547,11 +2573,16 @@ select::-ms-expand {
   }
 }
 
+.blog-wrapper {
+  margin-bottom: 137px;
+  margin-bottom: 8.5625rem;
+}
 @media screen and (min-width: 768px) {
   .blog-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    margin-bottom: 12.625rem;
   }
 }
 
@@ -2582,6 +2613,27 @@ select::-ms-expand {
   left: -0.5625rem;
 }
 
+.contact-mv {
+  background-image: url(../src/images/contact/page-contact_top-sp.jpg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+@media screen and (min-width: 768px) {
+  .contact-mv {
+    height: 23.125rem;
+    background-image: url(../src/images/contact/page-contact_top.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .contact-mv {
+    height: 31.25rem;
+  }
+}
+
 .contact__message {
   font-size: 14px;
   font-size: 0.875rem;
@@ -2602,12 +2654,12 @@ select::-ms-expand {
 }
 
 .contact__wrapper {
-  margin-top: 95px;
-  margin-top: 5.9375rem;
+  margin: 95px auto 103px;
+  margin: 5.9375rem auto 6.4375rem;
 }
 @media screen and (min-width: 768px) {
   .contact__wrapper {
-    margin: 10rem auto;
+    margin: 9.625rem auto 7.125rem;
     width: 100%;
     max-width: 45.5rem;
   }
@@ -2629,6 +2681,9 @@ select::-ms-expand {
   .contact-header__title {
     font-size: 1.75rem;
   }
+  .contact-header__title br {
+    display: none;
+  }
 }
 .contact-header__title::before {
   position: absolute;
@@ -2645,7 +2700,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .contact-header__title::before {
-    left: 24%;
+    left: 16%;
     width: 4.1875rem;
     height: 1.25rem;
     background: url(../src/images/top/title-deco.svg);
@@ -2666,7 +2721,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .contact-header__title::after {
-    right: 25%;
+    right: 16%;
     width: 4.1875rem;
     height: 1.25rem;
     background: url(../src/images/top/title-deco.svg);
@@ -2679,7 +2734,7 @@ select::-ms-expand {
 }
 @media screen and (min-width: 768px) {
   .contact-form {
-    margin-top: 3.875rem;
+    margin-top: 4.4375rem;
   }
 }
 
@@ -3386,10 +3441,13 @@ checked状態
 .medical-menu {
   margin-top: 60px;
   margin-top: 3.75rem;
+  margin-bottom: 137px;
+  margin-bottom: 8.5625rem;
 }
 @media screen and (min-width: 768px) {
   .medical-menu {
     margin-top: 5rem;
+    margin-bottom: 12.625rem;
   }
 }
 
@@ -3557,12 +3615,15 @@ checked状態
   margin-left: 1.25rem;
   margin-right: 20px;
   margin-right: 1.25rem;
+  margin-bottom: 137px;
+  margin-bottom: 8.5625rem;
 }
 @media screen and (min-width: 768px) {
   .reservation__inner {
     margin-top: 5rem;
     margin-left: auto;
     margin-right: auto;
+    margin-bottom: 12.625rem;
   }
 }
 
@@ -3628,6 +3689,28 @@ checked状態
   line-height: 1.714;
   margin-top: 26px;
   margin-top: 1.625rem;
+}
+
+.reservation__wrapper {
+  margin-top: 95px;
+  margin-top: 5.9375rem;
+}
+@media screen and (min-width: 768px) {
+  .reservation__wrapper {
+    margin: 10rem auto;
+    width: 100%;
+    max-width: 45.5rem;
+  }
+}
+
+.reservation-form {
+  margin-top: 68px;
+  margin-top: 4.25rem;
+}
+@media screen and (min-width: 768px) {
+  .reservation-form {
+    margin-top: 3.875rem;
+  }
 }
 
 .greeting-boss {
@@ -3884,10 +3967,13 @@ checked状態
 .greeting-staff {
   margin-top: 100px;
   margin-top: 6.25rem;
+  margin-bottom: 137px;
+  margin-bottom: 8.5625rem;
 }
 @media screen and (min-width: 768px) {
   .greeting-staff {
     margin-top: 10.125rem;
+    margin-bottom: 12.625rem;
   }
 }
 
@@ -4118,8 +4204,8 @@ checked状態
 }
 
 .main-visual__inner {
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 81px;
+  margin-top: 5.0625rem;
   margin-right: 20px;
   margin-right: 1.25rem;
   margin-left: 20px;
@@ -4127,9 +4213,15 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .main-visual__inner {
-    margin-top: 2.5rem;
+    margin-top: 6.5625rem;
     margin-right: 3.625rem;
     margin-left: 3.875rem;
+    margin-bottom: em(67);
+  }
+}
+@media screen and (min-width: 1024px) {
+  .main-visual__inner {
+    margin-top: 7.5625rem;
   }
 }
 
@@ -4176,24 +4268,24 @@ checked状態
   width: 50px;
   width: 3.125rem;
   position: absolute;
-  top: 24%;
+  top: 3.2%;
 }
 @media screen and (min-width: 768px) {
   .swiper-button-prev,
 .swiper-button-next {
-    top: 30%;
+    top: 10%;
   }
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .swiper-button-prev,
 .swiper-button-next {
-    top: 30%;
+    top: 4.9%;
   }
 }
 @media screen and (min-width: 1440px) {
   .swiper-button-prev,
 .swiper-button-next {
-    top: 40%;
+    top: 3.2%;
   }
 }
 
@@ -4228,6 +4320,7 @@ checked状態
   margin: auto;
   width: 50px;
   width: 3.125rem;
+  position: absolute;
 }
 
 /* 前への矢印カスタマイズ */
@@ -4650,6 +4743,16 @@ checked状態
   }
 }
 
+.staff-blog__inner {
+  margin-bottom: 137px;
+  margin-bottom: 8.5625rem;
+}
+@media screen and (min-width: 768px) {
+  .staff-blog__inner {
+    margin-bottom: 12.625rem;
+  }
+}
+
 .staff-blog-header {
   position: relative;
   text-align: center;
@@ -4735,8 +4838,8 @@ checked状態
   display: flex;
 }
 .staff-blog__item:not(:first-child) {
-  margin-top: 20px;
-  margin-top: 1.25rem;
+  margin-top: 10px;
+  margin-top: 0.625rem;
 }
 @media screen and (min-width: 768px) {
   .staff-blog__item:not(:first-child) {
@@ -4771,7 +4874,10 @@ checked状態
   transition: -webkit-transform 0.6s ease;
   transition: transform 0.6s ease;
   transition: transform 0.6s ease, -webkit-transform 0.6s ease; /* ゆっくり変化させる */
-  width: 100%;
+  width: 276px;
+  width: 17.25rem;
+  height: 101px;
+  height: 6.3125rem;
 }
 @media screen and (min-width: 768px) {
   .staff-blog__img img {
@@ -4892,7 +4998,7 @@ checked状態
 }
 @media screen and (min-width: 768px) {
   .treatment-guidance {
-    margin-top: 7.9375rem;
+    margin-top: 8.5rem;
     padding-top: 0;
   }
 }
@@ -4986,7 +5092,7 @@ checked状態
 }
 @media screen and (min-width: 1024px) {
   .treatment-guidance__deco-top {
-    height: 11.875rem;
+    height: 12.6875rem;
   }
 }
 @media screen and (min-width: 1440px) {

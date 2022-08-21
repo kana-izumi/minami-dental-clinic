@@ -2,8 +2,11 @@
 
 
 .blog-wrapper {
+    margin-bottom: rem(137);
+
     @include mq(md) {
         display: flex;
+        margin-bottom: rem(202);
     }
 }
 

@@ -17,10 +17,10 @@
 }
 
 .contact__wrapper {
-    margin-top: rem(95);
+    margin: rem(95) auto rem(103);
 
     @include mq(md) {
-        margin: rem(160) auto;
+        margin: rem(154) auto rem(114);
         width: 100%;
         max-width: rem(728);
     }
@@ -39,6 +39,10 @@
 
         @include mq(md) {
             font-size: rem(28);
+
+            br {
+                display: none;
+              }
         }
 
         &::before {
@@ -52,7 +56,7 @@
             background: url(../src/images/common/section-title.deco.svg);
 
             @include mq(md) {
-                left: 24%;
+                left: 16%;
                 width: rem(67);
                 height: rem(20);
                 background: url(../src/images/top/title-deco.svg);
@@ -69,7 +73,7 @@
             background: url(../src/images/common/section-title.deco.svg);
 
             @include mq(md) {
-                right: 25%;
+                right: 16%;
                 width: rem(67);
                 height: rem(20);
                 background: url(../src/images/top/title-deco.svg);
@@ -82,7 +86,7 @@
     margin-top: rem(68);
 
     @include mq(md) {
-        margin-top: rem(62);
+        margin-top: rem(71);
     }
 }
 

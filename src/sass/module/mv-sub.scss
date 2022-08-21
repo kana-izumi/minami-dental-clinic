@@ -5,10 +5,10 @@
 }
 
 .mv-sub__inner {
-    margin: rem(20) rem(20);
+    margin:  rem(81) rem(20) rem(20);
 
     @include mq(md) {
-        margin: rem(20) rem(60);
+        margin: rem(105) rem(60) rem(67);
     }
 }
 
@@ -34,7 +34,7 @@
     text-align: center;
 
     @include mq(md) {
-        top: 49%;
+        top: 48%;
     }
 }
 

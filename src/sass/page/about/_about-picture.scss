@@ -2,15 +2,14 @@
 
 .about-picture {
     margin-top: rem(93);
+    margin-bottom: rem(137);
 
     @include mq(md) {
         margin-top: rem(155);
+        margin-bottom: rem(202);
     }
 }
 
-.about-picture__inner {
-    max-width: rem(1000);
-}
 .about-picture__items {
     display: grid;
     grid-template-columns: 1fr 1fr;

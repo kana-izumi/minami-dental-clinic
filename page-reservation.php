@@ -41,13 +41,13 @@
             メールアドレスの入力間違いにより送信できない事が発生しておりますので、メールアドレスは正しくご入力下さい。<br>
             ※24時間以内に当院からの返信がない場合には、お電話(TEL 03-1234-5678)にてお問い合わせ下さい。</p>
         </div>
-        <div class="contact__wrapper">
+        <div class="reservation__wrapper">
         <?php if(have_posts()): ?>
           <div class="contact-header">
             <h2 class="contact-header__title">予約フォーム</h2>
           </div>
           <?php while(have_posts()) : the_post(); ?>
-          <form class="contact-form" action="">
+          <form class="reservation-form" action="">
           <?php the_content(); ?>
           <?php echo do_shortcode('[contact-form-7 id="52" title="WEB予約ページ"]'); ?>
           </form>
