@@ -1,0 +1,18 @@
+@use "global" as *;
+.reservation-mv {
+    background-image: url(../src/images/contact/page-contact_top-sp.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center center;
+
+    @include mq(md) {
+        height: rem(370);
+        background-image: url(../src/images/contact/page-contact_top.jpg);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-position: center center;
+    }
+    @include mq(xl) {
+        height: rem(500);
+    }
+}

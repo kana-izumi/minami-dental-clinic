@@ -11,18 +11,23 @@
 
 .reservation__inner {
     margin-top: rem(60);
+    margin-left: rem(20);
+    margin-right: rem(20);
 
     @include mq(md) {
         margin-top: rem(80);
+        margin-left: auto;
+        margin-right: auto;
     }
 }
 
 .reservation__message + .reservation__message {
-    margin-top: rem(40);
+    margin-top: rem(33);
 }
 
 .reservation__title {
     font-size: rem(20);
+    letter-spacing: 0.08em;
 
     @include mq(md) {
         font-size: rem(28);
@@ -36,11 +41,11 @@
 .reservation__tel {
     display: inline-block;
     font-size: rem(32);
-    padding-left: rem(40);
+    padding-left: rem(31);
     font-weight: $bold;
     color: $main-color;
     position: relative;
-    margin-top: rem(28);
+    margin-top: rem(24);
 
     &::before {
         content: "";
@@ -57,10 +62,12 @@
 .reservation__time {
     font-size: rem(12);
     color: $main-color;
+    margin-left: rem(21);
+    margin-top: rem(-5);
 }
 
 .reservation__text {
     font-size: rem(14);
     line-height: 1.714;
-    margin-top: rem(28);
+    margin-top: rem(26);
 }

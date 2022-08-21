@@ -50,11 +50,16 @@ body {
 .mv-sub__heading {
   color: #fff;
   position: absolute;
-  top: 47%;
+  top: 44%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   text-align: center;
+}
+@media screen and (min-width: 768px) {
+  .mv-sub__heading {
+    top: 49%;
+  }
 }
 
 .mv-sub__title {
@@ -69,8 +74,8 @@ body {
 
 .mv-sub__lead {
   display: inline-block;
-  margin-top: 10px;
-  margin-top: 0.625rem;
+  margin-top: 15px;
+  margin-top: 0.9375rem;
   letter-spacing: 0.12em;
   font-size: 12px;
   font-size: 0.75rem;

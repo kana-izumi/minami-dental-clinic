@@ -1,28 +1,30 @@
 <?php get_header(); ?>
-<?php get_template_part('includes/header')?>
+<?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/contact/page-contact_top-sp.jpg')); ?>" alt="">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/contact/page-contact_top.jpg')); ?>" alt="">
-        </div>
+        <div class="mv-sub__img reservation-mv"></div>
         <div class="mv-sub__heading">
           <h2 class="mv-sub__title">WEB予約</h2>
           <span class="mv-sub__lead">RESERVE</span>
         </div>
-        <div class="bread">
-          <ul class="bread__list">
-            <li class="bread__item bread__item-grey"><a href="#">ホーム</a></li>
-            <li class="bread__item"><a href="#">WEB予約</a></li>
-          </ul>
-        </div>
+        <?php if (!is_front_page()) { ?>
+          <?php if (function_exists('bcn_display')) { ?>
+            <div class="bread" vocab="http://schema.org/" typeof="BreadcrumbList">
+            <?php bcn_display();?>
+            </div>
+          <?php } ?>
+          <?php } ?>
+      </div>
+      <div class="reservation__link">
+        <a href="<?php echo esc_url(home_url('/'))?>reservation">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/web-icon.svg')); ?>" alt="WEB予約はこちら">
+        <p>WEB予約<br>はこちら</p>
+        </a>
       </div>
     </div>
 
     <section class="reservation">
-      <div class="reservation__inner inner">
+      <div class="reservation__inner">
         <div class="reservation__message">
           <h2 class="reservation__title">お電話でのご予約/ご相談</h2>
           <div class="reservation__info">

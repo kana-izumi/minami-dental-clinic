@@ -28,10 +28,14 @@
 .mv-sub__heading {
     color: $white;
     position: absolute;
-    top: 47%;
+    top: 44%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;
+
+    @include mq(md) {
+        top: 49%;
+    }
 }
 
 .mv-sub__title {
@@ -45,7 +49,7 @@
 
 .mv-sub__lead {
     display: inline-block;
-    margin-top: rem(10);
+    margin-top: rem(15);
     letter-spacing: 0.12em;
     font-size: rem(12);
 
