@@ -158,7 +158,11 @@
 }
 .contact-form__input{
     [type="date"] {
+        margin-top: rem(15);
+
+        @include mq(md){
             margin-top: rem(20);
+        }
     }
 }
 
@@ -402,8 +406,12 @@ checked状態
         background: #F6F6F6;
         padding: rem(13) rem(16);
         width: 100%;
-        height: rem(200);
+        height: rem(155);
         resize: none;
+
+        @include mq(md) {
+            height: rem(200);
+        }
     }
 }
 
@@ -411,6 +419,7 @@ checked状態
     padding-top: rem(68);
     border-top: rem(1) solid #DDDDDD;
     text-align: center;
+    padding-bottom: rem(20);
 
     [type="submit"] {
         padding: rem(9) rem(113);
