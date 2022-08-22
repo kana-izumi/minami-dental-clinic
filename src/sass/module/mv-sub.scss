@@ -2,13 +2,20 @@
 
 .mv-sub {
     position: relative;
+    padding-top: rem(80);
+
+    @include mq(md) {
+        padding-top: rem(107);
+    }
 }
 
 .mv-sub__inner {
-    margin:  rem(81) rem(20) rem(20);
+    margin-right: rem(20);
+    margin-left: rem(20);
 
     @include mq(md) {
-        margin: rem(105) rem(60) rem(67);
+        margin-right: rem(60);
+        margin-left: rem(60);
     }
 }
 
@@ -35,6 +42,9 @@
 
     @include mq(md) {
         top: 48%;
+    }
+    @include mq(lg) {
+        top: 58%;
     }
 }
 

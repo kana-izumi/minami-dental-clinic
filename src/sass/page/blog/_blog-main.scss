@@ -9,6 +9,9 @@
         margin-right: rem(30);
         margin-top: rem(32);
     }
+    @include mq(lg) {
+        margin-top: rem(42);
+    }
 }
 
 .blog-main__items {
@@ -21,7 +24,7 @@
 
 .blog-main__item {
         display: flex;
-        align-items: center;
+        // align-items: center;
 
         &:not(:first-child) {
             margin-top: rem(20);
@@ -37,9 +40,9 @@
     height: rem(101);
     width: auto;
 
-    @include mq(md) {
-        max-width: none;
-        display: block;
+    @include mq(lg) {
+        max-width: rem(244);
+        height: rem(153);
         width: auto;
     }
 }
@@ -51,6 +54,10 @@
 
     @include mq(md) {
         margin-left: rem(21);
+    }
+    @include mq(lg) {
+        margin-left: rem(21);
+        margin-top: rem(18);
     }
 }
 

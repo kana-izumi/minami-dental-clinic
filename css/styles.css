@@ -923,6 +923,11 @@ select::-ms-expand {
     height: 4.375rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .header {
+    height: 5rem;
+  }
+}
 @media screen and (min-width: 1440px) {
   .header {
     height: 5rem;
@@ -934,12 +939,6 @@ select::-ms-expand {
   max-width: 1200px;
   max-width: 75rem;
   margin: 0 auto;
-}
-@media screen and (min-width: 768px) {
-  .header__inner {
-    padding-right: 1.25rem;
-    padding-left: 1.25rem;
-  }
 }
 
 .header__logo {
@@ -1102,15 +1101,25 @@ select::-ms-expand {
 
 .mv-sub {
   position: relative;
+  padding-top: 80px;
+  padding-top: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .mv-sub {
+    padding-top: 6.6875rem;
+  }
 }
 
 .mv-sub__inner {
-  margin: 81px 20px 20px;
-  margin: 5.0625rem 1.25rem 1.25rem;
+  margin-right: 20px;
+  margin-right: 1.25rem;
+  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .mv-sub__inner {
-    margin: 6.5625rem 3.75rem 4.1875rem;
+    margin-right: 3.75rem;
+    margin-left: 3.75rem;
   }
 }
 
@@ -1142,6 +1151,11 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .mv-sub__heading {
     top: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mv-sub__heading {
+    top: 58%;
   }
 }
 
@@ -1782,6 +1796,11 @@ select::-ms-expand {
     margin-top: 2rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .blog-main {
+    margin-top: 2.625rem;
+  }
+}
 
 .blog-main__items {
   margin-top: 40px;
@@ -1797,9 +1816,6 @@ select::-ms-expand {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 .blog-main__item:not(:first-child) {
   margin-top: 20px;
@@ -1817,10 +1833,10 @@ select::-ms-expand {
   height: 6.3125rem;
   width: auto;
 }
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 1024px) {
   .blog-main__img img {
-    max-width: none;
-    display: block;
+    max-width: 15.25rem;
+    height: 9.5625rem;
     width: auto;
   }
 }
@@ -1833,6 +1849,12 @@ select::-ms-expand {
 @media screen and (min-width: 768px) {
   .blog-main__body {
     margin-left: 1.3125rem;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .blog-main__body {
+    margin-left: 1.3125rem;
+    margin-top: 1.125rem;
   }
 }
 
@@ -2268,6 +2290,11 @@ select::-ms-expand {
     margin-top: 3.5625rem;
   }
 }
+@media screen and (min-width: 1024px) {
+  .blog-side__about {
+    margin-top: 4.4375rem;
+  }
+}
 
 .blog-side__about-title {
   font-size: 16px;
@@ -2480,8 +2507,8 @@ select::-ms-expand {
 }
 
 .blog-side__post-items {
-  margin-top: 40px;
-  margin-top: 2.5rem;
+  margin-top: 21px;
+  margin-top: 1.3125rem;
 }
 @media screen and (min-width: 768px) {
   .blog-side__post-items {
@@ -4285,7 +4312,7 @@ checked状態
 @media screen and (min-width: 1440px) {
   .swiper-button-prev,
 .swiper-button-next {
-    top: 3.2%;
+    top: 6.2%;
   }
 }
 
@@ -4836,6 +4863,7 @@ checked状態
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 .staff-blog__item:not(:first-child) {
   margin-top: 10px;
@@ -5038,15 +5066,14 @@ checked状態
   height: 12px;
   height: 0.75rem;
   top: 50%;
-  left: 225px;
-  left: 14.0625rem;
+  left: 18%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/common/section-title.deco.svg);
 }
 @media screen and (min-width: 768px) {
   .treatment-guidance__title::before {
-    left: 21.625rem;
+    left: 35%;
     width: 4.1875rem;
     height: 1.25rem;
     background: url(../src/images/top/title-deco.svg);
@@ -5060,15 +5087,14 @@ checked状態
   height: 12px;
   height: 0.75rem;
   top: 50%;
-  right: 225px;
-  right: 14.0625rem;
+  right: 18%;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   background: url(../src/images/common/section-title.deco.svg);
 }
 @media screen and (min-width: 768px) {
   .treatment-guidance__title::after {
-    right: 21.625rem;
+    right: 35%;
     width: 4.1875rem;
     height: 1.25rem;
     background: url(../src/images/top/title-deco.svg);
@@ -5305,6 +5331,12 @@ checked状態
   .treatment-guidance__deco-bottom {
     background-size: cover;
     height: 6.0625rem;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .treatment-guidance__deco-bottom {
+    background-size: cover;
+    height: 9.375rem;
   }
 }
 /*# sourceMappingURL=styles.css.map */

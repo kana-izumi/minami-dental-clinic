@@ -13,6 +13,9 @@
   @include mq(md) {
     height: rem(70);
   }
+  @include mq(lg) {
+    height: rem(80);
+  }
 
   @include mq(xl) {
     height: rem(80);
@@ -23,11 +26,6 @@
   height: inherit;
   max-width: rem(1200);
   margin: 0 auto;
-
-  @include mq(md) {
-    padding-right: rem(20);
-    padding-left: rem(20);
-  }
 }
 
 .header__logo {

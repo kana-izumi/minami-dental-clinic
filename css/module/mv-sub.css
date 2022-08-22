@@ -19,15 +19,25 @@ body {
 
 .mv-sub {
   position: relative;
+  padding-top: 80px;
+  padding-top: 5rem;
+}
+@media screen and (min-width: 768px) {
+  .mv-sub {
+    padding-top: 6.6875rem;
+  }
 }
 
 .mv-sub__inner {
-  margin: 81px 20px 20px;
-  margin: 5.0625rem 1.25rem 1.25rem;
+  margin-right: 20px;
+  margin-right: 1.25rem;
+  margin-left: 20px;
+  margin-left: 1.25rem;
 }
 @media screen and (min-width: 768px) {
   .mv-sub__inner {
-    margin: 6.5625rem 3.75rem 4.1875rem;
+    margin-right: 3.75rem;
+    margin-left: 3.75rem;
   }
 }
 
@@ -59,6 +69,11 @@ body {
 @media screen and (min-width: 768px) {
   .mv-sub__heading {
     top: 48%;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .mv-sub__heading {
+    top: 58%;
   }
 }
 

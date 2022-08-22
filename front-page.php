@@ -204,7 +204,20 @@
         setup_postdata( $post );
         ?>
               <a class="staff-blog__item" href="<?php the_permalink(); ?>">
-                  <figure class="staff-blog__img">
+                  <?php
+                  $days = 3;
+                  $today = date_i18n('U');
+                  $entry_day = get_the_time('U');
+                  $keika = date('U',($today - $entry_day)) / 86400;
+                  if ( $days > $keika ):
+                      $limit = 3;
+                      $num = $wp_query->current_post;
+                      if ( $limit > $num ):
+                          echo '<div class="blog__icon">NEW</div>';
+                      endif;
+                  endif;
+                  ?>
+                  <figure class="staff-blog__img staff-blog__new">
                   <?php if (has_post_thumbnail()) { ?>
 									<?php the_post_thumbnail('blog'); ?>
 								<?php } else { ?>

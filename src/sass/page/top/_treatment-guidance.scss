@@ -39,12 +39,12 @@
         width: rem(48);
         height: rem(12);
         top: 50%;
-        left: rem(225);
+        left: 18%;
         transform: translateY(-50%);
         background: url(../src/images/common/section-title.deco.svg);
 
         @include mq(md) {
-            left: rem(346);
+            left: 35%;
             width: rem(67);
             height: rem(20);
             background: url(../src/images/top/title-deco.svg);
@@ -58,12 +58,12 @@
         width: rem(48);
         height: rem(12);
         top: 50%;
-        right: rem(225);
+        right: 18%;
         transform: translateY(-50%);
         background: url(../src/images/common/section-title.deco.svg);
 
         @include mq(md) {
-            right: rem(346);
+            right: 35%;
             width: rem(67);
             height: rem(20);
             background: url(../src/images/top/title-deco.svg);
@@ -260,5 +260,10 @@
     @include mq(md) {
         background-size: cover;
         height: rem(97);
+    }
+
+    @include mq(xl) {
+        background-size: cover;
+        height: rem(150);
     }
 }
