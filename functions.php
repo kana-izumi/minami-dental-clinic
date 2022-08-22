@@ -57,18 +57,16 @@ add_action('pre_get_posts','topNews_posts_per_page');
 ----------------------------------------------*/
 
 add_action( 'wp_footer', 'add_origin_thanks_page' );
- function add_origin_thanks_page() {
- $thanks = home_url('contact-thanks/');
- $recruit = home_url('reservation-thanks/');
-   echo <<< EOC
-     <script>
-       var thanksPage = {
-         33: '{$thanks}',
-         52: '{$recruit}',
-       };
-     document.addEventListener( 'wpcf7mailsent', function( event ) {
-       location = thanksPage[event.detail.contactFormId];
-     }, false );
-     </script>
-   EOC;
- }
+  function add_origin_thanks_page() {
+    echo <<< EOC
+      <script>
+        var thanksPage = {
+          123: 'https://xxxxxxxx.com/thanks/',
+          2345: 'https://xxxxxxxx.com/thanks-recruit/',
+        };
+       document.addEventListener( 'wpcf7mailsent', function( event ) {
+         location = thanksPage[event.detail.contactFormId];
+       }, false );
+      </script>
+    EOC;
+  }

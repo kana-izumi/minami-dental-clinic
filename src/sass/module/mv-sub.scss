@@ -5,6 +5,9 @@
     padding-top: rem(80);
 
     @include mq(md) {
+        padding-top: rem(30);
+    }
+    @include mq(lg) {
         padding-top: rem(107);
     }
 }
@@ -35,7 +38,7 @@
 .mv-sub__heading {
     color: $white;
     position: absolute;
-    top: 44%;
+    top: 60%;
     left: 50%;
     transform: translate(-50%,-50%);
     text-align: center;

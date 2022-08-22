@@ -4,6 +4,7 @@
     margin-top: rem(53);
     padding-top: rem(110);
     position: relative;
+    overflow: hidden;
 
     @include mq(md) {
         padding-top: rem(180);
@@ -16,7 +17,7 @@
         position: absolute;
         content: "";
         top: 0;
-        // left: 3%;
+        left: 3%;
         width: 100%;
         height:rem(307);
         background-image: url(../src/images/top/concept-bg.svg);
@@ -28,11 +29,11 @@
             position: absolute;
             content: "";
             top: 0;
-            // left: 3%;
+            left: 32.5%;
             width: 100%;
-            height:rem(725);
+            height: 100%;
             background-image: url(../src/images/top/concept-bg.svg);
-            background-size: cover;
+            background-size: contain;
             background-repeat: no-repeat;
             z-index: 90;
             }

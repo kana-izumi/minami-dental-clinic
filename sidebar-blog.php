@@ -42,7 +42,7 @@
                   </a>
                     <a class="blog-side__body">
                       <div class="blog-side__tag"><?php echo esc_html( get_the_terms( get_the_ID(), 'blog_category' )[0]->name ); ?></div>
-                      <p class="blog-side__title"><?php echo mb_substr($post-> post_title, 0, 20); ?></p>
+                      <p class="blog-side__title"><?php the_title(); ?></p>
                       <time class="blog-side__date" datetime="2020-02-14"><?php echo get_the_date('Y.m.d'); ?></time>
                     </a>
                 </div>

@@ -79,7 +79,7 @@
                 </ul>
             <div class="header__info">
                 <p class="header__info-address">〒166-0001 東京都杉並区阿佐谷北7-3-1</p>
-                <p class="header__info-tel">03-1234-5678</p>
+                <p class="header__info-tel"><a href="0312345678">03-1234-5678</a></p>
             </div>
             </nav>
         </div>

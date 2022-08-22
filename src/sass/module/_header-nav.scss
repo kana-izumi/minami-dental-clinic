@@ -19,6 +19,10 @@
 
 .header-nav__item {
 
+  &.is-active {
+    color: $main-color;
+  }
+
   @include mq(lg) {
     display: flex;
     flex-direction: column; /*縦に並べる*/
@@ -35,8 +39,9 @@
     color: $main-color;
     fill: $main-color;
     transition: all 0.6s ease;
+  }
 
-    &::after {
+    &:hover::after {
       position: absolute;
       content: "";
       bottom: rem(-6);
@@ -46,8 +51,9 @@
       height: rem(2);
       background-color: $main-color;
       border-radius: rem(30);
+      transform-origin: center top;
+      transition: transform 0.3s;
     }
-  }
 }
 
 .header-nav__item svg {

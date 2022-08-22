@@ -181,64 +181,11 @@
     }
 }
 
-.wpcf7-list-item-label {
-    font-size: rem(14);
-    padding-left: rem(16);
-    margin-right: rem(23);
-    position: relative;
-    display: inline-block;
-
-    @include mq(md) {
-        padding-left: rem(32);
-        margin-right: rem(40);
-    }
-
-    &::before {
-        content: "";
-        position: absolute;
-        width: rem(24);
-        height: rem(24);
-        border: rem(1) solid $main-color;
-        border-radius: 50%;
-        left: rem(-16);
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: #fff;
-
-        @include mq(md) {
-            left: 0;
-        }
-    }
-
-    &::after {
-        content: "";
-        position: absolute;
-        width: rem(12);
-        height: rem(12);
-        border: rem(1) solid $main-color;
-        border-radius: 50%;
-        left: rem(-1010);
-        top: 50%;
-        transform: translateY(-50%);
-        background-color: $main-color;
-        display: none;
-
-        @include mq(md) {
-            left: rem(6);
-        }
-    }
-}
 
 .contact-form__radio {
     border-top: rem(1) solid #DDDDDD;
     padding-top: rem(28);
-    padding-bottom: rem(28);
-
-    [type="radio"]:checked + span {
-        &::after {
-            display: block;
-        }
-    }
+    padding-bottom: rem(20);
 
     @include mq(md) {
         display: flex;
@@ -248,9 +195,63 @@
     }
 }
 
+.wpcf7-list-item {
+    margin: 0;
+}
+
+.wpcf7-list-item-label {
+    font-size: rem(14);
+    padding-left: rem(16);
+    margin-right: rem(23);
+    display: inline-block;
+
+    @include mq(md) {
+        padding-left: rem(32);
+        margin-right: rem(40);
+    }
+}
+
+    [type="radio"] + span {
+        cursor: pointer;
+        display: inline-block;
+        font-size: rem(14);
+        line-height: 1;
+        margin: 0 rem(32) 0 0;
+        padding: 8px 0 8px 32px;
+        position: relative;
+}
+
+[type="radio"] + span::before {
+    background: #fff;
+    border: 1px solid #1391E6;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: rem(24);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(24);
+}
+
+[type="radio"]:checked + span::after {
+    background: #1391E6;
+    border-radius: 50%;
+    content: "";
+    display: block;
+    height: rem(12);
+    left: rem(6);
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(12);
+}
+
 .contact-form__check {
     border-top: rem(1) solid #DDDDDD;
-    padding-top: rem(25);
+    padding-top: rem(23);
     padding-bottom: rem(28);
 
     @include mq(md) {
@@ -259,65 +260,6 @@
         padding-top: rem(8);
         padding-bottom: rem(21);
     }
-}
-
-.wpcf7-list-item {
-    margin: 0 rem(-5) 0 rem(16);
-}
-
-.checkbox input[type=checkbox]{
-    display: none;
-}
-
-.checkbox span.wpcf7-list-item {
-    margin-left: 0;
-}
-
-.checkbox  span.wpcf7-list-item ~ span.wpcf7-list-item {
-    margin-left: 20px;
-}
-
-/* spanの左側にボタンを配置するスペースを作る */
-.checkbox input[type=checkbox] + .wpcf7-list-item-label {
-    padding-left: 2em;
-    display: inline-block;
-    position: relative;
-}
-
-/* 各パーツを作成 */
-.checkbox input[type=checkbox] + .wpcf7-list-item-label::after,
-.checkbox input[type=checkbox] + .wpcf7-list-item-label::before {
-    content: '';
-    display: block;
-    position: absolute;
-    border: 1px solid #AAAAAA;
-    width: 20px;
-    height: 20px;
-    top: 0;
-    left: 0;
-}
-
-/* after上書き */
-.checkbox input[type=checkbox] + .wpcf7-list-item-label::after {
-    opacity: 0;
-    width: 10px;
-    height: 15px;
-    transform: rotate(45deg);
-    left: 5px;
-    border: none;
-    border-right: 3px solid $main-color;
-    border-bottom: 3px solid $main-color;
-}
-
-/*
-checked状態
-文字のcolorとボタンのopacityを変更
-*/
-.checkbox input[type=checkbox]:checked + .wpcf7-list-item-label {
-    color: $main-color;
-}
-.checkbox input[type=checkbox]:checked + .wpcf7-list-item-label::after {
-    opacity: 1;
 }
 
 
@@ -336,49 +278,90 @@ checked状態
     }
 }
 
-// .contact-form__check-body span {
-//         display: inline-block;
-//         font-size: rem(14);
-//         padding-left: rem(32);
-//         position: relative;
-//         margin-right: rem(16);
+[type="checkbox"] {
+    display: none;
+}
 
-//         &::before {
-//             content: "";
-//             position: absolute;
-//             width: rem(24);
-//             height: rem(24);
-//             border: rem(1) solid $main-color;
-//             left: 0;
-//             top: 50%;
-//             transform: translateY(-50%);
-//             background-color: #fff;
-//         }
+[type="checkbox"] + span {
+    cursor: pointer;
+    display: inline-block;
+    font-size: rem(14);
+    line-height: 1;
+    margin: 0 rem(19) 0 0;
+    padding: 0 0 0 rem(32);
+    position: relative;
+    transition: all 1s ease 0s;
+}
 
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             width: rem(11);
-//             height: rem(6);
-//             border: rem(1) solid $main-color;
-//             left: rem(7);
-//             top: 50%;
-//             transform: rotate(-45deg) translateY(-50%);
-//             border: none;
-//             border-bottom: 1px solid $main-color;
-//             border-left: 1px solid  $main-color;
-//             transition: opacity 0.3s ease 0s;
-//             display: none;
-//         }
-// }
-
-//         [type="checkbox"]:checked + span {
-//             &::after {
-//                 display: block;
-//             }
-//         }
+[type="checkbox"] + span::before {
+    background: #fff;
+    border: 1px solid #1391E6;
+    content: "";
+    display: block;
+    height: rem(24);
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: rem(24);
+}
 
 
+[type="checkbox"]:checked + span::after {
+    border-bottom: rem(4) solid #1391E6;
+    border-left: rem(4) solid #1391E6;
+    content: "";
+    display: block;
+    height: rem(14.4);
+    left: 0;
+    margin-top: rem(-0.2);
+    opacity: 1;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(-45deg);
+    width: rem(24);
+}
+// // .contact-form__check-body span {
+// //         display: inline-block;
+// //         font-size: rem(14);
+// //         padding-left: rem(32);
+// //         position: relative;
+// //         margin-right: rem(16);
+
+// //         &::before {
+// //             content: "";
+// //             position: absolute;
+// //             width: rem(24);
+// //             height: rem(24);
+// //             border: rem(1) solid $main-color;
+// //             left: 0;
+// //             top: 50%;
+// //             transform: translateY(-50%);
+// //             background-color: #fff;
+// //         }
+
+// //         &::after {
+// //             content: "";
+// //             position: absolute;
+// //             width: rem(11);
+// //             height: rem(6);
+// //             border: rem(1) solid $main-color;
+// //             left: rem(7);
+// //             top: 50%;
+// //             transform: rotate(-45deg) translateY(-50%);
+// //             border: none;
+// //             border-bottom: 1px solid $main-color;
+// //             border-left: 1px solid  $main-color;
+// //             transition: opacity 0.3s ease 0s;
+// //             display: none;
+// //         }
+// // }
+
+// //         [type="checkbox"]:checked + span {
+// //             &::after {
+// //                 display: block;
+// //             }
+// //         }
 
 
 .contact-form__select{
@@ -442,8 +425,4 @@ checked状態
             border-radius: rem(28);
         }
     }
-}
-
-.wpcf7-form-control .has-spinner .wpcf7-submit {
-
 }

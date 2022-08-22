@@ -35,6 +35,13 @@ jQuery(function ($) { // この中であればWordpressでも「$」が使用可
 
   });
 
+  $(function(){
+    $('.header-nav__item').on('click', function() {
+      $('.header-nav__item').css('color','');
+      $(this).css('color','#1391E6');
+    });
+  });
+
 // トップに戻る
   $(function () {
     // スクロールしたら「トップに戻る」ボタンが表示される

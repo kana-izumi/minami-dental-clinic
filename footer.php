@@ -63,12 +63,25 @@
                 </ul>
                 </dd>
                 <dd>
+                    <?php
+                $args = array(
+                    'post_type' => 'plan', // カスタム投稿名を指定
+                    'taxonomy' => 'plan_category' ,//タクソノミー名を指定
+                    'term' => 'specal',//タームのスラッグを指定
+                    'order' => 'ASC', //最新順'DESC'・古い順'ASC'
+                    'posts_per_page' => -1 // 表示件数(−1で全ての記事表示)
+                );
+                $the_query = new WP_Query($args); if($the_query->have_posts()):
+                    ?>
+                <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
                 <ul class="footer-nav__item-list footer-nav__sub">
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">矯正歯科</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">ホワイトニング</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">口腔外科</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">レーザー治療</a></li>
+                    <li>
+                        <a href="<?php echo esc_url(home_url('/'))?>medical#specail_<?php echo the_ID(); ?>"><?php the_title();?></a>
+                    </li>
                 </ul>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
                 </dd>
             </div>
             </div>

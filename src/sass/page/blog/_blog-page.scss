@@ -1,7 +1,21 @@
 @use "global" as *;
 
+.blog-page__main {
+    margin-top: rem(61);
+
+    @include mq(md) {
+        width: 69.356%;
+        margin-right: rem(30);
+        margin-top: rem(32);
+    }
+    @include mq(lg) {
+        margin-top: rem(70);
+    }
+}
+
 .blog-page__title1 {
     font-size: rem(20);
+    letter-spacing: 0.08em;
 
     @include mq(md) {
         font-size: rem(28);
@@ -45,6 +59,8 @@
 
 .blog-page__content1 {
     margin-top: rem(60);
+    font-size: rem(14);
+    line-height: 1.7;
 }
 
 .blog-page__text1 {

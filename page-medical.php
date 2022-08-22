@@ -34,18 +34,25 @@ Template Name: 診察案内
           <h3 class="medical-menu__title">一般診療</h3>
           <span class="medical-menu__category">保険対象</span>
         </div>
-        <ul class="medical-menu__list">
-        <!-- 子タームのみ取得 -->
+        <!-- 特定のカテゴリー内の特定タームの記事を表示（サブループ） -->
         <?php
-        $taxonomy_name = 'plan_category'; //カスタムタクソノミー名
-        $term_id = 166; //親タームID
-        $termchildren = get_term_children( $term_id, $taxonomy_name );
-        foreach ( $termchildren as $child ) :?>
-         <?php $term = get_term_by( 'id', $child, $taxonomy_name );?>
-         <li class="medical-menu_item"><a href="#<?php get_the_ID(); ?>">
-            <?php echo $term->name; //ターム名 ?>
-          </li></a>
-        <?php endforeach; ?>
+            $args = array(
+              'post_type' => 'plan', // カスタム投稿名を指定
+              'taxonomy' => 'plan_category' ,//タクソノミー名を指定
+              'term' => 'general',//タームのスラッグを指定
+              'order' => 'ASC', //最新順'DESC'・古い順'ASC'
+              'posts_per_page' => -1 // 表示件数(−1で全ての記事表示)
+            );
+            $the_query = new WP_Query($args); if($the_query->have_posts()):
+          ?>
+        <ul class="medical-menu__list">
+          <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+          <li class="medical-menu_item">
+            <a href="#medical_<?php echo the_ID(); ?>"><?php the_title();?></a>
+          </li>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
         </ul>
       </div>
       <div class="medical-menu__inner inner">
@@ -53,22 +60,30 @@ Template Name: 診察案内
           <h3 class="medical-menu__title">特殊診療</h3>
           <span class="medical-menu__category medical-menu__category--red">実費</span>
         </div>
-        <ul class="medical-menu__list">
+        <!-- 特定のカテゴリー内の特定タームの記事を表示（サブループ） -->
         <?php
-        $taxonomy_name = 'plan_category'; //カスタムタクソノミー名
-        $term_id = 167; //親タームID
-        $termchildren = get_term_children( $term_id, $taxonomy_name );
-        foreach ( $termchildren as $child ) :?>
-         <?php $term = get_term_by( 'id', $child, $taxonomy_name );?>
-         <li class="medical-menu_item"><a href="<?php echo esc_url(home_url('/'))?>medical#specal">
-            <?php echo $term->name; //ターム名 ?>
-         </a></li>
-        <?php endforeach; ?>
+            $args = array(
+              'post_type' => 'plan', // カスタム投稿名を指定
+              'taxonomy' => 'plan_category' ,//タクソノミー名を指定
+              'term' => 'specal',//タームのスラッグを指定
+              'order' => 'ASC', //最新順'DESC'・古い順'ASC'
+              'posts_per_page' => -1 // 表示件数(−1で全ての記事表示)
+            );
+            $the_query = new WP_Query($args); if($the_query->have_posts()):
+          ?>
+        <ul class="medical-menu__list">
+          <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+          <li class="medical-menu_item">
+            <a href="#specail_<?php echo the_ID(); ?>"><?php the_title();?></a>
+          </li>
+          <?php endwhile; ?>
+          <?php wp_reset_postdata(); ?>
+          <?php endif; ?>
         </ul>
       </div>
 
 
-    <div id="common"  class="medical-content">
+    <div class="medical-content">
       <div class="medical-content__deco-top"></div>
       <div class="medical-content__bg">
         <div class="medical-content__inner inner">
@@ -87,7 +102,7 @@ Template Name: 診察案内
             $the_query = new WP_Query($args); if($the_query->have_posts()):
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-          <div class="medical-content__items1">
+          <div id="medical_<?php echo the_ID(); ?>" class="medical-content__items1">
             <div id="<?php get_the_ID(); ?>" class="medical-content__item">
               <div class="medical-content__heading">
                 <h3 class="medical-content__title"><?php the_title(); ?></h3>
@@ -115,7 +130,7 @@ Template Name: 診察案内
         </div>
       </div>
       <div class="medical-content__deco-bottom"></div>
-  <div  id="specail" class="medical-content">
+  <div class="medical-content">
     <div class="medical-content__deco-top"></div>
       <div class="medical-content__bg">
         <div class="medical-content__inner inner">
@@ -133,7 +148,7 @@ Template Name: 診察案内
             $the_query = new WP_Query($args); if($the_query->have_posts()):
           ?>
           <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
-          <div id="specal" class="medical-content__items2">
+          <div id="specail_<?php echo the_ID(); ?>" class="medical-content__items2">
             <div class="medical-content__item">
               <div class="medical-content__heading">
                 <h3 class="medical-content__title"><?php the_title(); ?></h3>

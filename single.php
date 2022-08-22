@@ -14,11 +14,17 @@
             </div>
           <?php } ?>
           <?php } ?>
+          <div class="reservation__link">
+        <a href="<?php echo esc_url(home_url('/'))?>reservation">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/web-icon.svg')); ?>" alt="WEB予約はこちら">
+        <p>WEB予約<br>はこちら</p>
+        </a>
+      </div>
       </div>
     </div>
 
     <div class="blog-page blog-wrapper inner">
-      <article class="blog-main">
+      <article class="blog-page__main">
         <?php if(have_posts()) : ?>
           <?php while(have_posts()) : the_post() ;?>
           <div class="blog-main__inner">
