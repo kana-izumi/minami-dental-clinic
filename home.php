@@ -29,7 +29,7 @@
           <?php if(have_posts()): ?>
           <div class="blog-main__items">
           <?php while (have_posts()) : the_post() ;?>
-            <a class="blog-main__item" href="<?php the_permalink(); ?>">
+            <a class="blog-main__item" href="<?php the_permalink(); ?>?lang=en">
                   <figure class="blog-main__img">
                   <?php if (has_post_thumbnail()) { ?>
 									<?php the_post_thumbnail('blog'); ?>

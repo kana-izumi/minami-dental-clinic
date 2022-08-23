@@ -53,20 +53,48 @@ function topNews_posts_per_page($query){
 add_action('pre_get_posts','topNews_posts_per_page');
 
 /*---------------------------------------------
+管理画面「投稿」名前変更
+----------------------------------------------*/
+
+  function Change_menulabel() {
+    global $menu;
+    global $submenu;
+    $name = 'お知らせ';
+    $menu[5][0] = $name;
+    $submenu['edit.php'][5][0] = $name.'一覧';
+    $submenu['edit.php'][10][0] = '新しい'.$name;
+  }
+  function Change_objectlabel() {
+    global $wp_post_types;
+    $name = 'お知らせ';
+    $labels = &$wp_post_types['post']->labels;
+    $labels->name = $name;
+    $labels->singular_name = $name;
+    $labels->add_new = _x('追加', $name);
+    $labels->add_new_item = $name.'の新規追加';
+    $labels->edit_item = $name.'の編集';
+    $labels->new_item = '新規'.$name;
+    $labels->view_item = $name.'を表示';
+    $labels->search_items = $name.'を検索';
+    $labels->not_found = $name.'が見つかりませんでした';
+    $labels->not_found_in_trash = 'ゴミ箱に'.$name.'は見つかりませんでした';
+  }
+  add_action( 'init', 'Change_objectlabel' );
+  add_action( 'admin_menu', 'Change_menulabel' );
+
+  /*---------------------------------------------
 サンクスページへ遷移
 ----------------------------------------------*/
 
-add_action( 'wp_footer', 'add_origin_thanks_page' );
-  function add_origin_thanks_page() {
-    echo <<< EOC
-      <script>
-        var thanksPage = {
-          123: 'https://xxxxxxxx.com/thanks/',
-          2345: 'https://xxxxxxxx.com/thanks-recruit/',
-        };
-       document.addEventListener( 'wpcf7mailsent', function( event ) {
-         location = thanksPage[event.detail.contactFormId];
-       }, false );
-      </script>
-    EOC;
-  }
+add_action( 'wp_footer', 'add_thanks_wcf7' );
+function add_thanks_wcf7() {
+  echo <<<EOD
+  <script>
+  document.addEventListener( 'wpcf7mailsent', function( event ) {
+    location = 'サンクスページのURL';
+  }, false );
+  </script>
+
+EOD;
+
+}

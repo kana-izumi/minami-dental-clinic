@@ -2,8 +2,8 @@
 
 .back-to-top {
     position: fixed;
-    right: rem(20);
-    bottom: rem(169);
+    right: rem(10);
+    bottom: rem(107);
 
     @include mq(md) {
         bottom: rem(103);

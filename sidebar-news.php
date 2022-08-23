@@ -32,7 +32,7 @@
             ?>
             <div class="blog-side__post-block">
               <a class="blog-side__post-item news-side__item">
-                <figure class="blog-side__post-img">
+                <figure class="news-side__post-img">
                 <?php if (has_post_thumbnail()) { ?>
 									<?php the_post_thumbnail('sidebar'); ?>
 								<?php } else { ?>

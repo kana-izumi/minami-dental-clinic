@@ -140,3 +140,19 @@
         margin-right: 0;
     }
 }
+
+.news-side__post-img img {
+    max-width: 100%;
+    display: block;
+    width: rem(129);
+    height: rem(90);
+
+    @include mq(md) {
+        width: rem(200);
+        height: rem(90);
+    }
+    @include mq(lg) {
+        width: rem(200);
+        height: rem(90);
+    }
+}

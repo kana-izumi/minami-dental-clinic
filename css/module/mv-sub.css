@@ -5,13 +5,13 @@ body {
 .u-desktop {
   display: none;
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .u-desktop {
     display: block;
   }
 }
 
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .u-mobile {
     display: none;
   }
@@ -28,6 +28,11 @@ body {
   }
 }
 @media screen and (min-width: 1024px) {
+  .mv-sub {
+    padding-top: 1.875rem;
+  }
+}
+@media screen and (min-width: 1280px) {
   .mv-sub {
     padding-top: 6.6875rem;
   }
@@ -56,7 +61,7 @@ body {
     height: 18.75rem;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .mv-sub__img {
     height: 23.125rem;
   }
@@ -76,7 +81,7 @@ body {
     top: 48%;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1280px) {
   .mv-sub__heading {
     top: 58%;
   }

@@ -7,7 +7,7 @@
     justify-content: space-around;
     padding: rem(10) 0;
 
-    @include mq(md) {
+    @include mq(lg) {
         display: none;
     }
 }

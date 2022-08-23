@@ -1,13 +1,14 @@
+<?php
+/*
+Template Name: お問い合わせ完了ページ
+*/
+?>
+
 <?php get_header(); ?>
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
-        <div class="mv-sub__img u-mobile">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/contact/page-contact_top-sp.jpg')); ?>" alt="">
-        </div>
-        <div class="mv-sub__img u-desktop">
-          <img src="<?php echo esc_url(get_theme_file_uri('/src/images/contact/page-contact_top.jpg')); ?>" alt="">
-        </div>
+        <div class="mv-sub__img contact-mv"></div>
         <div class="mv-sub__heading">
           <h2 class="mv-sub__title">お問い合わせ</h2>
           <span class="mv-sub__lead">CONTACT</span>
@@ -19,6 +20,12 @@
 		    </div>
 	      <?php } ?>
         <?php } ?>
+      </div>
+      <div class="reservation__link">
+        <a href="<?php echo esc_url(home_url('/'))?>reservation">
+        <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/web-icon.svg')); ?>" alt="WEB予約はこちら">
+        <p>WEB予約<br>はこちら</p>
+        </a>
       </div>
     </div>
     <section class="contact contact-thanks">

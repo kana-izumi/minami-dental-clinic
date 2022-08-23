@@ -7,9 +7,14 @@
     background-position: center center;
 
     @include mq(md) {
+        height: rem(370);
         background-image: url(../src/images/blog/archive_top.jpg);
         background-size: contain;
         background-repeat: no-repeat;
         background-position: center center;
+    }
+
+    @include mq(xl) {
+        height: rem(500);
     }
 }
