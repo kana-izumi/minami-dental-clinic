@@ -1,0 +1,19 @@
+@use "global" as *;
+.header__info {
+    @include mq(lg) {
+      margin-left: rem(32);
+    }
+  }
+
+  .header__info-address {
+    @include mq(lg) {
+      font-size: rem(12);
+      text-align: right;
+    }
+  }
+
+  .header__info-tel img {
+    @include mq(lg) {
+    width: rem(260);
+    }
+  }

@@ -806,6 +806,25 @@ select::-ms-expand {
 }
 
 @media screen and (min-width: 1024px) {
+  .header__info {
+    margin-left: 2rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__info-address {
+    font-size: 0.75rem;
+    text-align: right;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .header__info-tel img {
+    width: 16.25rem;
+  }
+}
+
+@media screen and (min-width: 1024px) {
   .header-nav {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -840,6 +859,7 @@ select::-ms-expand {
         -ms-flex-direction: column;
             flex-direction: column; /*縦に並べる*/
     position: relative;
+    margin-left: 1.3125rem;
   }
   .header-nav__item:not(:first-child) {
     margin-left: 1.625rem;
@@ -881,41 +901,6 @@ select::-ms-expand {
   }
 }
 
-@media screen and (min-width: 1024px) {
-  .header__info {
-    margin-left: 2rem;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header__info-address {
-    font-size: 0.75rem;
-    text-align: right;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .header__info-tel {
-    display: inline-block;
-    font-size: 2rem;
-    padding-left: 1rem;
-    font-weight: 700;
-    color: #1391E6;
-    position: relative;
-  }
-  .header__info-tel::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 0;
-    width: 1.75rem;
-    height: 1.75rem;
-    -webkit-transform: translate(-50%, -50%);
-            transform: translate(-50%, -50%);
-    background: url(../src/images/top/icon_tel.svg);
-  }
-}
-
 .header {
   height: 60px;
   height: 3.75rem;
@@ -947,7 +932,13 @@ select::-ms-expand {
   height: inherit;
   max-width: 1200px;
   max-width: 75rem;
-  margin: 0 auto;
+  margin: 0 20px;
+  margin: 0 1.25rem;
+}
+@media screen and (min-width: 1440px) {
+  .header__inner {
+    max-width: 120rem;
+  }
 }
 
 .header__logo {

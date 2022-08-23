@@ -25,7 +25,11 @@
 .header__inner {
   height: inherit;
   max-width: rem(1200);
-  margin: 0 auto;
+  margin: 0 rem(20);
+
+  @include mq(xl) {
+    max-width: rem(1920);
+  }
 }
 
 .header__logo {

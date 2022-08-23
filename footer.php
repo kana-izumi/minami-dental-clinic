@@ -55,19 +55,32 @@
             <dt><a href="<?php echo esc_url(home_url('/'))?>medical">治療内容</a></dt>
             <div class="footer-nav__item-flex">
                 <dd>
-                <ul class="footer-nav__item-list">
-                    <li><a href="#common<?php get_the_ID(); ?>">一般歯科</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">小児歯科</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">予防歯科</a></li>
-                    <li><a href="<?php echo esc_url(home_url('/'))?>medical">入れ歯</a></li>
+                <?php
+                $args = array(
+                    'post_type' => 'plan', // カスタム投稿名を指定
+                    'taxonomy' => 'plan_category' ,//タクソノミー名を指定
+                    'post__in' => array(2185, 2192, 2193, 2194),
+                    'order' => 'ASC', //最新順'DESC'・古い順'ASC'
+                    'posts_per_page' => -1 // 表示件数(−1で全ての記事表示)
+                );
+                $the_query = new WP_Query($args); if($the_query->have_posts()):
+                    ?>
+                <?php while ($the_query->have_posts()): $the_query->the_post(); ?>
+                <ul class="footer-nav__item-list footer-nav__sub">
+                    <li>
+                        <a href="<?php echo esc_url(home_url('/'))?>medical#medical_<?php echo the_ID(); ?>"><?php the_title();?></a>
+                    </li>
                 </ul>
+                <?php endwhile; ?>
+                <?php wp_reset_postdata(); ?>
+                <?php endif; ?>
                 </dd>
                 <dd>
                     <?php
                 $args = array(
                     'post_type' => 'plan', // カスタム投稿名を指定
                     'taxonomy' => 'plan_category' ,//タクソノミー名を指定
-                    'term' => 'specal',//タームのスラッグを指定
+                    'post__in' => array(2195, 2196, 2197, 2198),
                     'order' => 'ASC', //最新順'DESC'・古い順'ASC'
                     'posts_per_page' => -1 // 表示件数(−1で全ての記事表示)
                 );
