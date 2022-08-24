@@ -22,23 +22,6 @@ function setup_post_thumnails(){
 add_action('after_setup_theme', 'setup_post_thumnails');
 
 /*---------------------------------------------
-各テンプレートごとのメイン画像を表示
-----------------------------------------------*/
-function get_main_image() {
-    if ( is_page(  ) ) :
-        return get_the_post_thumbnail();
-    elseif(is_page(  )):
-    elseif(is_page( 'medical' )):
-    elseif(is_page(  )):
-    elseif(is_page()):
-    elseif(is_page()):
-    elseif(is_home( 'news' )):
-    elseif(is_single( 'blog' )):
-
-    endif;
-}
-
-/*---------------------------------------------
 メインクエリの変更
 ----------------------------------------------*/
 function topNews_posts_per_page($query){
@@ -82,19 +65,41 @@ add_action('pre_get_posts','topNews_posts_per_page');
   add_action( 'init', 'Change_objectlabel' );
   add_action( 'admin_menu', 'Change_menulabel' );
 
-  /*---------------------------------------------
+
+/*---------------------------------------------
 サンクスページへ遷移
 ----------------------------------------------*/
+// add_action( 'wp_footer', 'add_origin_thanks_page' );
+//   function add_origin_thanks_page() {
+//   $thanks = home_url('/contact/thanks/');
+//   $entry = home_url('/reservation/entry/');
+//     echo<<<EOD
+//      <script>
+//        var thanksPage = {
+//          33: '{$thanks}',
+//          52: '{$entry}',
+//        };
+//      document.addEventListener( 'wpcf7mailsent', function( event ) {
+//        location = thanksPage[event.detail.contactFormId];
+//      }, false );
+//      </script>
+//      EOD;}
 
-add_action( 'wp_footer', 'add_thanks_wcf7' );
-function add_thanks_wcf7() {
-  echo <<<EOD
+$contact = 'contact';
+$thanks = 'thanks';
+
+//お問い合わせフォームの送信後にサンクスページへ飛ばす
+add_action( 'wp_footer', 'redirect_thanks_page' );
+function redirect_thanks_page() {
+  global $contact;
+  global $thanks;
+
+  if( is_page($contact)  ) {
+  ?>
   <script>
-  document.addEventListener( 'wpcf7mailsent', function( event ) {
-    location = 'サンクスページのURL';
-  }, false );
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+      location = '<?php echo home_url('/'.$contact.'/'.$thanks); ?>'; // 遷移先のURL
+    }, false );
   </script>
-
-EOD;
-
+  <?php }
 }

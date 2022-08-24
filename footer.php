@@ -125,7 +125,6 @@
     <a href="#" class="back-to-top js-to-top">
         <img src="<?php echo esc_url(get_theme_file_uri('/src/images/common/totop.svg')); ?>" alt="トップに戻るボタン">
     </a>
-
-        <?php wp_footer(); ?>
+    <?php wp_footer(); ?>
     </body>
     </html>

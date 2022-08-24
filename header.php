@@ -29,14 +29,3 @@
 </head>
 <bod <?php body_class(); ?>>
 <?php wp_body_open(); ?>
-
-
-<?php if (is_front_page()) { ?>
-
-<?php } elseif (is_page( 'about' )) { ?>
-<?php } elseif (is_home() || is_single()) { ?>
-<?php } elseif (is_page( 'staff' )) { ?>
-<?php } elseif (is_page([ 'contact' , 'contact-thanks'])) { ?>
-<?php } elseif (is_page([ 'reservation' , 'reservation-thanks'])) { ?>
-<?php } else { ?>
-<?php } ?>

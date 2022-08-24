@@ -2,9 +2,9 @@
 /*
 Template Name: お問い合わせ完了ページ
 */
+get_header();
 ?>
 
-<?php get_header(); ?>
 <?php get_template_part('template-parts/header')?>
     <div class="mv-sub">
       <div class="mv-sub__inner">
