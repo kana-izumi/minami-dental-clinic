@@ -27,5 +27,5 @@
 <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 <?php wp_head();?>
 </head>
-<bod <?php body_class(); ?>>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>

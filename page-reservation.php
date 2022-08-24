@@ -47,10 +47,9 @@
             <h2 class="contact-header__title">予約フォーム</h2>
           </div>
           <?php while(have_posts()) : the_post(); ?>
-          <form class="reservation-form" action="">
-          <?php the_content(); ?>
+          <div class="reservation-form">
           <?php echo do_shortcode('[contact-form-7 id="52" title="WEB予約ページ"]'); ?>
-          </form>
+        </div>
           <?php endwhile;?>
           <?php endif; ?>
         </div>

@@ -36,10 +36,9 @@
               <h2 class="contact-header__title">お問い合わせ<br>フォーム</h2>
             </div>
             <?php while(have_posts()) : the_post(); ?>
-            <form class="contact-form" action="">
-              <?php the_content(); ?>
+            <div class="contact-form">
               <?php echo do_shortcode('[contact-form-7 id="33" title="お問い合わせ"]')?>
-            </form>
+          </div>
             <?php endwhile;?>
           <?php endif; ?>
         </div>
