@@ -50,13 +50,13 @@
             </li>
             <?php endif; ?>
             <li>
-              <a class="blog-page__pagination-all" href="<?php echo esc_url(home_url('/'))?>archive">
+              <a class="blog-page__pagination-all" href="<?php echo esc_url(home_url('/'))?>blog">
               記事一覧
               </a>
             </li>
             <?php $prevpost = get_adjacent_post(false, '', true); if ($prevpost) : ?>
             <li>
-                <a class="blog-page__pagination-next" href="<?php echo get_permalink($nextpost->ID); ?>">
+                <a class="blog-page__pagination-next" href="<?php echo get_permalink($prevpost->ID); ?>">
                 次の記事へ
                 </a>
             </li>

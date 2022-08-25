@@ -1960,6 +1960,16 @@ select::-ms-expand {
   margin-left: 0.4375rem;
 }
 
+.page-numbers:hover {
+  background: #1391E6;
+  color: #fff;
+}
+
+.page-numbers.current {
+  background: #1391E6;
+  color: #fff;
+}
+
 .prev,
 .next {
   background-color: #1391E6;

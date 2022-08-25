@@ -126,6 +126,15 @@
     }
 }
 
+.page-numbers:hover{
+    background: $main-color;
+    color: $white;
+  }
+.page-numbers.current{
+    background: $main-color;
+    color: $white;
+}
+
 .prev  ,
 .next {
     background-color: $main-color;

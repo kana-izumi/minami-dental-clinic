@@ -67,5 +67,15 @@ add_action('pre_get_posts','topNews_posts_per_page');
 
 
 /*---------------------------------------------
-サンクスページへ遷移
+Breacrumb navXT のトップページの表記を書き換える
 ----------------------------------------------*/
+add_filter( 'bcn_breadcrumb_title', 'nskw_bcn_breadcrumb_title_filter', 10, 2 );
+function nskw_bcn_breadcrumb_title_filter( $title, $type=null ) {
+
+    if ( 'home' === $type[0] ) {
+        $title = 'ホーム';
+    }
+
+    return $title;
+
+}

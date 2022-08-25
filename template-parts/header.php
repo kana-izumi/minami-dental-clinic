@@ -7,7 +7,7 @@
         </div>
             <nav class="header-nav u-desktop">
                 <ul class="header-nav__list">
-                    <li <?php if( is_front_page() && is_home() ){ echo ' class="current"'; }?>>
+                    <li <?php if( is_front_page() || is_home() ){ echo ' class="current"'; }?>>
                         <a href="<?php echo esc_url(home_url('/'))?>">
                             <svg id="icon-01" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <g id="home">
