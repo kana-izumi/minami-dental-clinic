@@ -846,11 +846,8 @@ select::-ms-expand {
   }
 }
 
-.header-nav__item.is-active {
-  color: #1391E6;
-}
 @media screen and (min-width: 1280px) {
-  .header-nav__item {
+  .header-nav__list li {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -860,18 +857,17 @@ select::-ms-expand {
             flex-direction: column; /*縦に並べる*/
     position: relative;
   }
-  .header-nav__item:not(:first-child) {
+  .header-nav__list li:not(:first-child) {
     margin-left: 1.5rem;
   }
 }
 
-.header-nav__item a:hover {
+.header-nav__list > li.current > a {
   color: #1391E6;
   fill: #1391E6;
-  -webkit-transition: all 0.6s ease;
-  transition: all 0.6s ease;
+  position: relative;
 }
-.header-nav__item a:hover::after {
+.header-nav__list > li.current > a::after {
   position: absolute;
   content: "";
   bottom: -6px;
@@ -885,12 +881,6 @@ select::-ms-expand {
   height: 0.125rem;
   background-color: #1391E6;
   border-radius: 1.875rem;
-  -webkit-transform-origin: center top;
-          transform-origin: center top;
-  -webkit-transition: -webkit-transform 0.3s;
-  transition: -webkit-transform 0.3s;
-  transition: transform 0.3s;
-  transition: transform 0.3s, -webkit-transform 0.3s;
 }
 
 @media screen and (min-width: 1280px) {
@@ -2331,11 +2321,6 @@ select::-ms-expand {
   right: 0.625rem;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
-}
-
-.current {
-  background-color: #1391E6;
-  color: #fff;
 }
 
 .blog-side__about {

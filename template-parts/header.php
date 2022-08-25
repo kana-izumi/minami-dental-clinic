@@ -7,7 +7,7 @@
         </div>
             <nav class="header-nav u-desktop">
                 <ul class="header-nav__list">
-                    <li class="header-nav__item">
+                    <li <?php if( is_front_page() && is_home() ){ echo ' class="current"'; }?>>
                         <a href="<?php echo esc_url(home_url('/'))?>">
                             <svg id="icon-01" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                             <g id="home">
@@ -18,7 +18,7 @@
                             <p>ホーム</p>
                         </a>
                     </li>
-                    <li class="header-nav__item">
+                    <li <?php if(is_page('about')){ echo ' class="current"'; } ?>>
                         <a href="<?php echo esc_url(home_url('/'))?>about">
                             <svg height="24" viewBox="0 0 24 24" width="24" xmlns="http://www.w3.org/2000/svg">
                             <g><path d="m0 0h24v24h-24z" opacity="0"/>
@@ -28,7 +28,7 @@
                             <p>当院について</p>
                         </a>
                     </li>
-                    <li class="header-nav__item">
+                    <li <?php if(is_page('medical')){ echo ' class="current"'; } ?>>
                         <a href="<?php echo esc_url(home_url('/'))?>medical">
                         <svg id="icon-03" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="file-text">
@@ -41,7 +41,7 @@
                         <p>治療案内</p>
                         </a>
                     </li>
-                    <li class="header-nav__item">
+                    <li <?php if(is_page('staff')){ echo ' class="current"'; } ?>>
                         <a href="<?php echo esc_url(home_url('/'))?>staff">
                         <svg id="icon-04" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="people">
@@ -54,7 +54,7 @@
                         <p>スタッフ紹介</p>
                         </a>
                     </li>
-                    <li class="header-nav__item">
+                    <li <?php if( !is_front_page() && get_post_type() === 'blog' ) echo ' class="current"'; ?>>
                         <a href="<?php echo esc_url(home_url('/'))?>blog">
                         <svg id="icon-05" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="edit">
@@ -65,7 +65,7 @@
                         <p>スタッフブログ</p>
                         </a>
                     </li>
-                    <li class="header-nav__item">
+                    <li <?php if(is_page('contact')){ echo ' class="current"'; } ?>>
                         <a href="<?php echo esc_url(home_url('/'))?>contact">
                         <svg id="icon-07" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
                         <g id="email">
